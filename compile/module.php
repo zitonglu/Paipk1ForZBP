@@ -1,3 +1,4 @@
+
 <div class="widget" id="<?php  echo $module->HtmlID;  ?>">
 
 <?php if ((!$module->IsHideTitle)&&($module->Name)) { ?>

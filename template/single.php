@@ -33,15 +33,13 @@
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">
-			<div class="single-left">
 {if $article.Type==ZC_POST_TYPE_ARTICLE}
 {template:post-single}
 {else}
 {template:post-page}
 {/if}
-			</div>
 		</div>
-		<div class="col-md-3 single-box">
+		<div class="col-md-3 single-box hidden-xs hidden-sm">
 			<div class="single-right">{template:sidebar2}</div>
 		</div>
 	</div>

@@ -31,15 +31,13 @@
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">
-			<div class="single-left">
 <?php if ($article->Type==ZC_POST_TYPE_ARTICLE) { ?>
 <?php  include $this->GetTemplate('post-single');  ?>
 <?php }else{  ?>
 <?php  include $this->GetTemplate('post-page');  ?>
 <?php } ?>
-			</div>
 		</div>
-		<div class="col-md-3 single-box">
+		<div class="col-md-3 single-box hidden-xs hidden-sm">
 			<div class="single-right"><?php  include $this->GetTemplate('sidebar2');  ?></div>
 		</div>
 	</div>
