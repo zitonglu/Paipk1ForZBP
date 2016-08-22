@@ -49,7 +49,7 @@
                 <h4 class="modal-title" id="myshare">谢谢您的分享</h4>
             </div>
             <div class="modal-body">
-                <img src="http://api.qrserver.com/v1/create-qr-code/?size=2560x256&amp;data=<?php  echo $article->Url;  ?>" class="img-responsive center-block" alt="文章网址的二维码">
+                <img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=<?php  echo $article->Url;  ?>" class="img-responsive center-block" alt="文章网址的二维码">
                 <p class="text-center weixin-share-p">打开微信，点击底部的“发现”，<br>使用“扫一扫”即可将网页分享至朋友圈</p>
                 <?php if ($zbp->Config('paipk1')->baiduShare!="") { ?><?php  echo $zbp->Config('paipk1')->baiduShare;  ?><?php } ?>
             </div>

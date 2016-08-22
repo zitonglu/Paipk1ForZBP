@@ -1,4 +1,5 @@
 <?php
+require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
 //注册插件
 RegisterPlugin('paipk1','ActivePlugin_paipk1');
 
@@ -7,6 +8,7 @@ function ActivePlugin_paipk1()
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'paipk1_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','paipk1_rebuild_Main');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
+	Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
 }
 
 //定义开头
