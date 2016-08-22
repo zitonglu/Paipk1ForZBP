@@ -86,7 +86,8 @@
 <?php }else{  ?>
     <script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/jquery.min.js'></script><script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/bootstrap.min.js'></script>
 <?php } ?>
-
+    <script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/custom.js'></script>
+    
 <?php  echo $footer;  ?>
 </body>
 </html>

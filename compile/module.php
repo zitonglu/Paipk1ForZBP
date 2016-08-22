@@ -1,14 +1,15 @@
-<dl class="function" id="<?php  echo $module->HtmlID;  ?>">
-<?php if ((!$module->IsHideTitle)&&($module->Name)) { ?><dt class="function_t"><?php  echo $module->Name;  ?></dt><?php }else{  ?><dt style="display:none;"></dt><?php } ?>
-<dd class="function_c">
+<div class="widget" id="<?php  echo $module->HtmlID;  ?>">
+
+<?php if ((!$module->IsHideTitle)&&($module->Name)) { ?>
+<h5><?php  echo $module->Name;  ?></h5>
+<?php }else{  ?><h5 style="display:none;"></h5><?php } ?>
 
 <?php if ($module->Type=='div') { ?>
 <div><?php  echo $module->Content;  ?></div>
 <?php } ?>
 
 <?php if ($module->Type=='ul') { ?>
-<ul><?php  echo $module->Content;  ?></ul>
+<div><ul><?php  echo $module->Content;  ?></ul></div>
 <?php } ?>
 
-</dd>
-</dl>
+</div>

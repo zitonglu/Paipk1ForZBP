@@ -88,7 +88,8 @@
 {else}
     <script src='{$host}zb_users/theme/{$theme}/js/jquery.min.js'></script><script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}
-
+    <script src='{$host}zb_users/theme/{$theme}/js/custom.js'></script>
+    
 {$footer}
 </body>
 </html>
