@@ -14,7 +14,7 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/{$style}.css?v=1.0" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=1.0" type="text/css">
 
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
@@ -66,3 +66,4 @@
 {if $zbp->Config('paipk1')->baiduTJ!=""}{$zbp->Config('paipk1')->baiduTJ}{/if}
 
 {$header}
+</head>
