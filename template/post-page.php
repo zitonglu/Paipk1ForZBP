@@ -6,26 +6,9 @@
   {if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
   <p class="time">
     {$article.Time('Y年m月d日 H:i')}&nbsp;
-    {if $article.Tags}
-    标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}">{$tag.Name}</a> {/foreach}
-    {else}{$article.Author.StaticName}
-    {/if}
+    {$article.Author.StaticName}
   </p>
   {$article.Content}
-
-  {if $article.Prev}<p class="next-pre-text pre-text">上一篇：<a href="{$article.Prev.Url}" title="{$article.Prev.Title}">{$article.Prev.Title}</a></p>{/if}
-  {if $article.Next}<p class="next-pre-text next-text">下一篇：<a href="{$article.Next.Url}" title="{$article.Next.Title}">{$article.Next.Title}</a></p>{/if}
-</div>
-
-<div class="text-center more-share">
-{if $article.Prev}
-  <a class="btn btn-default" href="{$article.Prev.Url}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
-{/if}
-  <a class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>
-  <a class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;文章分享</a>
-{if $article.Next} 
-  <a class="btn btn-default" href="{$article.Next.Url}" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-{/if}
 </div>
 
 <div class="more-text">

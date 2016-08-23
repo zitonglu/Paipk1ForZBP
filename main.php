@@ -59,6 +59,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->baiduShare = $_POST['baiduShare'];
   $zbp->Config('paipk1')->CopyrightDescription = $_POST['CopyrightDescription'];
   $zbp->Config('paipk1')->baike = $_POST['baike'];
+  $zbp->Config('paipk1')->ifPPT = $_POST['ifPPT'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -84,7 +85,7 @@ if(isset($_POST['ifOutLink'])){
       </tr>
       <tr>
         <td scope="row">首页关键词</td>
-        <td><input name="HomeKeywords" type="text" style="width:98%" value="<?php echo $zbp->Config('paipk1')->HomeKeywords; ?>">
+        <td><input name="HomeKeywords" type="text" style="width:96%" value="<?php echo $zbp->Config('paipk1')->HomeKeywords; ?>">
           </input></td>
         <td>多个词汇用,隔开</td>
       </tr>
@@ -109,10 +110,16 @@ if(isset($_POST['ifOutLink'])){
         <td>显示在每页底部</td>
       </tr>
       <tr>
-        <td scope="row">备案地址</td>
-        <td><input name="baike" type="text" style="width:98%" value="<?php echo $zbp->Config('paipk1')->baike; ?>">
+        <td scope="row">备案号</td>
+        <td><input name="baike" type="text" style="width:96%" value="<?php echo $zbp->Config('paipk1')->baike; ?>">
           </input></td>
         <td>显示在每页底部</td>
+      </tr>
+      <tr>
+        <td scope="row"><strong>首页幻灯片</strong></td>
+        <td>
+        <input name="ifPPT" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifPPT; ?>"></input></td>
+        <td>开启后置顶文章为幻灯片模式</td>
       </tr>
       </table>
       <br/>

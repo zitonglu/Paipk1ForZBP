@@ -301,7 +301,6 @@ body{
 }
 .single-left img,
 .list-left .media-body img{
-	display: block;
 	max-width: 100%;
 	height: auto;
 }

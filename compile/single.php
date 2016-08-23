@@ -38,7 +38,7 @@
 <?php } ?>
 		</div>
 		<div class="col-md-3 single-box hidden-xs hidden-sm">
-			<div class="single-right"><?php  include $this->GetTemplate('sidebar2');  ?></div>
+			<div class="single-right"><?php  include $this->GetTemplate('sidebar3');  ?></div>
 		</div>
 	</div>
 </div>

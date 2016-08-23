@@ -50,7 +50,7 @@ $randABC=rand(1,20);
   <div class="more-text-box" style="background-image:url(<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/images/rand/<?php  echo $randABC;  ?>.jpg)">
 <?php } ?>
       <p class="BMT-title">
-        <a href="<?php  echo $hotlist->Category->Url;  ?>" title="<?php  echo $hotlist->Category->Name;  ?>"><?php  echo $hotlist->Category->Name;  ?></a><br><br>近三个月被浏览 <?php  echo $hotlist->ViewNums;  ?>次</p><p class="more-text-title"><a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Title;  ?></a>
+        <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Category->Name;  ?>"><?php  echo $hotlist->Category->Name;  ?></a><br><br>近三个月被浏览 <?php  echo $hotlist->ViewNums;  ?>次</p><p class="more-text-title"><a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Title;  ?></a>
       </p>
     </div>
   </div>
