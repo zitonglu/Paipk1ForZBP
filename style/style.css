@@ -461,6 +461,11 @@ p.next-text{
 		font-size: 15px;
 		margin-bottom: 0px;
 	}
+	.comment-box,
+	.comment-post{
+		padding-left:10px;
+		padding-right:10px;
+	}
 }
 /*.single-right*/
 .widget{

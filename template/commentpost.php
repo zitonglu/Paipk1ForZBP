@@ -3,9 +3,9 @@
 </div>';die();?>
 <div class="comment-post">
 <h4><span class="glyphicon glyphicon-share-alt"></span>&nbsp;发表评论：</h4>
-<form class="form-horizontal more-margin" id="frmSumbit" target="_self" method="post" action="{$article.CommentPostUrl}">
-	<input type="hidden" name="inpId" id="inpId" value="{$article.ID}" />
-	<input type="hidden" name="inpRevID" id="inpRevID" value="0" />
+<form class="form-horizontal" id="frmSumbit" target="_self" method="post" action="{$article.CommentPostUrl}">
+<input type="hidden" name="inpId" id="inpId" value="{$article.ID}" />
+<input type="hidden" name="inpRevID" id="inpRevID" value="0" />
 	<div class="form-group">
 		<label for="inpName" class="col-sm-2 control-label">评论者(*)</label>
 		<div class="col-sm-10">
