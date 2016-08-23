@@ -43,7 +43,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
         <td><label for="nopic.jpg">默认图片设置</label></td>
         <td><input name="nopic.png" type="file"/>
           <input name="" type="Submit" class="button" value="上传默认图片"/></td>
-        <td>[240px*180px]-jpg格式</td>
+        <td>jpg格式</td>
       </tr>
     </form>
     <form enctype="multipart/form-data" method="post" action="save.php?type=shangjpg">
@@ -58,7 +58,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
 <?php } ?>
 <?php if ($act == 'config' || $act == ''){?><!--基本设置-->
 <?php
-if(isset($_POST['ifseo'])){
+if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifOutLink = $_POST['ifOutLink'];
   $zbp->Config('paipk1')->ifseo = $_POST['ifseo'];
   $zbp->Config('paipk1')->HomeKeywords = $_POST['HomeKeywords'];
@@ -67,11 +67,6 @@ if(isset($_POST['ifseo'])){
   $zbp->Config('paipk1')->baiduShare = $_POST['baiduShare'];
   $zbp->Config('paipk1')->CopyrightDescription = $_POST['CopyrightDescription'];
   $zbp->Config('paipk1')->baike = $_POST['baike'];
-
-  $zbp->Config('paipk1')->carousel2 = $_POST['carousel2'];
-  $zbp->Config('paipk1')->carousel3 = $_POST['carousel3'];
-  $zbp->Config('paipk1')->carousel4 = $_POST['carousel4'];
-  $zbp->Config('paipk1')->carousel5 = $_POST['carousel5'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -126,55 +121,6 @@ if(isset($_POST['ifseo'])){
         <td><input name="baike" type="text" style="width:98%" value="<?php echo $zbp->Config('paipk1')->baike; ?>">
           </input></td>
         <td>显示在每页底部</td>
-      </tr>
-
-      <tr>
-        <td scope="row"><strong>主页侧栏跟随</strong></td>
-        <td><input name="ifsidebar1" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifsidebar1; ?>">
-          </input></td>
-        <td>开启主页侧栏自动跟随</td>
-      </tr>
-      <tr>
-        <td scope="row"><strong>内容页侧栏跟随</strong></td>
-        <td><input name="ifsidebar2" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifsidebar2; ?>">
-          </input></td>
-        <td>开启内容页页侧栏自动跟随</td>
-      </tr>
-      <tr>
-        <td scope="row"><strong>首页幻灯片开关</strong></td>
-        <td><input name="ifcarousel" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifcarousel; ?>">
-          </input></td>
-        <td>开启关闭首页幻灯片模式</td>
-      </tr>
-      <tr>
-        <td scope="row">幻灯片默认图片URL</td>
-        <td><textarea name="carousel0" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->carousel0; ?></textarea></td>
-        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
-      </tr>
-      <tr>
-        <td scope="row">幻灯片第二图片URL</td>
-        <td><textarea name="carousel1" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->carousel1; ?></textarea></td>
-        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
-      </tr>
-      <tr>
-        <td scope="row">幻灯片第三图片URL</td>
-        <td><textarea name="carousel2" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->carousel2; ?></textarea></td>
-        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
-      </tr>
-      <tr>
-        <td scope="row">幻灯片第四图片URL</td>
-        <td><textarea name="carousel3" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->carousel3; ?></textarea></td>
-        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
-      </tr>
-      <tr>
-        <td scope="row">幻灯片第五图片URL</td>
-        <td><textarea name="carousel4" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->carousel4; ?></textarea></td>
-        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
-      </tr>
-      <tr>
-        <td scope="row">幻灯片第六图片URL</td>
-        <td><textarea name="carousel5" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->carousel5; ?></textarea></td>
-        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       </table>
       <br/>

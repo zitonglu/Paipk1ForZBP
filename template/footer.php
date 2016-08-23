@@ -71,7 +71,7 @@
             <h4 class="modal-title" id="myModalLabel">谢谢您的打赏</h4>
           </div>
           <div class="modal-body">
-            <img src="{$host}zb_users/theme/{$theme}/include/shang.png" class="img-responsive center-block" alt="打赏图片">
+            <img src="{$host}zb_users/theme/{$theme}/include/shang.jpg" class="img-responsive center-block" alt="打赏图片">
             <p class="text-center weixin-share-p">打开微信，点击底部的“发现”，<br>使用“扫一扫”即可将请我喝可乐</p>
             {if $zbp->Config('paipk1')->baiduShare!=""}{$zbp->Config('paipk1')->baiduShare}{/if}
           </div>

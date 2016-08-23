@@ -42,11 +42,18 @@ $zbp->Config('paipk1')->Version = '1.0';
 $zbp->SaveConfig('paipk1');
 }
 
+//定义特色图片
+function paipk1_teSeTuPian(){
+	global $zbp,$article;
+	echo '<div><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片链接地址:</label><br /><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" alt="暂无图片" style="max-width:190px" /></div>';
+}
+
 //重建模块首先加载项目
 function paipk1_rebuild_Main() {
 	global $zbp;
 	$zbp->RegBuildModule('comments','paipk1_side_comm');
 	$zbp->RegBuildModule('archives','paipk1_side_archives');
+	$zbp->RegBuildModule('previous','paipk1_side_previous');
 }
 
 //侧栏评论
@@ -123,10 +130,32 @@ function paipk1_side_archives() {
 	return $s;
 }
 
-//定义特色图片
-function paipk1_teSeTuPian(){
-	global $zbp,$article;
-	echo '<div><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片链接地址:</label><br /><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" alt="暂无图片" style="max-width:190px" /></div>';
+// 侧栏带图片的最新文章
+// 有缩略图地址的先判断地址路径；
+// 没有的找到文章中第一个图片；
+// 实在没有就用缩略图；
+function paipk1_side_previous() {
+	global $zbp;
+	$i = $zbp->modulesbyfilename['previous']->MaxLi;
+	if ($i == 0) $i = 10;
+	$articles = $zbp->GetArticleList('*', array(array('=', 'log_Type', 0), array('=', 'log_Status', 0)), array('log_PostTime' => 'DESC'), $i, null,false);
+	$s = '<ul>';
+	foreach ($articles as $article) {
+	$clsjtp=rand(1,20);
+	$pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
+	$content = $article->Content;
+	preg_match_all($pattern,$content,$matchContent);
+	if ($article->Metas->paipk1_teSeTuPian!='') {
+		$clsjtp=$article->Metas->paipk1_teSeTuPian;
+	}elseif(isset($matchContent[1][0])){
+		$clsjtp=$matchContent[1][0];
+	}else{
+		$clsjtp="{$zbp->host}zb_users/theme/paipk1/images/rand/$clsjtp.jpg";
+	}
+	$s .= '<li><a href="' . $article->Url. '" title="' . $article->Title. '"><img src="' .$clsjtp. '" alt="' . $article->Title. '"/><span>' . $article->Title. '</span></a></li>';
+	}
+	$s .= '</ul>';
+	return $s;	
 }
 
 function UninstallPlugin_paipk1(){
