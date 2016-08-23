@@ -23,7 +23,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
     <a href="http://www.paipk.com/" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
   </div>
   <div id="divMain2">
-<?php if ($act == 'base' || $act == 'bjjpg' || $act == 'shangjpg'){?><!--图片设置-->
+<?php if ($act == 'base' || $act == 'shangjpg'){?><!--图片设置-->
     <table width="100%" border="1" width="100%" class="tableBorder">
     <tr>
       <th scope="col" height="32" width="150px">配置项</th>
@@ -36,14 +36,6 @@ require $blogpath . 'zb_system/admin/admin_top.php';
         <td><input name="logo.png" type="file"/>
           <input name="" type="Submit" class="button" value="上传LOGO图片"/></td>
         <td>png格式</td>
-      </tr>
-    </form>
-    <form enctype="multipart/form-data" method="post" action="save.php?type=bjjpg">
-      <tr>
-        <td><label for="nopic.jpg">默认图片设置</label></td>
-        <td><input name="nopic.png" type="file"/>
-          <input name="" type="Submit" class="button" value="上传默认图片"/></td>
-        <td>jpg格式</td>
       </tr>
     </form>
     <form enctype="multipart/form-data" method="post" action="save.php?type=shangjpg">

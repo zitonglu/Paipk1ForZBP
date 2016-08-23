@@ -155,7 +155,7 @@ function paipk1_side_previous() {
 	$s .= '<li><a href="' . $article->Url. '" title="' . $article->Title. '"><img src="' .$clsjtp. '" alt="' . $article->Title. '"/><span>' . $article->Title. '</span></a></li>';
 	}
 	$s .= '</ul>';
-	return $s;	
+	return $s;
 }
 
 function UninstallPlugin_paipk1(){
