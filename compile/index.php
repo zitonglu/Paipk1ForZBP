@@ -9,16 +9,19 @@
 			<?php  include $this->GetTemplate('sidebar');  ?>
 		</div>
 		<div class="col-md-7">
-<?php if ($type=='index'&&$page=='1'&&) { ?> 
-{if}
+<?php if ($type=='index'&&$page=='1') { ?> 
+<?php } ?>
+		<div class="list-left">
+			<ul class="media-list">
 			<?php  foreach ( $articles as $article) { ?>
-			{if $article.IsTop}
+			<?php if ($article->IsTop) { ?>
 			<?php  include $this->GetTemplate('post-istop');  ?>
 			<?php }else{  ?>
 			<?php  include $this->GetTemplate('post-multi');  ?>
 			<?php } ?>
 			<?php }   ?>
-
+			</ul>
+		</div>
 			<?php  include $this->GetTemplate('pagebar');  ?>
 		</div>
 		<div class="col-md-3 single-box hidden-xs hidden-sm">

@@ -1,9 +1,48 @@
-<div class="post multi">
-	<h4 class="post-date"><?php  echo $article->Time('Y年m月d日');  ?></h4>
-	<h2 class="post-title"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></h2>
-	<div class="post-body"><?php  echo $article->Intro;  ?></div>
-	<h5 class="post-tags"></h5>
-	<h6 class="post-footer">
-		作者:<?php  echo $article->Author->StaticName;  ?> | 分类:<?php  echo $article->Category->Name;  ?> | 浏览:<?php  echo $article->ViewNums;  ?> | 评论:<?php  echo $article->CommNums;  ?>
-	</h6>
-</div>
+
+<?php 
+    SF_img1::getPics($article,190,120,4);
+ ?>
+<?php if ($article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!='') { ?>
+<li class="media">
+	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a><?php if ($article->Alias!="") { ?><small><?php  echo $article->Alias;  ?></small><?php } ?></h4>
+	<div class="media-left">
+	<?php 
+	if($article->Metas->paipk1_teSeTuPian!=""){
+		$bgtURL=$article->Metas->paipk1_teSeTuPian;
+	}else{
+		$bgtURL=$article->sf_img[0];
+	}
+	 ?>
+		<div class="media-box" style="background-image:url(<?php  echo $bgtURL;  ?>)">
+			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('m');  ?>月<br><?php  echo $article->Time('d');  ?></a></div>
+			<div class="cat">
+				<a href="<?php  echo $article->Category->Url;  ?>" target="_blank" title="<?php  echo $article->Category->Name;  ?>"><?php  echo $article->Category->Name;  ?></a>
+			</div>
+		</div>
+	</div>
+	<div class="media-body">
+		<h6>
+		<?php  echo $article->Time('Y-m-d');  ?>&nbsp;<span class="glyphicon glyphicon-time"></span><?php  echo $article->Time('H:i');  ?>&nbsp;
+		<span class="glyphicon glyphicon-tags"></span>
+		<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
+		<span class="glyphicon glyphicon-eye-open"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a></span>
+		</h6>
+		<hr>
+		<?php  echo $article->Intro;  ?>
+	</div>
+</li>
+<?php }else{  ?>
+<li class="media">
+  <div class="media-body">
+  	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a><?php if ($article->Alias!="") { ?><small><?php  echo $article->Alias;  ?></small><?php } ?></h4>
+  	<h6>
+  	<?php  echo $article->Time('Y-m-d');  ?>&nbsp;<span class="glyphicon glyphicon-time"></span><?php  echo $article->Time('H:i');  ?>&nbsp;
+  	<span class="glyphicon glyphicon-tags"></span>
+  	<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
+  	<span class="glyphicon glyphicon-eye-open"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a></span>
+  	</h6>
+    <hr>
+    <?php  echo $article->Intro;  ?>
+  </div>
+</li>
+<?php } ?>

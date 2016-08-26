@@ -11,8 +11,10 @@
 			{template:sidebar}
 		</div>
 		<div class="col-md-7">
-{if $type=='index'&&$page=='1'&&} 
-{if}
+{if $type=='index'&&$page=='1'} 
+{/if}
+		<div class="list-left">
+			<ul class="media-list">
 			{foreach $articles as $article}
 			{if $article.IsTop}
 			{template:post-istop}
@@ -20,7 +22,8 @@
 			{template:post-multi}
 			{/if}
 			{/foreach}
-
+			</ul>
+		</div>
 			{template:pagebar}
 		</div>
 		<div class="col-md-3 single-box hidden-xs hidden-sm">

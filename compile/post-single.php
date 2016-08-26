@@ -5,7 +5,7 @@
   <p class="time">
     <?php  echo $article->Time('Y年m月d日 H:i');  ?>&nbsp;
     <?php if ($article->Tags) { ?>
-    标签：<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>
+    标签：<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>
     <?php }else{  ?><?php  echo $article->Author->StaticName;  ?>
     <?php } ?>
   </p>

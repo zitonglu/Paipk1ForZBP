@@ -7,7 +7,7 @@
   <p class="time">
     {$article.Time('Y年m月d日 H:i')}&nbsp;
     {if $article.Tags}
-    标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}">{$tag.Name}</a> {/foreach}
+    标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}
     {else}{$article.Author.StaticName}
     {/if}
   </p>
