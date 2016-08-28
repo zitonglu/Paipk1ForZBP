@@ -37,6 +37,7 @@ if(!$zbp->Config('paipk1')->HasKey('Version')){
 $zbp->Config('paipk1')->ifseo = '1';
 $zbp->Config('paipk1')->HomeKeywords = '拍拍看科技';
 $zbp->Config('paipk1')->CopyrightDescription = '本站发布文章版权归原作者所有，任何商业用途均须联系作者。如未经授权用作他处，作者将保留追究侵权者法律责任的权利。';
+$zbp->Config('paipk1')->topID = 1;
 }
 $zbp->Config('paipk1')->Version = '1.0';
 $zbp->SaveConfig('paipk1');

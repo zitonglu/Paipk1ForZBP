@@ -11,22 +11,49 @@
 			{template:sidebar}
 		</div>
 		<div class="col-md-7">
-{if $type=='index'&&$page=='1'} 
+{if $type=='index'&&$zbp->Config('paipk1')->ifPPT=='1'}
+		<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+{php}
+$stime = time();
+$ytime = 91*24*60*60;
+$ztime = $stime-$ytime;
+$order = array('log_ViewNums'=>'DESC');
+$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
+$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(4),'');
+$PPTNumber = 1;
+{/php}
+{foreach $RMarray as $hotlist}
+	{template:post-istop}
+{/foreach}
+			</div>
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+{if $zbp->Config('paipk1')->topID!=''}
+	{foreach GetList(1,null,null,null,null,null,array('is_related'=>$zbp->Config('paipk1')->topID)) as $topText}
+		<div class="istop">
+			<p><a href="{$topText.Url}" title="{$topText.Title}"><span class="glyphicon glyphicon-fire"></span>{$topText.Title}</a><b class="hidden-xs hidden-sm">{$topText.Time('Y-m-d')}</b></p>
+		</div>
+	{/foreach}
+{/if}
 {/if}
 		<div class="list-left">
 			<ul class="media-list">
 			{foreach $articles as $article}
-			{if $article.IsTop}
-			{template:post-istop}
-			{else}
-			{template:post-multi}
-			{/if}
+				{template:post-multi}
 			{/foreach}
 			</ul>
 		</div>
 			{template:pagebar}
 		</div>
-		<div class="col-md-3 single-box hidden-xs hidden-sm">
+		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
 			<div class="single-right">
 				{template:sidebar2}
 			</div>

@@ -60,6 +60,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->CopyrightDescription = $_POST['CopyrightDescription'];
   $zbp->Config('paipk1')->baike = $_POST['baike'];
   $zbp->Config('paipk1')->ifPPT = $_POST['ifPPT'];
+  $zbp->Config('paipk1')->topID = $_POST['topID'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -120,6 +121,12 @@ if(isset($_POST['ifOutLink'])){
         <td>
         <input name="ifPPT" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifPPT; ?>"></input></td>
         <td>开启后置顶文章为幻灯片模式</td>
+      </tr>
+      <tr>
+        <td scope="row">置顶文章</td>
+        <td><input name="topID" type="text" style="width:30%" value="<?php echo $zbp->Config('paipk1')->topID; ?>">
+          </input></td>
+        <td>输入置顶文章的ID数字</td>
       </tr>
       </table>
       <br/>
