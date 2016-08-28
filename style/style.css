@@ -472,6 +472,7 @@ p.next-text{
 /*.single-right*/
 .widget{
 	margin-bottom: 10px;
+	overflow:hidden;
 }
 .widget h5{
 	margin: 0px;
@@ -483,6 +484,7 @@ p.next-text{
 }
 .widget>div{
 	padding:10px;
+	overflow:hidden;
 }
 #tbCalendar{
 	margin: 0 auto;

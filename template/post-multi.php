@@ -16,7 +16,8 @@
 	}
 	{/php}
 		<div class="media-box" style="background-image:url({$bgtURL})">
-			<div class="tim"><a href="{$article.Url}">{$article.Time('m')}月<br>{$article.Time('d')}</a></div>
+			<div class="tim"><a href="{$article.Url}">{$article.Time('m')}月<br>{$article.Time('d')}</a>
+			</div>
 			<div class="cat">
 				<a href="{$article.Category.Url}" target="_blank" title="{$article.Category.Name}">{$article.Category.Name}</a>
 			</div>
@@ -31,6 +32,7 @@
 		</h6>
 		<hr>
 		{$article.Intro}
+		<p class="clearfix"></p>
 	</div>
 </li>
 {else}
@@ -45,6 +47,7 @@
   	</h6>
     <hr>
     {$article.Intro}
+    <p class="clearfix"></p>
   </div>
 </li>
 {/if}

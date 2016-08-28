@@ -14,7 +14,8 @@
 	}
 	 ?>
 		<div class="media-box" style="background-image:url(<?php  echo $bgtURL;  ?>)">
-			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('m');  ?>月<br><?php  echo $article->Time('d');  ?></a></div>
+			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('m');  ?>月<br><?php  echo $article->Time('d');  ?></a>
+			</div>
 			<div class="cat">
 				<a href="<?php  echo $article->Category->Url;  ?>" target="_blank" title="<?php  echo $article->Category->Name;  ?>"><?php  echo $article->Category->Name;  ?></a>
 			</div>
@@ -29,6 +30,7 @@
 		</h6>
 		<hr>
 		<?php  echo $article->Intro;  ?>
+		<p class="clearfix"></p>
 	</div>
 </li>
 <?php }else{  ?>
@@ -43,6 +45,7 @@
   	</h6>
     <hr>
     <?php  echo $article->Intro;  ?>
+    <p class="clearfix"></p>
   </div>
 </li>
 <?php } ?>

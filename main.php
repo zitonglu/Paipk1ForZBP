@@ -114,7 +114,7 @@ if(isset($_POST['ifOutLink'])){
       </tr>
       <tr>
         <td scope="row">百度分享代码</td>
-        <td><textarea name="baiduShare" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->Share; ?></textarea></td>
+        <td><textarea name="baiduShare" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->baiduShare; ?></textarea></td>
         <td>相应处会调用分享代码</td>
       </tr>
       <tr>
