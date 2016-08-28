@@ -13,6 +13,10 @@
   </p>
   {$article.Content}
 
+  {if $zbp->Config('paipk1')->PageAD1!=""}
+  <div class="center-block singleAD">{$zbp->Config('paipk1')->PageAD1}</div>
+  {/if}
+
   {if $article.Prev}<p class="next-pre-text pre-text">上一篇：<a href="{$article.Prev.Url}" title="{$article.Prev.Title}">{$article.Prev.Title}</a></p>{/if}
   {if $article.Next}<p class="next-pre-text next-text">下一篇：<a href="{$article.Next.Url}" title="{$article.Next.Title}">{$article.Next.Title}</a></p>{/if}
 </div>
@@ -58,6 +62,10 @@ $randABC=rand(1,20);
 {/foreach}
   <div class="clearfix"></div>
 </div>
+
+{if $zbp->Config('paipk1')->PageAD2!=""}
+<div class="hidden-xs hidden-sm">{$zbp->Config('paipk1')->PageAD2}</div>
+{/if}
 
 {if !$article.IsLock}
 {template:comments}		

@@ -11,6 +11,10 @@
   </p>
   <?php  echo $article->Content;  ?>
 
+  <?php if ($zbp->Config('paipk1')->PageAD1!="") { ?>
+  <div class="center-block singleAD"><?php  echo $zbp->Config('paipk1')->PageAD1;  ?></div>
+  <?php } ?>
+
   <?php if ($article->Prev) { ?><p class="next-pre-text pre-text">上一篇：<a href="<?php  echo $article->Prev->Url;  ?>" title="<?php  echo $article->Prev->Title;  ?>"><?php  echo $article->Prev->Title;  ?></a></p><?php } ?>
   <?php if ($article->Next) { ?><p class="next-pre-text next-text">下一篇：<a href="<?php  echo $article->Next->Url;  ?>" title="<?php  echo $article->Next->Title;  ?>"><?php  echo $article->Next->Title;  ?></a></p><?php } ?>
 </div>
@@ -56,6 +60,10 @@ $randABC=rand(1,20);
 <?php }   ?>
   <div class="clearfix"></div>
 </div>
+
+<?php if ($zbp->Config('paipk1')->PageAD2!="") { ?>
+<div class="hidden-xs hidden-sm"><?php  echo $zbp->Config('paipk1')->PageAD2;  ?></div>
+<?php } ?>
 
 <?php if (!$article->IsLock) { ?>
 <?php  include $this->GetTemplate('comments');  ?>		

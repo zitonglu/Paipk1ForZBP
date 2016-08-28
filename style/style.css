@@ -653,3 +653,12 @@ p.next-text{
 	float: right;
 	margin-right: 10px;
 }
+.singleAD{
+	overflow: hidden;
+	margin-top: 40px;
+}
+.singleAD>div>iframe{
+	display: block;
+	margin-right:auto !important;
+	margin-left:auto !important;
+}

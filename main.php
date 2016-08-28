@@ -96,6 +96,18 @@ if(isset($_POST['ifOutLink'])){
         <td>留空为副标题</td>
       </tr>
       <tr>
+        <td scope="row"><strong>首页幻灯片</strong></td>
+        <td>
+        <input name="ifPPT" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifPPT; ?>"></input></td>
+        <td>开启后置顶文章为幻灯片模式</td>
+      </tr>
+      <tr>
+        <td scope="row">置顶文章</td>
+        <td><input name="topID" type="text" style="width:15%" value="<?php echo $zbp->Config('paipk1')->topID; ?>">
+          </input></td>
+        <td>输入置顶文章的ID数字</td>
+      </tr>
+      <tr>
         <td scope="row">百度统计代码</td>
         <td><textarea name="baiduTJ" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->baiduTJ; ?></textarea></td>
         <td>代码添加至网站全部页面的head标签前</td>
@@ -116,18 +128,6 @@ if(isset($_POST['ifOutLink'])){
           </input></td>
         <td>显示在每页底部</td>
       </tr>
-      <tr>
-        <td scope="row"><strong>首页幻灯片</strong></td>
-        <td>
-        <input name="ifPPT" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifPPT; ?>"></input></td>
-        <td>开启后置顶文章为幻灯片模式</td>
-      </tr>
-      <tr>
-        <td scope="row">置顶文章</td>
-        <td><input name="topID" type="text" style="width:30%" value="<?php echo $zbp->Config('paipk1')->topID; ?>">
-          </input></td>
-        <td>输入置顶文章的ID数字</td>
-      </tr>
       </table>
       <br/>
       <input class="button" type="submit" value="保存设置" />
@@ -135,12 +135,9 @@ if(isset($_POST['ifOutLink'])){
 <?php } ?>
 <?php if ($act == 'advertisement'){?><!--广告设置-->
 <?php
-  if(isset($_POST['listAD1'])){
-    $zbp->Config('paipk1')->listAD1 = $_POST['listAD1'];
-    $zbp->Config('paipk1')->listAD2 = $_POST['listAD2'];
+  if(isset($_POST['PageAD1'])){
     $zbp->Config('paipk1')->PageAD1 = $_POST['PageAD1'];
     $zbp->Config('paipk1')->PageAD2 = $_POST['PageAD2'];
-    $zbp->Config('paipk1')->HomeAD1 = $_POST['HomeAD1'];
     $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
   }
@@ -153,16 +150,6 @@ if(isset($_POST['ifOutLink'])){
         <th scope="col" width="500px">使用说明</th>
       </tr>
       <tr>
-        <td scope="row">首页广告1</td>
-        <td><textarea name="listAD1" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->listAD1; ?></textarea></td>
-        <td>列表中间的广告</td>
-      </tr>
-      <tr>
-        <td scope="row">首页广告2</td>
-        <td><textarea name="listAD2" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->listAD2; ?></textarea></td>
-        <td>列表底部的广告</td>
-      </tr>
-      <tr>
         <td scope="row">文章底部广告1</td>
         <td><textarea name="PageAD1" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->PageAD1; ?></textarea></td>
         <td>文章底部的广告代码</td>
@@ -171,11 +158,6 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">文章底部广告2</td>
         <td><textarea name="PageAD2" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->PageAD2; ?></textarea></td>
         <td>文章底部的广告代码</td>
-      </tr>
-      <tr>
-        <td scope="row">简单搜索页面广告1</td>
-        <td><textarea name="HomeAD1" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->HomeAD1; ?></textarea></td>
-        <td>简单搜索页面的侧栏广告<br />仅在屏幕宽度超过1190px时显示</td>
       </tr>
       </table>
       <br/>
