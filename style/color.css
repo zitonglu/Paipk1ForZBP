@@ -234,8 +234,17 @@ body,
 	color:#98699b;
 }
 #divPrevious li a{
-	color: #777;
+	color: #fff;
 }
-#divPrevious li:hover a{
-	color:#98699b;
+#divPrevious p{
+	background-color: rgba(0, 0, 0,0.5);
+}
+.newsList{
+	border: solid 1px #eee;
+}
+#divPrevious li:hover .newsList{
+	border: solid 1px #98699b;
+}
+#divPrevious li:hover p{
+	background-color:#98699b;
 }

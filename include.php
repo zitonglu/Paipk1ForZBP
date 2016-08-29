@@ -153,7 +153,7 @@ function paipk1_side_previous() {
 	}else{
 		$clsjtp="{$zbp->host}zb_users/theme/paipk1/images/rand/$clsjtp.jpg";
 	}
-	$s .= '<li><a href="' . $article->Url. '" title="' . $article->Title. '"><img src="' .$clsjtp. '" alt="' . $article->Title. '"/><span>' . $article->Title. '</span></a></li>';
+	$s .= '<li><div class="newsList" style="background-image:url(' .$clsjtp. ')"><a href="' . $article->Url. '" title="' . $article->Title. '"><p>' . $article->Title. '</p></div></li>';
 	}
 	$s .= '</ul>';
 	return $s;
