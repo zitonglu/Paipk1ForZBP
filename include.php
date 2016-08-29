@@ -140,7 +140,7 @@ function paipk1_side_previous() {
 	$i = $zbp->modulesbyfilename['previous']->MaxLi;
 	if ($i == 0) $i = 10;
 	$articles = $zbp->GetArticleList('*', array(array('=', 'log_Type', 0), array('=', 'log_Status', 0)), array('log_PostTime' => 'DESC'), $i, null,false);
-	$s = '<ul>';
+	$s = '';
 	foreach ($articles as $article) {
 	$clsjtp=rand(1,20);
 	$pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
@@ -153,9 +153,8 @@ function paipk1_side_previous() {
 	}else{
 		$clsjtp="{$zbp->host}zb_users/theme/paipk1/images/rand/$clsjtp.jpg";
 	}
-	$s .= '<li><div class="newsList" style="background-image:url(' .$clsjtp. ')"><a href="' . $article->Url. '" title="' . $article->Title. '"><p>' . $article->Title. '</p></div></li>';
+	$s .= '<li><div class="newsList" style="background-image:url(' .$clsjtp. ')"><a href="' . $article->Url. '" title="' . $article->Title. '"><p>' . $article->Title. '</p></a></div></li>';
 	}
-	$s .= '</ul>';
 	return $s;
 }
 
