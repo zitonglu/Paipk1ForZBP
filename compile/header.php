@@ -23,9 +23,9 @@
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?php  echo $host;  ?>zb_system/xml-rpc/wlwmanifest.xml" />
 <?php } ?>
   <!--SEO代码优化-->
+  <title><?php  echo $title;  ?></title>
 <?php if ($zbp->Config('paipk1')->ifseo=="1") { ?>
 	<?php if ($type=='article') { ?>
-  <title><?php  echo $title;  ?></title>
   <?php 
     $aryTags = array();
     foreach($article->Tags as $key){
@@ -42,7 +42,6 @@
   <meta name="description" content="<?php  echo $description;  ?>"/>
   <meta name="author" content="<?php  echo $article->Author->StaticName;  ?>">
 <?php }elseif($type=='page') {  ?>
-  <title><?php  echo $title;  ?></title>
   <meta name="keywords" content="<?php  echo $title;  ?>,<?php  echo $name;  ?>"/>
   <?php 
     $description = preg_replace('/[\r\n\s]+/', ' ', trim(SubStrUTF8(TransferHTML($article->Content,'[nohtml]'),140)).'...');
@@ -50,12 +49,10 @@
   <meta name="description" content="<?php  echo $description;  ?>"/>
   <meta name="author" content="<?php  echo $article->Author->StaticName;  ?>">
 <?php }elseif($type=='index') {  ?>
-  <title><?php  echo $name;  ?><?php if ($page>'1') { ?>_第<?php  echo $pagebar->PageNow;  ?>页<?php } ?></title>
   <meta name="Keywords" content="<?php  echo $name;  ?>,<?php  echo $zbp->Config('paipk1')->HomeKeywords;;  ?>">
   <meta name="description" content="<?php if ($zbp->Config('paipk1')->HomeDescription=="") { ?><?php  echo $subname;  ?><?php }else{  ?><?php  echo $zbp->Config('paipk1')->HomeDescription;  ?><?php } ?>">
   <meta name="author" content="<?php  echo $zbp->members[1]->Name;  ?>">
 <?php }else{  ?>
-  <title><?php  echo $title;  ?>_<?php  echo $name;  ?></title>
   <meta name="Keywords" content="<?php  echo $title;  ?>,<?php  echo $name;  ?>">
   <meta name="description" content="<?php  echo $title;  ?>_<?php  echo $name;  ?>_当前是第<?php  echo $pagebar->PageNow;  ?>页">
   <meta name="author" content="<?php  echo $zbp->members[1]->Name;  ?>">

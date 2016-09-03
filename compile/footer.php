@@ -46,7 +46,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myshare">谢谢您的分享</h4>
+                <h4 class="modal-title" id="mythinks">谢谢您的分享</h4>
             </div>
             <div class="modal-body">
                 <img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=<?php  echo $article->Url;  ?>" class="img-responsive center-block" alt="文章网址的二维码">

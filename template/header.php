@@ -25,9 +25,9 @@
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{$host}zb_system/xml-rpc/wlwmanifest.xml" />
 {/if}
   <!--SEO代码优化-->
+  <title>{$title}</title>
 {if $zbp->Config('paipk1')->ifseo=="1"}
 	{if $type=='article'}
-  <title>{$title}</title>
   {php}
     $aryTags = array();
     foreach($article->Tags as $key){
@@ -44,7 +44,6 @@
   <meta name="description" content="{$description}"/>
   <meta name="author" content="{$article.Author.StaticName}">
 {elseif $type=='page'}
-  <title>{$title}</title>
   <meta name="keywords" content="{$title},{$name}"/>
   {php}
     $description = preg_replace('/[\r\n\s]+/', ' ', trim(SubStrUTF8(TransferHTML($article->Content,'[nohtml]'),140)).'...');
@@ -52,12 +51,10 @@
   <meta name="description" content="{$description}"/>
   <meta name="author" content="{$article.Author.StaticName}">
 {elseif $type=='index'}
-  <title>{$name}{if $page>'1'}_第{$pagebar.PageNow}页{/if}</title>
   <meta name="Keywords" content="{$name},{$zbp->Config('paipk1')->HomeKeywords;}">
   <meta name="description" content="{if $zbp->Config('paipk1')->HomeDescription==""}{$subname}{else}{$zbp->Config('paipk1')->HomeDescription}{/if}">
   <meta name="author" content="{$zbp.members[1].Name}">
 {else}
-  <title>{$title}_{$name}</title>
   <meta name="Keywords" content="{$title},{$name}">
   <meta name="description" content="{$title}_{$name}_当前是第{$pagebar.PageNow}页">
   <meta name="author" content="{$zbp.members[1].Name}">

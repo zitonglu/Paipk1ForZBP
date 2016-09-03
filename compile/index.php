@@ -62,7 +62,7 @@ $PPTNumber = 1;
 <div class="container-fluid bottom">
 	<div class="container"><div class="row">
 		<div class="col-sm-7 bottom-div">
-			<p>将这个网站<a href="#" class="bottom-a" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
+			<p>将这个网站<a class="bottom-a" href="#" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
 		</div>
 		<div class="btn-group col-sm-5 bottom-div">
 			<a class="btn btn-default" href="<?php  echo $pagebar->prevbutton;  ?>" title="更早的文章" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>

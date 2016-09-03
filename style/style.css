@@ -240,6 +240,10 @@ body{
 .single-body{
 	margin-bottom: 10px;
 }
+.single-body>.col-md-7{
+	padding-right: 5px;
+	padding-left: 5px;
+}
 .single-nav{
 	margin-bottom: 5px;
 }
