@@ -669,3 +669,18 @@ p.next-text{
 	margin-right:auto !important;
 	margin-left:auto !important;
 }
+.carousel-control.right,
+.carousel-control.left{
+	background-image:none !important;
+}
+#single-noside>.container>.row>.hidden-sm{
+	display: none;
+}
+@media (min-width: 992px){
+	#single-noside .single-left p,
+	#single-noside .single-left h1,
+	#single-noside .single-left div{
+		margin-left: 12.5%;
+		width: 75%;
+	}
+}
