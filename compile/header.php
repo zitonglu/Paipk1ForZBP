@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php  echo $language;  ?>" lang="<?php  echo $language;  ?>">
 <head>
 	<meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="<?php  echo $host;  ?>zb_system/script/common.js" type="text/javascript"></script>
   <script src="<?php  echo $host;  ?>zb_system/script/c_html_js_add.php" type="text/javascript"></script>
@@ -60,6 +60,9 @@
 <?php } ?>
 <!--百度统计-->
 <?php if ($zbp->Config('paipk1')->baiduTJ!="") { ?><?php  echo $zbp->Config('paipk1')->baiduTJ;  ?><?php } ?>
-
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 <?php  echo $header;  ?>
 </head>

@@ -35,11 +35,10 @@ $PPTNumber = 1;
 			</a>
 		</div>
 <?php if ($zbp->Config('paipk1')->topID!='') { ?>
-	<?php  foreach ( GetList(1,null,null,null,null,null,array('is_related'=>$zbp->Config('paipk1')->topID)) as $topText) { ?>
+	<?php  $topText=GetPost((int)$zbp->Config('paipk1')->topID);;  ?>
 		<div class="istop">
 			<p><a href="<?php  echo $topText->Url;  ?>" title="<?php  echo $topText->Title;  ?>"><span class="glyphicon glyphicon-fire"></span><?php  echo $topText->Title;  ?></a><b class="hidden-xs hidden-sm"><?php  echo $topText->Time('Y-m-d');  ?></b></p>
 		</div>
-	<?php }   ?>
 <?php } ?>
 <?php } ?>
 		<div class="list-left">
