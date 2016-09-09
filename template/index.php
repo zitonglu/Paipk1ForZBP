@@ -37,11 +37,10 @@ $PPTNumber = 1;
 			</a>
 		</div>
 {if $zbp->Config('paipk1')->topID!=''}
-	{foreach GetList(1,null,null,null,null,null,array('is_related'=>$zbp->Config('paipk1')->topID)) as $topText}
+	{$topText=GetPost((int)$zbp->Config('paipk1')->topID);}
 		<div class="istop">
 			<p><a href="{$topText.Url}" title="{$topText.Title}"><span class="glyphicon glyphicon-fire"></span>{$topText.Title}</a><b class="hidden-xs hidden-sm">{$topText.Time('Y-m-d')}</b></p>
 		</div>
-	{/foreach}
 {/if}
 {/if}
 		<div class="list-left">
