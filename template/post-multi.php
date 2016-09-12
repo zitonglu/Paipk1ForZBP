@@ -37,7 +37,7 @@
 </li>
 {else}
 <li class="media">
-  <div class="media-body">
+  <div>
   	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a>{if $article->Alias!=""}<small>{$article->Alias}</small>{/if}</h4>
   	<h6>
   	{$article.Time('Y-m-d')}&nbsp;<span class="glyphicon glyphicon-time"></span>{$article.Time('H:i')}&nbsp;
