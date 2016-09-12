@@ -45,7 +45,8 @@ body{
 .post-box,
 .more-text-box,
 .media-box,
-.newsList{
+.newsList,
+.singleTopAD{
 	overflow: hidden;
 	background-repeat:no-repeat;
 	background-position:center center;
@@ -683,4 +684,7 @@ p.next-text{
 		margin-left: 12.5%;
 		width: 75%;
 	}
+}
+.singleLogo{
+	margin-left: 20px;
 }

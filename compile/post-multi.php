@@ -35,7 +35,7 @@
 </li>
 <?php }else{  ?>
 <li class="media">
-  <div class="media-body">
+  <div>
   	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a><?php if ($article->Alias!="") { ?><small><?php  echo $article->Alias;  ?></small><?php } ?></h4>
   	<h6>
   	<?php  echo $article->Time('Y-m-d');  ?>&nbsp;<span class="glyphicon glyphicon-time"></span><?php  echo $article->Time('H:i');  ?>&nbsp;
