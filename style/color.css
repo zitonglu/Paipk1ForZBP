@@ -91,6 +91,13 @@ body,
 .widget{
 	background-color: #f8f8f8;
 }
+.single-left h3,
+.single-left h4,
+.single-left h5,
+.single-left h6{
+	color: #23527c;
+	border-color:#23527c;
+}
 @media (max-width: 749px){
 	#single,
 	.single-left,

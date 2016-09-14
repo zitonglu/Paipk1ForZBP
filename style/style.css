@@ -276,6 +276,16 @@ body{
 	line-height: 30px;
 	text-align: center;
 }
+.single-left h3,
+.single-left h4,
+.single-left h5,
+.single-left h6{
+	margin: 30px 0px 10px;
+	padding-bottom: 5px;
+	font-size: 18px;
+	font-weight: 800;
+	border-bottom:1px solid;
+}
 .Subtitle{
 	margin-top:-5px;
 	margin-bottom: 20px;
