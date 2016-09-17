@@ -88,6 +88,14 @@ body{
 	border-style:solid;
 	border-width:6px;
 }
+.post-nopic{
+	padding: 2px 9px 0px;
+}
+.post-nopic>h4{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 .cat{
 	position: relative;
 	float: right;
@@ -339,7 +347,9 @@ p.next-text{
 .more-text-box p a:hover,
 .more-text-box p a:focus,
 .istop p a:hover,
-.istop p a:focus{
+.istop p a:focus,
+.post-nopic a:hover,
+.post-nopic a:focus{
 	text-decoration: none;
 }
 .more-share{
@@ -630,7 +640,9 @@ p.next-text{
 	}
 }
 .list-left a,
-.list-left a:hover{
+.list-left a:hover,
+.post-nopic a,
+.post-nopic a:hover{
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
 	-ms-transition: all .3s;

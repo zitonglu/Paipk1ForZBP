@@ -11,7 +11,7 @@
 			{template:sidebar}
 		</div>
 		<div class="col-md-7">
-{if $type=='index'&&$zbp->Config('paipk1')->ifPPT=='1'}
+{if $zbp->Config('paipk1')->ifPPT=='1'}
 		<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 {php}
@@ -60,16 +60,4 @@ $PPTNumber = 1;
 	</div>
 </div>
 
-<div class="container-fluid bottom">
-	<div class="container"><div class="row">
-		<div class="col-sm-7 bottom-div">
-			<p>将这个网站<a class="bottom-a" href="#" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
-		</div>
-		<div class="btn-group col-sm-5 bottom-div">
-			<a class="btn btn-default" href="{$pagebar.prevbutton}" title="更早的文章" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>
-			<a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
-			<a class="btn btn-default" href="{$pagebar.nextbutton}" title="之后的文章" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div></div>
-</div>
 {template:footer}

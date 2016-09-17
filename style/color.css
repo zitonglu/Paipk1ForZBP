@@ -51,7 +51,7 @@ body,
 	border-top:2px dotted #ccc;
 }
 .tit>h3{
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.5);
 }
 .top-box .tit>h3{
 	background-color: rgba(0,0,0,0.5);
@@ -60,7 +60,7 @@ body,
 	background-color:rgba(0,0,0,0);
 }
 .tit>h3>a{
-	color:rgb(210, 210, 210);
+	color:rgb(240, 240, 240);
 }
 .post-box:hover .tit>h3>a{
 	color:rgb(255, 255, 255);
