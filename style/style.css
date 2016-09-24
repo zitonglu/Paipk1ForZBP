@@ -14,6 +14,9 @@ body{
 .list-left a{
 	text-decoration: none;
 }
+.tit>hr{
+	border-top:2px dotted transparent;
+}
 .post-box,
 .post-box:hover,
 .post-box .tim,
@@ -39,7 +42,7 @@ body{
 }
 .post-list,
 .left-list{
-	padding:5px;
+	padding:.3em;
 }
 .top-box,
 .post-box,
@@ -63,6 +66,7 @@ body{
 	position: relative;
 	height:120px;
 	width: 180px;
+	border: 1px solid transparent;
 }
 .media-box:after{
 	content:" ";
@@ -246,6 +250,9 @@ body{
 	margin: 0px;
 	padding: 2px 0px;
 }
+#single .breadcrumb{
+	background:transparent;
+}
 .single-body{
 	margin-bottom: 10px;
 }
@@ -290,10 +297,20 @@ body{
 .single-left h6{
 	margin: 30px 0px 10px;
 	padding-bottom: 5px;
-	font-size: 18px;
 	font-weight: 800;
 	border-bottom:1px solid;
 }
+.single-left h3{
+	font-size: 19px;
+}
+.single-left h4{
+	font-size: 18px;
+}
+.single-left h5,
+.single-left h6{
+	font-size: 17px;
+}
+
 .Subtitle{
 	margin-top:-5px;
 	margin-bottom: 20px;
@@ -709,4 +726,7 @@ p.next-text{
 }
 .singleLogo{
 	margin-left: 20px;
+}
+.blockquote{
+	font-size:14px;
 }

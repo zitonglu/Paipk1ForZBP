@@ -20,7 +20,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
   <div class="divHeader2"><?php echo $blogtitle;?></div>
   <div class="SubMenu">
     <?php paipk1_SubMenu($act);?>
-    <a href="http://www.paipk.com/" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
+    <a href="http://www.paipk.com/wiki/geziwiki.html" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
   </div>
   <div id="divMain2">
 <?php if ($act == 'base' || $act == 'shangjpg'){?><!--图片设置-->

@@ -28,6 +28,7 @@ if($PPTNumber==1){
 		</div>
 		<div class="tit">
 			<p></p>
+			<hr>
 			<h3><a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a></h3>
 		</div>
 	</div>

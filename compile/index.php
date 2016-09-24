@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-2 left-list hidden-xs hidden-sm">
-			<img class="img-responsive" src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt="<?php  echo $name;  ?>的网站LOGO">
+			<img class="img-responsive single-body" src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt="<?php  echo $name;  ?>的网站LOGO">
 			<?php  include $this->GetTemplate('sidebar');  ?>
 		</div>
 		<div class="col-md-7">

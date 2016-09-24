@@ -20,16 +20,4 @@
 		<!-- </div> -->
 	</div>
 </div>
-<div class="container-fluid bottom">
-	<div class="container"><div class="row">
-		<div class="col-sm-7 bottom-div">
-			<p>将这个网站<a class="bottom-a" href="#" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
-		</div>
-		<div class="btn-group col-sm-5 bottom-div">
-			<a class="btn btn-default" href="{$article.Prev.Url}" title="{$article.Prev.Title}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
-			<a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
-			<a class="btn btn-default" href="{$article.Next.Url}" title="{$article.Next.Title}" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div></div>
-</div>
 {template:footer}

@@ -26,6 +26,7 @@ if($PPTNumber==1){
 		</div>
 		<div class="tit">
 			<p></p>
+			<hr>
 			<h3><a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Title;  ?></a></h3>
 		</div>
 	</div>

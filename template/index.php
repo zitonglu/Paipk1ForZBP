@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-2 left-list hidden-xs hidden-sm">
-			<img class="img-responsive" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO">
+			<img class="img-responsive single-body" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO">
 			{template:sidebar}
 		</div>
 		<div class="col-md-7">
