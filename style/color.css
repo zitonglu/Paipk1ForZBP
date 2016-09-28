@@ -1,5 +1,4 @@
 /*for limiwu.com*/
-/*linear-gradient(45deg, #e5e5e5 0%, #f0f0f0 20%, #d6d6d6 30%, #F5F5F5 40%, #d9d9d9 50%, #ddd 60%, #e3e3e3 70%, #e3e3e3 80%, #eee 90%, #e6e6e6 100%)*/
 body,
 #single,
 .footer{
@@ -255,8 +254,13 @@ body,
 }
 /*导航条颜色*/
 .navbar-mycolor {
-  background-color: #428bca;
-  border-color: #357ebd;
+background:
+linear-gradient(#23527c 3%,#428bca 0,#428bca 50%,transparent 0) 0 0, 
+radial-gradient(circle closest-side, #428bca 53%, transparent 0) 0 0,
+radial-gradient(circle closest-side, #428bca 50%, transparent 0) 20px 0 transparent;
+background-size:40px 77px;
+background-repeat: repeat-x;
+border-color: transparent;
 }
 .navbar-mycolor .navbar-brand,
 .navbar-mycolor .navbar-text,
@@ -271,7 +275,9 @@ body,
 .navbar-mycolor .navbar-nav > .active > a:hover,
 .navbar-mycolor .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #23527c;
+  background:linear-gradient(#23527c 35px,transparent 100%);
+  /*background-size: 40px 80px;*/
+  /*background-color: #23527c;*/
 }
 .navbar-mycolor .navbar-nav > .disabled > a,
 .navbar-mycolor .navbar-nav > .disabled > a:hover,
