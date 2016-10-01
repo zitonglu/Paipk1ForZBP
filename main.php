@@ -24,7 +24,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
   </div>
   <div id="divMain2">
 <?php if ($act == 'base' || $act == 'shangjpg'){?><!--图片设置-->
-    <table width="100%" border="1" width="100%" class="tableBorder">
+    <table width="100%" border="1" class="tableBorder">
     <tr>
       <th scope="col" height="32" width="150px">配置项</th>
       <th scope="col">配置内容</th>
@@ -66,7 +66,7 @@ if(isset($_POST['ifOutLink'])){
 }
 ?>
     <form id="form-postdata" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php">
-      <table width="100%" border="1" width="100%" class="tableBorder">
+      <table width="100%" border="1" class="tableBorder" id="PPT">
       <tr>
         <th scope="col" height="32" width="150px">配置项</th>
         <th scope="col">配置内容</th>
@@ -75,19 +75,19 @@ if(isset($_POST['ifOutLink'])){
       <tr>
         <td scope="row"><strong>外部JS和CSS</strong></td>
         <td><input name="ifOutLink" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifOutLink; ?>">
-      </input></td>
+      </td>
       <td>开启后默认调用百度库</td>
       </tr>
       <tr>
         <td scope="row"><strong>网站SEO</strong></td>
         <td><input name="ifseo" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifseo; ?>">
-          </input></td>
+          </td>
         <td>用其他SEO插件请关闭</td>
       </tr>
       <tr>
         <td scope="row">首页关键词</td>
         <td><input name="HomeKeywords" type="text" style="width:96%" value="<?php echo $zbp->Config('paipk1')->HomeKeywords; ?>">
-          </input></td>
+          </td>
         <td>多个词汇用,隔开</td>
       </tr>
       <tr>
@@ -98,13 +98,13 @@ if(isset($_POST['ifOutLink'])){
       <tr>
         <td scope="row"><strong>首页幻灯片</strong></td>
         <td>
-        <input name="ifPPT" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifPPT; ?>"></input></td>
+        <input name="ifPPT" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifPPT; ?>"></td>
         <td>开启后置顶文章为幻灯片模式</td>
       </tr>
       <tr>
         <td scope="row">置顶文章</td>
         <td><input name="topID" type="text" style="width:15%" value="<?php echo $zbp->Config('paipk1')->topID; ?>">
-          </input></td>
+          </td>
         <td>输入置顶文章的ID数字</td>
       </tr>
       <tr>
@@ -125,7 +125,7 @@ if(isset($_POST['ifOutLink'])){
       <tr>
         <td scope="row">备案号</td>
         <td><input name="baike" type="text" style="width:96%" value="<?php echo $zbp->Config('paipk1')->baike; ?>">
-          </input></td>
+          </td>
         <td>显示在每页底部</td>
       </tr>
       </table>
@@ -144,7 +144,7 @@ if(isset($_POST['ifOutLink'])){
   }
 ?>
     <form id="form-postdata" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=advertisement">
-      <table width="100%" border="1" width="100%" class="tableBorder">
+      <table width="100%" border="1" class="tableBorder">
       <tr>
         <th scope="col" height="32" width="150px">配置项</th>
         <th scope="col">配置内容</th>
@@ -167,8 +167,53 @@ if(isset($_POST['ifOutLink'])){
       </tr>
       </table>
       <br/>
-      <input name="ok" class="button" type="submit" value="保存设置" />
+      <input class="button" type="submit" value="保存设置" />
     </form>
+<?php } ?>
+<?php if ($act == 'TopPPT'){?><!--顶部幻灯片-->
+<?php
+  if(count($_POST)>0){
+    $zbp->SaveConfig('paipk1');
+    $zbp->ShowHint('good');
+  }
+?>
+<input type="submit" value="增加一页" id="addTable"/> <input type="submit" value="删除选行" id="deleteTable"/>
+  <hr>
+  <form id="form-postdata" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=TopPPT">
+  <table>
+    <thead>
+      <tr>
+        <th>选项</th>
+        <th>增加图片URL地址(*)</th>
+        <th>链接地址(*)</th>
+        <th>图片名称</th>
+      </tr>
+    </thead>
+    <tbody id="PPT"></tbody>
+  </table><br/>
+  <input class="button" type="submit" value="保存设置" />
+  </form>
+  <p>*顶部幻灯片需在基础设置里面开启才能看到。默认的幻灯片是增加一个图片，点击这个图片会增加一个弹出式链接。所以前两项为必填项目，最后一项为选填项。</p>
+  <h2>此功能测试中未开发完善！</h2>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+// 幻灯片增加行代码
+$(document).ready(function(){
+$("#addTable").click(function(){
+var tr="<tr><td><input type=\"checkbox\" name=\"check\"/></td><td><input type=\"text\" value=\"\"></td><td><input type=\"text\" value=\"\"></td><td><input type=\"text\" value=\"\"></td></tr>";
+$("#PPT").append(tr);
+});
+$("#deleteTable").click(function(){
+var check = document.getElementsByName("check");
+for(var i=0;i<check.length;i++){
+if(check[i].checked){
+document.getElementById('PPT').deleteRow(i);
+i--;
+}
+}
+});
+});
+</script>
 <?php } ?>
 <?php if ($act == 'byDesign'){?><!--个性定制-->
     <h3 style="margin-top:30px">定制页面</h3>

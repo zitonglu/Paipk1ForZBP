@@ -17,10 +17,11 @@ function paipk1_SubMenu($id){
 		0 => array('基本设置', 'config', 'left', false),
 		1 => array('图片设置', 'base', 'left', false),
 		2 => array('广告设置', 'advertisement', 'left', false),
-		3 => array('个性定制', 'byDesign', 'left', false),
+		3 => array('顶部幻灯片', 'TopPPT', 'left', false),
+		4 => array('个性定制', 'byDesign', 'left', false),
 	);
 	foreach($arySubMenu as $k => $v){
-		echo '<a href="?act='.$v[1].'" '.($v[3]==true?'target="_blank"':'').'><span class="m-'.$v[2].' '.($id==$v[1]?'m-now':'').'">'.$v[0].'</span></a>';
+		echo '<a href="?act='.$v[1].'" '.($v[4]==true?'target="_blank"':'').'><span class="m-'.$v[2].' '.($id==$v[1]?'m-now':'').'">'.$v[0].'</span></a>';
 	}
 }
 
