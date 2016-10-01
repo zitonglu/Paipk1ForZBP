@@ -293,7 +293,8 @@ border-color: transparent;
 .navbar-mycolor .navbar-toggle,
 .navbar-mycolor .navbar-collapse,
 .navbar-mycolor .navbar-form {
-  border-color: transparent;
+  border-color: #23527c;
+border-color: transparent;
 }
 .navbar-mycolor .navbar-nav > .open > a,
 .navbar-mycolor .navbar-nav > .open > a:hover,
