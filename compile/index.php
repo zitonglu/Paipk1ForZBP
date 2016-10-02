@@ -13,6 +13,9 @@
 		<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 <?php 
+if(is_file($zbp->path.'zb_users/theme/paipk1/plugin/out.html')){
+	include $zbp->path.'zb_users/theme/paipk1/plugin/out.html';
+}else{
 $stime = time();
 $ytime = 91*24*60*60;
 $ztime = $stime-$ytime;
@@ -20,10 +23,11 @@ $order = array('log_ViewNums'=>'DESC');
 $where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
 $RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(4),'');
 $PPTNumber = 1;
+foreach ($RMarray as $hotlist){
+	include $this->GetTemplate('post-istop');
+	}
+}
  ?>
-<?php  foreach ( $RMarray as $hotlist) { ?>
-	<?php  include $this->GetTemplate('post-istop');  ?>
-<?php }   ?>
 			</div>
 			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -39,7 +43,7 @@ $PPTNumber = 1;
 		<div class="istop">
 			<p><a href="<?php  echo $topText->Url;  ?>" title="<?php  echo $topText->Title;  ?>"><span class="glyphicon glyphicon-fire"></span><?php  echo $topText->Title;  ?></a><b class="hidden-xs hidden-sm"><?php  echo $topText->Time('Y-m-d');  ?></b></p>
 		</div>
-<?php } ?>
+	<?php } ?>
 <?php } ?>
 		<div class="list-left">
 			<ul class="media-list">

@@ -172,9 +172,44 @@ if(isset($_POST['ifOutLink'])){
 <?php } ?>
 <?php if ($act == 'TopPPT'){?><!--顶部幻灯片-->
 <?php
-  if(count($_POST)>0){
-    $zbp->SaveConfig('paipk1');
-    $zbp->ShowHint('good');
+if($_POST){
+  $rules = array();
+  $rule = array();
+  $i=0;$Y=-1;
+  $li='<div class="item"><a href="-aurl-" target="_blank"><img src="-picurl-" alt="-pictitle-" /></a></div>';
+  $tr='<tr><td><input type="checkbox" name="check"/></td><td><input name="picurl-id-" type="text" value="-picurl-" required="required"></td><td><input name="aurl-id-" type="text" value="-aurl-" required="required"></td><td><input name="pictitle-id-" type="text" value="-pictitle-"></td></tr>';
+  $curli = "";$curtr = "";$html = "";$alltr = "";$one="";
+foreach($_POST as $k=>$v){
+  if($i % 3 == 0){
+  $rule['picurl'] = (string)$v;
+  $curtr = str_replace("-picurl-",$rule["picurl"],$tr);
+  $curli = str_replace("-picurl-",$rule["picurl"],$li);
+  }
+  if($i % 3 == 1){
+  $rule['aurl'] = (string)$v;
+  $curtr = str_replace("-aurl-",$rule["aurl"],$curtr);
+  $curli = str_replace("-aurl-",$rule["aurl"],$curli);
+  }
+  if($i % 3 == 2){
+  $rule['pictitle'] = (string)$v;
+  $curtr = str_replace("-pictitle-",$rule["pictitle"],$curtr);
+  $curli = str_replace("-pictitle-",$rule["pictitle"],$curli);
+  $curtr = str_replace("-id-",$Y,$curtr);
+  $Y--;
+    if ($one=="") {
+      $curli = str_replace("class=\"item\"","class=\"item active\"",$curli);
+      $one="end";
+    }
+  $alltr .= $curtr;
+  $html .= $curli;
+  $rules[]=json_encode($rule);
+  }
+  $i++;
+}
+file_put_contents("plugin/alltr.html", $alltr);
+file_put_contents("plugin/out.html", $html);
+$zbp->SaveConfig('paipk1');
+$zbp->ShowHint('good');
   }
 ?>
 <input type="submit" value="增加一页" id="addTable"/> <input type="submit" value="删除选行" id="deleteTable"/>
@@ -189,18 +224,25 @@ if(isset($_POST['ifOutLink'])){
         <th>图片名称</th>
       </tr>
     </thead>
-    <tbody id="PPT"></tbody>
+    <tbody id="PPT">
+<?php
+  if(is_file('plugin/alltr.html')) {
+    include 'plugin/alltr.html';
+  }
+?>
+    </tbody>
   </table><br/>
   <input class="button" type="submit" value="保存设置" />
   </form>
-  <p>*顶部幻灯片需在基础设置里面开启才能看到。默认的幻灯片是增加一个图片，点击这个图片会增加一个弹出式链接。所以前两项为必填项目，最后一项为选填项。</p>
-  <h2>此功能测试中未开发完善！</h2>
+  <p>*顶部幻灯片需在基础设置里面开启才能看到。<br>默认的幻灯片是增加一个图片，点击这个图片会增加一个弹出式链接。所以前两项为必填项目，最后一项为选填项。</p>
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script>
 // 幻灯片增加行代码
 $(document).ready(function(){
+var i=0;
 $("#addTable").click(function(){
-var tr="<tr><td><input type=\"checkbox\" name=\"check\"/></td><td><input type=\"text\" value=\"\"></td><td><input type=\"text\" value=\"\"></td><td><input type=\"text\" value=\"\"></td></tr>";
+var tr="<tr><td><input type=\"checkbox\" name=\"check\"/></td><td><input name=\"picurl"+i+"\" type=\"text\" required=\"required\"></td><td><input name=\"aurl"+i+"\" type=\"text\" required=\"required\"></td><td><input name=\"pictitle"+i+"\" type=\"text\"></td></tr>";
+i++;
 $("#PPT").append(tr);
 });
 $("#deleteTable").click(function(){
