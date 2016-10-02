@@ -10,6 +10,9 @@
 	<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
 {php}
+if(is_file($zbp->path.'zb_users/theme/paipk1/plugin/out.html')){
+	include $zbp->path.'zb_users/theme/paipk1/plugin/out.html';
+}else{
 $stime = time();
 $ytime = 91*24*60*60;
 $ztime = $stime-$ytime;
@@ -17,10 +20,11 @@ $order = array('log_ViewNums'=>'DESC');
 $where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
 $RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(4),'');
 $PPTNumber = 1;
+foreach ($RMarray as $hotlist){
+	include $this->GetTemplate('post-istop');
+	}
+}
 {/php}
-{foreach $RMarray as $hotlist}
-{template:post-istop}
-{/foreach}
 		</div>
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

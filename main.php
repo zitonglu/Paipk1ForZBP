@@ -176,7 +176,7 @@ if($_POST){
   $rules = array();
   $rule = array();
   $i=0;$Y=-1;
-  $li='<div class="item"><a href="-aurl-" target="_blank"><img src="-picurl-" alt="-pictitle-" /></a></div>';
+  $li='<a class="item" href="-aurl-" target="_blank" title="-pictitle-"><div class="top-box" style="background-image:url(-picurl-);"></div></a>';
   $tr='<tr><td><input type="checkbox" name="check"/></td><td><input name="picurl-id-" type="text" value="-picurl-" required="required"></td><td><input name="aurl-id-" type="text" value="-aurl-" required="required"></td><td><input name="pictitle-id-" type="text" value="-pictitle-"></td></tr>';
   $curli = "";$curtr = "";$html = "";$alltr = "";$one="";
 foreach($_POST as $k=>$v){
