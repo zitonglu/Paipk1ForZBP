@@ -356,3 +356,15 @@ fieldset[disabled] .navbar-mycolor .btn-link:hover,
 fieldset[disabled] .navbar-mycolor .btn-link:focus {
   color: #23527c;
 }
+/*代码背景*/
+pre[class*="language-"]{
+background: #fff9c4;
+background-image: linear-gradient(#b3e5fc 50%,#fff9c4 0);
+background-size: auto 3em;
+background-origin: content-box;
+border-color: #b2ebf2;
+}
+div.prism-show-language > div.prism-show-language-label[data-language]{
+	color: #fff;
+	background-color: #1976d2;
+}
