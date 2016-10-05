@@ -89,7 +89,7 @@ body,
 .single-left,
 .list-left,
 .widget{
-	background-color: #f8f8f8;
+	background-color: #fff;
 	border:8px solid hsla(0,0%,100%,.2);
 	background-clip: padding-box;
 }
@@ -169,8 +169,15 @@ body,
 	}
 }
 .widget h5{
-	background-color:#e7e7e7;
 	color: #555;
+	background-color:#e7e7e7;
+	background-image: 
+radial-gradient(circle at 100% 150%, #e7e7e7 24%, white 25%, white 28%, #e7e7e7 29%, #e7e7e7 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 0    150%, #e7e7e7 24%, white 25%, white 28%, #e7e7e7 29%, #e7e7e7 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 50%  100%, white 10%, #e7e7e7 11%, #e7e7e7 23%, white 24%, white 30%, #e7e7e7 31%, #e7e7e7 43%, white 44%, white 50%, #e7e7e7 51%, #e7e7e7 63%, white 64%, white 71%, transparent 71%, transparent),
+radial-gradient(circle at 100% 50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%, white 20%, #e7e7e7 21%, #e7e7e7 30%, white 31%, white 35%, #e7e7e7 36%, #e7e7e7 45%, white 46%, white 49%, transparent 50%, transparent),
+radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%, white 20%, #e7e7e7 21%, #e7e7e7 30%, white 31%, white 35%, #e7e7e7 36%, #e7e7e7 45%, white 46%, white 49%, transparent 50%, transparent);
+	background-size:100px 50px;
 }
 #tbCalendar td:hover,
 #tbCalendar th:hover {
