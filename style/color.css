@@ -213,18 +213,28 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 .list-left{
 	color: #555;
 }
+@media (min-width: 749px){
+.list-left h4>a{
+	margin-left:-20px;
+	padding-left:20px;
+	background: linear-gradient(90deg,#428bca 7px, transparent 0,
+		transparent 8px,#428bca 0,#428bca 12px,transparent 0,
+		transparent 13px,#428bca 0,#428bca 16px,transparent 0);
+	background-origin:border-box;
+	}
+}
 .list-left h4 small{
 	color: #98699b;
 }
-.list-left .media-body h6 a,
-.list-left .media-body h6{
+.list-left .media h6 a,
+.list-left .media h6{
 	color: #777;
 }
-.list-left .media-body h6 a:hover{
+.list-left .media h6 a:hover{
 	color: #428bca;
 }
 .list-left>ul>li{
-	border-bottom:1px dotted #ddd;
+	border-bottom:.1em dashed #ddd;
 }
 .list-left>ul>li:last-child{
 	border-bottom:none;

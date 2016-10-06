@@ -30,7 +30,6 @@
 		{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
 		<span class="glyphicon glyphicon-eye-open"><a href="{$article.Url}">{$article.ViewNums}</a></span>
 		</h6>
-		<hr>
 		{$article.Intro}
 		<p class="clearfix"></p>
 	</div>
@@ -45,7 +44,6 @@
   	{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
   	<span class="glyphicon glyphicon-eye-open"><a href="{$article.Url}">{$article.ViewNums}</a></span>
   	</h6>
-    <hr>
     {$article.Intro}
     <p class="clearfix"></p>
   </div>

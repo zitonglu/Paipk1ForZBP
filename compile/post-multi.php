@@ -28,7 +28,6 @@
 		<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
 		<span class="glyphicon glyphicon-eye-open"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a></span>
 		</h6>
-		<hr>
 		<?php  echo $article->Intro;  ?>
 		<p class="clearfix"></p>
 	</div>
@@ -43,7 +42,6 @@
   	<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
   	<span class="glyphicon glyphicon-eye-open"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a></span>
   	</h6>
-    <hr>
     <?php  echo $article->Intro;  ?>
     <p class="clearfix"></p>
   </div>
