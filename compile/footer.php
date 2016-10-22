@@ -12,23 +12,20 @@
     </div></div>
 </div>
 <div class="container-fluid footer">
-    <div class="container">
-    <div class="footer-list">
-            <?php if ($zbp->Config('paipk1')->CopyrightDescription!="") { ?><p><?php  echo $zbp->Config('paipk1')->CopyrightDescription;  ?></p><?php } ?>
-            <p>
-                Copyright © 2016-2017 <a href="<?php  echo $hose;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>&nbsp;    
-                <?php if ($user->ID>0) { ?>
-                <a href="<?php  echo $host;  ?>zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
-                <?php }else{  ?>
-                <a href="<?php  echo $host;  ?>zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
-                <?php } ?>
-                <?php if ($zbp->Config('paipk1')->baike!="") { ?>&nbsp;<?php  echo $zbp->Config('paipk1')->baike;  ?>&nbsp;<?php } ?>
-                <?php  echo $copyright;  ?>&nbsp;
-Powered By <?php  echo $zblogphpabbrhtml;  ?>. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
-            </p>
-        </div>
-    </div>
+    <?php if ($zbp->Config('paipk1')->CopyrightDescription!="") { ?><p><?php  echo $zbp->Config('paipk1')->CopyrightDescription;  ?></p><?php } ?>
+    <p>
+        Copyright © 2016-2017 <a href="<?php  echo $hose;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>&nbsp;
+        <?php if ($user->ID>0) { ?>
+        <a href="<?php  echo $host;  ?>zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
+        <?php }else{  ?>
+        <a href="<?php  echo $host;  ?>zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
+        <?php } ?>
+        <?php if ($zbp->Config('paipk1')->baike!="") { ?>&nbsp;<?php  echo $zbp->Config('paipk1')->baike;  ?>&nbsp;<?php } ?>
+        <?php  echo $copyright;  ?>&nbsp;
+        Powered By <?php  echo $zblogphpabbrhtml;  ?>. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
+    </p>
 </div>
+<div class="hidden-xs top"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 <div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

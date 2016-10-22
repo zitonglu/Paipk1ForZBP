@@ -1,6 +1,6 @@
 
 <?php  include $this->GetTemplate('header');  ?>
-<body id="index-there">
+<body id="top">
 <div class="container"><?php  include $this->GetTemplate('nav');  ?></div>
 <div class="container">
 	<div class="row single-body">

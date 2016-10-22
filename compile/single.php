@@ -1,6 +1,6 @@
 
 <?php  include $this->GetTemplate('header');  ?>
-<body id="single">
+<body class="single" id="top">
 <!-- 导航 -->
 <div class="container">
 	<?php  include $this->GetTemplate('nav');  ?>

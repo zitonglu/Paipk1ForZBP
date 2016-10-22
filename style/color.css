@@ -76,13 +76,12 @@ body{
 .bottom-a:active{
 	color:rgb(251, 248, 0);
 }
-.footer a{
-	color: #777;
+.footer{
+	background:#212121; 
+	color:#bdbdbd;
 }
-@media (max-width: 749px){
-	.footer h5{
-		border-top: 1px dotted rgb(200, 200, 200);
-	}
+.footer a{
+	color:#777;
 }
 .single-left,
 .list-left,
