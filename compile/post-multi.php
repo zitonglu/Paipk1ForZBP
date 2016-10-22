@@ -3,7 +3,7 @@
     SF_img1::getPics($article,190,120,4);
  ?>
 <?php if ($article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!='') { ?>
-<li class="media">
+<li class="media" id="post-<?php  echo $article->ID;  ?>">
 	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a><?php if ($article->Alias!="") { ?><small><?php  echo $article->Alias;  ?></small><?php } ?></h4>
 	<div class="media-left">
 	<?php 
@@ -13,8 +13,10 @@
 		$bgtURL=$article->sf_img[0];
 	}
 	 ?>
-		<div class="media-box" style="background-image:url(<?php  echo $bgtURL;  ?>)">
-			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('m');  ?>月<br><?php  echo $article->Time('d');  ?></a>
+	<!-- style="background-image:url(<?php  echo $bgtURL;  ?>)" -->
+		<div class="media-box">
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img src="<?php  echo $bgtURL;  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('M');  ?><br><?php  echo $article->Time('d');  ?></a>
 			</div>
 			<div class="cat">
 				<a href="<?php  echo $article->Category->Url;  ?>" target="_blank" title="<?php  echo $article->Category->Name;  ?>"><?php  echo $article->Category->Name;  ?></a>

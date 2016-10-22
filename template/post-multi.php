@@ -5,7 +5,7 @@
     SF_img1::getPics($article,190,120,4);
 {/php}
 {if $article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!=''}
-<li class="media">
+<li class="media" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a>{if $article->Alias!=""}<small>{$article->Alias}</small>{/if}</h4>
 	<div class="media-left">
 	{php}
@@ -15,8 +15,10 @@
 		$bgtURL=$article->sf_img[0];
 	}
 	{/php}
-		<div class="media-box" style="background-image:url({$bgtURL})">
-			<div class="tim"><a href="{$article.Url}">{$article.Time('m')}月<br>{$article.Time('d')}</a>
+	<!-- style="background-image:url({$bgtURL})" -->
+		<div class="media-box">
+			<a href="{$article.Url}" title="{$article.title}"><img src="{$bgtURL}" alt="{$article.title}"></a>
+			<div class="tim"><a href="{$article.Url}">{$article.Time('M')}<br>{$article.Time('d')}</a>
 			</div>
 			<div class="cat">
 				<a href="{$article.Category.Url}" target="_blank" title="{$article.Category.Name}">{$article.Category.Name}</a>

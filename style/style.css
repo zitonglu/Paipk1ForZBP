@@ -68,18 +68,18 @@ body{
 	position: relative;
 	height:120px;
 	width: 180px;
-	border: 1px solid transparent;
+	border-radius:16px 0;
 }
-.media-box:after{
-	content:" ";
-	position:absolute;
-	top:0px;
-	left:0px;
-	right:0px;
-	bottom: 0px;
+.media-box>a>img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
 }
-.media-box:after,
-.media-box:hover:after,
+.media-box:hover>a>img{
+	transform:scale(.9,.9);
+}
+.media-box>a>img,
+.media-box:hover>a>img,
 #divPrevious li,
 #divPrevious li:hover,
 #divPrevious li p,
@@ -108,29 +108,25 @@ body{
 	white-space: nowrap;
 }
 .cat{
-	position: relative;
-	float: right;
-	padding: 2px 5px;
-	margin-right:-66px;
-	margin-top: 6px;
+	position:absolute;
+	top:0;
+	right:0;
+	padding:2px 5px;
 	overflow: hidden;
 	text-transform: uppercase;
 	max-width: 208px;
 	max-height: 24px;
-	z-index: 10;
 }
 .tim{
-	position: relative;
-	float: right;
+	position: absolute;
+	top: 22px;
+	right: 2px;
 	font-size: 28px;
 	font-weight: bold;
 	line-height:30px;
-	margin-top:30px;
 	padding: 5px;
 	text-align: right;
 	text-transform: uppercase;
-	width:73px;
-	z-index: 29;
 }
 .post-box .tim{
 	filter:alpha(Opacity=0);
@@ -172,14 +168,14 @@ body{
 	opacity: 1;
 }
 .tit>h3{
-	font-size: 18px;
-	margin-top: 5px;
+	font-size:18px;
+	margin-top:5px;
 	padding-left:10px;
 	padding-right:10px;
-	overflow: hidden;
-	height: 60px;
-	line-height: 26px;
-	text-align: right;
+	overflow:hidden;
+	height:60px;
+	line-height:24px;
+	text-align:right;
 }
 .top-box .tit>h3{
 	text-align:left;
