@@ -13,7 +13,6 @@
 		$bgtURL=$article->sf_img[0];
 	}
 	 ?>
-	<!-- style="background-image:url(<?php  echo $bgtURL;  ?>)" -->
 		<div class="media-box">
 			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img src="<?php  echo $bgtURL;  ?>" alt="<?php  echo $article->title;  ?>"></a>
 			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('M');  ?><br><?php  echo $article->Time('d');  ?></a>
