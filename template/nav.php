@@ -10,12 +10,14 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="{$host}" title="{$name}">{$name}</a>
+			<a class="navbar-brand visible-xs" href="{$host}">{$name}</a>
 		</div>
-
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right" id="divNavBar">
+			<ul class="nav navbar-nav" id="divNavBar">
 				{module:navbar}
+			</ul>
+			<ul class="nav navbar-nav navbar-right hidden-xs">
+				<li><a href="#" data-toggle="modal" data-target="#myshare"><i class="glyphicon glyphicon-qrcode"></i></a></li>
 			</ul>
 		</div>
 	</div>

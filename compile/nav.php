@@ -8,12 +8,14 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="<?php  echo $host;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>
+			<a class="navbar-brand visible-xs" href="<?php  echo $host;  ?>"><?php  echo $name;  ?></a>
 		</div>
-
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right" id="divNavBar">
+			<ul class="nav navbar-nav" id="divNavBar">
 				<?php  if(isset($modules['navbar'])){echo $modules['navbar']->Content;}  ?>
+			</ul>
+			<ul class="nav navbar-nav navbar-right hidden-xs">
+				<li><a href="#" data-toggle="modal" data-target="#myshare"><i class="glyphicon glyphicon-qrcode"></i></a></li>
 			</ul>
 		</div>
 	</div>
