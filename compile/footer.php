@@ -13,46 +13,22 @@
 </div>
 <div class="container-fluid footer">
     <div class="container">
-<?php if ($type=='index') { ?>
-        <div class="footer-list col-sm-2 col-md-1">
-            <h5>栏目</h5>
-            <ul><?php  if(isset($modules['catalog'])){echo $modules['catalog']->Content;}  ?></ul>
-        </div>
-        <div class="footer-list col-sm-2 col-md-1">
-            <h5>关于</h5>
-            <ul><?php  if(isset($modules['footerabout'])){echo $modules['footerabout']->Content;}  ?></ul>
-        </div>
-        <div class="footer-list col-sm-2 col-md-1">
-            <h5>联系</h5>
-            <ul><?php  if(isset($modules['footercontact'])){echo $modules['footercontact']->Content;}  ?></ul>
-        </div>
-        <div class="footer-list col-sm-2 col-md-1">
-            <h5>友情链接</h5>
-            <ul><?php  if(isset($modules['footerlinks'])){echo $modules['footerlinks']->Content;}  ?></ul>
-        </div>
-        <div class="footer-list col-sm-4 col-md-offset-3 col-md-5">
-            <h5>版权</h5>
-<?php }else{  ?>
     <div class="footer-list">
-<?php } ?>
             <?php if ($zbp->Config('paipk1')->CopyrightDescription!="") { ?><p><?php  echo $zbp->Config('paipk1')->CopyrightDescription;  ?></p><?php } ?>
             <p>
-                Copyright © 2016-2017 <a href="<?php  echo $hose;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>&nbsp;          
+                Copyright © 2016-2017 <a href="<?php  echo $hose;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>&nbsp;    
                 <?php if ($user->ID>0) { ?>
                 <a href="<?php  echo $host;  ?>zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
                 <?php }else{  ?>
                 <a href="<?php  echo $host;  ?>zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
                 <?php } ?>
-            </p>
-            <p>Powered By <?php  echo $zblogphpabbrhtml;  ?>. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a></p>
-            <p>
-            <?php if ($zbp->Config('paipk1')->baike!="") { ?><?php  echo $zbp->Config('paipk1')->baike;  ?>&nbsp;<?php } ?>
-            <?php  echo $copyright;  ?>
+                <?php if ($zbp->Config('paipk1')->baike!="") { ?>&nbsp;<?php  echo $zbp->Config('paipk1')->baike;  ?>&nbsp;<?php } ?>
+                <?php  echo $copyright;  ?>&nbsp;
+Powered By <?php  echo $zblogphpabbrhtml;  ?>. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
             </p>
         </div>
     </div>
 </div>
-
 <div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

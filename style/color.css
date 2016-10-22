@@ -1,6 +1,5 @@
 /*for limiwu.com*/
-body,
-#single{
+body{
 	background: 
 	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
 	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
@@ -92,12 +91,36 @@ body,
 	border:8px solid hsla(0,0%,100%,.2);
 	background-clip: padding-box;
 }
+.single-left h1{
+	color:#212121;
+}
+.single-left h2,
 .single-left h3,
 .single-left h4,
 .single-left h5,
 .single-left h6{
-	color: #23527c;
-	border-color:#23527c;
+	color:#428bca;
+	border-color:#428bca;
+}
+.single-left h2:before{
+border-radius:50%;
+border: 3px solid #428bca;
+}
+.single-left h3:before{
+border-radius:0 6px;
+background:#428bca;
+}
+.single-left h4:before{
+border-radius:6px 6px 0;
+border: 2px solid #428bca;
+}
+.single-left h5:before{
+border-radius:6px 0;
+border: 2px solid #428bca;
+}
+.single-left h6:before{
+border-radius:50%;
+background:#428bca;
 }
 @media (max-width: 749px){
 	#single,
@@ -106,10 +129,6 @@ body,
 		background-color:#f0f0f0;
 		background-image:none;
 	}
-}
-.single-left,
-.list-left{
-	color:rgb(51, 51, 51);
 }
 .Subtitle,
 .time{
@@ -209,9 +228,6 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 #divTags li:hover a{
 	color: rgb(245,245,245);
 }
-.list-left{
-	color: #555;
-}
 @media (min-width: 749px){
 .list-left h4>a{
 	margin-left:-20px;
@@ -253,20 +269,12 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 .istop a:hover{
 	color:#98699b;
 }
-#divPrevious li a{
-	color: #fff;
-}
-#divPrevious p{
-	background-color: rgba(0, 0, 0,0.5);
-}
-.newsList{
-	border: solid 1px #eee;
-}
-#divPrevious li:hover .newsList{
-	border: solid 1px #98699b;
+#divPrevious li:hover{
+	border-color:#98699b;
 }
 #divPrevious li:hover p{
 	background-color:#98699b;
+	color: #fff;
 }
 /*导航条颜色*/
 .navbar-mycolor {
@@ -374,11 +382,12 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 /*代码背景*/
 pre[class*="language-"]{
-background: #fff9c4;
-background-image: linear-gradient(#b3e5fc 50%,#fff9c4 0);
+background: #eee;
+background-image: linear-gradient(#fff 50%,transparent 0);
 background-size: auto 3em;
 background-origin: content-box;
 border-color: #b2ebf2;
+text-shadow:none;
 }
 div.prism-show-language > div.prism-show-language-label[data-language]{
 	color: #fff;

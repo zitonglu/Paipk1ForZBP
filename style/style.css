@@ -1,11 +1,6 @@
 body{
-	padding-top:70px;
-	font-family:"微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-@media (max-width: 749px){
-	body{
-		padding-top:55px;
-	}
+	padding-top:55px;
+	font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .cat>a:hover,
 .tit>p>a:hover,
@@ -48,7 +43,6 @@ body{
 .post-box,
 .more-text-box,
 .media-box,
-.newsList,
 .singleTopAD{
 	overflow: hidden;
 	background-repeat:no-repeat;
@@ -85,10 +79,10 @@ body{
 }
 .media-box:after,
 .media-box:hover:after,
+#divPrevious li,
+#divPrevious li:hover,
 #divPrevious li p,
-#divPrevious li:hover p,
-#divPrevious li .newsList,
-#divPrevious li:hover .newsList{
+#divPrevious li:hover p{
 	-webkit-transition:all 0.2s ease-in-out;
 	-moz-transition:all 0.2s ease-in-out;
 	-o-transition:all 0.2s ease-in-out;
@@ -303,26 +297,28 @@ body{
 	line-height: 30px;
 	text-align: center;
 }
+.single-left h2,
 .single-left h3,
 .single-left h4,
 .single-left h5,
 .single-left h6{
-	margin: 30px 0px 10px;
-	padding-bottom: 5px;
+	line-height: 1.5em;
 	font-weight: 800;
 	border-bottom:1px solid;
-}
-.single-left h3{
-	font-size: 19px;
-}
-.single-left h4{
 	font-size: 18px;
 }
-.single-left h5,
-.single-left h6{
-	font-size: 17px;
+.single-left h2:before,
+.single-left h3:before,
+.single-left h4:before,
+.single-left h5:before,
+.single-left h6:before{
+	content: '';
+	width:14px;
+	height:14px;
+	display: inline-block;
+	margin-right:6px;
+	position: relative;
 }
-
 .Subtitle{
 	margin-top:-5px;
 	margin-bottom: 20px;
@@ -611,6 +607,16 @@ p.next-text{
 	margin-bottom: 10px;
 	list-style-type: none;
 }
+#divPrevious li{
+	border: 1px solid white;
+}
+#divPrevious li img{
+	width:100%;
+	height:auto;
+}
+#divPrevious li p{
+	margin-bottom:0;
+}
 #divArchives li{
 	width: 49%;
 	display: inline-block;
@@ -626,17 +632,6 @@ p.next-text{
 }
 .tag-count{
 	font-size: 10px;
-}
-.newsList{
-	width: 100%;
-	height: 140px;
-}
-.newsList p{
-	margin-top: 116px;
-	padding-left: 3px;
-	height: 24px;
-	overflow: hidden;
-	font-size: 14px;
 }
 .list-left .media-left{
 	padding-right:20px;
