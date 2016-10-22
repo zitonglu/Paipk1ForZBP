@@ -4,11 +4,8 @@
 {template:header}
 <body class="single" id="top">
 <!-- 导航 -->
-<div class="container">
-	{template:nav}
-	{template:head-row}
-</div>
-
+<div class="container-fluid">{template:nav}</div>
+<div class="container">{template:head-row}</div>
 <div class="container hidden-xs single-nav">
 	<ol class="breadcrumb"><li><a href="{$host}">主页</a></li>
 {if $article.Type==ZC_POST_TYPE_ARTICLE}

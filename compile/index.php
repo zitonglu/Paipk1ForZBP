@@ -1,7 +1,7 @@
 
 <?php  include $this->GetTemplate('header');  ?>
 <body id="top">
-<div class="container"><?php  include $this->GetTemplate('nav');  ?></div>
+<div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-2 left-list hidden-xs hidden-sm">

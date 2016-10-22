@@ -2,11 +2,8 @@
 <?php  include $this->GetTemplate('header');  ?>
 <body class="single" id="top">
 <!-- 导航 -->
-<div class="container">
-	<?php  include $this->GetTemplate('nav');  ?>
-	<?php  include $this->GetTemplate('head-row');  ?>
-</div>
-
+<div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
+<div class="container"><?php  include $this->GetTemplate('head-row');  ?></div>
 <div class="container hidden-xs single-nav">
 	<ol class="breadcrumb"><li><a href="<?php  echo $host;  ?>">主页</a></li>
 <?php if ($article->Type==ZC_POST_TYPE_ARTICLE) { ?>

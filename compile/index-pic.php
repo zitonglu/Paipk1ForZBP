@@ -1,7 +1,7 @@
 
 <?php  include $this->GetTemplate('header');  ?>
 <body id="index-pic">
-<div class="container"><?php  include $this->GetTemplate('nav');  ?></div>
+<div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
 <div class="container body">
 <?php if ($zbp->Config('paipk1')->ifPPT=='1') { ?>
 <div class="col-md-8 col-sm-12 post-list">

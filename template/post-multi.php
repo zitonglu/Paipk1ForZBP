@@ -15,7 +15,6 @@
 		$bgtURL=$article->sf_img[0];
 	}
 	{/php}
-	<!-- style="background-image:url({$bgtURL})" -->
 		<div class="media-box">
 			<a href="{$article.Url}" title="{$article.title}"><img src="{$bgtURL}" alt="{$article.title}"></a>
 			<div class="tim"><a href="{$article.Url}">{$article.Time('M')}<br>{$article.Time('d')}</a>

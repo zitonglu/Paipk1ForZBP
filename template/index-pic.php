@@ -3,7 +3,7 @@
 </div>';die();?>
 {template:header}
 <body id="index-pic">
-<div class="container">{template:nav}</div>
+<div class="container-fluid">{template:nav}</div>
 <div class="container body">
 {if $zbp->Config('paipk1')->ifPPT=='1'}
 <div class="col-md-8 col-sm-12 post-list">

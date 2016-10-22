@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default navbar-fixed-top navbar-mycolor">
+<nav class="row navbar navbar-default navbar-mycolor">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -15,7 +15,7 @@
 				<?php  if(isset($modules['navbar'])){echo $modules['navbar']->Content;}  ?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
-				<li><a href="#" data-toggle="modal" data-target="#myshare"><i class="glyphicon glyphicon-qrcode"></i></a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myshare"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a></li>
 			</ul>
 		</div>
 	</div>
