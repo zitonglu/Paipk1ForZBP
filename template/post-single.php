@@ -5,11 +5,18 @@
   <h1>{$article.Title}</h1>
   {if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
   <p class="time">
-    {$article.Time('Y年m月d日 H:i')}&nbsp;
+    <i class="glyphicon glyphicon-time"></i>&nbsp;{$article.Time('Y-m-d H:i')}&nbsp;
+    <i class="glyphicon glyphicon-folder-open"></i>&nbsp;<a href="{$article.Category.Url}" title="{$article.Category.Name}" target="_blank">{$article.Category.Name}</a>&nbsp;
     {if $article.Tags}
-    标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}
-    {else}{$article.Author.StaticName}
+    <i class="glyphicon glyphicon-tags"></i>&nbsp;标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}
+    {else}<i class="glyphicon glyphicon-user"></i>&nbsp;{$article.Author.StaticName}
     {/if}
+    &nbsp;<i class="glyphicon glyphicon-eye-open"></i>&nbsp;{$article.ViewNums}&nbsp;
+    <i class="glyphicon glyphicon-comment"></i>&nbsp;
+    {if $article.CommNums<=0}
+    <a href="#SOHUCS" title="发表评论">发表评论</a>
+    {else}{$article.CommNums}{/if}&nbsp;
+    <i class="glyphicon glyphicon-qrcode"></i>&nbsp;<a href="#" role="button" data-toggle="modal" data-target="#myshare">二维码</a>
   </p>
   {$article.Content}
 
@@ -33,32 +40,28 @@
 </div>
 
 <div class="more-text">
-{php}
-$stime = time();
-$ytime = 91*24*60*60;
-$ztime = $stime-$ytime;
-$order = array('log_ViewNums'=>'DESC');
-$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(6),'');
-{/php}
-{foreach $RMarray as $hotlist}
+{foreach GetList(4,$article->Category->ID) as $hotlist}
 {php}
 SF_img1::getPics($hotlist,355,230,4);
 $randABC=rand(1,20);
 {/php}
-  <div class="col-md-4 col-sm-6">
+<div class="col-md-3 col-sm-6 more-text-box">
+  <a href="{$hotlist.Url}" title="{$hotlist.Title}">
 {if $hotlist.Metas.paipk1_teSeTuPian!=""}
-  <div class="more-text-box" style="background-image:url({$hotlist.Metas.paipk1_teSeTuPian})">
+  <img src="{$hotlist.Metas.paipk1_teSeTuPian}" alt="{$hotlist.title}">
 {elseif $hotlist->sf_img_count>=1}
-  <div class="more-text-box" style="background-image:url({$hotlist.sf_img[0]})">
+  <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.title}">
 {else}
-  <div class="more-text-box" style="background-image:url({$host}zb_users/theme/{$theme}/images/rand/{$randABC}.jpg)">
+  <img src="{$host}zb_users/theme/{$theme}/images/rand/{$randABC}.jpg" alt="{$hotlist.title}">
 {/if}
-      <p class="BMT-title">
-        <a href="{$hotlist.Url}" title="{$hotlist.Category.Name}">{$hotlist.Category.Name}</a><br><br>近三个月被浏览 {$hotlist.ViewNums}次</p><p class="more-text-title"><a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
-      </p>
-    </div>
-  </div>
+  </a>
+  <p class="BMT-title">
+    <a href="{$hotlist.Url}" title="{$hotlist.title}">{$hotlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$hotlist.ViewNums}次
+  </p>
+  <p class="more-text-title">
+    <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
+  </p>
+</div>
 {/foreach}
   <div class="clearfix"></div>
 </div>

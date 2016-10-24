@@ -3,7 +3,7 @@
 </div>';die();?>
 <div class="head row">
 	<div class="col-sm-4 hidden-xs">
-		<img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO" class="singleLogo">
+		<a href="{$host}" title="{$name}"><img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO" class="singleLogo"></a>
 	</div>
 	{if $zbp->Config('paipk1')->PageTop==""}
 	<div class="col-sm-5 col-sm-offset-3 col-md-4 col-md-offset-4 search-box hidden-xs">

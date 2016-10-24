@@ -1,5 +1,5 @@
 
-<div class="comment-post">
+<div class="comment-post" id="SOHUCS">
 <h4><span class="glyphicon glyphicon-share-alt"></span>&nbsp;发表评论：</h4>
 <form class="form-horizontal" id="frmSumbit" target="_self" method="post" action="<?php  echo $article->CommentPostUrl;  ?>">
 <input type="hidden" name="inpId" id="inpId" value="<?php  echo $article->ID;  ?>" />

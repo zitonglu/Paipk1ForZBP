@@ -6,23 +6,14 @@
 <!-- 导航 -->
 <div class="container-fluid">{template:nav}</div>
 <div class="container">{template:head-row}</div>
-<div class="container hidden-xs single-nav">
-	<ol class="breadcrumb"><li><a href="{$host}">主页</a></li>
-{if $article.Type==ZC_POST_TYPE_ARTICLE}
-	<li><a href="{$article.Category.Url}" title="{$article.Category.Name}" target="_blank">{$article.Category.Name}</a></li>
-    <li class="active">正文</li>
-{/if}
-	</ol>
-</div>
-
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">
-{if $article.Type==ZC_POST_TYPE_ARTICLE}
-{template:post-single}
-{else}
-{template:post-page}
-{/if}
+			{if $article.Type==ZC_POST_TYPE_ARTICLE}
+			{template:post-single}
+			{else}
+			{template:post-page}
+			{/if}
 		</div>
 		<div class="col-md-3 single-box hidden-xs hidden-sm">
 			<div class="single-right">{template:sidebar3}</div>

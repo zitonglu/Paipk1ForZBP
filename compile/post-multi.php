@@ -4,7 +4,7 @@
  ?>
 <?php if ($article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!='') { ?>
 <li class="media" id="post-<?php  echo $article->ID;  ?>">
-	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a><?php if ($article->Alias!="") { ?><small><?php  echo $article->Alias;  ?></small><?php } ?></h4>
+	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
 	<div class="media-left">
 	<?php 
 	if($article->Metas->paipk1_teSeTuPian!=""){
@@ -24,10 +24,11 @@
 	</div>
 	<div class="media-body">
 		<h6>
-		<?php  echo $article->Time('Y-m-d');  ?>&nbsp;<span class="glyphicon glyphicon-time"></span><?php  echo $article->Time('H:i');  ?>&nbsp;
-		<span class="glyphicon glyphicon-tags"></span>
+		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php  echo $article->Time('Y-m-d H:i');  ?>&nbsp;
+		<?php if ($article->Tags) { ?><i class="glyphicon glyphicon-tags"></i>
 		<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
-		<span class="glyphicon glyphicon-eye-open"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a></span>
+		<?php } ?>
+		<i class="glyphicon glyphicon-eye-open"></i><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a>
 		</h6>
 		<?php  echo $article->Intro;  ?>
 		<p class="clearfix"></p>
@@ -37,12 +38,13 @@
 <li class="media">
   <div>
   	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a><?php if ($article->Alias!="") { ?><small><?php  echo $article->Alias;  ?></small><?php } ?></h4>
-  	<h6>
-  	<?php  echo $article->Time('Y-m-d');  ?>&nbsp;<span class="glyphicon glyphicon-time"></span><?php  echo $article->Time('H:i');  ?>&nbsp;
-  	<span class="glyphicon glyphicon-tags"></span>
-  	<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
-  	<span class="glyphicon glyphicon-eye-open"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a></span>
-  	</h6>
+	<h6>
+	<i class="glyphicon glyphicon-time"></i><?php  echo $article->Time('Y-m-d H:i');  ?>&nbsp;
+	<?php if ($article->Tags) { ?><i class="glyphicon glyphicon-tags"></i>
+	<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
+	<?php } ?>
+	<i class="glyphicon glyphicon-eye-open"></i><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a>
+	</h6>
     <?php  echo $article->Intro;  ?>
     <p class="clearfix"></p>
   </div>

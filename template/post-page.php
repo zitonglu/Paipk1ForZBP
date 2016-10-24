@@ -5,8 +5,13 @@
   <h1>{$article.Title}</h1>
   {if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
   <p class="time">
-    {$article.Time('Y年m月d日 H:i')}&nbsp;
-    {$article.Author.StaticName}
+    <i class="glyphicon glyphicon-time"></i>&nbsp;{$article.Time('Y-m-d H:i')}&nbsp;
+    <i class="glyphicon glyphicon-eye-open"></i>&nbsp;{$article.ViewNums}&nbsp;
+    <i class="glyphicon glyphicon-comment"></i>&nbsp;
+    {if $article.CommNums<=0}
+    <a href="#SOHUCS" title="发表评论">发表评论</a>
+    {else}{$article.CommNums}{/if}&nbsp;
+    <i class="glyphicon glyphicon-qrcode"></i>&nbsp;<a href="#" role="button" data-toggle="modal" data-target="#myshare">二维码</a>
   </p>
   {$article.Content}
 </div>

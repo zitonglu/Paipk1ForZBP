@@ -125,6 +125,10 @@ border: 2px solid #428bca;
 border-radius:50%;
 background:#428bca;
 }
+.single-right .widget h5:before{
+border-radius:0 4px 0;
+border: 2px solid rgba(85,85,85,.7);
+}
 @media (max-width: 749px){
 	#single,
 	.single-left,
@@ -134,7 +138,10 @@ background:#428bca;
 	}
 }
 .Subtitle,
-.time{
+.time,
+.time a,
+.time a:hover,
+.time a:focus{
 	color:rgb(119,119,119);
 }
 .time{
@@ -272,13 +279,15 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 }
 /*导航条颜色*/
 .navbar-mycolor {
-background:
-linear-gradient(#23527c 3%,#428bca 0,#428bca 50%,transparent 0) 0 0, 
-radial-gradient(circle closest-side, #428bca 53%, transparent 0) 0 0,
-radial-gradient(circle closest-side, #428bca 50%, transparent 0) 20px 0 transparent;
-background-size:40px 77px;
-background-repeat: repeat-x;
-border-color: transparent;
+    background-color: rgba(66,139,202,.65);
+}
+@media (max-width: 599px){
+	.navbar-mycolor {
+    	background-color:#428bca;
+	}
+}
+.navbar-default{
+	border-color:#428bca;
 }
 .navbar-mycolor .navbar-brand,
 .navbar-mycolor .navbar-text,
@@ -291,9 +300,12 @@ border-color: transparent;
 .navbar-mycolor .navbar-nav > li > a:focus,
 .navbar-mycolor .navbar-nav > .active > a,
 .navbar-mycolor .navbar-nav > .active > a:hover,
-.navbar-mycolor .navbar-nav > .active > a:focus {
+.navbar-mycolor .navbar-nav > .active > a:focus,
+.navbar-mycolor .navbar-nav > .open > a,
+.navbar-mycolor .navbar-nav > .open > a:hover,
+.navbar-mycolor .navbar-nav > .open > a:focus{
   color: #fff;
-  background:linear-gradient(#23527c 35px,transparent 100%);
+  background-color:#428bca;
 }
 .navbar-mycolor .navbar-nav > .disabled > a,
 .navbar-mycolor .navbar-nav > .disabled > a:hover,
@@ -313,12 +325,6 @@ border-color: transparent;
 .navbar-mycolor .navbar-form {
   border-color: #23527c;
 border-color: transparent;
-}
-.navbar-mycolor .navbar-nav > .open > a,
-.navbar-mycolor .navbar-nav > .open > a:hover,
-.navbar-mycolor .navbar-nav > .open > a:focus {
-  color: #fff;
-  background-color: #080808;
 }
 @media (max-width: 767px) {
 .navbar-nav{

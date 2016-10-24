@@ -6,7 +6,7 @@
 {/php}
 {if $article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!=''}
 <li class="media" id="post-{$article.ID}">
-	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a>{if $article->Alias!=""}<small>{$article->Alias}</small>{/if}</h4>
+	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-left">
 	{php}
 	if($article->Metas->paipk1_teSeTuPian!=""){
@@ -26,10 +26,11 @@
 	</div>
 	<div class="media-body">
 		<h6>
-		{$article.Time('Y-m-d')}&nbsp;<span class="glyphicon glyphicon-time"></span>{$article.Time('H:i')}&nbsp;
-		<span class="glyphicon glyphicon-tags"></span>
+		<i class="glyphicon glyphicon-time"></i>&nbsp;{$article.Time('Y-m-d H:i')}&nbsp;
+		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
 		{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
-		<span class="glyphicon glyphicon-eye-open"><a href="{$article.Url}">{$article.ViewNums}</a></span>
+		{/if}
+		<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
 		</h6>
 		{$article.Intro}
 		<p class="clearfix"></p>
@@ -39,12 +40,13 @@
 <li class="media">
   <div>
   	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a>{if $article->Alias!=""}<small>{$article->Alias}</small>{/if}</h4>
-  	<h6>
-  	{$article.Time('Y-m-d')}&nbsp;<span class="glyphicon glyphicon-time"></span>{$article.Time('H:i')}&nbsp;
-  	<span class="glyphicon glyphicon-tags"></span>
-  	{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
-  	<span class="glyphicon glyphicon-eye-open"><a href="{$article.Url}">{$article.ViewNums}</a></span>
-  	</h6>
+	<h6>
+	<i class="glyphicon glyphicon-time"></i>{$article.Time('Y-m-d H:i')}&nbsp;
+	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
+	{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
+	{/if}
+	<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+	</h6>
     {$article.Intro}
     <p class="clearfix"></p>
   </div>

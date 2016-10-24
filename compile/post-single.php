@@ -3,11 +3,18 @@
   <h1><?php  echo $article->Title;  ?></h1>
   <?php if ($article->Alias!="") { ?><p class="Subtitle text-right">——<?php  echo $article->Alias;  ?></p><?php } ?>
   <p class="time">
-    <?php  echo $article->Time('Y年m月d日 H:i');  ?>&nbsp;
+    <i class="glyphicon glyphicon-time"></i>&nbsp;<?php  echo $article->Time('Y-m-d H:i');  ?>&nbsp;
+    <i class="glyphicon glyphicon-folder-open"></i>&nbsp;<a href="<?php  echo $article->Category->Url;  ?>" title="<?php  echo $article->Category->Name;  ?>" target="_blank"><?php  echo $article->Category->Name;  ?></a>&nbsp;
     <?php if ($article->Tags) { ?>
-    标签：<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>
-    <?php }else{  ?><?php  echo $article->Author->StaticName;  ?>
+    <i class="glyphicon glyphicon-tags"></i>&nbsp;标签：<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>
+    <?php }else{  ?><i class="glyphicon glyphicon-user"></i>&nbsp;<?php  echo $article->Author->StaticName;  ?>
     <?php } ?>
+    &nbsp;<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<?php  echo $article->ViewNums;  ?>&nbsp;
+    <i class="glyphicon glyphicon-comment"></i>&nbsp;
+    <?php if ($article->CommNums<=0) { ?>
+    <a href="#SOHUCS" title="发表评论">发表评论</a>
+    <?php }else{  ?><?php  echo $article->CommNums;  ?><?php } ?>&nbsp;
+    <i class="glyphicon glyphicon-qrcode"></i>&nbsp;<a href="#" role="button" data-toggle="modal" data-target="#myshare">二维码</a>
   </p>
   <?php  echo $article->Content;  ?>
 
@@ -31,32 +38,28 @@
 </div>
 
 <div class="more-text">
-<?php 
-$stime = time();
-$ytime = 91*24*60*60;
-$ztime = $stime-$ytime;
-$order = array('log_ViewNums'=>'DESC');
-$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(6),'');
- ?>
-<?php  foreach ( $RMarray as $hotlist) { ?>
+<?php  foreach ( GetList(4,$article->Category->ID) as $hotlist) { ?>
 <?php 
 SF_img1::getPics($hotlist,355,230,4);
 $randABC=rand(1,20);
  ?>
-  <div class="col-md-4 col-sm-6">
+<div class="col-md-3 col-sm-6 more-text-box">
+  <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>">
 <?php if ($hotlist->Metas->paipk1_teSeTuPian!="") { ?>
-  <div class="more-text-box" style="background-image:url(<?php  echo $hotlist->Metas->paipk1_teSeTuPian;  ?>)">
+  <img src="<?php  echo $hotlist->Metas->paipk1_teSeTuPian;  ?>" alt="<?php  echo $hotlist->title;  ?>">
 <?php }elseif($hotlist->sf_img_count>=1) {  ?>
-  <div class="more-text-box" style="background-image:url(<?php  echo $hotlist->sf_img[0];  ?>)">
+  <img src="<?php  echo $hotlist->sf_img[0];  ?>" alt="<?php  echo $hotlist->title;  ?>">
 <?php }else{  ?>
-  <div class="more-text-box" style="background-image:url(<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/images/rand/<?php  echo $randABC;  ?>.jpg)">
+  <img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/images/rand/<?php  echo $randABC;  ?>.jpg" alt="<?php  echo $hotlist->title;  ?>">
 <?php } ?>
-      <p class="BMT-title">
-        <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Category->Name;  ?>"><?php  echo $hotlist->Category->Name;  ?></a><br><br>近三个月被浏览 <?php  echo $hotlist->ViewNums;  ?>次</p><p class="more-text-title"><a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Title;  ?></a>
-      </p>
-    </div>
-  </div>
+  </a>
+  <p class="BMT-title">
+    <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->title;  ?>"><?php  echo $hotlist->Time('Y-m-d');  ?></a><br><br>该文章被浏览 <?php  echo $hotlist->ViewNums;  ?>次
+  </p>
+  <p class="more-text-title">
+    <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Title;  ?></a>
+  </p>
+</div>
 <?php }   ?>
   <div class="clearfix"></div>
 </div>

@@ -14,8 +14,8 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=1.61" type="text/css">
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=1.64" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=1.831" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=1.831" type="text/css">
 
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
