@@ -65,7 +65,7 @@ $randABC=rand(1,20);
 </div>
 
 <?php if ($zbp->Config('paipk1')->PageAD2!="") { ?>
-<div class="hidden-xs hidden-sm"><?php  echo $zbp->Config('paipk1')->PageAD2;  ?></div>
+<div class="hidden-xs hidden-sm singleAD"><?php  echo $zbp->Config('paipk1')->PageAD2;  ?></div>
 <?php } ?>
 
 <?php if (!$article->IsLock) { ?>

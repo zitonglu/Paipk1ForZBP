@@ -15,6 +15,6 @@
 		</form>
 	</div>
 	{else}
-	<div class="col-md-8 hidden-xs singleTopAD">{$zbp->Config('paipk1')->PageTop}</div>
+	<div class="col-md-8 hidden-xs singleAD">{$zbp->Config('paipk1')->PageTop}</div>
 	{/if}
 </div>

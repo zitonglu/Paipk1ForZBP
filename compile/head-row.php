@@ -13,6 +13,6 @@
 		</form>
 	</div>
 	<?php }else{  ?>
-	<div class="col-md-8 hidden-xs singleTopAD"><?php  echo $zbp->Config('paipk1')->PageTop;  ?></div>
+	<div class="col-md-8 hidden-xs singleAD"><?php  echo $zbp->Config('paipk1')->PageTop;  ?></div>
 	<?php } ?>
 </div>

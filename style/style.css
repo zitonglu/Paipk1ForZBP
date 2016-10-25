@@ -44,7 +44,7 @@ body{
 .post-box,
 .more-text-box,
 .media-box,
-.singleTopAD{
+.singleAD{
 	overflow: hidden;
 	background-repeat:no-repeat;
 	background-position:center center;
@@ -635,6 +635,7 @@ p.next-text{
 }
 .list-left h4{
 	font-weight: bold;
+	line-height: 1.5;
 }
 @media (min-width: 479px){
 	.list-left h4{
@@ -689,10 +690,6 @@ p.next-text{
 .istop b{
 	float: right;
 	margin-right: 10px;
-}
-.singleAD{
-	overflow: hidden;
-	margin-top: 40px;
 }
 .singleAD>div>iframe{
 	display: block;
