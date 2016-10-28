@@ -455,7 +455,9 @@ p.next-text{
 	-ms-transform: rotate(35deg);
 }
 .comment-box a img,
-.comment-box a:hover img{
+.comment-box a:hover img,
+.weiyu a img,
+.weiyu:hover a img{
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
 	-ms-transition: all .3s;
@@ -732,4 +734,40 @@ p.next-text{
 .top:hover,
 .top:focus{
   box-shadow:none;
+}
+.weiyu .media-body p{
+	margin:0;
+	font-size:12px;
+	color:#777;
+}
+.weiyu .media-body p a{
+	color:#777;
+}
+.weiyu .media-left{
+	padding-right:10px;
+}
+.weiyu .media-left img{
+	border-radius:50%;
+	width:50px;
+}
+.weiyu .media-body{
+	padding: .8em;
+	border: 1px solid #dedede;
+	border-radius: 0 16px 16px 16px;
+	box-shadow: 0 6px 4px -4px #777;
+	background: #f1f1f1;
+}
+.weiyu .media-body h5{
+	line-height:1.5;
+}
+@media (max-width: 749px){
+	.weiyu{
+		padding-bottom:20px;
+	}
+	.weiyu .media-body h5{
+		margin-bottom:.8em;
+	}
+}
+.weiyu:hover a img{
+	transform:rotate(-30deg);
 }

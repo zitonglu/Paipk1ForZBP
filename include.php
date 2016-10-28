@@ -7,6 +7,7 @@ function ActivePlugin_paipk1()
 {
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'paipk1_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','paipk1_rebuild_Main');
+	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_weiyu');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
 	Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
 }
@@ -44,10 +45,16 @@ $zbp->Config('paipk1')->Version = '1.0';
 $zbp->SaveConfig('paipk1');
 }
 
+//定义微语
+function paipk1_weiyu(){
+	global $zbp,$article;
+	echo '<label for="meta_paipk1_weiyu" class="editinputname">微语(<a href="http://www.paipk.com/486.html" target="_blank">说明</a>)</label><input type="text" style="display: none;" class="checkbox" name="meta_paipk1_weiyu" value="'.htmlspecialchars($article->Metas->paipk1_weiyu).'" ></div>';
+}
+
 //定义特色图片
 function paipk1_teSeTuPian(){
 	global $zbp,$article;
-	echo '<div><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片链接地址:</label><br /><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" alt="暂无图片" style="max-width:190px" /></div>';
+	echo '<div style="text-align:left;" class="editmod"><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片网址:</label><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" style="width:100%;margin-top:1em" />';
 }
 
 //重建模块首先加载项目
@@ -162,4 +169,26 @@ function paipk1_side_previous() {
 
 function UninstallPlugin_paipk1(){
 	global $zbp;
+}
+
+function TimeAgo( $ptime ) {
+    $ptime = strtotime($ptime);
+    $etime = time() - $ptime;
+    if($etime < 1) return '刚刚';
+    $interval = array (
+        12 * 30 * 24 * 60 * 60  =>  '年前 ('.date('Y-m-d', $ptime).')',
+        30 * 24 * 60 * 60       =>  '个月前 ('.date('m-d', $ptime).')',
+        7 * 24 * 60 * 60        =>  '周前 ('.date('m-d', $ptime).')',
+        24 * 60 * 60            =>  '天前',
+        60 * 60                 =>  '小时前',
+        60                      =>  '分钟前',
+        1                       =>  '秒前'
+    );
+    foreach ($interval as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d);
+            return $r . $str;
+        }
+    };
 }

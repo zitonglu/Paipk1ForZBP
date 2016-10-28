@@ -12,8 +12,8 @@
 <?php }else{  ?>
   <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/bootstrap.min.css" type="text/css"/>
 <?php } ?>
- 	<link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/style.css?v=1.832" type="text/css">
-  <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/color.css?v=1.832" type="text/css">
+ 	<link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/style.css?v=1.9" type="text/css">
+  <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/color.css?v=1.9" type="text/css">
 
 	<meta name="generator" content="<?php  echo $zblogphp;  ?>" />
   <!--首页相关信息-->
