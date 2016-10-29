@@ -8,12 +8,12 @@
 	<div class="row single-body">
 		<div class="col-md-9">
 {if $zbp->Config('paipk1')->ifPPT=='1'}
-	<div class="post-box">
-		<div class="col-sm-3">
+		<!-- <div class="col-sm-3">
+			<img src="{$zbp.members[1].Avatar}" alt="作者LOGO">
 			<a href="{$host}" title="{$name}"><img class="img-responsive two_logo" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
-			<h4 class="text-center">{$zbp.members[1].StaticName}</h4>
-		</div>
-		<div id="carousel-example-generic" class="carousel slide col-sm-9" data-ride="carousel">
+			<h4><img src="{$zbp.members[1].Avatar}" alt="作者LOGO">&nbsp;{$zbp.members[1].StaticName}：</h4>
+		</div> -->
+		<div id="carousel-example-generic" class="carousel slide post-box" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 {php}
 if(is_file($zbp->path.'zb_users/theme/paipk1/plugin/out.html')){
@@ -40,7 +40,6 @@ foreach ($RMarray as $hotlist){
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
-		</div>
 	</div>	
 	{if $zbp->Config('paipk1')->topID!=''}
 		{$topText=GetPost((int)$zbp->Config('paipk1')->topID);}

@@ -14,9 +14,14 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=1.9" type="text/css">
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=1.9" type="text/css">
-
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=2" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=2" type="text/css">
+  {if $zbp->Config('paipk1')->ifGlaze=='1'}
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/glaze.css" type="text/css">
+  {/if}
+  {if $zbp->Config('paipk1')->ifbg=='0'}
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bg.css" type="text/css">
+  {/if}
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
 {if $type=='index'&&$page=='1'}

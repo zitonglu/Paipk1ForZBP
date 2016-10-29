@@ -12,9 +12,14 @@
 <?php }else{  ?>
   <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/bootstrap.min.css" type="text/css"/>
 <?php } ?>
- 	<link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/style.css?v=1.9" type="text/css">
-  <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/color.css?v=1.9" type="text/css">
-
+ 	<link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/style.css?v=2" type="text/css">
+  <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/color.css?v=2" type="text/css">
+  <?php if ($zbp->Config('paipk1')->ifGlaze=='1') { ?>
+  <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/glaze.css" type="text/css">
+  <?php } ?>
+  <?php if ($zbp->Config('paipk1')->ifbg=='0') { ?>
+  <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/bg.css" type="text/css">
+  <?php } ?>
 	<meta name="generator" content="<?php  echo $zblogphp;  ?>" />
   <!--首页相关信息-->
 <?php if ($type=='index'&&$page=='1') { ?>

@@ -62,6 +62,8 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifPPT = $_POST['ifPPT'];
   $zbp->Config('paipk1')->topID = $_POST['topID'];
   $zbp->Config('paipk1')->indexTheme = $_POST['indexTheme'];
+  $zbp->Config('paipk1')->ifGlaze = $_POST['ifGlaze'];
+  $zbp->Config('paipk1')->ifbg = $_POST['ifbg'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -77,8 +79,8 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">首页模板</td>
         <td>
           <select name="indexTheme" style="width:150px">
+            <option value="two" <?php if($zbp->Config('paipk1')->indexTheme == "two")echo "selected=\"selected\"";?>>两栏默认样式</option>
             <option value="there" <?php if($zbp->Config('paipk1')->indexTheme == "there")echo "selected=\"selected\"";?>>左中右三栏</option>
-            <option value="two" <?php if($zbp->Config('paipk1')->indexTheme == "two")echo "selected=\"selected\"";?>>左右两栏</option>
             <option value="pic" <?php if($zbp->Config('paipk1')->indexTheme == "pic")echo "selected=\"selected\"";?>>全图片</option>
           </select>
         </td>
@@ -128,6 +130,16 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">百度分享代码</td>
         <td><textarea name="baiduShare" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->baiduShare; ?></textarea></td>
         <td>相应处会调用分享代码</td>
+      </tr>
+      <tr>
+        <td scope="row">纯色背景效果</td>
+        <td><input name="ifbg" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifbg; ?>">
+        <td scope="row">开启为纯色背景</td>
+      </tr>
+      <tr>
+        <td scope="row">玻璃边框效果</td>
+        <td><input name="ifGlaze" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifGlaze; ?>">
+        <td scope="row">开启后在有一玻璃边框效果</td>
       </tr>
       <tr>
         <td scope="row">版权说明</td>
