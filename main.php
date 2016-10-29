@@ -61,6 +61,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->baike = $_POST['baike'];
   $zbp->Config('paipk1')->ifPPT = $_POST['ifPPT'];
   $zbp->Config('paipk1')->topID = $_POST['topID'];
+  $zbp->Config('paipk1')->indexTheme = $_POST['indexTheme'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -71,6 +72,17 @@ if(isset($_POST['ifOutLink'])){
         <th scope="col" height="32" width="150px">配置项</th>
         <th scope="col">配置内容</th>
         <th scope="col" width="500px">使用说明</th>
+      </tr>
+      <tr>
+        <td scope="row">首页模板</td>
+        <td>
+          <select name="indexTheme" style="width:150px">
+            <option value="there" <?php if($zbp->Config('paipk1')->indexTheme == "there")echo "selected=\"selected\"";?>>左中右三栏</option>
+            <option value="two" <?php if($zbp->Config('paipk1')->indexTheme == "two")echo "selected=\"selected\"";?>>左右两栏</option>
+            <option value="pic" <?php if($zbp->Config('paipk1')->indexTheme == "pic")echo "selected=\"selected\"";?>>全图片</option>
+          </select>
+        </td>
+        <td>选择文章列表页面的默认模板</td>
       </tr>
       <tr>
         <td scope="row"><strong>外部JS和CSS</strong></td>

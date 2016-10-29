@@ -53,6 +53,7 @@ body{
 .top-box,
 .post-box{
 	height:240px;
+	background-color:#fff;
 }
 .media-box{
 	position: relative;
@@ -232,9 +233,14 @@ body{
 .single-body{
 	margin-bottom: 10px;
 }
-.single-body>.col-md-7{
+.single-body>.col-md-7,
+.single-body>.col-md-9{
 	padding-right: 5px;
 	padding-left: 5px;
+}
+.single-body>.col-md-9>div>div{
+	padding-right:0;
+	padding-left:0;
 }
 .single-nav{
 	margin-bottom: 5px;
@@ -505,7 +511,6 @@ p.next-text{
 .widget{
 	margin-bottom:.6em;
 	overflow:hidden;
-	border-radius:.5em .5em 0 0;
 }
 .widget h5{
 	margin: 0px;
@@ -770,4 +775,12 @@ p.next-text{
 }
 .weiyu:hover a img{
 	transform:rotate(-30deg);
+}
+.two_logo{
+	border-radius: 0 32px;
+	margin: 10px auto 2px;
+	border: 1px solid rgba(240,240,240,.8);
+	box-shadow: 0px 5px 5px -5px black;
+	background: #f1f1f1;
+	padding: 2%;
 }
