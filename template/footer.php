@@ -7,9 +7,17 @@
             <p>将这个网站<a class="bottom-a" href="#" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
         </div>
         <div class="btn-group col-sm-5 bottom-div">
+        {if $type=='index'}
+            <a class="btn btn-default" href="{$pagebar.prevbutton}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>
+        {else}
             <a class="btn btn-default" href="{$article.Prev.Url}" title="{$article.Prev.Title}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+        {/if}
             <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
+        {if $type=='index'}
+            <a class="btn btn-default" href="{$pagebar.nextbutton}" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+        {else}
             <a class="btn btn-default" href="{$article.Next.Url}" title="{$article.Next.Title}" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+        {/if}
         </div>
     </div></div>
 </div>
@@ -26,6 +34,9 @@
         {$copyright}&nbsp;
         Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
     </p>
+    {if $type=='index'&&$page=='1'}
+        <br><div class="list-inline">友情链接：{module:link}</div>
+    {/if}
 </div>
 <div class="hidden-xs top"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 <div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">

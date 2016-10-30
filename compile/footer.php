@@ -5,9 +5,17 @@
             <p>将这个网站<a class="bottom-a" href="#" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
         </div>
         <div class="btn-group col-sm-5 bottom-div">
+        <?php if ($type=='index') { ?>
+            <a class="btn btn-default" href="<?php  echo $pagebar->prevbutton;  ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>
+        <?php }else{  ?>
             <a class="btn btn-default" href="<?php  echo $article->Prev->Url;  ?>" title="<?php  echo $article->Prev->Title;  ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+        <?php } ?>
             <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
+        <?php if ($type=='index') { ?>
+            <a class="btn btn-default" href="<?php  echo $pagebar->nextbutton;  ?>" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+        <?php }else{  ?>
             <a class="btn btn-default" href="<?php  echo $article->Next->Url;  ?>" title="<?php  echo $article->Next->Title;  ?>" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+        <?php } ?>
         </div>
     </div></div>
 </div>
@@ -24,6 +32,9 @@
         <?php  echo $copyright;  ?>&nbsp;
         Powered By <?php  echo $zblogphpabbrhtml;  ?>. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
     </p>
+    <?php if ($type=='index'&&$page=='1') { ?>
+        <br><div class="list-inline">友情链接：<?php  if(isset($modules['link'])){echo $modules['link']->Content;}  ?></div>
+    <?php } ?>
 </div>
 <div class="hidden-xs top"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 <div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">
