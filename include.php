@@ -169,6 +169,23 @@ function paipk1_side_previous() {
 	return $s;
 }
 
+function paipk_index_theme_option(){
+	global $zbp;
+	$theme = $zbp->Config('paipk1')->indexTheme;
+	$themes = array(
+			'there' => '左中右三栏',
+			'two' => '两栏(默认)',
+			'pic' => '单图'
+		);
+	if($theme == '') $theme = 'two';
+	foreach ($themes as $key => $value){
+		$tr = '<option value="'.$key.'"';
+		if($key == $theme) $tr .= ' selected="selected"';
+		$tr .='>'.$value.'</option>';
+		echo $tr;
+	}
+}
+
 function UninstallPlugin_paipk1(){
 	global $zbp;
 }

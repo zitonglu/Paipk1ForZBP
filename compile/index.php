@@ -1,8 +1,6 @@
 <?php 
-if ($zbp->Config('paipk1')->indexTheme=="there") {
-	include $this->GetTemplate('index-there');
-}elseif ($zbp->Config('paipk1')->indexTheme=="pic") {
-	include $this->GetTemplate('index-pic');
+if ($zbp->Config('paipk1')->indexTheme!="") {
+	include $this->GetTemplate('index-'.$zbp->Config('paipk1')->indexTheme);
 }else{
 	include $this->GetTemplate('index-two');
 }

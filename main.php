@@ -79,9 +79,7 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">首页模板</td>
         <td>
           <select name="indexTheme" style="width:150px">
-            <option value="two" <?php if($zbp->Config('paipk1')->indexTheme == "two")echo "selected=\"selected\"";?>>两栏默认样式</option>
-            <option value="there" <?php if($zbp->Config('paipk1')->indexTheme == "there")echo "selected=\"selected\"";?>>左中右三栏</option>
-            <option value="pic" <?php if($zbp->Config('paipk1')->indexTheme == "pic")echo "selected=\"selected\"";?>>全图片</option>
+            <?php paipk_index_theme_option() ?>
           </select>
         </td>
         <td>选择文章列表页面的默认模板</td>
