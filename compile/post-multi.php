@@ -1,6 +1,6 @@
 
 <?php SF_img1::getPics($article,190,120,4); ?>
-<?php if ($article->Metas->paipk1_weiyu=="1") { ?>
+<?php if ($article->Metas->paipk1_single_theme_select == "weiyu") { ?>
 <li class="media weiyu" id="post-<?php  echo $article->ID;  ?>">
 	<a class="media-left hidden-xs" href="<?php  echo $article->Url;  ?>">
 		<img src="<?php  echo $article->Author->Avatar;  ?>" alt="作者头像">

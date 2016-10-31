@@ -1,4 +1,7 @@
 
+<?php if ($article->Metas->paipk1_single_theme_select == "noside") { ?>
+	<?php  include $this->GetTemplate('single-noside');  ?>
+<?php }else{  ?>
 <?php  include $this->GetTemplate('header');  ?>
 <body class="single" id="top">
 <!-- 导航 -->
@@ -20,3 +23,5 @@
 </div>
 
 <?php  include $this->GetTemplate('footer');  ?>
+
+<?php } ?>

@@ -7,7 +7,7 @@ function ActivePlugin_paipk1()
 {
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'paipk1_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','paipk1_rebuild_Main');
-	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_weiyu');
+	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_single_theme_select');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
 	Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
 }
@@ -43,14 +43,28 @@ $zbp->Config('paipk1')->HomeKeywords = '拍拍看科技';
 $zbp->Config('paipk1')->CopyrightDescription = '本站发布文章版权归原作者所有，任何商业用途均须联系作者。如未经授权用作他处，作者将保留追究侵权者法律责任的权利。';
 $zbp->Config('paipk1')->topID = 1;
 }
-$zbp->Config('paipk1')->Version = '1.9';
+$zbp->Config('paipk1')->Version = '2.0';
 $zbp->SaveConfig('paipk1');
 }
 
-//定义微语
-function paipk1_weiyu(){
+// 主题single模板选择，在文章编辑里
+function paipk1_single_theme_select(){
 	global $zbp,$article;
-	echo '<label for="meta_paipk1_weiyu" class="editinputname">微语(<a href="http://www.paipk.com/486.html" target="_blank">说明</a>)</label><input type="text" style="display: none;" class="checkbox" name="meta_paipk1_weiyu" value="'.htmlspecialchars($article->Metas->paipk1_weiyu).'" ></div>';
+	$theme = $article->Metas->paipk1_single_theme_select;
+	$themes = array(
+			'right' => '标准',
+			'noside' => '单页',
+			'weiyu' => '微语'
+		);
+	if($theme == '') $article->Metas->paipk1_single_theme_select = 'right';
+	$tr = '<label for="meta_paipk1_single_theme_select" class="editinputname" style="max-width:65px;text-overflow:ellipsis;">文章形式</label><select style="width:180px;" name="meta_paipk1_single_theme_select">';
+	foreach ($themes as $key => $value){
+		$tr .= '<option value="'.$key.'"';
+		if($key == $theme) $tr .= ' selected="selected"';
+		$tr .='>'.$value.'</option>';
+	}
+	$tr .= '</select>';
+	echo $tr;
 }
 
 //定义特色图片
@@ -168,8 +182,8 @@ function paipk1_side_previous() {
 	}
 	return $s;
 }
-
-function paipk_index_theme_option(){
+// 主题index模版选择的<option>
+function paipk1_index_theme_option(){
 	global $zbp;
 	$theme = $zbp->Config('paipk1')->indexTheme;
 	$themes = array(

@@ -79,7 +79,7 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">首页模板</td>
         <td>
           <select name="indexTheme" style="width:150px">
-            <?php paipk_index_theme_option() ?>
+            <?php paipk1_index_theme_option() ?>
           </select>
         </td>
         <td>选择文章列表页面的默认模板</td>

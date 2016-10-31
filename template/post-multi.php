@@ -2,7 +2,7 @@
 <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {php}SF_img1::getPics($article,190,120,4);{/php}
-{if $article->Metas->paipk1_weiyu=="1"}
+{if $article->Metas->paipk1_single_theme_select == "weiyu"}
 <li class="media weiyu" id="post-{$article.ID}">
 	<a class="media-left hidden-xs" href="{$article.Url}">
 		<img src="{$article.Author.Avatar}" alt="作者头像">
