@@ -6,11 +6,6 @@
 	<div class="row single-body">
 		<div class="col-md-9">
 <?php if ($zbp->Config('paipk1')->ifPPT=='1') { ?>
-		<!-- <div class="col-sm-3">
-			<img src="<?php  echo $zbp->members[1]->Avatar;  ?>" alt="作者LOGO">
-			<a href="<?php  echo $host;  ?>" title="<?php  echo $name;  ?>"><img class="img-responsive two_logo" src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt="<?php  echo $name;  ?>的网站LOGO"></a>
-			<h4><img src="<?php  echo $zbp->members[1]->Avatar;  ?>" alt="作者LOGO">&nbsp;<?php  echo $zbp->members[1]->StaticName;  ?>：</h4>
-		</div> -->
 		<div id="carousel-example-generic" class="carousel slide post-box" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 <?php 

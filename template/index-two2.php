@@ -6,6 +6,11 @@
 <div class="container-fluid">{template:nav}</div>
 <div class="container">
 	<div class="row single-body">
+		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
+			<div class="single-right">
+				{template:sidebar4}
+			</div>
+		</div>
 		<div class="col-md-9">
 {if $zbp->Config('paipk1')->ifPPT=='1'}
 		<div id="carousel-example-generic" class="carousel slide post-box" data-ride="carousel">
@@ -51,11 +56,6 @@ foreach ($RMarray as $hotlist){
 			</ul>
 		</div>
 			{template:pagebar}
-		</div>
-		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
-			<div class="single-right">
-				{template:sidebar4}
-			</div>
 		</div>
 	</div>
 </div>

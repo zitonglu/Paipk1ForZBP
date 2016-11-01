@@ -188,7 +188,8 @@ function paipk1_index_theme_option(){
 	$theme = $zbp->Config('paipk1')->indexTheme;
 	$themes = array(
 			'there' => '左中右三栏',
-			'two' => '两栏(默认)',
+			'two' => '两栏(右侧栏)',
+			'two2' => '两栏(左侧栏)',
 			'pic' => '单图'
 		);
 	if($theme == '') $theme = 'two';

@@ -1,16 +1,19 @@
-<?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
-<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
-</div>';die();?>
-{template:header}
+
+<?php  include $this->GetTemplate('header');  ?>
 <body id="top">
-<div class="container-fluid">{template:nav}</div>
+<div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
 <div class="container">
 	<div class="row single-body">
+		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
+			<div class="single-right">
+				<?php  include $this->GetTemplate('sidebar4');  ?>
+			</div>
+		</div>
 		<div class="col-md-9">
-{if $zbp->Config('paipk1')->ifPPT=='1'}
+<?php if ($zbp->Config('paipk1')->ifPPT=='1') { ?>
 		<div id="carousel-example-generic" class="carousel slide post-box" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
-{php}
+<?php 
 if(is_file($zbp->path.'zb_users/theme/paipk1/plugin/out.html')){
 	include $zbp->path.'zb_users/theme/paipk1/plugin/out.html';
 }else{
@@ -25,7 +28,7 @@ foreach ($RMarray as $hotlist){
 	include $this->GetTemplate('post-istop');
 	}
 }
-{/php}
+ ?>
 			</div>
 			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -36,28 +39,23 @@ foreach ($RMarray as $hotlist){
 				<span class="sr-only">Next</span>
 			</a>
 	</div>	
-	{if $zbp->Config('paipk1')->topID!=''}
-		{$topText=GetPost((int)$zbp->Config('paipk1')->topID);}
+	<?php if ($zbp->Config('paipk1')->topID!='') { ?>
+		<?php  $topText=GetPost((int)$zbp->Config('paipk1')->topID);;  ?>
 		<div class="istop">
-			<p><a href="{$topText.Url}" title="{$topText.Title}"><span class="glyphicon glyphicon-fire"></span>{$topText.Title}</a><b class="hidden-xs hidden-sm">{$topText.Time('Y-m-d')}</b></p>
+			<p><a href="<?php  echo $topText->Url;  ?>" title="<?php  echo $topText->Title;  ?>"><span class="glyphicon glyphicon-fire"></span><?php  echo $topText->Title;  ?></a><b class="hidden-xs hidden-sm"><?php  echo $topText->Time('Y-m-d');  ?></b></p>
 		</div>
-	{/if}
-{/if}
+	<?php } ?>
+<?php } ?>
 		<div class="list-left">
 			<ul class="media-list">
-			{foreach $articles as $article}
-				{template:post-multi}
-			{/foreach}
+			<?php  foreach ( $articles as $article) { ?>
+				<?php  include $this->GetTemplate('post-multi');  ?>
+			<?php }   ?>
 			</ul>
 		</div>
-			{template:pagebar}
-		</div>
-		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
-			<div class="single-right">
-				{template:sidebar4}
-			</div>
+			<?php  include $this->GetTemplate('pagebar');  ?>
 		</div>
 	</div>
 </div>
 
-{template:footer}
+<?php  include $this->GetTemplate('footer');  ?>

@@ -18,7 +18,7 @@
 		</p>
 	</div>
 </li>
-{elseif $article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!=''}
+{elseif $article->sf_img_count>=1 || $article->Metas->paipk1_teSeTuPian!=''}
 <li class="media" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-left">

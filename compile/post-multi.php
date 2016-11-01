@@ -16,7 +16,7 @@
 		</p>
 	</div>
 </li>
-<?php }elseif($article->sf_img_count>=1 or $article->Metas->paipk1_teSeTuPian!='') {  ?>
+<?php }elseif($article->sf_img_count>=1 || $article->Metas->paipk1_teSeTuPian!='') {  ?>
 <li class="media" id="post-<?php  echo $article->ID;  ?>">
 	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
 	<div class="media-left">
