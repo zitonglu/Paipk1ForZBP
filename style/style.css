@@ -59,6 +59,7 @@ body{
 .post-box{
 	height:240px;
 	background:#fff;
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
 }
 .media-box{
 	position: relative;
@@ -80,7 +81,9 @@ body{
 #divPrevious li,
 #divPrevious li:hover,
 #divPrevious li p,
-#divPrevious li:hover p{
+#divPrevious li:hover p,
+.threepic img,
+.threepic img:hover{
 	-webkit-transition:all 0.2s ease-in-out;
 	-moz-transition:all 0.2s ease-in-out;
 	-o-transition:all 0.2s ease-in-out;
@@ -244,7 +247,7 @@ body{
 .single-box{
 	padding: 5px;
 }
-.there-right-box{
+.three-right-box{
 	padding: 0px 5px;
 }
 .single-left{
@@ -670,11 +673,11 @@ p.next-text{
 	}
 }
 #index-list .post-box,
-#index-there .post-box{
+#index-three .post-box{
 	margin-bottom:10px;
 }
 #index-list pre,
-#index-there pre{
+#index-three pre{
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
@@ -777,4 +780,21 @@ p.next-text{
 	box-shadow: 0px 5px 5px -5px black;
 	background: #f1f1f1;
 	padding: 2%;
+}
+.threepic img{
+	padding-left:3px;
+	padding-right:3px;
+	height:60px;
+	object-fit:cover;
+}
+.threepic .row{
+	margin-bottom: 16px;
+}
+@media (min-width: 499px){
+	.threepic img:hover{
+		border-radius:40px 0;
+	}
+	.threepic img{
+		height:140px;
+	}
 }

@@ -1,6 +1,7 @@
 
 <?php SF_img1::getPics($article,190,120,4); ?>
 <?php if ($article->Metas->paipk1_single_theme_select == "weiyu") { ?>
+<!-- 微语模式 -->
 <li class="media weiyu" id="post-<?php  echo $article->ID;  ?>">
 	<a class="media-left hidden-xs" href="<?php  echo $article->Url;  ?>">
 		<img src="<?php  echo $article->Author->Avatar;  ?>" alt="作者头像">
@@ -16,7 +17,26 @@
 		</p>
 	</div>
 </li>
+<?php }elseif($article->sf_img_count>=3 && $article->Metas->paipk1_single_theme_select == "threepic") {  ?>
+<!-- 图片模式 -->
+<li class="threepic" id="post-<?php  echo $article->ID;  ?>">
+	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
+		<div class="row">
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img class="col-xs-4" src="<?php  echo $article->sf_img[0];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img class="col-xs-4" src="<?php  echo $article->sf_img[1];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img class="col-xs-4" src="<?php  echo $article->sf_img[2];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+		</div>
+	<div class="hidden-xs"><?php  echo $article->Intro;  ?></div>
+	<h6>
+	<i class="glyphicon glyphicon-time"></i>&nbsp;<?php  echo TimeAgo($article->Time());  ?>&nbsp;
+	<?php if ($article->Tags) { ?><i class="glyphicon glyphicon-tags"></i>
+	<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
+	<?php } ?>
+	<i class="glyphicon glyphicon-eye-open"></i><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a>
+	</h6>
+</li>
 <?php }elseif($article->sf_img_count>=1 || $article->Metas->paipk1_teSeTuPian!='') {  ?>
+<!-- 单图普通模式 -->
 <li class="media" id="post-<?php  echo $article->ID;  ?>">
 	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
 	<div class="media-left">

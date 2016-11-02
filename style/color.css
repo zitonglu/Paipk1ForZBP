@@ -226,11 +226,11 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 .list-left h4 small{
 	color: #98699b;
 }
-.list-left .media h6 a,
-.list-left .media h6{
+.list-left h6 a,
+.list-left h6{
 	color: #777;
 }
-.list-left .media h6 a:hover{
+.list-left h6 a:hover{
 	color: #428bca;
 }
 .list-left>ul>li{

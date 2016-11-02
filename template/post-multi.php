@@ -3,6 +3,7 @@
 </div>';die();?>
 {php}SF_img1::getPics($article,190,120,4);{/php}
 {if $article->Metas->paipk1_single_theme_select == "weiyu"}
+<!-- 微语模式 -->
 <li class="media weiyu" id="post-{$article.ID}">
 	<a class="media-left hidden-xs" href="{$article.Url}">
 		<img src="{$article.Author.Avatar}" alt="作者头像">
@@ -18,7 +19,26 @@
 		</p>
 	</div>
 </li>
+{elseif $article->sf_img_count>=3 && $article->Metas->paipk1_single_theme_select == "threepic"}
+<!-- 图片模式 -->
+<li class="threepic" id="post-{$article.ID}">
+	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
+		<div class="row">
+			<a href="{$article.Url}" title="{$article.title}"><img class="col-xs-4" src="{$article->sf_img[0]}" alt="{$article.title}"></a>
+			<a href="{$article.Url}" title="{$article.title}"><img class="col-xs-4" src="{$article->sf_img[1]}" alt="{$article.title}"></a>
+			<a href="{$article.Url}" title="{$article.title}"><img class="col-xs-4" src="{$article->sf_img[2]}" alt="{$article.title}"></a>
+		</div>
+	<div class="hidden-xs">{$article.Intro}</div>
+	<h6>
+	<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
+	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
+	{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
+	{/if}
+	<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+	</h6>
+</li>
 {elseif $article->sf_img_count>=1 || $article->Metas->paipk1_teSeTuPian!=''}
+<!-- 单图普通模式 -->
 <li class="media" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-left">

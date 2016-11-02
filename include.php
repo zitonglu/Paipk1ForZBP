@@ -54,6 +54,7 @@ function paipk1_single_theme_select(){
 	$themes = array(
 			'right' => '标准',
 			'noside' => '单页',
+			'threepic' => '图片',
 			'weiyu' => '微语'
 		);
 	if($theme == '') $article->Metas->paipk1_single_theme_select = 'right';
@@ -187,7 +188,7 @@ function paipk1_index_theme_option(){
 	global $zbp;
 	$theme = $zbp->Config('paipk1')->indexTheme;
 	$themes = array(
-			'there' => '左中右三栏',
+			'three' => '左中右三栏',
 			'two' => '两栏(右侧栏)',
 			'two2' => '两栏(左侧栏)',
 			'pic' => '单图'
