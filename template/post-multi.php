@@ -24,11 +24,11 @@
 <li class="threepic" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 		<div class="row">
-			<a href="{$article.Url}" title="{$article.title}"><img class="col-xs-4" src="{$article->sf_img[0]}" alt="{$article.title}"></a>
-			<a href="{$article.Url}" title="{$article.title}"><img class="col-xs-4" src="{$article->sf_img[1]}" alt="{$article.title}"></a>
-			<a href="{$article.Url}" title="{$article.title}"><img class="col-xs-4" src="{$article->sf_img[2]}" alt="{$article.title}"></a>
+			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[0]}" alt="{$article.Title}"></a>
+			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[1]}" alt="{$article.Title}"></a>
+			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[2]}" alt="{$article.Title}"></a>
 		</div>
-	<div class="hidden-xs">{$article.Intro}</div>
+	{$article.Intro}
 	<h6>
 	<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
 	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
@@ -50,7 +50,7 @@
 	}
 	{/php}
 		<div class="media-box">
-			<a href="{$article.Url}" title="{$article.title}"><img src="{$bgtURL}" alt="{$article.title}"></a>
+			<a href="{$article.Url}" title="{$article.Title}"><img src="{$bgtURL}" alt="{$article.Title}"></a>
 			<div class="tim"><a href="{$article.Url}">{$article.Time('M')}<br>{$article.Time('d')}</a>
 			</div>
 			<div class="cat">

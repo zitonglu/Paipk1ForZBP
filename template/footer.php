@@ -24,7 +24,7 @@
 <div class="container-fluid footer">
     {if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}
     <p>
-        Copyright © 2016-2017 <a href="{$hose}" title="{$name}">{$name}</a>&nbsp;
+        Copyright © 2016-2017 <a href="{$host}" title="{$name}">{$name}</a>&nbsp;
         {if $user.ID>0}
         <a href="{$host}zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
         {else}
@@ -84,9 +84,9 @@
 {/if}
 
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script><script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 {else}
-    <script src='{$host}zb_users/theme/{$theme}/js/jquery.min.js'></script><script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
+    <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}
     <script src='{$host}zb_users/theme/{$theme}/js/custom.js'></script>
     

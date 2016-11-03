@@ -6,7 +6,15 @@
 <body class="single" id="top">
 <!-- 导航 -->
 <div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
+<?php if ($article->Metas->paipk1_singleVideo != "") { ?>
+<div class="jumbotron videobox">
+	<div class="video">
+		<?php  echo $article->Metas->paipk1_singleVideo;  ?>
+	</div>
+</div>
+<?php }else{  ?>
 <div class="container"><?php  include $this->GetTemplate('head-row');  ?></div>
+<?php } ?>
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">

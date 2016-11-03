@@ -8,7 +8,15 @@
 <body class="single" id="top">
 <!-- 导航 -->
 <div class="container-fluid">{template:nav}</div>
+{if $article->Metas->paipk1_singleVideo != ""}
+<div class="jumbotron videobox">
+	<div class="video">
+		{$article->Metas->paipk1_singleVideo}
+	</div>
+</div>
+{else}
 <div class="container">{template:head-row}</div>
+{/if}
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">

@@ -12,7 +12,7 @@
 <?php }else{  ?>
   <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/bootstrap.min.css" type="text/css"/>
 <?php } ?>
- 	<link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/style.css?v=2" type="text/css">
+ 	<link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/style.css?v=2.12" type="text/css">
   <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/color.css?v=2" type="text/css">
   <?php if ($zbp->Config('paipk1')->ifGlaze=='1') { ?>
   <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/glaze.css" type="text/css">

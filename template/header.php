@@ -7,14 +7,15 @@
 	<meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="{$host}zb_system/script/common.js" type="text/javascript"></script>
+  <script src="{$host}zb_system/script/jquery-2.2.4.min.js" type="text/javascript"></script>
+  <script src="{$host}zb_system/script/zblogphp.js" type="text/javascript"></script>
   <script src="{$host}zb_system/script/c_html_js_add.php" type="text/javascript"></script>
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
   <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css"/>
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=2.1" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=2.12" type="text/css">
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=2" type="text/css">
   {if $zbp->Config('paipk1')->ifGlaze=='1'}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/glaze.css" type="text/css">

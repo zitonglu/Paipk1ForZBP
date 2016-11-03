@@ -22,11 +22,11 @@
 <li class="threepic" id="post-<?php  echo $article->ID;  ?>">
 	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
 		<div class="row">
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img class="col-xs-4" src="<?php  echo $article->sf_img[0];  ?>" alt="<?php  echo $article->title;  ?>"></a>
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img class="col-xs-4" src="<?php  echo $article->sf_img[1];  ?>" alt="<?php  echo $article->title;  ?>"></a>
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img class="col-xs-4" src="<?php  echo $article->sf_img[2];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[0];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[1];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[2];  ?>" alt="<?php  echo $article->title;  ?>"></a>
 		</div>
-	<div class="hidden-xs"><?php  echo $article->Intro;  ?></div>
+	<?php  echo $article->Intro;  ?>
 	<h6>
 	<i class="glyphicon glyphicon-time"></i>&nbsp;<?php  echo TimeAgo($article->Time());  ?>&nbsp;
 	<?php if ($article->Tags) { ?><i class="glyphicon glyphicon-tags"></i>

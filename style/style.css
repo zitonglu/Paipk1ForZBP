@@ -777,13 +777,16 @@ p.next-text{
 	border-radius: 0 32px;
 	margin: 10px auto 2px;
 	border: 1px solid rgba(240,240,240,.8);
-	box-shadow: 0px 5px 5px -5px black;
+	box-shadow: 0px 5px 5px -5px #000;
 	background: #f1f1f1;
 	padding: 2%;
 }
-.threepic img{
+.threepic .row a{
 	padding-left:3px;
 	padding-right:3px;
+}
+.threepic img{
+	width:100%;
 	height:60px;
 	object-fit:cover;
 }
@@ -796,5 +799,19 @@ p.next-text{
 	}
 	.threepic img{
 		height:140px;
+		box-shadow: 0px 1px 3px rgba(66,139,202,.65);
 	}
+}
+.videobox{
+	margin-top:-70px;
+	margin-bottom:5px;
+	padding-top:70px;
+	height:100vmin;
+	background:transparent;
+}
+.video{
+	margin:0 auto;
+	max-width:900px;
+	height:80vmin;
+	box-shadow:0px 6px 4px -4px rgba(0,0,0,.5);
 }

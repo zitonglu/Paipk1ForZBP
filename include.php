@@ -1,18 +1,18 @@
 <?php
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
-//注册插件
+/*注册插件*/
 RegisterPlugin('paipk1','ActivePlugin_paipk1');
 
-function ActivePlugin_paipk1()
-{
+function ActivePlugin_paipk1(){
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'paipk1_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','paipk1_rebuild_Main');
+	Add_Filter_Plugin('Filter_Plugin_Edit_Response2','paipk1_single_video');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_single_theme_select');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
 	Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
 }
 
-//定义开头
+/*定义开头*/
 function paipk1_SubMenu($id){
 	$arySubMenu = array(
 		0 => array('基本设置', 'config', 'left', false),
@@ -47,7 +47,7 @@ $zbp->Config('paipk1')->Version = '2.0';
 $zbp->SaveConfig('paipk1');
 }
 
-// 主题single模板选择，在文章编辑里
+/*主题single模板选择，在文章编辑里*/
 function paipk1_single_theme_select(){
 	global $zbp,$article;
 	$theme = $article->Metas->paipk1_single_theme_select;
@@ -68,13 +68,13 @@ function paipk1_single_theme_select(){
 	echo $tr;
 }
 
-//定义特色图片
+/*定义特色图片*/
 function paipk1_teSeTuPian(){
 	global $zbp,$article;
 	echo '<div style="text-align:left;" class="editmod"><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片网址:</label><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" style="width:100%;margin-top:1em" />';
 }
 
-//重建模块首先加载项目
+/*重建模块首先加载项目*/
 function paipk1_rebuild_Main() {
 	global $zbp;
 	$zbp->RegBuildModule('comments','paipk1_side_comm');
@@ -82,7 +82,7 @@ function paipk1_rebuild_Main() {
 	$zbp->RegBuildModule('previous','paipk1_side_previous');
 }
 
-//侧栏评论
+/*侧栏评论*/
 function paipk1_side_comm() {
     global $zbp;
 	$i = $zbp->modulesbyfilename['comments']->MaxLi;
@@ -99,7 +99,7 @@ function paipk1_side_comm() {
 	return $s;
 }
 
-//文章归档
+/*文章归档*/
 function paipk1_side_archives() {
 	global $zbp;
 	$i = $zbp->modulesbyfilename['archives']->MaxLi;
@@ -155,11 +155,12 @@ function paipk1_side_archives() {
 			</script>';
 	return $s;
 }
-
-// 侧栏带图片的最新文章
-// 有缩略图地址的先判断地址路径；
-// 没有的找到文章中第一个图片；
-// 实在没有就用缩略图；
+/*
+* 侧栏带图片的最新文章
+* 有缩略图地址的先判断地址路径；
+* 没有的找到文章中第一个图片；
+* 实在没有就用缩略图；
+*/
 function paipk1_side_previous() {
 	global $zbp;
 	$i = $zbp->modulesbyfilename['previous']->MaxLi;
@@ -183,7 +184,7 @@ function paipk1_side_previous() {
 	}
 	return $s;
 }
-// 主题index模版选择的<option>
+/* 主题index模版选择的<option> */
 function paipk1_index_theme_option(){
 	global $zbp;
 	$theme = $zbp->Config('paipk1')->indexTheme;
@@ -201,10 +202,20 @@ function paipk1_index_theme_option(){
 		echo $tr;
 	}
 }
-
-function UninstallPlugin_paipk1(){
-	global $zbp;
-}
+/* 文章页面插入视频 */
+function paipk1_single_video(){
+	global $zbp,$article; ?>
+<table width="100%" style="margin-top:10px;margin-bottom:20px">
+	<tr>
+		<th width="25%"><label for="meta_paipk1_singleVideo"><h3>镶入视频代码：</h3>你可以在这里镶入视频代码，代码获取可在优酷，土豆等视频网站获取。<br>建议将视频容器设置为：<br>width=100% height=100%</label></th>
+		<td width="75%"><textarea name="meta_paipk1_singleVideo" rows="8" cols="5" style="width:100%;"><?php echo $article->Metas->paipk1_singleVideo ?></textarea></td>
+	</tr>
+	<tr>
+		<th width="25%"><label for="meta_paipk1_singleVideoURL">插入视频缩略图的网址：</label></th>
+		<td width="75%"><input name="meta_paipk1_singleVideoURL" value="<?php echo $article->Metas->paipk1_singleVideoURL ?>" size="90" type="text"> 建议JPG|PNG格式(设置特殊图片亦可)</td>
+	</tr>
+</table>
+<?php }
 
 function TimeAgo( $ptime ) {
     $ptime = strtotime($ptime);
@@ -226,4 +237,7 @@ function TimeAgo( $ptime ) {
             return $r . $str;
         }
     };
+}
+function UninstallPlugin_paipk1(){
+	global $zbp;
 }
