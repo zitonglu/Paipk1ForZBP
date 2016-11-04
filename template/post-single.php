@@ -44,17 +44,16 @@
 {php}
 SF_img1::getPics($hotlist,355,230,4);
 $randABC=rand(1,20);
+if($hotlist->Metas->paipk1_teSeTuPian!=""){
+    $IMGURL=$hotlist->Metas->paipk1_teSeTuPian;
+  }elseif($hotlist->sf_img_count>=1){
+    $IMGURL=$hotlist->sf_img[0];
+  }else{
+    $IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
+  }
 {/php}
 <div class="col-md-3 col-sm-6 more-text-box">
-  <a href="{$hotlist.Url}" title="{$hotlist.Title}">
-{if $hotlist.Metas.paipk1_teSeTuPian!=""}
-  <img src="{$hotlist.Metas.paipk1_teSeTuPian}" alt="{$hotlist.Title}">
-{elseif $hotlist->sf_img_count>=1}
-  <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}">
-{else}
-  <img src="{$host}zb_users/theme/{$theme}/images/rand/{$randABC}.jpg" alt="{$hotlist.Title}">
-{/if}
-  </a>
+  <a href="{$hotlist.Url}" title="{$hotlist.Title}"><img src="{$IMGURL}" alt="{$hotlist.Title}"></a>
   <p class="BMT-title">
     <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$hotlist.ViewNums}次
   </p>

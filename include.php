@@ -6,7 +6,7 @@ RegisterPlugin('paipk1','ActivePlugin_paipk1');
 function ActivePlugin_paipk1(){
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'paipk1_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','paipk1_rebuild_Main');
-	Add_Filter_Plugin('Filter_Plugin_Edit_Response2','paipk1_single_video');
+	Add_Filter_Plugin('Filter_Plugin_Edit_Response2','paipk1_single_footer');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_single_theme_select');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
 	Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
@@ -55,6 +55,7 @@ function paipk1_single_theme_select(){
 			'right' => '标准',
 			'noside' => '单页',
 			'threepic' => '图片',
+			'video' => '视频',
 			'weiyu' => '微语'
 		);
 	if($theme == '') $article->Metas->paipk1_single_theme_select = 'right';
@@ -203,16 +204,12 @@ function paipk1_index_theme_option(){
 	}
 }
 /* 文章页面插入视频 */
-function paipk1_single_video(){
+function paipk1_single_footer(){
 	global $zbp,$article; ?>
 <table width="100%" style="margin-top:10px;margin-bottom:20px">
 	<tr>
 		<th width="25%"><label for="meta_paipk1_singleVideo"><h3>镶入视频代码：</h3>你可以在这里镶入视频代码，代码获取可在优酷，土豆等视频网站获取。<br>建议将视频容器设置为：<br>width=100% height=100%</label></th>
 		<td width="75%"><textarea name="meta_paipk1_singleVideo" rows="8" cols="5" style="width:100%;"><?php echo $article->Metas->paipk1_singleVideo ?></textarea></td>
-	</tr>
-	<tr>
-		<th width="25%"><label for="meta_paipk1_singleVideoURL">插入视频缩略图的网址：</label></th>
-		<td width="75%"><input name="meta_paipk1_singleVideoURL" value="<?php echo $article->Metas->paipk1_singleVideoURL ?>" size="90" type="text"> 建议JPG|PNG格式(设置特殊图片亦可)</td>
 	</tr>
 </table>
 <?php }
