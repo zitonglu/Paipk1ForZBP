@@ -832,6 +832,7 @@ p.next-text{
 .videoIMG{
 	border-radius:0 20px;
 	box-shadow: 0px 1px 3px rgba(66,139,202,.65);
+	width:100%;
 }
 .videolist .media-right>div{
 	position:relative;
