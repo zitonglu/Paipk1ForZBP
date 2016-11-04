@@ -59,7 +59,7 @@ function paipk1_single_theme_select(){
 			'weiyu' => '微语'
 		);
 	if($theme == '') $article->Metas->paipk1_single_theme_select = 'right';
-	$tr = '<label for="meta_paipk1_single_theme_select" class="editinputname" style="max-width:65px;text-overflow:ellipsis;">文章形式</label><select style="width:180px;" name="meta_paipk1_single_theme_select">';
+	$tr = '<label for="meta_paipk1_single_theme_select" class="editinputname" style="text-overflow:ellipsis;">文章形式</label><select style="width:120px;" name="meta_paipk1_single_theme_select">';
 	foreach ($themes as $key => $value){
 		$tr .= '<option value="'.$key.'"';
 		if($key == $theme) $tr .= ' selected="selected"';
@@ -72,7 +72,7 @@ function paipk1_single_theme_select(){
 /*定义特色图片*/
 function paipk1_teSeTuPian(){
 	global $zbp,$article;
-	echo '<div style="text-align:left;" class="editmod"><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片网址:</label><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" style="width:100%;margin-top:1em" />';
+	echo '<div style="text-align:left;" class="editmod"><label for="meta_paipk1_teSeTuPian" class="editinputname">特色图片网址:</label><input type="text" name="meta_paipk1_teSeTuPian" value="'.htmlspecialchars($article->Metas->paipk1_teSeTuPian).'" style="width:100%"/><br /><img src="'.$article->Metas->paipk1_teSeTuPian.'" style="width:100%;margin-top:1em" />';
 }
 
 /*重建模块首先加载项目*/

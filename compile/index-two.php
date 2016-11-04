@@ -1,8 +1,8 @@
 
 <?php  include $this->GetTemplate('header');  ?>
-<body id="top">
+<body id="top" class="index-two">
 <div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
-<div class="container">
+<div class="container long">
 	<div class="row single-body">
 		<div class="col-md-9">
 <?php if ($zbp->Config('paipk1')->ifPPT=='1') { ?>

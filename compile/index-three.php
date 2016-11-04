@@ -2,7 +2,7 @@
 <?php  include $this->GetTemplate('header');  ?>
 <body id="top">
 <div class="container-fluid"><?php  include $this->GetTemplate('nav');  ?></div>
-<div class="container">
+<div class="container long">
 	<div class="row single-body">
 		<div class="col-md-2 left-list hidden-xs hidden-sm">
 			<a href="<?php  echo $host;  ?>" title="<?php  echo $name;  ?>"><img class="img-responsive" src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt="<?php  echo $name;  ?>的网站LOGO"></a>

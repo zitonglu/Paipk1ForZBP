@@ -42,19 +42,18 @@
 <?php 
 SF_img1::getPics($hotlist,355,230,4);
 $randABC=rand(1,20);
+if($hotlist->Metas->paipk1_teSeTuPian!=""){
+    $IMGURL=$hotlist->Metas->paipk1_teSeTuPian;
+  }elseif($hotlist->sf_img_count>=1){
+    $IMGURL=$hotlist->sf_img[0];
+  }else{
+    $IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
+  }
  ?>
 <div class="col-md-3 col-sm-6 more-text-box">
-  <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>">
-<?php if ($hotlist->Metas->paipk1_teSeTuPian!="") { ?>
-  <img src="<?php  echo $hotlist->Metas->paipk1_teSeTuPian;  ?>" alt="<?php  echo $hotlist->title;  ?>">
-<?php }elseif($hotlist->sf_img_count>=1) {  ?>
-  <img src="<?php  echo $hotlist->sf_img[0];  ?>" alt="<?php  echo $hotlist->title;  ?>">
-<?php }else{  ?>
-  <img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/images/rand/<?php  echo $randABC;  ?>.jpg" alt="<?php  echo $hotlist->title;  ?>">
-<?php } ?>
-  </a>
+  <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><img src="<?php  echo $IMGURL;  ?>" alt="<?php  echo $hotlist->Title;  ?>"></a>
   <p class="BMT-title">
-    <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->title;  ?>"><?php  echo $hotlist->Time('Y-m-d');  ?></a><br><br>该文章被浏览 <?php  echo $hotlist->ViewNums;  ?>次
+    <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Time('Y-m-d');  ?></a><br><br>该文章被浏览 <?php  echo $hotlist->ViewNums;  ?>次
   </p>
   <p class="more-text-title">
     <a href="<?php  echo $hotlist->Url;  ?>" title="<?php  echo $hotlist->Title;  ?>"><?php  echo $hotlist->Title;  ?></a>

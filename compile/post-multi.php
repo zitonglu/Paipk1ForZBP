@@ -1,5 +1,15 @@
 
-<?php SF_img1::getPics($article,190,120,4); ?>
+<?php 
+	SF_img1::getPics($article,190,120,4);
+	$randABC=rand(1,20);
+	if($article->Metas->paipk1_teSeTuPian!=""){
+		$IMGURL=$article->Metas->paipk1_teSeTuPian;
+	}elseif($article->sf_img_count>=1){
+		$IMGURL=$article->sf_img[0];
+	}else{
+		$IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
+	}
+ ?>
 <?php if ($article->Metas->paipk1_single_theme_select == "weiyu") { ?>
 <!-- 微语模式 -->
 <li class="media weiyu" id="post-<?php  echo $article->ID;  ?>">
@@ -17,14 +27,32 @@
 		</p>
 	</div>
 </li>
+<?php }elseif($article->Metas->paipk1_single_theme_select == "video") {  ?>
+<!-- 视频模式 -->
+<li class="media videolist" id="post-<?php  echo $article->ID;  ?>">
+	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
+	<div class="media-body">
+<h6 class="hidden-xs">
+<i class="glyphicon glyphicon-time"></i>&nbsp;<?php  echo TimeAgo($article->Time());  ?>&nbsp;
+<?php if ($article->Tags) { ?><i class="glyphicon glyphicon-tags"></i>
+<?php  foreach ( $article->Tags as $tag) { ?><a href="<?php  echo $tag->Url;  ?>" title="<?php  echo $tag->Name;  ?>"><?php  echo $tag->Name;  ?></a> <?php }   ?>&nbsp;
+<?php } ?>
+<i class="glyphicon glyphicon-eye-open"></i><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->ViewNums;  ?></a>
+</h6>
+		<?php  echo $article->Intro;  ?>
+	</div>
+	<a class="media-right" href="<?php  echo $article->Url;  ?>">
+		<img src="<?php  echo $IMGURL;  ?>" alt="视频截图" class="videoIMG">
+	</a>
+</li>
 <?php }elseif($article->sf_img_count>=3 && $article->Metas->paipk1_single_theme_select == "threepic") {  ?>
 <!-- 图片模式 -->
 <li class="threepic" id="post-<?php  echo $article->ID;  ?>">
 	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
 		<div class="row">
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[0];  ?>" alt="<?php  echo $article->title;  ?>"></a>
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[1];  ?>" alt="<?php  echo $article->title;  ?>"></a>
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[2];  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[0];  ?>" alt="<?php  echo $article->Title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[1];  ?>" alt="<?php  echo $article->Title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>" class="col-xs-4"><img src="<?php  echo $article->sf_img[2];  ?>" alt="<?php  echo $article->Title;  ?>"></a>
 		</div>
 	<?php  echo $article->Intro;  ?>
 	<h6>
@@ -40,15 +68,8 @@
 <li class="media" id="post-<?php  echo $article->ID;  ?>">
 	<h4><a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><?php  echo $article->Title;  ?></a></h4>
 	<div class="media-left">
-	<?php 
-	if($article->Metas->paipk1_teSeTuPian!=""){
-		$bgtURL=$article->Metas->paipk1_teSeTuPian;
-	}else{
-		$bgtURL=$article->sf_img[0];
-	}
-	 ?>
 		<div class="media-box">
-			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->title;  ?>"><img src="<?php  echo $bgtURL;  ?>" alt="<?php  echo $article->title;  ?>"></a>
+			<a href="<?php  echo $article->Url;  ?>" title="<?php  echo $article->Title;  ?>"><img src="<?php  echo $IMGURL;  ?>" alt="<?php  echo $article->Title;  ?>"></a>
 			<div class="tim"><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Time('M');  ?><br><?php  echo $article->Time('d');  ?></a>
 			</div>
 			<div class="cat">

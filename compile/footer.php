@@ -8,13 +8,13 @@
         <?php if ($type=='index') { ?>
             <a class="btn btn-default" href="<?php  echo $pagebar->prevbutton;  ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>
         <?php }else{  ?>
-            <a class="btn btn-default" href="<?php  echo $article->Prev->Url;  ?>" title="<?php  echo $article->Prev->Title;  ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+            <a class="btn btn-default"<?php if ($article->Prev) { ?> href="<?php  echo $article->Prev->Url;  ?>" title="<?php  echo $article->Prev->Title;  ?>"<?php } ?> role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
         <?php } ?>
             <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
         <?php if ($type=='index') { ?>
             <a class="btn btn-default" href="<?php  echo $pagebar->nextbutton;  ?>" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
         <?php }else{  ?>
-            <a class="btn btn-default" href="<?php  echo $article->Next->Url;  ?>" title="<?php  echo $article->Next->Title;  ?>" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a class="btn btn-default"<?php if ($article->Next) { ?> href="<?php  echo $article->Next->Url;  ?>" title="<?php  echo $article->Next->Title;  ?>"<?php } ?> role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
         <?php } ?>
         </div>
     </div></div>
@@ -22,7 +22,7 @@
 <div class="container-fluid footer">
     <?php if ($zbp->Config('paipk1')->CopyrightDescription!="") { ?><p><?php  echo $zbp->Config('paipk1')->CopyrightDescription;  ?></p><?php } ?>
     <p>
-        Copyright © 2016-2017 <a href="<?php  echo $hose;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>&nbsp;
+        Copyright © 2016-2017 <a href="<?php  echo $host;  ?>" title="<?php  echo $name;  ?>"><?php  echo $name;  ?></a>&nbsp;
         <?php if ($user->ID>0) { ?>
         <a href="<?php  echo $host;  ?>zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
         <?php }else{  ?>
@@ -82,9 +82,9 @@
 <?php } ?>
 
 <?php if ($zbp->Config('paipk1')->ifOutLink=="1") { ?>
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script><script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <?php }else{  ?>
-    <script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/jquery.min.js'></script><script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/bootstrap.min.js'></script>
+    <script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/bootstrap.min.js'></script>
 <?php } ?>
     <script src='<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/js/custom.js'></script>
     

@@ -32,20 +32,24 @@
 {elseif $article->Metas->paipk1_single_theme_select == "video"}
 <!-- 视频模式 -->
 <li class="media videolist" id="post-{$article.ID}">
-	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-body">
-<h6 class="hidden-xs">
-<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
-{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
-{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
-{/if}
-<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
-</h6>
-		{$article.Intro}
+		<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
+		<div class="hidden-xs">{$article.Intro}</div>
+		<h6>
+		<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
+		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
+		{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
+		{/if}
+		<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+		</h6>
 	</div>
-	<a class="media-right" href="{$article.Url}">
-		<img src="{$IMGURL}" alt="视频截图" class="videoIMG">
+	<a class="media-right" href="{$article.Url}" title="{$article.Title}">
+		<div>
+			<img src="{$IMGURL}" alt="视频截图" class="videoIMG">
+			<i class="glyphicon glyphicon-facetime-video mask"></i>
+		</div>
 	</a>
+	
 </li>
 {elseif $article->sf_img_count>=3 && $article->Metas->paipk1_single_theme_select == "threepic"}
 <!-- 图片模式 -->
