@@ -42,24 +42,9 @@ body{
 .left-list{
 	padding:.3em;
 }
-.top-box,
-.post-box,
-.more-text-box,
-.media-box,
-.singleAD{
-	overflow: hidden;
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-size:cover;
-}
 .single-left,
 .list-left,
 .widget{
-	background:#fff;
-}
-.top-box,
-.post-box{
-	height:240px;
 	background:#fff;
 }
 .media-box{
@@ -67,6 +52,7 @@ body{
 	height:120px;
 	width: 180px;
 	border-radius:16px 0;
+	overflow: hidden;
 }
 .media-box>a>img,
 .more-text-box>a>img,
@@ -121,6 +107,15 @@ body{
 	text-align: right;
 	text-transform: uppercase;
 }
+.post-box{
+	background:#fff;
+	overflow:hidden;
+}
+@media (min-width:599px){
+	.post-box{
+		height:240px;
+	}
+}
 .post-box .tim{
 	filter:alpha(Opacity=0);
 	-moz-opacity:0;
@@ -169,6 +164,11 @@ body{
 	height:60px;
 	line-height:24px;
 	text-align:right;
+}
+.top-box{
+	height:240px;
+	background:#fff;
+	overflow:hidden;
 }
 .top-box .tit>h3{
 	text-align:left;
@@ -359,6 +359,7 @@ p.next-text{
 	padding:0;
 	height:160px;
 	border:5px solid transparent;
+	overflow:hidden;
 }
 .more-text{
 	margin-bottom:15px;
@@ -696,6 +697,9 @@ p.next-text{
 .istop b{
 	float: right;
 	margin-right: 10px;
+}
+.singleAD{
+	overflow: hidden;
 }
 .singleAD>div>iframe{
 	display: block;

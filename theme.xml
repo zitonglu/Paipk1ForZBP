@@ -5,7 +5,7 @@
 <url>http://www.paipk.com/</url>
 <note>清新三栏响应式主题，强大模块管理，兼容多屏浏览</note>
 <description>z-blogPHP主题paipk1模版.由紫铜炉设计和制作.详见拍拍看科技</description>
-<path>main-admin/main.php</path>
+<path>main.php</path>
 <include>include.php</include>
 <level>1</level>
 <author>
