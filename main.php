@@ -7,11 +7,8 @@ $action='root';
 if (!$zbp->CheckRights($action)) {$zbp->ShowError(6);die();}
 if (!$zbp->CheckPlugin('paipk1')) {$zbp->ShowError(48);die();}
 $blogtitle="主题配置";
-$act = "";
-if ($_GET['act']){
-$act = $_GET['act'] == "" ? 'base' : $_GET['act'];
-}
-
+$act=GetVars('act','GET');
+if($act == "" ) $act= 'config' ;
 require $blogpath . 'zb_system/admin/admin_header.php';
 require $blogpath . 'zb_system/admin/admin_top.php';
 ?>
@@ -194,7 +191,7 @@ if($_POST){
   $rules = array();
   $rule = array();
   $i=0;$Y=-1;
-  $li='<a class="item" href="-aurl-" target="_blank" title="-pictitle-"><div class="top-box" style="background-image:url(-picurl-);"></div></a>';
+  $li='<a class="item" href="-aurl-" target="_blank" title="-pictitle-"><div class="top-box"><img src="-picurl-" alt="-pictitle-"></div></a>';
   $tr='<tr><td><input type="checkbox" name="check"/></td><td><input name="picurl-id-" type="text" value="-picurl-" required="required"></td><td><input name="aurl-id-" type="text" value="-aurl-" required="required"></td><td><input name="pictitle-id-" type="text" value="-pictitle-"></td></tr>';
   $curli = "";$curtr = "";$html = "";$alltr = "";$one="";
 foreach($_POST as $k=>$v){

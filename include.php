@@ -22,7 +22,7 @@ function paipk1_SubMenu($id){
 		4 => array('个性定制', 'byDesign', 'left', false),
 	);
 	foreach($arySubMenu as $k => $v){
-		echo '<a href="?act='.$v[1].'" '.($v[4]==true?'target="_blank"':'').'><span class="m-'.$v[2].' '.($id==$v[1]?'m-now':'').'">'.$v[0].'</span></a>';
+		echo '<a href="?act='.$v[1].'" '.($id=='4'?'target="_blank"':'').'><span class="m-'.$v[2].' '.($id==$v[1]?'m-now':'').'">'.$v[0].'</span></a>';
 	}
 }
 
