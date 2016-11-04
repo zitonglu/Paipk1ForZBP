@@ -69,7 +69,8 @@ body{
 	border-radius:16px 0;
 }
 .media-box>a>img,
-.more-text-box>a>img{
+.more-text-box>a>img,
+.carousel-inner > .item > a > img.topIMG{
 	width:100%;
 	height:100%;
 	object-fit:cover;

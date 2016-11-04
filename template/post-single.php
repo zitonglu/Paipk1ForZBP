@@ -48,15 +48,15 @@ $randABC=rand(1,20);
 <div class="col-md-3 col-sm-6 more-text-box">
   <a href="{$hotlist.Url}" title="{$hotlist.Title}">
 {if $hotlist.Metas.paipk1_teSeTuPian!=""}
-  <img src="{$hotlist.Metas.paipk1_teSeTuPian}" alt="{$hotlist.title}">
+  <img src="{$hotlist.Metas.paipk1_teSeTuPian}" alt="{$hotlist.Title}">
 {elseif $hotlist->sf_img_count>=1}
-  <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.title}">
+  <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}">
 {else}
-  <img src="{$host}zb_users/theme/{$theme}/images/rand/{$randABC}.jpg" alt="{$hotlist.title}">
+  <img src="{$host}zb_users/theme/{$theme}/images/rand/{$randABC}.jpg" alt="{$hotlist.Title}">
 {/if}
   </a>
   <p class="BMT-title">
-    <a href="{$hotlist.Url}" title="{$hotlist.title}">{$hotlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$hotlist.ViewNums}次
+    <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$hotlist.ViewNums}次
   </p>
   <p class="more-text-title">
     <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>

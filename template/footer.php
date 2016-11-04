@@ -10,13 +10,13 @@
         {if $type=='index'}
             <a class="btn btn-default" href="{$pagebar.prevbutton}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>
         {else}
-            <a class="btn btn-default" href="{$article.Prev.Url}" title="{$article.Prev.Title}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+            <a class="btn btn-default"{if $article.Prev} href="{$article.Prev.Url}" title="{$article.Prev.Title}"{/if} role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
         {/if}
             <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
         {if $type=='index'}
             <a class="btn btn-default" href="{$pagebar.nextbutton}" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
         {else}
-            <a class="btn btn-default" href="{$article.Next.Url}" title="{$article.Next.Title}" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a class="btn btn-default"{if $article.Next} href="{$article.Next.Url}" title="{$article.Next.Title}"{/if} role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
         {/if}
         </div>
     </div></div>
