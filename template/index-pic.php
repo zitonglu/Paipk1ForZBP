@@ -4,7 +4,7 @@
 {template:header}
 <body id="index-pic">
 <div class="container-fluid">{template:nav}</div>
-<div class="container body">
+<div class="container body long">
 {if $zbp->Config('paipk1')->ifPPT=='1'}
 <div class="col-md-8 col-sm-12 post-list">
 	<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">

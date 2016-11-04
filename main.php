@@ -61,6 +61,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->baike = $_POST['baike'];
   $zbp->Config('paipk1')->ifPPT = $_POST['ifPPT'];
   $zbp->Config('paipk1')->topID = $_POST['topID'];
+  $zbp->Config('paipk1')->iflong = $_POST['iflong'];
   $zbp->Config('paipk1')->indexTheme = $_POST['indexTheme'];
   $zbp->Config('paipk1')->ifGlaze = $_POST['ifGlaze'];
   $zbp->Config('paipk1')->ifbg = $_POST['ifbg'];
@@ -83,6 +84,11 @@ if(isset($_POST['ifOutLink'])){
           </select>
         </td>
         <td>选择文章列表页面的默认模板</td>
+      </tr>
+      <tr>
+        <td scope="row">网站效果</td>
+        <td>纯色背景效果<input name="ifbg" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifbg; ?>"> | 玻璃边框效果<input name="ifGlaze" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifGlaze; ?>"> | 分栏合体效果<input name="iflong" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->iflong; ?>">
+        <td scope="row">可以调整网站的不同小的样式设置</td>
       </tr>
       <tr>
         <td scope="row"><strong>外部JS和CSS</strong></td>
@@ -128,16 +134,6 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">百度分享代码</td>
         <td><textarea name="baiduShare" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->baiduShare; ?></textarea></td>
         <td>相应处会调用分享代码</td>
-      </tr>
-      <tr>
-        <td scope="row">纯色背景效果</td>
-        <td><input name="ifbg" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifbg; ?>">
-        <td scope="row">开启为纯色背景</td>
-      </tr>
-      <tr>
-        <td scope="row">玻璃边框效果</td>
-        <td><input name="ifGlaze" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifGlaze; ?>">
-        <td scope="row">开启后在有一玻璃边框效果</td>
       </tr>
       <tr>
         <td scope="row">版权说明</td>

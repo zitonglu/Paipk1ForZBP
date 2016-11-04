@@ -1,0 +1,23 @@
+.long{
+	background:#fff;
+	padding-top: 70px;
+	margin-top: -70px;
+}
+.widget h5{
+	background:transparent;
+}
+@media (min-width: 749px){
+	.single-left,
+	.list-left,
+	.widget,
+	.top-box,
+	.post-box{
+		box-shadow:none;
+		border:none;
+	}
+}
+.index-two .single-body > .col-md-7,
+.index-two .single-body > .col-md-9{
+	padding-left:0;
+	padding-right:0;
+}

@@ -2,9 +2,9 @@
 <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {template:header}
-<body id="top">
+<body id="top" class="index-two">
 <div class="container-fluid">{template:nav}</div>
-<div class="container">
+<div class="container long">
 	<div class="row single-body">
 		<div class="col-md-9">
 {if $zbp->Config('paipk1')->ifPPT=='1'}

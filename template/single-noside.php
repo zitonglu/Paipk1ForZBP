@@ -6,15 +6,15 @@
 <!-- 导航 -->
 <div class="container-fluid">{template:nav}</div>
 {if $article->Metas->paipk1_singleVideo != ""}
-<div class="jumbotron videobox">
+<div class="jumbotron videobox long">
 	<div class="video">
 		{$article->Metas->paipk1_singleVideo}
 	</div>
 </div>
 {else}
-<div class="container">{template:head-row}</div>
+<div class="container long">{template:head-row}</div>
 {/if}
-<div class="container">
+<div class="container long">
 	<div class="row single-body single-box">
 		<!-- <div class="col-md-9 col-md-offset-125"> -->
 {if $article.Type==ZC_POST_TYPE_ARTICLE}
