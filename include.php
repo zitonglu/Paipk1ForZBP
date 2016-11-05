@@ -1,5 +1,5 @@
 <?php
-require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
+//搜索引擎强化插件有问题，关闭了 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
 /*注册插件*/
 RegisterPlugin('paipk1','ActivePlugin_paipk1');
 
@@ -9,7 +9,7 @@ function ActivePlugin_paipk1(){
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response2','paipk1_single_footer');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_single_theme_select');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
-	Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
+	//搜索引擎 Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
 }
 
 /*定义开头*/
