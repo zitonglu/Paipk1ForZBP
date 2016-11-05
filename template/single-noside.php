@@ -2,18 +2,10 @@
 <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {template:header}
-<body id="single-noside">
+<body id="top" class="single-noside">
 <!-- 导航 -->
 <div class="container-fluid">{template:nav}</div>
-{if $article->Metas->paipk1_singleVideo != ""}
-<div class="jumbotron videobox long">
-	<div class="video">
-		{$article->Metas->paipk1_singleVideo}
-	</div>
-</div>
-{else}
 <div class="container long">{template:head-row}</div>
-{/if}
 <div class="container long">
 	<div class="row single-body single-box">
 		<!-- <div class="col-md-9 col-md-offset-125"> -->

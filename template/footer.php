@@ -12,7 +12,7 @@
         {else}
             <a class="btn btn-default"{if $article.Prev} href="{$article.Prev.Url}" title="{$article.Prev.Title}"{/if} role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
         {/if}
-            <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;微信分享</a>
+            <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;文章分享</a>
         {if $type=='index'}
             <a class="btn btn-default" href="{$pagebar.nextbutton}" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
         {else}

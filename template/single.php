@@ -3,6 +3,8 @@
 </div>';die();?>
 {if $article->Metas->paipk1_single_theme_select == "noside"}
 	{template:single-noside}
+{elseif $article->Metas->paipk1_single_theme_select == "video" and $article->Metas->paipk1_singleVideo != ""}
+	{template:single-video}
 {else}
 {template:header}
 <body class="single" id="top">
@@ -33,5 +35,4 @@
 </div>
 
 {template:footer}
-
 {/if}

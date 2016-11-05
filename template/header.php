@@ -15,8 +15,8 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=2.21" type="text/css">
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=2.21" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=2.221" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color.css?v=2.221" type="text/css">
   {if $zbp->Config('paipk1')->ifGlaze=='1'}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/glaze.css" type="text/css">
   {/if}

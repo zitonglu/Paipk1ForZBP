@@ -33,7 +33,7 @@
   <a class="btn btn-default" href="{$article.Prev.Url}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
 {/if}
   <a class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>
-  <a class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;文章分享</a>
+  <a class="btn btn-info hidden-xs" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;文章分享</a>
 {if $article.Next} 
   <a class="btn btn-default" href="{$article.Next.Url}" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 {/if}
