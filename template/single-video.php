@@ -7,6 +7,10 @@
 <div class="container long">
 	<div class="col-md-7 video-left">{$article->Metas->paipk1_singleVideo}</div>
 	<div class="col-md-5 video-right">
+{if $zbp->Config('paipk1')->ifbaiduShare == '1'}
+<div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+{/if}
 	<p class="time">
 	    <i class="glyphicon glyphicon-time"></i>&nbsp;{$article.Time('Y-m-d H:i')}&nbsp;
 	    <i class="glyphicon glyphicon-eye-open"></i>&nbsp;{$article.ViewNums}&nbsp;
@@ -14,7 +18,6 @@
 	    {if $article.CommNums<=0}
 	    <a href="#SOHUCS" title="发表评论">发表评论</a>
 	    {else}{$article.CommNums}{/if}&nbsp;
-	    <i class="glyphicon glyphicon-qrcode hidden-xs"></i>&nbsp;<a href="#" role="button" data-toggle="modal" data-target="#myshare" class="hidden-xs">二维码</a>
 	</p>
 	<h1 class="title">{$article.Title}</h1>
 

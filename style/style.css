@@ -198,10 +198,6 @@ body{
 	margin-left:.2em;
 	margin-right:.2em;
 }
-.bdsharebuttonbox{
-	max-width: 304px;
-	margin: 0px auto;
-}
 .weixin-share-p{
 	margin-top: 10px;
 }
@@ -722,7 +718,7 @@ p.next-text{
 	.single-noside .single-left h1,
 	.single-noside .single-left div{
 		margin-left: 12.5%;
-		width: 75%;
+		max-width:800px;
 	}
 }
 .singleLogo{
@@ -946,4 +942,11 @@ p.next-text{
 }
 .search-box .input-group{
 	min-width:300px;
+}
+/*百度分享*/
+@media (min-width: 749px){
+	.bdsharebuttonbox{
+		float:right;
+		margin-top:-6px;
+	}
 }

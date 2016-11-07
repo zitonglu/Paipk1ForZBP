@@ -53,7 +53,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->HomeKeywords = $_POST['HomeKeywords'];
   $zbp->Config('paipk1')->HomeDescription = $_POST['HomeDescription'];
   $zbp->Config('paipk1')->baiduTJ = $_POST['baiduTJ'];
-  $zbp->Config('paipk1')->baiduShare = $_POST['baiduShare'];
+  $zbp->Config('paipk1')->ifbaiduShare = $_POST['ifbaiduShare'];
   $zbp->Config('paipk1')->CopyrightDescription = $_POST['CopyrightDescription'];
   $zbp->Config('paipk1')->baike = $_POST['baike'];
   $zbp->Config('paipk1')->ifPPT = $_POST['ifPPT'];
@@ -128,9 +128,10 @@ if(isset($_POST['ifOutLink'])){
         <td>代码添加至网站全部页面的head标签前</td>
       </tr>
       <tr>
-        <td scope="row">百度分享代码</td>
-        <td><textarea name="baiduShare" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->baiduShare; ?></textarea></td>
-        <td>相应处会调用分享代码</td>
+        <td scope="row">文章分享</td>
+        <td>
+        <input name="ifbaiduShare" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifbaiduShare; ?>"></td>
+        <td>开启关闭文章的分享</td>
       </tr>
       <tr>
         <td scope="row">版权说明</td>
