@@ -159,7 +159,7 @@ border: 2px solid rgba(85,85,85,.7);
 	.widget,
 	.top-box,
 	.post-box{
-		box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+		box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 	}
 }
 .widget h5{
@@ -245,7 +245,7 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 }
 /*导航条颜色*/
 .navbar-mycolor {
-    background-color: rgba(66,139,202,.65);
+    background-color:#5EAAE4;
 }
 @media (max-width: 599px){
 	.navbar-mycolor {
