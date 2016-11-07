@@ -950,3 +950,14 @@ p.next-text{
 		margin-top:-6px;
 	}
 }
+/*文章侧栏滑动*/
+.rightfloat{
+	position:relative;
+}
+.float2{
+	position:fixed;
+	top:70px;
+	z-index:250;
+	padding:8px;
+	width:282px;
+}

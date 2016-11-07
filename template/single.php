@@ -29,10 +29,15 @@
 			{/if}
 		</div>
 		<div class="col-md-3 single-box hidden-xs hidden-sm">
-			<div class="single-right">{template:sidebar3}</div>
+			<div class="single-right">{template:sidebar3}
+			<div class="rightfloat">
+				<div id="float">
+BLOG启示录-WORDPRESS博客建设与经营》是2010年出版的一本关于wordpress博客方面的书。它的内容非常全面，紧紧围绕wordpress网站建设和运营来写的。但网站的建设和经营本来就是一个非常大的方面，如果对于新手来说，这本书就像本天书，每个地方都要细细研究；对于有一定基础的朋友来说，这里的一些东西是概括性居多，分析和细节方便少的可怜；对于专攻某方面的人来说，这本书只要看四、五分之一就够了
+				</div>
+			</div>
+			</div>
 		</div>
 	</div>
 </div>
-
 {template:footer}
 {/if}
