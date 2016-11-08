@@ -674,6 +674,9 @@ p.next-text{
 		margin-top:32px;
 		padding-bottom:30px;
 	}
+	.list-left>ul>li:first-child{
+		margin-top:0;
+	}
 }
 #index-list .post-box,
 #index-three .post-box{
