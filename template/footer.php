@@ -38,7 +38,16 @@
         <br><div class="list-inline">友情链接：{module:link}</div>
     {/if}
 </div>
-<div class="hidden-xs top"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+<div class="hidden-xs top">
+    {php}
+        $QQzaixian="910109610";
+        if($zbp->Config('paipk1')->QQ != ""){
+           $QQzaixian = $zbp->Config('paipk1')->QQ;
+        }
+    {/php}
+    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
+    <a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
 <div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

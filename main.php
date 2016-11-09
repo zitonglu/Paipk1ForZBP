@@ -63,6 +63,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifGlaze = $_POST['ifGlaze'];
   $zbp->Config('paipk1')->ifbg = $_POST['ifbg'];
   $zbp->Config('paipk1')->floatBox = $_POST['floatBox'];
+  $zbp->Config('paipk1')->QQ = $_POST['QQ'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -146,7 +147,13 @@ if(isset($_POST['ifOutLink'])){
       </tr>
       <tr>
         <td scope="row">备案号</td>
-        <td><input name="baike" type="text" style="width:96%" value="<?php echo $zbp->Config('paipk1')->baike; ?>">
+        <td><input name="baike" type="text" style="width:20%" value="<?php echo $zbp->Config('paipk1')->baike; ?>">
+          </td>
+        <td>显示在每页底部</td>
+      </tr>
+      <tr>
+        <td scope="row">QQ号</td>
+        <td><input name="QQ" type="text" style="width:20%" value="<?php echo $zbp->Config('paipk1')->QQ; ?>">
           </td>
         <td>显示在每页底部</td>
       </tr>

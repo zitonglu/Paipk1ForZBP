@@ -72,7 +72,8 @@ body{
 #divPrevious li p,
 #divPrevious li:hover p,
 .threepic img,
-.threepic img:hover{
+.threepic img:hover,
+.QQstyle:hover{
 	-webkit-transition:all 0.2s ease-in-out;
 	-moz-transition:all 0.2s ease-in-out;
 	-o-transition:all 0.2s ease-in-out;
@@ -218,6 +219,9 @@ body{
 	}
 }
 /*single*/
+.head{
+	margin-bottom:5px;
+}
 .search-box{
 	margin-top: 15px;
 }
@@ -737,7 +741,7 @@ p.next-text{
   bottom:.1em;
   font-size:2em;
   padding:.1em .45em;
-  background:#DCEDC8;
+  background:linear-gradient(#b3e5fc 50%,#DCEDC8 0);
   border-radius:.2em;
   box-shadow:0 0 .2em #8BC34A;
   z-index:50;
@@ -745,6 +749,13 @@ p.next-text{
 .top:hover,
 .top:focus{
   box-shadow:none;
+}
+.QQstyle{
+	vertical-align:top;
+	opacity:.4;
+}
+.QQstyle:hover{
+	opacity:1;
 }
 .weiyu .media-body p{
 	margin:0;

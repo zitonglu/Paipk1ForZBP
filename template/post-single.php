@@ -69,10 +69,10 @@ if($hotlist->Metas->paipk1_teSeTuPian!=""){
   <div class="clearfix"></div>
 </div>
 
-{if $zbp->Config('paipk1')->PageAD2!=""}
-<div class="hidden-xs hidden-sm singleAD">{$zbp->Config('paipk1')->PageAD2}</div>
-{/if}
-
 {if !$article.IsLock}
 {template:comments}		
+{/if}
+
+{if $zbp->Config('paipk1')->PageAD2!=""}
+<div class="hidden-xs hidden-sm singleAD">{$zbp->Config('paipk1')->PageAD2}</div>
 {/if}
