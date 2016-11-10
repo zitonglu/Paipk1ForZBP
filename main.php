@@ -64,6 +64,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifbg = $_POST['ifbg'];
   $zbp->Config('paipk1')->floatBox = $_POST['floatBox'];
   $zbp->Config('paipk1')->QQ = $_POST['QQ'];
+  $zbp->Config('paipk1')->indexHome = $_POST['indexHome'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -79,8 +80,9 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">首页模板</td>
         <td>
           <select name="indexTheme" style="width:150px">
-            <?php paipk1_index_theme_option() ?>
+            <?php paipk1_index_theme_option() ?> 
           </select>
+          自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php
         </td>
         <td>选择文章列表页面的默认模板</td>
       </tr>
