@@ -1,0 +1,47 @@
+body{
+	background-color:white;
+	font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+img.logo{
+	max-height:50px;
+}
+.navbar-brand{
+	padding:0;
+	margin-left:10px;
+	margin-right:20px;
+}
+.navbar{
+	border:none;
+	margin-bottom:0;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav >li>a:focus{
+	background-color:#e7e7e7;
+}
+/*顶部搜索栏*/
+.search-box{
+	background:transparent;
+	border:none;
+	box-shadow:none;
+}
+.search-box .input-group{
+	min-width:300px;
+}
+.shade{
+	position: absolute;
+	z-index:5;
+	margin-top:0;
+	width:100vw;
+	height:40px;
+	background:#f8f8f8;
+	border-radius:50% / 0 0 100% 100%;
+	box-shadow: 0 2px 5px -3px #757575;
+}
+.jumbotron{
+	height:350px;
+	background-image:url(1.jpg);
+	background-position:center;
+	background-repeat:no-repeat; 
+	box-shadow: 0 -20px 40px -20px #555 inset;
+	border-bottom: 1px solid #757575;
+}

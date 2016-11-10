@@ -35,7 +35,53 @@
 {$header}
 </head>
 <body>
-
+<!-- 导航 -->
+<nav class="navbar navbar-default navbar-mycolor">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="{$host}">
+				<img class="logo" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO">
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">{$name}</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav" id="divNavBar">
+				{module:navbar}
+			</ul>
+			<ul class="nav navbar-nav navbar-right hidden-xs">
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
+				<ul class="dropdown-menu">
+					<!-- <img src="http://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data={$host}" alt="网页二维码"> -->
+				</ul>
+				</li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i> 搜索</a>
+				<ul class="dropdown-menu search-box">
+					<form method="post" action="{$host}zb_system/cmd.php?act=search" name="search">
+						<div class="input-group">
+							<input type="text" class="form-control" name="q" size="12" placeholder="输入搜索内容">
+							<span class="input-group-btn">
+						        <button class="btn btn-default" type="submit">Go!</button>
+						    </span>
+					    </div>
+				    </form>
+				</ul>
+				</li>	
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="shade"></div>
+<!-- 导航end -->
+<div class="jumbotron">
+	<div class="container">
+		
+	</div>	
+</div>
 
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
