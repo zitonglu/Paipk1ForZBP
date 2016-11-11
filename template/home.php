@@ -82,6 +82,39 @@
 		
 	</div>	
 </div>
+<!-- 内容页面 -->
+<article class="container contentbox">
+	<section class="col-sm-4">
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+	  <li role="presentation" class="active"><a href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
+	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">关注范围</a></li>
+	  <li class="more"><a href="{$zbp.members[1].HomePage}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	</ul>
+	<!-- Tab panes -->
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="blog">
+		<ul class="media-list">
+			<li class="media">
+				<a class="media-left" href="{$zbp.members[1].HomePage}">
+					{if $host == "http://www.paipk.com/"}
+					<img src="http://images.limiwu.com/avatar.jpg" alt="{$zbp.members[1].StaticName}" class="Avatar">
+					{else}
+					<img src="{$zbp.members[1].Avatar}" alt="{$zbp.members[1].StaticName}" class="Avatar">
+					{/if}
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading">{$zbp.members[1].StaticName}</h4>
+					<p>{$zbp.members[1].Intro}</p>
+				</div>
+			</li>
+		</ul>
+	  </div>
+	  <div role="tabpanel" class="tab-pane" id="tags"><ul>{module:tags}</ul></div>
+	</div>
+	</section>
+</article>
+
 
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>

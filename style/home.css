@@ -1,5 +1,5 @@
 body{
-	background-color:white;
+	background-color:#f2f5f8;
 	font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 img.logo{
@@ -38,10 +38,71 @@ img.logo{
 	box-shadow: 0 2px 5px -3px #757575;
 }
 .jumbotron{
-	height:350px;
+	margin-bottom:0;
+	min-height:350px;
 	background-image:url(1.jpg);
 	background-position:center;
 	background-repeat:no-repeat; 
 	box-shadow: 0 -20px 40px -20px #555 inset;
 	border-bottom: 1px solid #757575;
 }
+/*内容*/
+.contentbox{
+	margin-top: -24px;
+	padding-top:20px;
+	padding-bottom:10px;
+	background:#fff;
+	border:6px solid hsla(0,0%,100%,.2);
+	background-clip:padding-box;
+}
+.tab-content{
+	padding:15px 5px;
+}
+.nav>li>a{
+	padding:5px 8px;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus{
+	color: #fff;
+	background-color: #2196f3;
+	border: 1px solid #1976d2;
+}
+.nav-tabs > li.more{float:right}
+.nav-tabs > li.more:hover a{background:transparent;border-color:transparent;}
+.Avatar{
+	max-width:60px;
+	border-radius:50%;
+	transition:all 0.2s ease-in-out;
+	border: 1px solid #757575;
+	padding: 2px;
+}
+.Avatar:hover{
+	transition:all 0.2s ease-in-out;
+	transform:rotate(-35deg);
+}
+.media-heading{
+	font-weight:600;
+}
+#blog .media-body p{color:#555}
+#tags ul,
+#tags ul li,
+#tags ul ul li,
+#tags a{
+	list-style: none;
+	display: inline-block;
+}
+#tags ul{padding-left:0}
+#tags a:hover{
+	text-decoration:none;
+	background-color:#98699b;
+	color:rgb(245,245,245);
+}
+#tags a{
+	margin:0 3px 3px 0;
+	padding:1px 10px 3px;
+	background:#f5f5f5;
+	color:#666;
+	border: 1px solid #eaeaea;
+}
+#tags a span{font-size:10px}
