@@ -33,6 +33,17 @@
   <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 {$header}
+{if $host == "http://www.paipk.com/"}
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?3339ebed2f8c74cf5764123027eb494f";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+{/if}
 </head>
 <body>
 <!-- 导航 -->
@@ -150,6 +161,14 @@
 	<section class="col-sm-4">
 	<ul class="nav nav-tabs" role="tablist">
 		<li role="presentation" class="active"><a href="#work" role="tab" data-toggle="tab">我的作品</a></li>
+
+{if $zbp->Config('paipk1')->ifbaiduShare == '1'}
+<li class="floatright"><!-- 百度分享 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</li>
+{/if}
+
 	</ul>
 
 	<div class="tab-content">

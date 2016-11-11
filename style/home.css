@@ -1,5 +1,5 @@
 body{
-	background-color:#f2f5f8;
+	background-color:#f8f8f8;
 	font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 img.logo{
@@ -51,8 +51,10 @@ img.logo{
 	margin-top: -24px;
 	padding-top:20px;
 	padding-bottom:10px;
-	background:#fff;
+	background: #fff;
+	background: linear-gradient(#eee 4%,#fff 12%,#fff 80%,#dfdfdf 100%);
 	border:6px solid hsla(0,0%,100%,.2);
+	border-radius: 0 0 15px 15px;
 	background-clip:padding-box;
 }
 .tab-content{
@@ -78,16 +80,8 @@ img.logo{
 	border-bottom-color:transparent;
 }
 .green>li>a{color:#689f38}
-.yellow>li.active>a,
-.yellow>li.active>a:hover,
-.yellow>li.active>a:focus{
-	color:#fff;
-	background-color:#ffc107;
-	border:1px solid #f57c00;
-	border-bottom-color:transparent;
-}
-.yellow>li>a{color:#f57c00}
-.nav-tabs>li.more{float:right}
+.nav-tabs>li.more,
+.nav-tabs>li.floatright{float:right}
 .nav-tabs>li.more:hover a{background:transparent;border-color:transparent;}
 .Avatar{
 	max-width:60px;
