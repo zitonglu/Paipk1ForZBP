@@ -5,7 +5,7 @@
 $indexHomeURL = $host.'zb_users/theme/'.$theme.'/template/'.$zbp->Config('paipk1')->indexHome .'.php';
 $fileExists = @file_get_contents($indexHomeURL,null,null,-1,1) ? true : false;
 
-if($zbp->Config('paipk1')->indexHome!=''){
+if($zbp->Config('paipk1')->indexHome!=''&&$type=='index'&&$page=='1'){
 	if($fileExists){
 		include $this->GetTemplate($zbp->Config('paipk1')->indexHome);
 	}else{

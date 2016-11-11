@@ -84,14 +84,14 @@
 </div>
 <!-- 内容页面 -->
 <article class="container contentbox">
+
 	<section class="col-sm-4">
-	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist">
 	  <li role="presentation" class="active"><a href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
 	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">关注范围</a></li>
 	  <li class="more"><a href="{$zbp.members[1].HomePage}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
-	<!-- Tab panes -->
+
 	<div class="tab-content">
 	  <div role="tabpanel" class="tab-pane active" id="blog">
 		<ul class="media-list">
@@ -112,6 +112,51 @@
 	  </div>
 	  <div role="tabpanel" class="tab-pane" id="tags"><ul>{module:tags}</ul></div>
 	</div>
+	</section>
+
+	<section class="col-sm-4">
+	<ul class="nav nav-tabs" role="tablist">
+	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab">最近发文</a></li>
+	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab">热门文章</a></li>
+	  <li class="more"><a href="{$pagebar.nextbutton}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	</ul>
+
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="news">
+	  	<ul class="homelist">
+		{foreach GetList($zbp->option['ZC_DISPLAY_COUNT']) as $related}
+		<li><span>{$related.Time('Y-m-d')}</span><a href="{$related.Url}" title="{$related.Title}">{$related.Title}</a></li>
+		{/foreach}
+		</ul>
+	  </div>
+	  <div role="tabpanel" class="tab-pane" id="hot">
+	  	<ul class="homelist">
+	  		{php}
+	  		$stime = time();
+			$ytime = 91*24*60*60;
+			$ztime = $stime-$ytime;
+			$order = array('log_ViewNums'=>'DESC');
+			$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
+			$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array($zbp->option['ZC_DISPLAY_COUNT']),'');
+			foreach ($RMarray as $hotlist){
+				echo "<li><span>".$hotlist->Time('Y-m-d')."</span><a href=\"".$hotlist->Url."\" title=\"".$hotlist->Title."\">".$hotlist->Title."</a></li>";
+			}
+	  		{/php}
+	  	</ul>
+	  </div>
+	</div>
+	</section>
+
+	<section class="col-sm-4">
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#work" role="tab" data-toggle="tab">我的作品</a></li>
+		<li class="more"><a href="#" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	</ul>
+
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="work">
+		...
+	  </div>
 	</section>
 </article>
 

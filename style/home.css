@@ -106,3 +106,36 @@ img.logo{
 	border: 1px solid #eaeaea;
 }
 #tags a span{font-size:10px}
+/*首页文章列表*/
+.homelist{
+	list-style:none;
+	padding-left:0;
+}
+.homelist li span{
+	float:right;
+	display:block;
+	color:#757575;
+}
+.homelist li a{
+	display:block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	margin-left:2px;
+}
+.homelist li a:hover,
+.homelist li a:focus{
+	text-decoration:none;
+}
+.homelist li a::before{
+	position:relative;
+	margin-bottom:4px;
+	margin-right:6px;
+	content: '';
+	width:8px;
+	height:8px;
+	display:inline-block;
+	border-radius:50% 50% 0;
+	border:1px solid #428bca;
+	box-shadow:0 1px 2px #757575;
+}
