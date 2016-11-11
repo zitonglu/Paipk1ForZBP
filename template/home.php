@@ -86,7 +86,7 @@
 <article class="container contentbox">
 
 	<section class="col-sm-4">
-	<ul class="nav nav-tabs" role="tablist">
+	<ul class="nav nav-tabs green" role="tablist">
 	  <li role="presentation" class="active"><a href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
 	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">关注范围</a></li>
 	  <li class="more"><a href="{$zbp.members[1].HomePage}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
@@ -115,7 +115,7 @@
 	</section>
 
 	<section class="col-sm-4">
-	<ul class="nav nav-tabs" role="tablist">
+	<ul class="nav nav-tabs blue" role="tablist">
 	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab">最近发文</a></li>
 	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab">热门文章</a></li>
 	  <li class="more"><a href="{$pagebar.nextbutton}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
@@ -150,13 +150,25 @@
 	<section class="col-sm-4">
 	<ul class="nav nav-tabs" role="tablist">
 		<li role="presentation" class="active"><a href="#work" role="tab" data-toggle="tab">我的作品</a></li>
-		<li class="more"><a href="#" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 
 	<div class="tab-content">
-	  <div role="tabpanel" class="tab-pane active" id="work">
-		...
-	  </div>
+	<div role="tabpanel" class="tab-pane active" id="work">
+		<div id="carousel-example-generic" class="carousel slide post-box" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				{php}include $zbp->path.'zb_users/theme/paipk1/plugin/out.html'{/php}
+			</div>
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	</div>
 	</section>
 </article>
 
