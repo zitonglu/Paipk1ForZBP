@@ -191,7 +191,31 @@
 	</section>
 </article>
 
-<div class="linkbox"></div>
+<div class="linkbox">
+	<div class="container">
+		<div class="col-sm-10 list-inline">
+			我的小伙伴：{module:link}
+		</div>
+		<div class="col-sm-2 text-right">
+		{php}
+			$QQzaixian="910109610";
+	        if($zbp->Config('paipk1')->QQ != ""){
+	           $QQzaixian = $zbp->Config('paipk1')->QQ;
+	        }
+		{/php}
+			<span class="dropup">
+			<a href=""  title="点击扫描手机号码" target="_blank" data-toggle="dropdown" data-placement="top" id="callnumber"><i class="glyphicon glyphicon-phone-alt icon-link"></i></a>&nbsp;
+			<ul class="dropdown-menu" role="menu" aria-labelledby="callnumber">
+				<img src="{$host}zb_users/theme/{$theme}/images/cellnumber.png" alt="手机号码"><br>
+				<p class="text-center">手机扫描后直接拨打</p>
+			</ul>
+			</span>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes" title="QQ联系我" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-user icon-link"></i></a>&nbsp;
+			<a href="mailto:{$zbp.members[1].Email}" title="E-mail" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-envelope icon-link"></i></a>
+		</div>
+		<script>$(function () { $("[data-toggle='tooltip']").tooltip(); });</script>
+	</div>
+</div>
 
 <footer class="footer">
 	{if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}

@@ -32,7 +32,7 @@ img.logo{
 	z-index:5;
 	margin-top:0;
 	width:100vw;
-	height:40px;
+	height:30px;
 	background:#f8f8f8;
 	border-radius:50% / 0 0 100% 100%;
 	box-shadow: 0 2px 5px -3px #757575;
@@ -48,7 +48,7 @@ img.logo{
 /*内容*/
 .contentbox{
 	margin-top: -24px;
-	margin-bottom: 20px;
+	margin-bottom:8px;
 	padding-top:20px;
 	padding-bottom:10px;
 	background: #fff;
@@ -158,6 +158,21 @@ img.logo{
 .carousel-control.right,
 .carousel-control.left{
 	background:transparent;
+}
+/*友情链接*/
+.linkbox{
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#555;
+	background:#f3f3f3;
+	border-top:1px solid #ddd;
+}
+.linkbox a{color:#555}
+.icon-link{padding:5px;border-radius:50%}
+.icon-link:hover,.icon-link:focus{
+	background: #555;
+	color:#f3f3f3;
+	transition:all 0.2s ease-in-out;
 }
 .footer{
 	text-align:center;
