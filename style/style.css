@@ -1,7 +1,7 @@
 body{
 	padding-top:70px;
 	font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
-	background-color:#f2f5f8;
+	background-color:#f8f8f8;
     color:#555;
 }
 .cat>a:hover,
@@ -741,9 +741,7 @@ p.next-text{
   bottom:.1em;
   font-size:2em;
   padding:.1em .45em;
-  background:linear-gradient(#b3e5fc 50%,#DCEDC8 0);
-  border-radius:.2em;
-  box-shadow:0 0 .2em #8BC34A;
+  /*background:linear-gradient(transparent 50%,#DCEDC8 0);*/
   z-index:50;
 }
 .top:hover,

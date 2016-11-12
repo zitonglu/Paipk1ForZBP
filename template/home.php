@@ -15,7 +15,7 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/home.css?v=2.32" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/home.css?v=2.43" type="text/css">
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
 {if $type=='index'&&$page=='1'}
@@ -24,8 +24,8 @@
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{$host}zb_system/xml-rpc/wlwmanifest.xml" />
 {/if}
   <title>{$name}-{$subname}</title>
-  <meta name="keywords" content="z-blogPHP,主题,网页设计"/>
-  <meta name="description" content="{$name}-{$subname}"/>
+  <meta name="keywords" content="{$zbp->Config('paipk1')->HomeKeywords;}"/>
+  <meta name="description" content="{if $zbp->Config('paipk1')->HomeDescription==""}{$subname}{else}{$zbp->Config('paipk1')->HomeDescription}{/if}"/>
 <!--百度统计-->
 {if $zbp->Config('paipk1')->baiduTJ!=""}{$zbp->Config('paipk1')->baiduTJ}{/if}
 <!--[if lt IE 9]>
@@ -33,24 +33,16 @@
   <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 {$header}
-{if $host == "http://www.paipk.com/"}
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-		var hm = document.createElement("script");
-		hm.src = "//hm.baidu.com/hm.js?3339ebed2f8c74cf5764123027eb494f";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
-{/if}
+<style type="text/css">
+.img-responsive,.thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner>.item > a > img{min-height:calc({$zbp->option['ZC_DISPLAY_COUNT']} * 22px);object-fit:cover}
+</style>
 </head>
 <body>
 <!-- 导航 -->
 <nav class="navbar navbar-default navbar-mycolor">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="{$host}">
+			<a class="navbar-brand" href="{$host}" title="{$name}">
 				<img class="logo" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO">
 			</a>
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -65,12 +57,16 @@
 				{module:navbar}
 			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
-				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击打开二维码"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
 				<ul class="dropdown-menu">
-					<!-- <img src="http://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data={$host}" alt="网页二维码"> -->
+					{if $host == "http://www.paipk.com/"}
+					<img src="http://images.paipk.com/erweima.png" alt="网页二维码">
+					{else}
+					<img src="http://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data={$host}" alt="网页二维码">
+					{/if}
 				</ul>
 				</li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i> 搜索</a>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击搜索"><i class="glyphicon glyphicon-search"></i> 搜索</a>
 				<ul class="dropdown-menu search-box">
 					<form method="post" action="{$host}zb_system/cmd.php?act=search" name="search">
 						<div class="input-group">
@@ -88,28 +84,28 @@
 </nav>
 <div class="shade"></div>
 <!-- 导航end -->
+{if $host == "http://www.paipk.com/"}
+<div class="jumbotron" style="background-image:url(http://images.paipk.com/1.jpg)">
+{else}
 <div class="jumbotron" style="background-image:url({$host}zb_users/theme/{$theme}/images/1.jpg)">
-	<div class="container">
-		
-	</div>	
+{/if}
 </div>
 <!-- 内容页面 -->
 <article class="container contentbox">
-
 	<section class="col-sm-4">
 	<ul class="nav nav-tabs green" role="tablist">
-	  <li role="presentation" class="active"><a href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
-	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">关注范围</a></li>
-	  <li class="more"><a href="{$zbp.members[1].HomePage}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	  <li role="presentation" class="active"><a title="博主信息" href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
+	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab" title="关注范围">关注范围</a></li>
+	  <li class="more"><a href="{$pagebar.nextbutton}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 
 	<div class="tab-content">
 	  <div role="tabpanel" class="tab-pane active" id="blog">
 		<ul class="media-list">
 			<li class="media">
-				<a class="media-left" href="{$zbp.members[1].HomePage}">
+				<a class="media-left" href="{$zbp.members[1].HomePage}" title="{$zbp.members[1].StaticName}">
 					{if $host == "http://www.paipk.com/"}
-					<img src="http://images.limiwu.com/avatar.jpg" alt="{$zbp.members[1].StaticName}" class="Avatar">
+					<img src="http://images.paipk.com/avatar.jpg" alt="{$zbp.members[1].StaticName}" class="Avatar">
 					{else}
 					<img src="{$zbp.members[1].Avatar}" alt="{$zbp.members[1].StaticName}" class="Avatar">
 					{/if}
@@ -120,6 +116,16 @@
 				</div>
 			</li>
 		</ul>
+{if $host == "http://www.paipk.com/"}
+<div class="hidden-sm">
+<hr>
+<script type="text/javascript">
+/*280*55 创建于 2016/11/12*/
+var cpro_id = "u2814888";
+</script>
+<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>
+</div>
+{/if}
 	  </div>
 	  <div role="tabpanel" class="tab-pane" id="tags"><ul>{module:tags}</ul></div>
 	</div>
@@ -127,8 +133,8 @@
 
 	<section class="col-sm-4">
 	<ul class="nav nav-tabs blue" role="tablist">
-	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab">最近发文</a></li>
-	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab">热门文章</a></li>
+	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab" title="最近发文">最近发文</a></li>
+	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab" title="热门文章">热门文章</a></li>
 	  <li class="more"><a href="{$pagebar.nextbutton}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 
@@ -194,7 +200,7 @@
 <div class="linkbox">
 	<div class="container">
 		<div class="col-sm-10 list-inline">
-			我的小伙伴：{module:link}
+			友情链接：{module:link}
 		</div>
 		<div class="col-sm-2 text-right">
 		{php}

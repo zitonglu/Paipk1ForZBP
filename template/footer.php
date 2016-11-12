@@ -45,7 +45,7 @@
            $QQzaixian = $zbp->Config('paipk1')->QQ;
         }
     {/php}
-    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
+    <a target="_blank" title="QQ联系我" href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
     <a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 <div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">

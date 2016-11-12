@@ -195,8 +195,8 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 #divLinkage li:hover,
 #divCatalog li:hover,
 #divTags li:hover{
-	background-color:#98699b;
-	color: rgb(245,245,245);
+	background-color:#8bc34a;
+	color:#fff;
 }
 #divFavorites li:hover a,
 #divLinkage li:hover a,
@@ -244,22 +244,6 @@ radial-gradient(circle at 0    50%, white 5%, #e7e7e7 6%, #e7e7e7 15%, white 16%
 	color: #fff;
 }
 /*导航条颜色*/
-.navbar-mycolor {
-    background-color:#5EAAE4;
-}
-@media (max-width: 599px){
-	.navbar-mycolor {
-    	background-color:#428bca;
-	}
-}
-.navbar-default{
-	border-color:#428bca;
-}
-.navbar-mycolor .navbar-brand,
-.navbar-mycolor .navbar-text,
-.navbar-mycolor .navbar-nav > li > a {
-  color: #fff;
-}
 .navbar-mycolor .navbar-brand:hover,
 .navbar-mycolor .navbar-brand:focus,
 .navbar-mycolor .navbar-nav > li > a:hover,

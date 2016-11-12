@@ -18,6 +18,19 @@ img.logo{
 .navbar-default .navbar-nav >li>a:focus{
 	background-color:#e7e7e7;
 }
+.navbar-mycolor .navbar-brand:hover,
+.navbar-mycolor .navbar-brand:focus,
+.navbar-mycolor .navbar-nav > li > a:hover,
+.navbar-mycolor .navbar-nav > li > a:focus,
+.navbar-mycolor .navbar-nav > .active > a,
+.navbar-mycolor .navbar-nav > .active > a:hover,
+.navbar-mycolor .navbar-nav > .active > a:focus,
+.navbar-mycolor .navbar-nav > .open > a,
+.navbar-mycolor .navbar-nav > .open > a:hover,
+.navbar-mycolor .navbar-nav > .open > a:focus{
+  color: #fff;
+  background-color:#428bca;
+}
 /*顶部搜索栏*/
 .search-box{
 	background:transparent;
@@ -31,7 +44,7 @@ img.logo{
 	position: absolute;
 	z-index:5;
 	margin-top:0;
-	width:100vw;
+	width:100%;
 	height:30px;
 	background:#f8f8f8;
 	border-radius:50% / 0 0 100% 100%;
@@ -39,7 +52,7 @@ img.logo{
 }
 .jumbotron{
 	margin-bottom:0;
-	min-height:400px;
+	min-height:350px;
 	background-position:center;
 	background-repeat:no-repeat; 
 	box-shadow: 0 -20px 40px -20px #555 inset;
@@ -48,13 +61,14 @@ img.logo{
 /*内容*/
 .contentbox{
 	margin-top: -24px;
-	margin-bottom:8px;
+	margin-bottom:20px;
 	padding-top:20px;
 	padding-bottom:10px;
 	background: #fff;
-	background: linear-gradient(#eee 4%,#fff 12%,#fff 80%,#dfdfdf 100%);
-	border:6px solid hsla(0,0%,100%,.2);
+	background: linear-gradient(#eee 4%,#fff 12%,#fff 70%,#f0f0f0 100%);
+	box-shadow: 0 0 0 1px #ddd,0 0 0 6px hsla(0,0%,100%,.2);
 	background-clip:padding-box;
+	min-height: calc(100vh - 430px);
 }
 .tab-content{
 	padding:15px 5px;
@@ -134,6 +148,8 @@ img.logo{
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	margin-left:2px;
+	padding-bottom:2px;
+	border-bottom:1px dashed #ddd;
 }
 .homelist li a:hover,
 .homelist li a:focus{
@@ -178,9 +194,23 @@ img.logo{
 	text-align:center;
 	background:#212121;
 	color:#bdbdbd;
-	padding:20px 0;
+	padding:20px 5px;
 	border-top:1px solid #757575;
 	box-shadow:0 6px 9px #000 inset;
 }
 .footer p{margin-bottom:5px}
 .footer a{color:#777}
+
+@media (max-width:767px){
+	.jumbotron{min-height:200px}
+	.shade{
+		height:10px;
+	}
+	.col-sm-4,
+	.col-sm-10,
+	.col-sm-2{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	.footer{box-shadow:none}
+}
