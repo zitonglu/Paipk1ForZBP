@@ -39,8 +39,7 @@ img.logo{
 }
 .jumbotron{
 	margin-bottom:0;
-	min-height:350px;
-	background-image:url(1.jpg);
+	min-height:400px;
 	background-position:center;
 	background-repeat:no-repeat; 
 	box-shadow: 0 -20px 40px -20px #555 inset;
@@ -49,12 +48,12 @@ img.logo{
 /*内容*/
 .contentbox{
 	margin-top: -24px;
+	margin-bottom: 20px;
 	padding-top:20px;
 	padding-bottom:10px;
 	background: #fff;
 	background: linear-gradient(#eee 4%,#fff 12%,#fff 80%,#dfdfdf 100%);
 	border:6px solid hsla(0,0%,100%,.2);
-	border-radius: 0 0 15px 15px;
 	background-clip:padding-box;
 }
 .tab-content{
@@ -160,3 +159,13 @@ img.logo{
 .carousel-control.left{
 	background:transparent;
 }
+.footer{
+	text-align:center;
+	background:#212121;
+	color:#bdbdbd;
+	padding:20px 0;
+	border-top:1px solid #757575;
+	box-shadow:0 6px 9px #000 inset;
+}
+.footer p{margin-bottom:5px}
+.footer a{color:#777}

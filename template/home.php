@@ -88,7 +88,7 @@
 </nav>
 <div class="shade"></div>
 <!-- 导航end -->
-<div class="jumbotron">
+<div class="jumbotron" style="background-image:url({$host}zb_users/theme/{$theme}/images/1.jpg)">
 	<div class="container">
 		
 	</div>	
@@ -191,6 +191,22 @@
 	</section>
 </article>
 
+<div class="linkbox"></div>
+
+<footer class="footer">
+	{if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}
+    <p>
+        Copyright © 2016-2017 <a href="{$host}" title="{$name}">{$name}</a>&nbsp;
+        {if $user.ID>0}
+        <a href="{$host}zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
+        {else}
+        <a href="{$host}zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
+        {/if}
+        {if $zbp->Config('paipk1')->baike!=""}&nbsp;{$zbp->Config('paipk1')->baike}&nbsp;{/if}
+        {$copyright}&nbsp;
+        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
+    </p>
+</footer>
 
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
