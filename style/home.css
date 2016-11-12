@@ -52,11 +52,10 @@ img.logo{
 }
 .jumbotron{
 	margin-bottom:0;
-	min-height:350px;
+	min-height:calc(100vh - 420px);
 	background-position:center;
 	background-repeat:no-repeat; 
-	box-shadow: 0 -20px 40px -20px #555 inset;
-	border-bottom: 1px solid #757575;
+	background-size:cover;
 }
 /*内容*/
 .contentbox{
@@ -68,7 +67,7 @@ img.logo{
 	background: linear-gradient(#eee 4%,#fff 12%,#fff 70%,#f0f0f0 100%);
 	box-shadow: 0 0 0 1px #ddd,0 0 0 6px hsla(0,0%,100%,.2);
 	background-clip:padding-box;
-	min-height: calc(100vh - 430px);
+	min-height:340px;
 }
 .tab-content{
 	padding:15px 5px;
@@ -190,6 +189,7 @@ img.logo{
 	color:#f3f3f3;
 	transition:all 0.2s ease-in-out;
 }
+.cellnumber{width:100%}
 .footer{
 	text-align:center;
 	background:#212121;

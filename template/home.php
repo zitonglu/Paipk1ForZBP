@@ -15,7 +15,7 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/home.css?v=2.43" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/home.css?v=2.45" type="text/css">
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
 {if $type=='index'&&$page=='1'}
@@ -210,9 +210,9 @@ var cpro_id = "u2814888";
 	        }
 		{/php}
 			<span class="dropup">
-			<a href=""  title="点击扫描手机号码" target="_blank" data-toggle="dropdown" data-placement="top" id="callnumber"><i class="glyphicon glyphicon-phone-alt icon-link"></i></a>&nbsp;
+			<a href=""  title="点击扫描手机号码" target="_blank" data-toggle="dropdown" data-placement="top" id="callnumber" data-hover="dropdown"><i class="glyphicon glyphicon-phone-alt icon-link"></i></a>&nbsp;
 			<ul class="dropdown-menu" role="menu" aria-labelledby="callnumber">
-				<img src="{$host}zb_users/theme/{$theme}/images/cellnumber.png" alt="手机号码"><br>
+				<img class="cellnumber" src="{$host}zb_users/theme/{$theme}/images/cellnumber.png" alt="手机号码"><br>
 				<p class="text-center">手机扫描后直接拨打</p>
 			</ul>
 			</span>
@@ -243,6 +243,7 @@ var cpro_id = "u2814888";
 {else}
     <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}
+<script src="{$host}zb_users/theme/{$theme}/js/datahover.js"></script>
 {$footer}
 </body>
 </html>
