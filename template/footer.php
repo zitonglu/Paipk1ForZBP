@@ -96,9 +96,11 @@
     <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}
     <script src='{$host}zb_users/theme/{$theme}/js/custom.js'></script>
-
-{if $zbp->Config('paipk1')->floatBox!=""}<!-- 滚动侧栏 -->
-    <script src='{$host}zb_users/theme/{$theme}/js/float.js'></script>
+{if $type != "index"}<!-- 滚动侧栏 -->
+<script src='{$host}zb_users/theme/{$theme}/js/theia-sticky-sidebar.js'></script>
+<script>
+    jQuery(document).ready(function() { jQuery('#sidebar').theiaStickySidebar({ additionalMarginTop: 60 }); });
+</script>
 {/if}
 {$footer}
 </body>

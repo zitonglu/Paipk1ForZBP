@@ -28,16 +28,9 @@
 			{template:post-page}
 			{/if}
 		</div>
-		<div class="col-md-3 single-box hidden-xs hidden-sm">
-			<div class="single-right">{template:sidebar3}
-			<!-- 滚动侧栏 -->
-			{if $zbp->Config('paipk1')->floatBox!=""}
-				<div class="rightfloat">
-					<div id="float">
-						{$zbp->Config('paipk1')->floatBox}
-					</div>
-				</div>
-			{/if}
+		<div class="col-md-3 single-box hidden-xs hidden-sm" id="sidebar">
+			<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
+				{template:sidebar3}
 			</div>
 		</div>
 	</div>

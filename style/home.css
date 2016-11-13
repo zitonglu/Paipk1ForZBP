@@ -69,6 +69,8 @@ img.logo{
 	background-clip:padding-box;
 	min-height:340px;
 }
+.contentbox .col-sm-4{border-left:1px dashed #ddd;}
+.contentbox .col-sm-4:first-child{border:none;}
 .tab-content{
 	padding:15px 5px;
 }
