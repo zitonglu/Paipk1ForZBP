@@ -101,23 +101,8 @@ border: 2px solid rgba(85,85,85,.7);
 	#single,
 	.single-left,
 	.single-right{
-		background-color:#f0f0f0;
+		background-color:transparent;
 		background-image:none;
-	}
-}
-.Subtitle,
-.time,
-.time a,
-.time a:hover,
-.time a:focus{
-	color:rgb(119,119,119);
-}
-.time{
-	border-bottom: 1px dotted #ddd;
-}
-@media (max-width: 749px){
-	.time{
-		border-bottom:none;
 	}
 }
 .flip{

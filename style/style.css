@@ -273,6 +273,7 @@ body{
 	color:#212121;
 	font-size: 24px;
 	font-weight:bolder;
+	line-height:1.6;
 }
 .single-left h2,
 .single-left h3,
@@ -306,19 +307,31 @@ body{
 	margin-bottom: 20px;
 	font-size: 14px;
 }
-
 @media (max-width: 749px){
 	.single-video .title,
 	.single-left>h1{
-	font-size: 20px;
-	font-weight: 500;
-	margin: 0 0 10px 0;
+		font-size:16px;
+		font-weight: 500;
+		margin: 0 0 10px 0;
 	}
 }
 .time{
-	padding-bottom:1em;
+	padding-bottom:.5em;
 	margin-bottom:1em;
 	font-size:14px;
+}
+@media (min-width: 749px){
+	.time{
+		border-bottom:1px dotted #ddd;
+	}
+}
+.time,
+.time a{
+	color:#bbb;
+}
+.time a:hover,
+.time a:focus{
+	color:#555;
 }
 .single-left,
 blockquote{
@@ -524,6 +537,9 @@ p.next-text{
 .widget>div{
 	padding:2px;
 	overflow:hidden;
+}
+.widget ul{
+	margin-top:10px;
 }
 #tbCalendar{
 	margin: 0 auto;
@@ -956,20 +972,7 @@ p.next-text{
 	min-width:300px;
 }
 /*百度分享*/
-@media (min-width: 749px){
-	.bdsharebuttonbox{
-		float:right;
-		margin-top:-6px;
-	}
-}
-/*文章侧栏滑动*/
-.rightfloat{
-	position:relative;
-}
-.float2{
-	position:fixed;
-	top:70px;
-	z-index:250;
-	padding:8px;
-	width:282px;
+.bdsharebuttonbox{
+	float:right;
+	margin-top:-6px;
 }
