@@ -1,5 +1,4 @@
 <?php
-//搜索引擎强化插件有问题，关闭了 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
 /*注册插件*/
 RegisterPlugin('paipk1','ActivePlugin_paipk1');
 
@@ -9,7 +8,6 @@ function ActivePlugin_paipk1(){
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response2','paipk1_single_footer');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_single_theme_select');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','paipk1_teSeTuPian');
-	//搜索引擎 Add_Filter_Plugin('Filter_Plugin_Search_Begin','paipk1_SearchMain');
 }
 
 /*定义开头*/
@@ -82,7 +80,6 @@ function paipk1_rebuild_Main() {
 	global $zbp;
 	$zbp->RegBuildModule('comments','paipk1_side_comm');
 	$zbp->RegBuildModule('archives','paipk1_side_archives');
-	$zbp->RegBuildModule('previous','paipk1_side_previous');
 }
 
 /*侧栏评论*/
@@ -94,9 +91,8 @@ function paipk1_side_comm() {
 	$s = '';
 	foreach ($comments as $comment) {
 		$s .= '<li><a href="'.$comment->Post->Url.'#cmt'.$comment->ID.'"><img src="'.$comment->Author->Avatar.'" alt="头像" class="img-comment"></a>';
-		$s .= '<span class="pl-list"><a href="'.$comment->Post->Url.'" title="'.$comment->Post->Title.'">'.$comment->Post->Title.'</a> <small>的评论：</small></span><br>';
-		$s .= '<a href="'.$comment->Post->Url.'" class="text-success">'.$comment->Author->StaticName.'</a>';
-		$s .= '<span class="text-muted"> - '.$comment->Time('Y-m-d').'</span><br>';
+		$s .= '<a href="'.$comment->Post->Url.'">'.$comment->Author->Name.'</a>';
+		$s .= '<small class="small"> - '.$comment->Time('Y-m-d').'</small><br>';
 		$s .= TransferHTML($comment->Content,'[noenter]').'</li>';
 	}
 	return $s;
@@ -156,35 +152,6 @@ function paipk1_side_archives() {
 			eval(targ+".location=\'"+selObj.options[selObj.selectedIndex].value+"\'");
 			if (restore) selObj.selectedIndex=0;}
 			</script>';
-	return $s;
-}
-/*
-* 侧栏带图片的最新文章
-* 有缩略图地址的先判断地址路径；
-* 没有的找到文章中第一个图片；
-* 实在没有就用缩略图；
-*/
-function paipk1_side_previous() {
-	global $zbp;
-	$i = $zbp->modulesbyfilename['previous']->MaxLi;
-	if ($i == 0) $i = 10;
-	$articles = $zbp->GetArticleList('*', array(array('=', 'log_Type', 0), array('=', 'log_Status', 0)), array('log_PostTime' => 'DESC'), $i, null,false);
-	$s = '';
-	foreach ($articles as $article) {
-	$clsjtp=rand(1,20);
-	$pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
-	$content = $article->Content;
-	preg_match_all($pattern,$content,$matchContent);
-	if ($article->Metas->paipk1_teSeTuPian!='') {
-		$clsjtp=$article->Metas->paipk1_teSeTuPian;
-	}elseif(isset($matchContent[1][0])){
-		$clsjtp=$matchContent[1][0];
-	}else{
-		$clsjtp="{$zbp->host}zb_users/theme/paipk1/images/rand/$clsjtp.jpg";
-	}
-	$s .= '<li><a href="' . $article->Url. '" title="' . $article->Title. '"><img src="' .$clsjtp. '" alt="' . $article->Title. '">
-			<p class="text-center">' . $article->Title. '</p></a></li>';
-	}
 	return $s;
 }
 /* 主题index模版选择的<option> */

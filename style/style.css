@@ -208,7 +208,6 @@ body{
 .footer{
 	padding-top:5px;
 	padding-bottom:5px;
-	line-height:1;
 	text-align:center;
 }
 @media (min-width: 749px){
@@ -632,7 +631,7 @@ p.next-text{
 	height: 40px;
 	float: left;
 	margin-right:10px;
-	border-radius:10%;
+	border-radius:50%;
 }
 .tag-count{
 	font-size: 10px;
