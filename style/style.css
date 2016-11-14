@@ -536,21 +536,56 @@ p.next-text{
 .widget>div{
 	padding:2px;
 	overflow:hidden;
-}
-.widget ul{
 	margin-top:10px;
 }
+.widget>ul{
+	margin-top:10px;
+}
+/*日历*/
+#divCalendar{
+	position:relative;
+    background:#eee;
+    background:linear-gradient(-150deg,transparent 1.5em,#eee 0);
+}
+#divCalendar::before{
+	content: '';
+    position: absolute;
+    top: 0;right: 0;
+    background: linear-gradient(to left bottom,
+        transparent 50%,
+        rgba(0,0,0,.2) 0,
+        rgba(0,0,0,.4)) 100% 0 no-repeat;
+    width:1.73em;
+    height:3em;
+    transform:translateY(-1.3em) rotate(-30deg);
+    transform-origin:bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow:-.2em .2em .3em -.1em rgba(0,0,0,.15);
+}
+#divCalendar>h5{display:none;}
 #tbCalendar{
 	margin: 0 auto;
 }
 #tbCalendar td,
 #tbCalendar th {
 	padding: 5px;
-	text-align: center
+	text-align:center;
 }
 #tbCalendar caption {
 	padding: 6px 0;
-	text-align: center
+	text-align:center;
+}
+#tbCalendar tbody a{
+	color:#fff;
+	background:#428bca;
+	border-radius:4px;
+	padding:2px 4px;
+}
+#tbCalendar tbody td:hover{
+	background:transparent;
+}
+#tbCalendar tbody td:hover a{
+	background:#999;
 }
 #divFavorites div,
 #divFavorites ul,
@@ -561,9 +596,7 @@ p.next-text{
 #divMisc div,
 #divMisc ul,
 #divTags div,
-#divTags ul,
-#divPrevious div,
-#divPrevious ul{
+#divTags ul{
 	list-style: none;
 	display: inline-block;
 }
@@ -602,23 +635,56 @@ p.next-text{
 #divComments ul,
 #divArchives ul,
 #divPrevious ul{
-	margin-left:-40px;
+	padding-left:0;
 }
-#divComments li,
-#divPrevious li{
+#divComments li{
 	margin-bottom: 10px;
 	list-style-type: none;
 }
-#divPrevious li{
-	border: 1px solid white;
+#divPrevious li a{
+	display: block;
+	margin-left:2px;
+	padding-bottom: 2px;
+	border-bottom: 1px dashed #ddd;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color:#555;
 }
-#divPrevious li img{
-	width:100%;
-	max-height:160px;
-	object-fit:cover;
+#divPrevious li a::before{
+	position:relative;
+	margin-bottom:2px;
+	margin-right:8px;
+	content: '';
+	width:8px;
+	height:8px;
+	display:inline-block;
+	border-radius:50% 50% 0;
+	box-shadow:0 1px 2px #757575;
 }
-#divPrevious li p{
-	margin-bottom:0;
+#divPrevious li:nth-child(n) a::before{
+	border:1px solid #fd5f00;
+}
+#divPrevious li:nth-child(n) a:hover{
+	color:#fd5f00;
+}
+#divPrevious li:nth-child(2n) a::before{
+	border:1px solid #00a635;
+}
+#divPrevious li:nth-child(2n) a:hover{
+	color:#00a635;
+}
+#divPrevious li:nth-child(3n) a::before{
+	border:1px solid #b92400;
+}
+#divPrevious li:nth-child(3n) a:hover{
+	color:#b92400;
+}
+#divPrevious li:nth-child(4n) a::before{
+	border:1px solid #00a9da;
+}
+#divPrevious li:nth-child(4n) a:hover{
+	color:#00a9da;
 }
 #divArchives li{
 	width: 49%;
