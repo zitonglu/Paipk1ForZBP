@@ -28,7 +28,7 @@
 			{template:post-page}
 			{/if}
 		</div>
-		<div class="col-md-3 single-box hidden-xs hidden-sm" id="sidebar">
+		<div class="col-md-3 single-box hidden-xs hidden-sm sidebar">
 			<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
 				{template:sidebar3}
 			</div>

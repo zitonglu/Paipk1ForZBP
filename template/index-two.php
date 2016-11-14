@@ -52,8 +52,8 @@ foreach ($RMarray as $hotlist){
 		</div>
 			{template:pagebar}
 		</div>
-		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
-			<div class="single-right">
+		<div class="col-md-3 there-right-box hidden-xs hidden-sm sidebar">
+			<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
 				{template:sidebar4}
 			</div>
 		</div>

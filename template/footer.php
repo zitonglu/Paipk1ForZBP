@@ -96,12 +96,13 @@
     <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}
     <script src='{$host}zb_users/theme/{$theme}/js/custom.js'></script>
-{if $type != "index"}<!-- 滚动侧栏 -->
+<!-- 滚动侧栏 -->
 <script src='{$host}zb_users/theme/{$theme}/js/theia-sticky-sidebar.js'></script>
 <script>
-    jQuery(document).ready(function() { jQuery('#sidebar').theiaStickySidebar({ additionalMarginTop: 60 }); });
+jQuery(document).ready(function() {
+    jQuery('.sidebar').theiaStickySidebar({ additionalMarginTop:60}); 
+});
 </script>
-{/if}
 {$footer}
 </body>
 </html>

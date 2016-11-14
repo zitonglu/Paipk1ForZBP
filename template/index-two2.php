@@ -6,8 +6,8 @@
 <div class="container-fluid">{template:nav}</div>
 <div class="container long">
 	<div class="row single-body">
-		<div class="col-md-3 there-right-box hidden-xs hidden-sm">
-			<div class="single-right">
+		<div class="col-md-3 there-right-box hidden-xs hidden-sm sidebar">
+			<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
 				{template:sidebar4}
 			</div>
 		</div>
