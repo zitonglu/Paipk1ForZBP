@@ -4,8 +4,8 @@
 <div class="widget" id="{$module.HtmlID}">
 
 {if (!$module.IsHideTitle)&&($module.Name)}
-<h5>{$module.Name}</h5>
-{else}<h5 style="display:none;"></h5>{/if}
+<nav class="modulename"><h5 class="glyphicon glyphicon-{$module.HtmlID}">{$module.Name}</h5></nav>
+{/if}
 
 {if $module.Type=='div'}
 <div>{$module.Content}</div>

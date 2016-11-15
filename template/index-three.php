@@ -2,66 +2,31 @@
 <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {template:header}
-<body id="top">
-<div class="container-fluid">{template:nav}</div>
-<div class="container long">
-	<div class="row single-body">
-		<div class="col-md-2 left-list hidden-xs hidden-sm">
+<body class="three">
+{template:nav}<!-- 导航结束 -->
+<div class="container">
+		<aside class="col-md-2 hidden-xs hidden-sm sidebar">
 			<a href="{$host}" title="{$name}"><img class="img-responsive" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
-			{template:sidebar}
-		</div>
-		<div class="col-md-7">
-{if $zbp->Config('paipk1')->ifPPT=='1'}
-		<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
-			<div class="carousel-inner" role="listbox">
-{php}
-if(is_file($zbp->path.'zb_users/theme/paipk1/plugin/out.html')){
-	include $zbp->path.'zb_users/theme/paipk1/plugin/out.html';
-}else{
-$stime = time();
-$ytime = 91*24*60*60;
-$ztime = $stime-$ytime;
-$order = array('log_ViewNums'=>'DESC');
-$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(4),'');
-$PPTNumber = 1;
-foreach ($RMarray as $hotlist){
-	include $this->GetTemplate('post-istop');
-	}
-}
-{/php}
-			</div>
-			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-{if $zbp->Config('paipk1')->topID!=''}
-	{$topText=GetPost((int)$zbp->Config('paipk1')->topID);}
-		<div class="istop">
-			<p><a href="{$topText.Url}" title="{$topText.Title}"><span class="glyphicon glyphicon-fire"></span>{$topText.Title}</a><b class="hidden-xs hidden-sm">{$topText.Time('Y-m-d')}</b></p>
-		</div>
-	{/if}
-{/if}
-		<div class="list-left">
+			<divi class="theiaStickySidebar">{template:sidebar2}</divi>
+		</aside>
+		<div class="col-md-7 list-body">
+		{if $zbp->Config('paipk1')->ifPPT=='1'}
+			{template:istop}<!-- 置顶内容结束 -->
+		{/if}
+		<article class="article">
 			<ul class="media-list">
 			{foreach $articles as $article}
 				{template:post-multi}
 			{/foreach}
 			</ul>
-		</div>
+		</article>
 			{template:pagebar}
 		</div>
-		<div class="col-md-3 three-right-box hidden-xs hidden-sm sidebar">
+		<aside class="col-md-3 hidden-xs hidden-sm sidebar">
 			<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
-				{template:sidebar2}
+				{template:sidebar}
 			</div>
-		</div>
-	</div>
+		</aside>
 </div>
 
 {template:footer}

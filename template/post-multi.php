@@ -98,7 +98,7 @@
 {else}
 <li class="media">
   <div>
-  	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a>{if $article->Alias!=""}<small>{$article->Alias}</small>{/if}</h4>
+  	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<h6>
 	<i class="glyphicon glyphicon-time"></i>{TimeAgo($article.Time())}&nbsp;
 	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
