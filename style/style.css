@@ -530,6 +530,21 @@ p.next-text{
 	font-size: 12px;
 	margin-right: 4px;
 }
+/*侧栏搜索*/
+#divSearchPanel form input{
+	color: #666;
+	background: #ededed;
+	border: 1px solid #cccccc;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+#divSearchPanel form input:first-child{
+	width:calc(100% - 50px);
+}
+#divSearchPanel form input:last-child{
+	padding-left:6px;
+	padding-right:6px;
+}
 /*日历*/
 #divCalendar{
 	position:relative;
