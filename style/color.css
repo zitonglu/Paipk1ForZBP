@@ -44,26 +44,7 @@
 .post-box:hover .tit>h3>a{
 	color:rgb(255, 255, 255);
 }
-.bottom{
-	background-color:#428bca;
-}
-.bottom-div{
-	color: #fff;
-}
-.bottom-a,
-.bottom-a:hover,
-.bottom-a:link,
-.bottom-a:visited,
-.bottom-a:active{
-	color:rgb(251, 248, 0);
-}
-.footer{
-	background:#212121; 
-	color:#bdbdbd;
-}
-.footer a{
-	color:#777;
-}
+
 .single-left h2,
 .single-left h3,
 .single-left h4,

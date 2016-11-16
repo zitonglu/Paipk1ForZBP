@@ -176,43 +176,31 @@ a:hover,a:focus{color:#555}
 	padding-right:30px;
 	padding-top:5px;
 }
-.bottom>div{
-	padding-top: 18px;
-	padding-bottom: 12px;
-}
-.bottom-div p{
-	font-size: 2.5rem;
-}
-@media (max-width: 749px) {
-	.bottom-div p{
-		font-size:16px;
-		text-align: center;
-	}
-	.bottom>div{
-	padding-top: 10px;
-	padding-bottom: 12px;
-	}
-}
-.bottom-a{
-	margin-left:.2em;
-	margin-right:.2em;
-}
 .weixin-share-p{
 	margin-top: 10px;
 }
-.bottom-div .btn{
-	width: 33.333333%;
+/*页面底部*/
+.bottom{
+	background: #f3f3f3;
+	border-top: 1px solid #ddd;
+	margin-bottom:0;
 }
 .footer{
 	padding-top:5px;
 	padding-bottom:5px;
 	text-align:center;
+	background:#212121; 
+	color:#bdbdbd;
+	border-top: 1px solid #757575;
+	box-shadow: 0 6px 9px #000 inset;
+}
+.footer a{
+	color:#777;
 }
 @media (min-width: 749px){
 	.footer{
 		padding-top: 15px;
 		padding-bottom: 15px;
-		min-height:9em;
 	}
 }
 /*single*/

@@ -17,7 +17,6 @@
 				{module:navbar}
 			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
-				<li><a href="#" data-toggle="modal" data-target="#myshare"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i> 搜索</a>
 				<ul class="dropdown-menu search-box">
 					<form method="post" action="{$host}zb_system/cmd.php?act=search" name="search">

@@ -1,27 +1,19 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
         <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
-<div class="container-fluid bottom">
-    <div class="container"><div class="row">
-        <div class="col-sm-7 bottom-div">
-            <p>将这个网站<a class="bottom-a" href="#" role="button" data-toggle="modal" data-target="#myshare">分享</a>给您的朋友吧！</p>
-        </div>
-        <div class="btn-group col-sm-5 bottom-div">
-        {if $type=='index'}
-            <a class="btn btn-default" href="{$pagebar.prevbutton}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一页</a>
+{if $type=='index'}
+<div class="jumbotron bottom hidden-xs">
+    <div class="container">
+        {if $zbp->Config('paipk1')->indexbottom != ""}
+            {$zbp->Config('paipk1')->indexbottom}
         {else}
-            <a class="btn btn-default"{if $article.Prev} href="{$article.Prev.Url}" title="{$article.Prev.Title}"{/if} role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+        <h2 class="text-center">{$name}</h2>
+        <p class="text-center">{$subname}</p>
         {/if}
-            <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;文章分享</a>
-        {if $type=='index'}
-            <a class="btn btn-default" href="{$pagebar.nextbutton}" role="button">下一页&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-        {else}
-            <a class="btn btn-default"{if $article.Next} href="{$article.Next.Url}" title="{$article.Next.Title}"{/if} role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-        {/if}
-        </div>
-    </div></div>
+    </div>
 </div>
-<div class="container-fluid footer">
+{/if}
+<footer class="footer">
     {if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}
     <p>
         Copyright © 2016-2017 <a href="{$host}" title="{$name}">{$name}</a>&nbsp;
@@ -37,7 +29,7 @@
     {if $type=='index'&&$page=='1'}
         <br><div class="list-inline">友情链接：{module:link}</div>
     {/if}
-</div>
+</footer>
 <div class="hidden-xs top">
     {php}
         $QQzaixian="910109610";
@@ -48,28 +40,6 @@
     <a target="_blank" title="QQ联系我" href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
     <a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
-<div class="modal fade" id="myshare" tabindex="-1" role="dialog" aria-labelledby="myshare">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="mythinks">谢谢您的分享</h4>
-            </div>
-            <div class="modal-body">
-                {if $type=='index'}
-                <img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$host}" class="img-responsive center-block" alt="文章网址的二维码">
-                {else}
-                <img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$article.Url}" class="img-responsive center-block" alt="文章网址的二维码">
-                {/if}
-                <p class="text-center weixin-share-p">打开微信，点击底部的“发现”，<br>使用“扫一扫”即可将网页分享至朋友圈</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 {if $type!='index'}
     <div class="modal fade" id="myshang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">

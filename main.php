@@ -64,6 +64,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifbg = $_POST['ifbg'];
   $zbp->Config('paipk1')->QQ = $_POST['QQ'];
   $zbp->Config('paipk1')->indexHome = $_POST['indexHome'];
+  $zbp->Config('paipk1')->indexbottom = $_POST['indexbottom'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -135,6 +136,11 @@ if(isset($_POST['ifOutLink'])){
         <td>
         <input name="ifbaiduShare" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifbaiduShare; ?>"></td>
         <td>开启关闭文章的分享</td>
+      </tr>
+      <tr>
+        <td scope="row">底部巨幕</td>
+        <td><textarea name="indexbottom" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->indexbottom; ?></textarea></td>
+        <td>在文章列表页面底部显示的内容，支持HTML</td>
       </tr>
       <tr>
         <td scope="row">版权说明</td>
