@@ -572,7 +572,7 @@ p.next-text{
 }
 #tbCalendar td,
 #tbCalendar th {
-	padding: 5px;
+	padding: 5px 3px;
 	text-align:center;
 }
 #tbCalendar caption {

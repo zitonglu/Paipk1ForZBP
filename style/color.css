@@ -92,15 +92,6 @@ border: 2px solid #428bca;
 border-radius:50%;
 background:#428bca;
 }
-@media (max-width: 749px){
-	#single,
-	.single-left,
-	.single-right{
-		background-color:transparent;
-		background-image:none;
-		overflow:hidden;
-	}
-}
 .flip{
 	border-top: 1px dotted rgb(200, 200, 200);
 	border-bottom: 1px dotted rgb(200, 200, 200);
