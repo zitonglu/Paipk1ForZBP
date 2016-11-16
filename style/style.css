@@ -507,7 +507,7 @@ p.next-text{
 	content:'\e103';
 	font-size:85%;
 	margin-right:6px;
-	color: #dedede;
+	color:#b3e5fc;
 }
 
 .widget h5.glyphicon-divTags::before{content:'\e042'}
@@ -611,9 +611,6 @@ p.next-text{
 	margin: 0 3px 3px 0;
 	padding: 1px 10px 3px;
 	display: inline-block;
-	-moz-border-radius: 1px;
-	-khtml-border-radius: 1px;
-	-webkit-border-radius: 1px;
 	border-radius: 1px;
 	color:#666;
 	background:#ededed;
@@ -629,7 +626,7 @@ p.next-text{
 #divLinkage li:hover,
 #divCatalog li:hover,
 #divTags li:hover{
-	background-color:#8bc34a;
+	background-color:#428bca;
 	color:#fff;
 }
 #divFavorites li:hover a,
@@ -774,11 +771,11 @@ p.next-text{
 	padding-right:.2em;
 }
 .article h6{
-	color:#ccc;
+	color:#a3a3a3;
 	text-align:right;
 }
 .article h6 a{
-	color:#ccc;
+	color:#a3a3a3;
 }
 .article h6 a:hover{
 	color: #428bca;

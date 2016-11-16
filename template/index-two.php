@@ -3,7 +3,7 @@
 </div>';die();?>
 {template:header}
 <body id="top" class="index-two">
-<div class="container-fluid">{template:nav}</div>
+<div class="container-fluid">{template:nav}</div>{$pagebar.nextbutton}
 <div class="container long">
 	<div class="row single-body">
 		<div class="col-md-9">

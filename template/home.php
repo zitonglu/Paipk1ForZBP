@@ -91,12 +91,21 @@
 {/if}
 </div>
 <!-- 内容页面 -->
+{php}
+if($type == 'index'){
+	$typeURL = $pagebar->nextbutton;
+}else{
+	$typeURL = $host;
+}
+{/php}
 <article class="container contentbox">
 	<section class="col-sm-4">
 	<ul class="nav nav-tabs green" role="tablist">
 	  <li role="presentation" class="active"><a title="博主信息" href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
 	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab" title="关注范围">关注范围</a></li>
-	  <li class="more"><a href="{$pagebar.nextbutton}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	  <li class="more">
+	  <a href="{$typeURL}" title="更多内容">
+	  <img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 
 	<div class="tab-content">
@@ -135,7 +144,7 @@ var cpro_id = "u2814888";
 	<ul class="nav nav-tabs blue" role="tablist">
 	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab" title="最近发文">最近发文</a></li>
 	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab" title="热门文章">热门文章</a></li>
-	  <li class="more"><a href="{$pagebar.nextbutton}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	  <li class="more"><a href="{$typeURL}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 
 	<div class="tab-content">
