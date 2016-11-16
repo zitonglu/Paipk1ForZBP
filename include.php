@@ -92,7 +92,7 @@ function paipk1_side_comm() {
 	foreach ($comments as $comment) {
 		$avatarrand = rand(1,20);
 		$avatarURL = $host.'zb_users/theme/paipk1/images/avatar/'.$avatarrand.'.jpg';
-		$s .= '<li><a href="'.$comment->Post->Url.'#cmt'.$comment->ID.'"><img src="'.$avatarURL.'" alt="头像" class="img-comment"></a>';
+		$s .= '<li><a href="'.$comment->Post->Url.'#cmt'.$comment->ID.'" title="'.$comment->Author->Name.'"><img src="'.$avatarURL.'" alt="头像" class="img-comment"></a>';
 		$s .= '<a href="'.$comment->Post->Url.'">'.$comment->Author->Name.'</a>';
 		$s .= '<small class="small"> - '.$comment->Time('Y-m-d').'</small><br>';
 		$s .= TransferHTML($comment->Content,'[noenter]').'</li>';

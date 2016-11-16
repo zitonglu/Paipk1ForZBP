@@ -436,10 +436,6 @@ p.next-text{
 }
 .comment-box a:hover img{
 	transform: rotate(35deg);
-	-webkit-transform: rotate(35deg);
-	-moz-transform: rotate(35deg);
-	-o-transform: rotate(35deg);
-	-ms-transform: rotate(35deg);
 }
 .comment-box a img,
 .comment-box a:hover img,
@@ -645,10 +641,24 @@ p.next-text{
 #divPrevious ul{
 	padding-left:0;
 }
-#divComments>div{margin-left:10px}
+#divComments>div{
+	margin-left:10px
+}
 #divComments li{
 	margin-bottom: 10px;
 	list-style-type: none;
+}
+#divComments .img-comment {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right:10px;
+	border-radius:50%;
+	transition:all .3s;
+}
+#divComments .img-comment:hover{
+	border-radius:0;
+	transition:all .3s ease-in-out;
 }
 #divPrevious li a{
 	display:block;
@@ -700,13 +710,6 @@ p.next-text{
 	display: inline-block;
 	text-align: center;
 	list-style-type: none;
-}
-.img-comment {
-	width: 40px;
-	height: 40px;
-	float: left;
-	margin-right:10px;
-	border-radius:50%;
 }
 .tag-count{
 	font-size: 10px;
