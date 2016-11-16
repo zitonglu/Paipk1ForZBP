@@ -526,7 +526,7 @@ p.next-text{
 	overflow:hidden;
 }
 .modulename{
-	background:linear-gradient(transparent 49%,#eaeaea 52%,transparent 0);
+	background:linear-gradient(transparent 49%,#dedede 52%,transparent 0);
 }
 /*站点信息*/
 #divStatistics li{
@@ -615,18 +615,33 @@ p.next-text{
 	-khtml-border-radius: 1px;
 	-webkit-border-radius: 1px;
 	border-radius: 1px;
+	color:#666;
+	background:#ededed;
+	border:1px solid #cccccc;
+}
+#divFavorites a,
+#divLinkage a,
+#divCatalog a,
+#divTags a{
+	color: #666;
+}
+#divFavorites li:hover,
+#divLinkage li:hover,
+#divCatalog li:hover,
+#divTags li:hover{
+	background-color:#8bc34a;
+	color:#fff;
+}
+#divFavorites li:hover a,
+#divLinkage li:hover a,
+#divCatalog li:hover a,
+#divTags li:hover a{
+	text-decoration: none;
+	color:#fff;
 }
 #divMisc li{
 	display: inline-block;
 	padding: 3px;
-}
-#divFavorites li a:hover,
-#divLinkage li a:hover,
-#divCatalog li a:hover,
-#divMisc li a:hover,
-#divTags li a:hover,
-#divPrevious li a:hover{
-	text-decoration: none;
 }
 #divComments ul,
 #divArchives ul,
@@ -656,6 +671,7 @@ p.next-text{
 	display:inline-block;
 	border-radius:50% 50% 0;
 	box-shadow:0 1px 2px #757575;
+	text-decoration: none;
 }
 #divPrevious li:nth-child(n) a::before{
 	border:1px solid #fd5f00;

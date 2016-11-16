@@ -5,9 +5,9 @@
 <body class="three">
 {template:nav}<!-- 导航结束 -->
 <div class="container">
-		<aside class="col-md-2 hidden-xs hidden-sm sidebar">
+		<aside class="col-md-2 hidden-xs hidden-sm">
 			<a href="{$host}" title="{$name}"><img class="img-responsive" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
-			<divi class="theiaStickySidebar">{template:sidebar2}</divi>
+			{template:sidebar2}
 		</aside>
 		<div class="col-md-7 list-body">
 		{if $zbp->Config('paipk1')->ifPPT=='1'}
