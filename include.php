@@ -84,13 +84,15 @@ function paipk1_rebuild_Main() {
 
 /*侧栏评论*/
 function paipk1_side_comm() {
-    global $zbp;
+    global $zbp,$host;
 	$i = $zbp->modulesbyfilename['comments']->MaxLi;
 	if ($i == 0) $i = 10;
 	$comments = $zbp->GetCommentList('*', array(array('=', 'comm_RootID', 0)), array('comm_PostTime' => 'DESC'), $i, null);
 	$s = '';
 	foreach ($comments as $comment) {
-		$s .= '<li><a href="'.$comment->Post->Url.'#cmt'.$comment->ID.'"><img src="'.$comment->Author->Avatar.'" alt="头像" class="img-comment"></a>';
+		$avatarrand = rand(1,20);
+		$avatarURL = $host.'zb_users/theme/paipk1/images/avatar/'.$avatarrand.'.jpg';
+		$s .= '<li><a href="'.$comment->Post->Url.'#cmt'.$comment->ID.'"><img src="'.$avatarURL.'" alt="头像" class="img-comment"></a>';
 		$s .= '<a href="'.$comment->Post->Url.'">'.$comment->Author->Name.'</a>';
 		$s .= '<small class="small"> - '.$comment->Time('Y-m-d').'</small><br>';
 		$s .= TransferHTML($comment->Content,'[noenter]').'</li>';

@@ -15,7 +15,7 @@
 	<div class="form-group">
 		<label for="inpEmail" class="col-sm-2 control-label">Email(*)</label>
 		<div class="col-sm-10">
-			<input type="text" name="inpEmail" id="inpEmail" placeholder="@" value="{$user.Email}" tabindex="2" class="form-control">
+			<input type="email" name="inpEmail" id="inpEmail" placeholder="@" value="{$user.Email}" tabindex="2" class="form-control">
 		</div>
 	</div>
 	<div class="form-group">
@@ -41,7 +41,7 @@
 	{/if}
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10">
-			<button type="submit" class="btn btn-default" name="sumbit" tabindex="7" onclick="return VerifyMessage()">发表评论</button>
+			<button type="submit" class="btn btn-default" name="sumbit" tabindex="7" onclick="return zbp.comment.post()">发表评论</button>
 		</div>
 	</div>
 </form>
