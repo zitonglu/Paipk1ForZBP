@@ -1,15 +1,10 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
         <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
-{if $type=='index'}
+{if $type=='index' && $zbp->Config('paipk1')->indexbottom != ""}
 <div class="jumbotron bottom hidden-xs">
     <div class="container">
-        {if $zbp->Config('paipk1')->indexbottom != ""}
-            {$zbp->Config('paipk1')->indexbottom}
-        {else}
-        <h2 class="text-center">{$name}</h2>
-        <p class="text-center">{$subname}</p>
-        {/if}
+        {$zbp->Config('paipk1')->indexbottom}
     </div>
 </div>
 {/if}

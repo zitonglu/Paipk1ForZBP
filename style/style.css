@@ -186,13 +186,11 @@ a:hover,a:focus{color:#555}
 	margin-bottom:0;
 }
 .footer{
-	padding-top:5px;
-	padding-bottom:5px;
+	padding:8px;
 	text-align:center;
 	background:#212121; 
 	color:#bdbdbd;
 	border-top: 1px solid #757575;
-	box-shadow: 0 6px 9px #000 inset;
 }
 .footer a{
 	color:#777;
@@ -201,6 +199,7 @@ a:hover,a:focus{color:#555}
 	.footer{
 		padding-top: 15px;
 		padding-bottom: 15px;
+		box-shadow: 0 6px 9px #000 inset;
 	}
 }
 /*single*/
@@ -540,6 +539,7 @@ p.next-text{
 	position:relative;
     background:#eee;
     background:linear-gradient(-150deg,transparent 1.5em,#eee 0);
+    margin-bottom:14px;
 }
 #divCalendar::before{
 	content: '';
