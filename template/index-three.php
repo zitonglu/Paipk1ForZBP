@@ -5,7 +5,7 @@
 <body>
 {template:nav}<!-- 导航结束 -->
 <div class="container">
-	<aside class="col-md-2 hidden-xs hidden-sm">
+	<aside class="col-md-2 hidden-xs">
 		<a href="{$host}" title="{$name}"><img class="img-responsive" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
 		{template:sidebar2}
 	</aside>
@@ -22,7 +22,7 @@
 		</article>
 		{template:pagebar}
 	</div>
-	<aside class="col-md-3 hidden-sm sidebar">
+	<aside class="col-md-3 hidden-xs sidebar">
 		<div class="theiaStickySidebar"><!-- 侧栏滚动 -->
 		{template:sidebar}
 	</div>
