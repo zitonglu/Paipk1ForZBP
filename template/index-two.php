@@ -18,7 +18,7 @@
 		</article>
 		{template:pagebar}
 	</div>
-	<aside class="col-md-3 hidden-xs sidebar">
+	<aside class="col-md-3 hidden-xs hidden-sm sidebar">
 		<div class="theiaStickySidebar"><!-- 侧栏滚动 -->
 		{template:sidebar}
 		</div>

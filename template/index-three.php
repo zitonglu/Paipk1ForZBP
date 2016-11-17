@@ -5,11 +5,11 @@
 <body id="top">
 {template:nav}<!-- 导航结束 -->
 <div class="container">
-	<aside class="col-md-2 hidden-xs">
+	<aside class="col-md-2 col-sm-3 hidden-xs">
 		<a href="{$host}" title="{$name}"><img class="img-responsive" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
 		{template:sidebar2}
 	</aside>
-	<div class="col-md-7 list-body">
+	<div class="col-md-7 col-sm-9 list-body">
 		{if $zbp->Config('paipk1')->ifPPT=='1'}
 		{template:istop}<!-- 置顶内容结束 -->
 		{/if}
@@ -22,7 +22,7 @@
 		</article>
 		{template:pagebar}
 	</div>
-	<aside class="col-md-3 hidden-xs sidebar">
+	<aside class="col-md-3 hidden-xs hidden-sm sidebar">
 		<div class="theiaStickySidebar"><!-- 侧栏滚动 -->
 		{template:sidebar}
 	</div>

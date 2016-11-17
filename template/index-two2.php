@@ -5,7 +5,7 @@
 <body  class="index-two" id="top">
 {template:nav}<!-- 导航结束 -->
 <div class="container">
-	<aside class="col-md-3 hidden-xs sidebar">
+	<aside class="col-md-3 hidden-xs hidden-sm sidebar">
 		<div class="theiaStickySidebar"><!-- 侧栏滚动 -->
 		{template:sidebar}
 		</div>
