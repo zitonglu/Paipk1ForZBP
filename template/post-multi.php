@@ -32,8 +32,8 @@
 {elseif $article->Metas->paipk1_single_theme_select == "video"}
 <!-- 视频模式 -->
 <li class="media videolist" id="post-{$article.ID}">
+	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-body">
-		<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 		{$article.Intro}
 		<h6>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
