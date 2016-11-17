@@ -8,10 +8,9 @@
 {else}
 {template:header}
 <body class="single" id="top">
-<!-- 导航 -->
-<div class="container-fluid">{template:nav}</div>
+{template:nav}<!-- 导航 -->
 {if $article->Metas->paipk1_singleVideo != ""}
-<div class="jumbotron videobox long">
+<div class="jumbotron videobox">
 	<div class="video">
 		{$article->Metas->paipk1_singleVideo}
 	</div>
