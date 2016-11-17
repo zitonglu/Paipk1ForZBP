@@ -11,6 +11,7 @@ a:hover,a:focus{color:#555}
 	3.Sidebar. This's for z-blogPHP
 	4.Index
 	5.List
+	6.Other
 */
 .media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#divPrevious li,
 #divPrevious li:hover,#divPrevious li p,#divPrevious li:hover p,.threepic img,
@@ -112,6 +113,15 @@ fieldset[disabled] .navbar-mycolor .btn-link:hover,
 .navbar-mycolor .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-mycolor .btn-link:focus {
   color: #23527c;
+}
+/* Top Navigation Bar - search:change bootstrap */
+.search-box{
+	background:transparent;
+	border:none;
+	box-shadow:none;
+}
+.search-box .input-group{
+	min-width:300px;
 }
 /* footer */
 .bottom{
@@ -458,6 +468,17 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	color:#555;
 }
 /* List - article */
+@media(min-width: 749px){
+	.article>ul>li{
+		margin-top:32px;
+		padding-bottom:30px;
+	}
+}
+.article>ul>li{
+	border-bottom:.1em solid #dedede;
+}
+.article>ul>li:first-child{margin-top:0;}
+.article>ul>li:last-child{border-bottom:none;}
 .article h4{
 	font-weight:bold;
 	line-height:1.2;
@@ -482,46 +503,89 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 		font-size:24px;
 	}
 }
+.article h6{
+	color:#a3a3a3;
+	text-align:right;
+}
+.article h6 a{
+	color:#a3a3a3;
+}
+.article h6 a:hover{
+	color:#428bca;
+}
+.article h6 a,
+.article h6 span{
+	padding-left:.2em;
+	padding-right:.2em;
+}
+.article blockquote{
+	font-size:14px;
+	border-color:#ddd;
+}
+/* 
+	List - article - default article
+	The default article(pic) style:have pic or no
+*/
 .article .media-left{
 	padding-right:20px;
 }
-@media (max-width: 749px){
+.article .media-box{
+		position: relative;
+		height:120px;
+		width:190px;
+		border-radius:16px 0;
+		overflow:hidden;
+		box-shadow:0px 3px 6px -3px #999;
+	}
+@media (max-width: 748px){
 	.article .media-left{
 		display:block;
 		width: 100%;
 		padding-right:0px;
 	}
-	.media-box{
+	.article .media-box{
 		width:100%;
 		height:auto;
+		border-radius:0;
+		box-shadow:0
+	}
+	.article .media-box img{
+		width:100%;
 	}
 }
-.article .media-body hr{
-	margin-bottom:5px;
-	margin-top:5px;
+/* 
+	List - article - three pic article
+	select PIC and have three pic
+*/
+.article .threepic .row a{
+	padding-left:3px;
+	padding-right:3px;
 }
-.article .media{
-	overflow:visible;
+.article .threepic img{
+	width:100%;
+	height:80px;
+	object-fit:cover;
 }
+.article .threepic .row{
+	margin:auto 0 16px;
+}
+@media (min-width: 499px){
+	.article .threepic img:hover{
+		border-radius:40px 0;
+	}
+	.article .threepic img{
+		height:140px;
+		box-shadow: 0px 1px 3px rgba(66,139,202,.65);
+	}
+}
+
 /*下面代码都是没审核的*/
 .tit>hr{
 	border-top:2px dotted transparent;
 }
 
-.media-box{
-	position: relative;
-	height:120px;
-	width:190px;
-	border-radius:16px 0;
-	overflow:hidden;
-	box-shadow:0px 3px 6px -3px #999;
-}
-.media-box>a>img,
-.more-text-box>a>img{
-	width:100%;
-	height:100%;
-	object-fit:cover;
-}
+
+
 .media-box:hover{
 	border-radius:0;
 }
@@ -626,10 +690,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	padding-right:30px;
 	padding-top:5px;
 }
-.weixin-share-p{
-	margin-top: 10px;
-}
-
 /*single*/
 .head{
 	margin-bottom:5px;
@@ -725,11 +785,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 .single-left ol p{
 	margin: 0;
 }
-.single-left img,
-.article .media-body img{
-	max-width:100%;
-	height:auto;
-}
+
+
 .flip{
 	padding:10px auto;
 	margin:30px auto;
@@ -898,40 +955,7 @@ p.next-text{
 	-o-transition: all .3s;
 	transition: all .3s;
 }
-.article h6 a,
-.article h6 span{
-	padding-left:.2em;
-	padding-right:.2em;
-}
-.article h6{
-	color:#a3a3a3;
-	text-align:right;
-}
-.article h6 a{
-	color:#a3a3a3;
-}
-.article h6 a:hover{
-	color:#428bca;
-}
-@media(min-width: 749px){
-	.article>ul>li{
-		margin-top:32px;
-		padding-bottom:30px;
-	}
-}
-.article>ul>li{
-	border-bottom:.1em solid #dedede;
-}
-.article>ul>li:first-child{
-	margin-top:0;
-}
-.article>ul>li:last-child{
-	border-bottom:none;
-}
-.article blockquote{
-	font-size:14px;
-	border-color:#ddd;
-}
+
 #index-list .post-box,
 #index-three .post-box{
 	margin-bottom:10px;
@@ -1014,27 +1038,7 @@ p.next-text{
 	background: #f1f1f1;
 	padding: 2%;
 }
-.threepic .row a{
-	padding-left:3px;
-	padding-right:3px;
-}
-.threepic img{
-	width:100%;
-	height:80px;
-	object-fit:cover;
-}
-.threepic .row{
-	margin:auto 0 16px;
-}
-@media (min-width: 499px){
-	.threepic img:hover{
-		border-radius:40px 0;
-	}
-	.threepic img{
-		height:140px;
-		box-shadow: 0px 1px 3px rgba(66,139,202,.65);
-	}
-}
+
 .videobox{
 	margin-top:-70px;
 	margin-bottom:5px;
@@ -1166,20 +1170,8 @@ p.next-text{
 	border:2px solid #428bca;
 	border-radius:50% 50% 0;
 }
-/*顶部搜索栏*/
-.search-box{
-	background:transparent;
-	border:none;
-	box-shadow:none;
-}
-.search-box .input-group{
-	min-width:300px;
-}
-/*百度分享*/
-.bdsharebuttonbox{
-	float:right;
-	margin-top:-6px;
-}
+
+
 .post-list{
 	border-color: #000;
 }
@@ -1296,16 +1288,25 @@ background:#428bca;
 	color: #fff;
 }
 
-/*代码背景*/
+/* Other */
+/* 
+	Other - pre
+	this is for z-blogPHP 
+*/
 pre[class*="language-"]{
-background: #eee;
-background-image: linear-gradient(#fff 50%,transparent 0);
-background-size: auto 3em;
-background-origin: content-box;
-border-color: #b2ebf2;
-text-shadow:none;
+	background:transparent;
+	background-image: linear-gradient(transparent 50%,#dedede 0);
+	background-size: auto 3em;
+	background-origin: content-box;
+	border-color:#dedede;
+	text-shadow:none;
 }
 div.prism-show-language > div.prism-show-language-label[data-language]{
 	color: #fff;
-	background-color: #1976d2;
+	background-color:#1976d2;
+}
+/* Other - baidushare */
+.bdsharebuttonbox{
+	float:right;
+	margin-top:-6px;
 }
