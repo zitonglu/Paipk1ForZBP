@@ -34,7 +34,7 @@
 <li class="media videolist" id="post-{$article.ID}">
 	<div class="media-body">
 		<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
-		<div class="hidden-xs">{$article.Intro}</div>
+		{$article.Intro}
 		<h6>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
 		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
@@ -44,7 +44,7 @@
 		</h6>
 	</div>
 	<a class="media-right" href="{$article.Url}" title="{$article.Title}">
-		<div>
+		<div class="videodiv">
 			<img src="{$IMGURL}" alt="视频截图" class="videoIMG">
 			<i class="glyphicon glyphicon-facetime-video mask"></i>
 		</div>
