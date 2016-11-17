@@ -26,13 +26,9 @@
     {/if}
 </footer>
 <div class="hidden-xs top">
-    {php}
-        $QQzaixian="910109610";
-        if($zbp->Config('paipk1')->QQ != ""){
-           $QQzaixian = $zbp->Config('paipk1')->QQ;
-        }
-    {/php}
-    <a target="_blank" title="QQ联系我" href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
+    {if $zbp->Config('paipk1')->QQ != ""}
+    <a target="_blank" title="QQ联系我" href="http://wpa.qq.com/msgrd?v=3&uin={$zbp->Config('paipk1')->QQ}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
+    {/if}
     <a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 {if $type!='index'}
