@@ -17,19 +17,17 @@
 </div><!-- video end -->
 {/if}
 <div class="container">
-	<div class="row single-body">
-		<div class="col-md-9 single-box">
-			{if $article.Type==ZC_POST_TYPE_ARTICLE}
-			{template:post-single}
-			{else}
-			{template:post-page}
-			{/if}
-		</div>
-		<div class="col-md-3 single-box hidden-xs hidden-sm sidebar">
-			<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
-				{template:sidebar3}
-			</div>
-		</div>
+	<div class="col-md-9">
+		{if $article.Type==ZC_POST_TYPE_ARTICLE}
+		{template:post-single}
+		{else}
+		{template:post-page}
+		{/if}
+	</div>
+	<div class="col-md-3 single-box hidden-xs hidden-sm sidebar">
+		<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
+		{template:sidebar3}
+	</div>
 	</div>
 </div>
 {template:footer}
