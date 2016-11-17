@@ -8,17 +8,15 @@
 {else}
 {template:header}
 <body class="single" id="top">
-{template:nav}<!-- 导航 -->
+{template:nav}<!-- nav end -->
 {if $article->Metas->paipk1_singleVideo != ""}
 <div class="jumbotron videobox">
 	<div class="video">
 		{$article->Metas->paipk1_singleVideo}
 	</div>
-</div>
-{else}
-<div class="container long">{template:head-row}</div>
+</div><!-- video end -->
 {/if}
-<div class="container long">
+<div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">
 			{if $article.Type==ZC_POST_TYPE_ARTICLE}

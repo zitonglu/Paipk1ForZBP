@@ -697,10 +697,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	}
 }
 /* single */
-/* 
-	single - video
-	default single style,have video
-*/
+/* single - head */
 .single .videobox{
 	margin-top:-70px;
 	margin-bottom:5px;
@@ -816,12 +813,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	padding-top:5px;
 }
 
-.head{
-	margin-bottom:5px;
-}
-.search-box{
-	margin-top: 15px;
-}
+
+
 .breadcrumb{
 	margin: 0px;
 	padding: 2px 0px;
@@ -1082,14 +1075,7 @@ p.next-text{
 	word-wrap: break-word;
 }
 
-.singleAD{
-	overflow: hidden;
-}
-.singleAD>div>iframe{
-	display: block;
-	margin-right:auto !important;
-	margin-left:auto !important;
-}
+
 
 .single-noside>.container>.row>.hidden-sm{
 	display: none;
@@ -1102,9 +1088,7 @@ p.next-text{
 		max-width:800px;
 	}
 }
-.singleLogo{
-	margin-left: 20px;
-}
+
 .blockquote{
 	font-size:14px;
 }

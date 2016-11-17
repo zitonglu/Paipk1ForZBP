@@ -161,7 +161,6 @@ if(isset($_POST['ifOutLink'])){
   if(isset($_POST['PageAD1'])){
     $zbp->Config('paipk1')->PageAD1 = $_POST['PageAD1'];
     $zbp->Config('paipk1')->PageAD2 = $_POST['PageAD2'];
-    $zbp->Config('paipk1')->PageTop = $_POST['PageTop'];
     $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
   }
@@ -174,17 +173,12 @@ if(isset($_POST['ifOutLink'])){
         <th scope="col" width="500px">使用说明</th>
       </tr>
       <tr>
-        <td scope="row">文章顶部广告</td>
-        <td><textarea name="PageTop" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->PageTop; ?></textarea></td>
-        <td>文章顶部的广告位，留空为搜索栏</td>
-      </tr>
-      <tr>
-        <td scope="row">文章底部广告1</td>
+        <td scope="row">文章底部广告</td>
         <td><textarea name="PageAD1" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->PageAD1; ?></textarea></td>
         <td>文章底部的广告代码</td>
       </tr>
       <tr>
-        <td scope="row">文章底部广告2</td>
+        <td scope="row">评论底部广告</td>
         <td><textarea name="PageAD2" type="text" style="width:98%" ><?php echo $zbp->Config('paipk1')->PageAD2; ?></textarea></td>
         <td>文章底部的广告代码</td>
       </tr>
