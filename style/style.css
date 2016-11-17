@@ -15,7 +15,8 @@ a:hover,a:focus{color:#555}
 */
 .media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#divPrevious li,
 #divPrevious li:hover,#divPrevious li p,#divPrevious li:hover p,.threepic img,
-.threepic img:hover,.QQstyle:hover{
+.threepic img:hover,.QQstyle:hover,.comment-box a img,.comment-box a:hover img,
+.weiyu a img,.weiyu:hover a img{
 	transition:all 0.2s ease-in-out;
 }
 .post-box,.post-box:hover,.post-box .tim,.post-box:hover .tim,.tit p,.tit p:hover,.tit hr,
@@ -559,7 +560,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 		width:100%;
 	}
 }
-
 /* 
 	List - article - three pic article
 	select PIC and have three pic
@@ -584,6 +584,43 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	.article .threepic img:hover{
 		border-radius:12px;
 		transform:scale(1.08,1.08);
+	}
+}
+/* List - article - weiyu */
+.article .weiyu .media-body p{
+	margin:0;
+	font-size:12px;
+	color:#777;
+}
+.article .weiyu .media-body p a{
+	color:#777;
+}
+.article .weiyu .media-left{
+	padding-right:10px;
+}
+.article .weiyu .media-left img{
+	border-radius:50%;
+	width:50px;
+}
+.article .weiyu:hover a img{
+	transform:rotate(-30deg);
+}
+.article .weiyu .media-body{
+	padding: .8em;
+	border: 1px solid #dedede;
+	border-radius: 0 16px 16px 16px;
+	box-shadow: 0 6px 4px -4px #777;
+	background: #f1f1f1;
+}
+.article .weiyu .media-body h5{
+	line-height:1.5;
+}
+@media (max-width:748px){
+	.article .weiyu{
+		padding-bottom:20px;
+	}
+	.article .weiyu .media-body h5{
+		margin-bottom:.8em;
 	}
 }
 
@@ -899,16 +936,7 @@ p.next-text{
 .comment-box a:hover img{
 	transform: rotate(35deg);
 }
-.comment-box a img,
-.comment-box a:hover img,
-.weiyu a img,
-.weiyu:hover a img{
-	-webkit-transition: all .3s;
-	-moz-transition: all .3s;
-	-ms-transition: all .3s;
-	-o-transition: all .3s;
-	transition: all .3s;
-}
+
 .comments{
 	padding:0px 35px;
 }
@@ -992,43 +1020,7 @@ p.next-text{
 	font-size:14px;
 }
 
-/*微语*/
-.weiyu .media-body p{
-	margin:0;
-	font-size:12px;
-	color:#777;
-}
-.weiyu .media-body p a{
-	color:#777;
-}
-.weiyu .media-left{
-	padding-right:10px;
-}
-.weiyu .media-left img{
-	border-radius:50%;
-	width:50px;
-}
-.weiyu .media-body{
-	padding: .8em;
-	border: 1px solid #dedede;
-	border-radius: 0 16px 16px 16px;
-	box-shadow: 0 6px 4px -4px #777;
-	background: #f1f1f1;
-}
-.weiyu .media-body h5{
-	line-height:1.5;
-}
-@media (max-width: 749px){
-	.weiyu{
-		padding-bottom:20px;
-	}
-	.weiyu .media-body h5{
-		margin-bottom:.8em;
-	}
-}
-.weiyu:hover a img{
-	transform:rotate(-30deg);
-}
+
 .two_logo{
 	border-radius: 0 32px;
 	margin: 10px auto 2px;
