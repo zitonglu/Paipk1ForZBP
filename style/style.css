@@ -471,23 +471,23 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 /* List - article */
 @media(min-width: 749px){
-	.article>ul>li{
+	.index .article>ul>li{
 		margin-top:32px;
 		padding-bottom:30px;
 	}
 }
-.article>ul>li{
+.index .article>ul>li{
 	border-bottom:.1em solid #dedede;
 }
-.article>ul>li:first-child{margin-top:0;}
-.article>ul>li:last-child{border-bottom:none;}
-.article h4{
+.index .article>ul>li:first-child{margin-top:0;}
+.index .article>ul>li:last-child{border-bottom:none;}
+.index .article .media-list h4{
 	font-weight:bold;
 	line-height:1.2;
 	font-size:16px;
 }
 
-.article h4 a::before,
+.index .article .media-list h4 a::before,
 .single .article .section>h1.title::before{
 	content:'';
 	margin-right:5px;
@@ -498,31 +498,31 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	border-radius: 50% 50% 0;
 	border:2px solid #337ab7;
 }
-.article h4:hover a::before{
+.index .article .media-list h4:hover a::before{
 	border-color:#555;
 }
 @media (min-width: 479px){
-	.article h4{
+	.index .article .media-list h4{
 		margin-bottom:20px;
 		font-size:24px;
 	}
 }
-.article h6{
+.index .article .media-list h6{
 	color:#a3a3a3;
 	text-align:right;
 }
-.article h6 a{
+.index .article .media-list h6 a{
 	color:#a3a3a3;
 }
-.article h6 a:hover{
+.index .article .media-list h6 a:hover{
 	color:#428bca;
 }
-.article h6 a,
-.article h6 span{
+.index .article .media-list h6 a,
+.index .article .media-list h6 span{
 	padding-left:.2em;
 	padding-right:.2em;
 }
-.article blockquote{
+.index .article .media-list blockquote{
 	font-size:14px;
 	border-color:#ddd;
 }
@@ -530,36 +530,36 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	List - article - default article
 	The default article(pic) style:have pic or no
 */
-.article .media-left{
+.index .article .media-left{
 	padding-right:20px;
 }
-.article .media-box{
+.index .article .media-box{
 		position: relative;
 		height:120px;
 		width:190px;
 		overflow:hidden;
 }
 @media (min-width: 749px){
-	.article .media-box{
+	.index .article .media-box{
 		box-shadow:0px 3px 6px -3px #000;
 		border-radius:16px 0;
 	}
-	.article .media-box:hover{border-radius:0}
-	.article .media-box:hover>a>img{
+	.index .article .media-box:hover{border-radius:0}
+	.index .article .media-box:hover>a>img{
 		transform:scale(1.08,1.08);
 	}
 }
 @media (max-width: 549px){
-	.article .media-left{
+	.index .article .media-left{
 		display:block;
 		width: 100%;
 		padding-right:0px;
 	}
-	.article .media-box{
+	.index .article .media-box{
 		width:100%;
 		height:auto;
 	}
-	.article .media-box img{
+	.index .article .media-box img{
 		width:100%;
 	}
 }
@@ -567,62 +567,62 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	List - article - three pic article
 	select PIC and have three pic
 */
-.article .threepic .row a{
+.index .article .threepic .row a{
 	padding-left:3px;
 	padding-right:3px;
 }
-.article .threepic img{
+.index .article .threepic img{
 	width:100%;
 	height:80px;
 	object-fit:cover;
 }
-.article .threepic .row{
+.index .article .threepic .row{
 	margin:auto 0 16px;
 }
 @media (min-width: 749px){
-	.article .threepic img{
+	.index .article .threepic img{
 		height:120px;
 		box-shadow:0px 3px 6px -3px #333;
 	}
-	.article .threepic img:hover{
+	.index .article .threepic img:hover{
 		border-radius:12px;
 		transform:scale(1.08,1.08);
 	}
 }
 /* List - article - weiyu */
-.article .weiyu .media-body p{
+.index .article .weiyu .media-body p{
 	margin:0;
 	font-size:12px;
 	color:#777;
 }
-.article .weiyu .media-body p a{
+.index .article .weiyu .media-body p a{
 	color:#777;
 }
-.article .weiyu .media-left{
+.index .article .weiyu .media-left{
 	padding-right:10px;
 }
-.article .weiyu .media-left img{
+.index .article .weiyu .media-left img{
 	border-radius:50%;
 	width:50px;
 }
-.article .weiyu:hover a img{
+.index .article .weiyu:hover a img{
 	transform:rotate(-30deg);
 }
-.article .weiyu .media-body{
+.index .article .weiyu .media-body{
 	padding: .8em;
 	border: 1px solid #dedede;
 	border-radius: 0 16px 16px 16px;
 	box-shadow: 0 6px 4px -4px #777;
 	background: #f1f1f1;
 }
-.article .weiyu .media-body h5{
+.index .article .weiyu .media-body h5{
 	line-height:1.5;
 }
 @media (max-width:748px){
-	.article .weiyu{
+	.index .article .weiyu{
 		padding-bottom:20px;
 	}
-	.article .weiyu .media-body h5{
+	.index .article .weiyu .media-body h5{
 		margin-bottom:.8em;
 	}
 }
@@ -630,15 +630,15 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	List - article - videolist
 	The article have video
 */
-.article .videolist{
+.index .article .videolist{
 	padding-bottom:10px;
 }
-.article .videolist .videodiv .videoIMG{
+.index .article .videolist .videodiv .videoIMG{
 	width:100%;
 	height:100%;
 	object-fit:cover;
 }
-.article .videodiv .mask{
+.index .article .videodiv .mask{
 	position:absolute;
 	padding-top:16px;
 	padding-right:6px;
@@ -653,49 +653,49 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	color:#fff;
 	font-size:28px;	
 }
-.article .videodiv .mask::before{
+.index .article .videodiv .mask::before{
 	border: 3px solid #fff;
 	padding: 4px 8px;
 	border-radius: 50%;
 }
-.article .videolist .media-body{
+.index .article .videolist .media-body{
 	width:100%;
 	display:block;
 }
-.article .videolist .media-right{
+.index .article .videolist .media-right{
 	padding-left:0;
 	display:block;
 }
-.article .videolist .videodiv{
+.index .article .videolist .videodiv{
 	position:relative;
 	width:100%;
 	height:auto;
 }
 @media (min-width: 549px){
-	.article .videolist .videodiv{
+	.index .article .videolist .videodiv{
 		height: 120px;
 		width: 190px;
 	}
-	.article .videolist .videodiv .videoIMG{
+	.index .article .videolist .videodiv .videoIMG{
 		box-shadow:0 6px 4px -4px #777;
 		border-radius:16px 0;
 	}
-	.article .videodiv .mask{
+	.index .article .videodiv .mask{
 		opacity:.6;
 		text-align:center;
 		padding-top:46px;
 		border-radius:16px 0;
 	}
-	.article .videodiv .mask:hover{
+	.index .article .videodiv .mask:hover{
 		opacity:1;
 		transition: all .4s ease-in-out 0s;
 		background-color:rgba(0,0,0,0.7);
 	}
-	.article .videolist .media-right{
+	.index .article .videolist .media-right{
 		padding-left:10px;
 		display: table-cell;
 	}
-	.article .videolist .media-body{
+	.index .article .videolist .media-body{
 		display: table-cell;
 	}
 }
@@ -713,14 +713,12 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	box-shadow:0px 6px 4px -4px rgba(0,0,0,.5);
 }
 /* single - article */
-.single .article .section{
-	font-size:16px;
-}
 .single .article .section>h1.title{
 	color:#212121;
 	font-size:28px;
 	font-weight:700;
 	line-height:1.42857143;
+	border-bottom:none;
 }
 .single .article .section>h1.title::before{
 	margin-right:5px;
@@ -735,6 +733,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	margin-top:-5px;
 	font-size: 14px;
 }
+.single .article .section h1,
 .single .article .section h2,
 .single .article .section h3,
 .single .article .section h4,
@@ -742,34 +741,34 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 .single .article .section h6{
 	line-height: 1.5em;
 	font-weight: 800;
-	border-bottom:1px solid;
+	border-bottom:1px solid #428bca;
 	font-size: 18px;
 	color:#428bca;
-	border-color:#428bca;
 }
+.single .article .section h1:before,
 .single .article .section h2:before,
 .single .article .section h3:before,
 .single .article .section h4:before,
 .single .article .section h5:before,
 .single .article .section h6:before{
+	position: relative;
 	content: '';
 	width:14px;
 	height:14px;
 	display: inline-block;
 	margin-right:6px;
-	position: relative;
 }
 .single .article .section h2:before{
 border-radius:50%;
 border:3px solid #428bca;
 }
 .single .article .section h3:before{
-border-radius:0 6px;
-background:#428bca;
-}
-.single .article .section h4:before{
 border-radius:6px 6px 0;
 border: 2px solid #428bca;
+}
+.single .article .section h4:before{
+border-radius:0 6px;
+background:#428bca;
 }
 .single .article .section h5:before{
 border-radius:6px 0;
@@ -796,6 +795,10 @@ background:#428bca;
 .single .article .section .tab a:hover,
 .single .article .section .tab a:focus{
 	color:#555;
+}
+/* single - content */
+.single .article .section{
+	font-size:16px;
 }
 
 /*下面代码都是没审核的*/
@@ -1093,14 +1096,6 @@ p.next-text{
 
 .single-noside>.container>.row>.hidden-sm{
 	display: none;
-}
-@media (min-width: 992px){
-	.single-noside .single-left p,
-	.single-noside .single-left h1,
-	.single-noside .single-left div{
-		margin-left: 12.5%;
-		max-width:800px;
-	}
 }
 
 .blockquote{
