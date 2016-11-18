@@ -45,7 +45,7 @@
 <div class="more-list">
 {foreach GetList(4,$article->Category->ID) as $hotlist}
 {php}
-SF_img1::getPics($hotlist,355,230,4);
+SF_img1::getPics($hotlist,200,155,4);
 $randABC=rand(1,20);
 if($hotlist->Metas->paipk1_teSeTuPian!=""){
     $IMGURL=$hotlist->Metas->paipk1_teSeTuPian;
