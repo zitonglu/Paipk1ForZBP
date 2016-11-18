@@ -8,10 +8,10 @@ a:hover,a:focus{color:#555}
 /*
 	1.Top Navigation Bar
 	2.Footer
-	3.Sidebar. This's for z-blogPHP
+	3.Sidebar. This for z-blogPHP
 	4.Index
 	5.List
-	6.Single
+	6.Single.
 	7.Search page
 	8.Other
 */
@@ -864,8 +864,9 @@ background:#428bca;
 	margin-bottom:2.5em;
 	overflow:hidden;
 }
-.single .article .singlebottomAD{
-	width:300px;
+.single .article .singlebottomAD>div,
+.single .article .singlefooterAD>div{
+	text-align:center;
 }
 .single .article .more-btn{
 	margin-top:2em;
@@ -1007,8 +1008,10 @@ background:#428bca;
 		margin-bottom: 0px;
 	}
 }
+/* single - noside */
 /* search page */
 @media(min-width: 992px){
+	.single-noside .article,
 	.single-search .article{width:970px}
 }
 .single-search .section .tab span,
