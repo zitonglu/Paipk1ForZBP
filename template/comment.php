@@ -1,10 +1,14 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
         <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
+{php}
+$avatarrand = rand(1,20);
+$avatarURL = $host.'zb_users/theme/paipk1/images/avatar/'.$avatarrand.'.jpg';
+{/php}
 <div class="media" id="cmt{$comment.ID}">
   <div class="media-left">
     <a href="#comment" onclick="RevertComment('{$comment.ID}')">
-      <img class="media-object" src="{$comment.Author.Avatar}" alt="{$comment.Author.Name}" title="点击头像回复该评论">
+      <img class="media-object" src="{$avatarURL}" alt="{$comment.Author.Name}" title="点击头像回复该评论">
     </a>
   </div>
   <div class="media-body">

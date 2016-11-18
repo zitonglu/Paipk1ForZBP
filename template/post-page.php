@@ -23,6 +23,10 @@
   {$article.Content}
 </section><!-- single content end -->
 
+{if $zbp->Config('paipk1')->PageAD1!=""}
+  <div class="center-block singlebottomAD">{$zbp->Config('paipk1')->PageAD1}</div>
+{/if}
+
 {if !$article.IsLock}
 {template:comments}		
 {/if}
