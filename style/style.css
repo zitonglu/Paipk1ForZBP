@@ -733,6 +733,29 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	margin-top:-5px;
 	font-size: 14px;
 }
+
+.single .article .section .tab{
+	padding-bottom:.5em;
+	margin-bottom:1em;
+	font-size:14px;
+}
+@media (min-width: 748px){
+	.single .article .section .tab{
+		border-bottom:1px dotted #ddd;
+	}
+}
+.single .article .section .tab,
+.single .article .section .tab a{
+	color:#bbb;
+}
+.single .article .section .tab a:hover,
+.single .article .section .tab a:focus{
+	color:#555;
+}
+/* single - article - content */
+.single .article .section{
+	font-size:16px;
+}
 .single .article .section h1,
 .single .article .section h2,
 .single .article .section h3,
@@ -758,6 +781,10 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	display: inline-block;
 	margin-right:6px;
 }
+.single .article .section h1:before{
+border-radius:6px 6px 0;
+background:#428bca;
+}
 .single .article .section h2:before{
 border-radius:50%;
 border:3px solid #428bca;
@@ -778,29 +805,6 @@ border: 2px solid #428bca;
 border-radius:50%;
 background:#428bca;
 }
-.single .article .section .tab{
-	padding-bottom:.5em;
-	margin-bottom:1em;
-	font-size:14px;
-}
-@media (min-width: 748px){
-	.single .article .section .tab{
-		border-bottom:1px dotted #ddd;
-	}
-}
-.single .article .section .tab,
-.single .article .section .tab a{
-	color:#bbb;
-}
-.single .article .section .tab a:hover,
-.single .article .section .tab a:focus{
-	color:#555;
-}
-/* single - content */
-.single .article .section{
-	font-size:16px;
-}
-
 /*下面代码都是没审核的*/
 .tit>hr{
 	border-top:2px dotted transparent;
