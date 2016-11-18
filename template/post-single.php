@@ -27,28 +27,22 @@
 
   {$article.Content}
 
-</section>
-<div>
-  {if $zbp->Config('paipk1')->PageAD1!=""}
-  <div class="center-block singleAD">{$zbp->Config('paipk1')->PageAD1}</div>
-  {/if}
+</section><!-- single content end -->
+{if $zbp->Config('paipk1')->PageAD1!=""}
+  <div class="center-block singlebottomAD">{$zbp->Config('paipk1')->PageAD1}</div>
+{/if}
 
-  {if $article.Prev}<p class="next-pre-text pre-text">上一篇：<a href="{$article.Prev.Url}" title="{$article.Prev.Title}">{$article.Prev.Title}</a></p>{/if}
-  {if $article.Next}<p class="next-pre-text next-text">下一篇：<a href="{$article.Next.Url}" title="{$article.Next.Title}">{$article.Next.Title}</a></p>{/if}
-</div>
-
-<div class="text-center more-share">
+<div class="text-center more-btn">
 {if $article.Prev}
-  <a class="btn btn-default" href="{$article.Prev.Url}" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+  <a class="btn btn-yellowgreen" href="{$article.Prev.Url}" role="button" title="{$article.Prev.Title}"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
 {/if}
-  <a class="btn btn-info" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>
-  <a class="btn btn-info hidden-xs" href="#" role="button" data-toggle="modal" data-target="#myshare"><span class="glyphicon glyphicon-qrcode"></span>&nbsp;文章分享</a>
+  <a class="btn btn-blue" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>
 {if $article.Next} 
-  <a class="btn btn-default" href="{$article.Next.Url}" role="button">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+  <a class="btn btn-orange" href="{$article.Next.Url}" role="button" title="{$article.Next.Title}">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 {/if}
 </div>
 
-<div class="more-text">
+<div class="more-list">
 {foreach GetList(4,$article->Category->ID) as $hotlist}
 {php}
 SF_img1::getPics($hotlist,355,230,4);
@@ -79,5 +73,5 @@ if($hotlist->Metas->paipk1_teSeTuPian!=""){
 {/if}
 
 {if $zbp->Config('paipk1')->PageAD2!=""}
-<div class="hidden-xs hidden-sm singleAD">{$zbp->Config('paipk1')->PageAD2}</div>
+  <div class="hidden-xs hidden-sm singlefooterAD">{$zbp->Config('paipk1')->PageAD2}</div>
 {/if}
