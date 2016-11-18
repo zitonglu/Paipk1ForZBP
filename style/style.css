@@ -779,7 +779,24 @@ border: 2px solid #428bca;
 border-radius:50%;
 background:#428bca;
 }
-
+.single .article .section .tab{
+	padding-bottom:.5em;
+	margin-bottom:1em;
+	font-size:14px;
+}
+@media (min-width: 748px){
+	.single .article .section .tab{
+		border-bottom:1px dotted #ddd;
+	}
+}
+.single .article .section .tab,
+.single .article .section .tab a{
+	color:#bbb;
+}
+.single .article .section .tab a:hover,
+.single .article .section .tab a:focus{
+	color:#555;
+}
 
 /*下面代码都是没审核的*/
 .tit>hr{
@@ -899,31 +916,7 @@ background:#428bca;
 
 
 
-.time{
-	padding-bottom:.5em;
-	margin-bottom:1em;
-	font-size:14px;
-}
-@media (min-width: 749px){
-	.time{
-		border-bottom:1px dotted #ddd;
-	}
-}
-.time,
-.time a{
-	color:#bbb;
-}
-.time a:hover,
-.time a:focus{
-	color:#555;
-}
-.single-left{
-	font-size: 16px;
-}
-.single-left ul p,
-.single-left ol p{
-	margin: 0;
-}
+
 
 
 .flip{
@@ -1154,7 +1147,7 @@ p.next-text{
 	}
 }
 /*搜索页面*/
-.single-search .time{display:none;}
+.single-search .single .article .section .tab{display:none;}
 .single-search .single-left h1{margin-bottom:24px;}
 .single-search .single-left{min-height:calc(100vh - 290px)}
 .single-search .single-left strong{

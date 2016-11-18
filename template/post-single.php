@@ -3,13 +3,16 @@
 </div>';die();?>
 <section class="section">
   <h1 class="title">{$article.Title}</h1>
-  {if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
+
+{if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
+
 {if $zbp->Config('paipk1')->ifbaiduShare == '1'}
 <div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 {/if}
-  <p class="time">
-    <i class="glyphicon glyphicon-time"></i>&nbsp;{$article.Time('Y-m-d H:i')}<span class="hidden-xs">&nbsp;
+
+<div class="tab">
+  <i class="glyphicon glyphicon-time"></i>&nbsp;{$article.Time('Y-m-d H:i')}<span class="hidden-xs">&nbsp;
     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;<a href="{$article.Category.Url}" title="{$article.Category.Name}" target="_blank">{$article.Category.Name}</a>&nbsp;
     {if $article.Tags}
     <i class="glyphicon glyphicon-tags"></i>&nbsp;标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}
@@ -19,10 +22,11 @@
     <i class="glyphicon glyphicon-comment"></i>&nbsp;
     {if $article.CommNums<=0}
     <a href="#SOHUCS" title="发表评论">发表评论</a>
-    {else}{$article.CommNums}{/if}</span>
-  </p>
-    
+  {else}{$article.CommNums}{/if}</span>
+</div>
+
   {$article.Content}
+
 </section>
 <div>
   {if $zbp->Config('paipk1')->PageAD1!=""}
