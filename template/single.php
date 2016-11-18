@@ -17,17 +17,17 @@
 </div><!-- video end -->
 {/if}
 <div class="container">
-	<div class="col-md-9">
+	<article class="col-md-9 article">
 		{if $article.Type==ZC_POST_TYPE_ARTICLE}
 		{template:post-single}
 		{else}
 		{template:post-page}
 		{/if}
-	</div>
+	</article>
 	<div class="col-md-3 single-box hidden-xs hidden-sm sidebar">
-		<div class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
-		{template:sidebar3}
-	</div>
+		<aside class="single-right theiaStickySidebar"><!-- 侧栏滚动 -->
+			{template:sidebar3}
+		</aside>
 	</div>
 </div>
 {template:footer}

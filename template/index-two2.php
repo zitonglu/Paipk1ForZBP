@@ -14,13 +14,13 @@
 		{if $zbp->Config('paipk1')->ifPPT=='1'}
 			{template:istop}<!-- 置顶内容结束 -->
 		{/if}
-		<article class="article">
+		<div class="article">
 			<ul class="media-list">
 				{foreach $articles as $article}
 				{template:post-multi}
 				{/foreach}
 			</ul>
-		</article>
+		</div>
 		{template:pagebar}
 	</div>
 </div>

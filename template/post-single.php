@@ -1,7 +1,7 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
         <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
-<article class="article">
+<section class="section">
   <h1 class="title">{$article.Title}</h1>
   {if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
 {if $zbp->Config('paipk1')->ifbaiduShare == '1'}
@@ -23,7 +23,7 @@
   </p>
     
   {$article.Content}
-</article>
+</section>
 <div>
   {if $zbp->Config('paipk1')->PageAD1!=""}
   <div class="center-block singleAD">{$zbp->Config('paipk1')->PageAD1}</div>

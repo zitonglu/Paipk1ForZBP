@@ -11,7 +11,8 @@ a:hover,a:focus{color:#555}
 	3.Sidebar. This's for z-blogPHP
 	4.Index
 	5.List
-	6.Other
+	6.Single
+	7.Other
 */
 .media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#divPrevious li,
 #divPrevious li:hover,#divPrevious li p,#divPrevious li:hover p,.threepic img,
@@ -487,7 +488,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 
 .article h4 a::before,
-.single .article>h1.title::before{
+.single .article .section>h1.title::before{
 	content:'';
 	margin-right:5px;
 	margin-bottom:.4em;
@@ -712,26 +713,33 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	box-shadow:0px 6px 4px -4px rgba(0,0,0,.5);
 }
 /* single - article */
-.single .article>h1.title{
+.single .article .section{
+	font-size:16px;
+}
+.single .article .section>h1.title{
 	color:#212121;
 	font-size:28px;
 	font-weight:700;
 	line-height:1.42857143;
 }
-.single .article>h1.title::before{
+.single .article .section>h1.title::before{
 	margin-right:5px;
 }
 @media (max-width: 749px){
-	.single .article>h1.title{
+	.single .article .section>h1.title{
 		font-size:20px;
 		margin: 0 0 10px 0;
 	}
 }
-.single .article h2,
-.single .article h3,
-.single .article h4,
-.single .article h5,
-.single .article h6{
+.single .article .section .Subtitle{
+	margin-top:-5px;
+	font-size: 14px;
+}
+.single .article .section h2,
+.single .article .section h3,
+.single .article .section h4,
+.single .article .section h5,
+.single .article .section h6{
 	line-height: 1.5em;
 	font-weight: 800;
 	border-bottom:1px solid;
@@ -739,11 +747,11 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	color:#428bca;
 	border-color:#428bca;
 }
-.single .article h2:before,
-.single .article h3:before,
-.single .article h4:before,
-.single .article h5:before,
-.single .article h6:before{
+.single .article .section h2:before,
+.single .article .section h3:before,
+.single .article .section h4:before,
+.single .article .section h5:before,
+.single .article .section h6:before{
 	content: '';
 	width:14px;
 	height:14px;
@@ -751,23 +759,23 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	margin-right:6px;
 	position: relative;
 }
-.single .article h2:before{
+.single .article .section h2:before{
 border-radius:50%;
 border:3px solid #428bca;
 }
-.single .article h3:before{
+.single .article .section h3:before{
 border-radius:0 6px;
 background:#428bca;
 }
-.single .article h4:before{
+.single .article .section h4:before{
 border-radius:6px 6px 0;
 border: 2px solid #428bca;
 }
-.single .article h5:before{
+.single .article .section h5:before{
 border-radius:6px 0;
 border: 2px solid #428bca;
 }
-.single .article h6:before{
+.single .article .section h6:before{
 border-radius:50%;
 background:#428bca;
 }
@@ -889,11 +897,7 @@ background:#428bca;
 	margin-bottom: 5px;
 }
 
-.Subtitle{
-	margin-top:-5px;
-	margin-bottom: 20px;
-	font-size: 14px;
-}
+
 
 .time{
 	padding-bottom:.5em;
