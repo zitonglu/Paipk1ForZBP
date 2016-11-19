@@ -47,9 +47,10 @@ a:hover,a:focus{color:#555}
   color: #23527c;
   background-color: transparent;
 }
+.navbar-mycolor .navbar-toggle,
 .navbar-mycolor .navbar-toggle:hover,
 .navbar-mycolor .navbar-toggle:focus {
-  background-color: #23527c;
+  background-color:#428bca;
 }
 .navbar-mycolor .navbar-toggle .icon-bar {
   background-color: #fff;
@@ -57,13 +58,9 @@ a:hover,a:focus{color:#555}
 .navbar-mycolor .navbar-toggle,
 .navbar-mycolor .navbar-collapse,
 .navbar-mycolor .navbar-form {
-  border-color: #23527c;
-border-color: transparent;
+  border-color:#428bca;
 }
 @media (max-width: 767px) {
-.navbar-nav{
-	background:#428bca;
-}
 .navbar-mycolor .navbar-brand:hover,
 .navbar-mycolor .navbar-brand:focus,
 .navbar-mycolor .navbar-nav > li > a:hover,
@@ -72,7 +69,7 @@ border-color: transparent;
 .navbar-mycolor .navbar-nav > .active > a:hover,
 .navbar-mycolor .navbar-nav > .active > a:focus {
   color: #fff;
-  background:#23527c;
+  background:#428bca;
 }
   .navbar-mycolor .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
@@ -571,7 +568,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.istop span{
+.float-right{
 	float:right;
 }
 .istop .bdsharebuttonbox{
@@ -599,7 +596,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	font-size:16px;
 }
 .index .article .media-list h4 a::before,
-.single .article .section>h1.title::before{
+.single .article .section>h2.title::before{
 	content:'';
 	margin-right:5px;
 	margin-bottom:.4em;
@@ -832,14 +829,14 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	box-shadow:0px 6px 4px -4px rgba(0,0,0,.5);
 }
 /* single - article */
-.single .article .section>h1.title{
+.single .article .section>h2.title{
 	color:#212121;
 	font-size:28px;
 	font-weight:700;
 	line-height:1.42857143;
 	border-bottom:none;
 }
-.single .article .section>h1.title::before{
+.single .article .section>h2.title::before{
 	margin-right:5px;
 	background:transparent;
 }
@@ -848,7 +845,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 		padding-left:0;
 		padding-right:0;
 	}
-	.single .article .section>h1.title{
+	.single .article .section>h2.title{
 		font-size:20px;
 		margin: 0 0 10px 0;
 	}
@@ -956,7 +953,7 @@ background:#428bca;
 	margin:0;
 }
 .single .article .section img{
-	display:block;
+	/*display:block;*/
 	max-width:100%;
 	height:auto;
 }

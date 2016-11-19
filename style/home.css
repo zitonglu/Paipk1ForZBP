@@ -18,8 +18,6 @@ img.logo{
 .navbar-default .navbar-nav >li>a:focus{
 	background-color:#e7e7e7;
 }
-.navbar-mycolor .navbar-brand:hover,
-.navbar-mycolor .navbar-brand:focus,
 .navbar-mycolor .navbar-nav > li > a:hover,
 .navbar-mycolor .navbar-nav > li > a:focus,
 .navbar-mycolor .navbar-nav > .active > a,

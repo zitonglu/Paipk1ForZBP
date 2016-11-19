@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="php">
 <id>paipk1</id>
-<name>清爽格子纹理</name>
+<name>拍拍看主题</name>
 <url>http://www.paipk.com/</url>
 <note>清新三栏响应式主题，强大模块管理，兼容多屏浏览</note>
-<description>z-blogPHP主题paipk1模版.由紫铜炉设计和制作.详见拍拍看科技</description>
+<description>z-blogPHP主题模版由紫铜炉设计和制作.详见拍拍看科技</description>
 <path>main.php</path>
 <include>include.php</include>
 <level>1</level>
@@ -19,9 +19,9 @@
   <url>http://www.paipk.com/</url>
 </source>
 <adapted>151626</adapted>
-<version>2.4</version>
+<version>3</version>
 <pubdate>2016-08-24</pubdate>
-<modified>2016-11-12</modified>
+<modified>2016-11-19</modified>
 <price>60</price>
 <advanced>
   <dependency>sf_img1</dependency>

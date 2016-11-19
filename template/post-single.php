@@ -2,7 +2,7 @@
         <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 <section class="section">
-  <h1 class="title">{$article.Title}</h1>
+  <h2 class="title">{$article.Title}</h2>
 
 {if $article->Alias!=""}<p class="Subtitle text-right">——{$article.Alias}</p>{/if}
 

@@ -19,7 +19,7 @@
 	    <a href="#SOHUCS" title="发表评论">发表评论</a>
 	    {else}{$article.CommNums}{/if}&nbsp;
 	</div>
-	<h1 class="title">{$article.Title}</h1>
+	<h2 class="title">{$article.Title}</h2>
 
 	{$article.Content}
 	</section>

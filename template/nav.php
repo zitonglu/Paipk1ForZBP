@@ -18,7 +18,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i> 搜索</a>
-				<ul class="dropdown-menu search-box">
+				<div class="dropdown-menu search-box">
 					<form method="post" action="{$host}zb_system/cmd.php?act=search" name="search">
 						<div class="input-group">
 							<input type="text" class="form-control" name="q" size="12" placeholder="输入搜索内容">
@@ -27,7 +27,7 @@
 						    </span>
 					    </div>
 				    </form>
-				</ul>
+				</div>
 				</li>	
 			</ul>
 		</div>

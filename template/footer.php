@@ -22,7 +22,7 @@
         Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
     </p>
     {if $type=='index'&&$page=='1'}
-        <br><div class="list-inline">友情链接：{module:link}</div>
+        <br><ul class="list-inline">友情链接：{module:link}</ul>
     {/if}
 </footer>
 <div class="hidden-xs top">
