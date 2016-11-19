@@ -355,11 +355,11 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	float: left;
 	margin-right:10px;
 	border-radius:50%;
-	transition:all .3s;
+	transition:all .2s;
 }
 #divComments .img-comment:hover{
 	border-radius:4px;
-	transition:all .3s ease-in-out;
+	transition:all .2s ease-in-out;
 }
 #divPrevious li:hover{
 	border-color:#98699b;
