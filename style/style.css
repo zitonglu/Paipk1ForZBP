@@ -434,7 +434,43 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	min-height:calc(100vh - 70px);
 }
 /* List */
-/* List - topbox */
+/* List - carousel:no picURL; */
+.top-box{
+	height:240px;
+	background:#fff;
+	overflow:hidden;
+}
+.top-box .tit>h3{
+	text-align:left;
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:5px;
+}
+.cat{
+	position:absolute;
+	top:0;
+	right:0;
+	padding:2px 5px;
+	overflow: hidden;
+	text-transform: uppercase;
+	max-width: 208px;
+	max-height: 24px;
+}
+.tim{
+	position: absolute;
+	top: 22px;
+	right: 2px;
+	font-size: 28px;
+	font-weight: bold;
+	line-height:30px;
+	padding: 5px;
+	text-align: right;
+	text-transform: uppercase;
+}
+.tit>hr{
+	border-top:2px dotted transparent;
+}
+/* List - PPT */
 .topbox{
 	overflow:hidden;
 }
@@ -1058,9 +1094,7 @@ background:#428bca;
 
 
 /*下面代码都是没审核的*/
-.tit>hr{
-	border-top:2px dotted transparent;
-}
+
 .post-nopic{
 	padding: 2px 9px 0px;
 }
@@ -1069,27 +1103,7 @@ background:#428bca;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.cat{
-	position:absolute;
-	top:0;
-	right:0;
-	padding:2px 5px;
-	overflow: hidden;
-	text-transform: uppercase;
-	max-width: 208px;
-	max-height: 24px;
-}
-.tim{
-	position: absolute;
-	top: 22px;
-	right: 2px;
-	font-size: 28px;
-	font-weight: bold;
-	line-height:30px;
-	padding: 5px;
-	text-align: right;
-	text-transform: uppercase;
-}
+
 .post-box{
 	background:#fff;
 	overflow:hidden;
@@ -1148,17 +1162,7 @@ background:#428bca;
 	line-height:24px;
 	text-align:right;
 }
-.top-box{
-	height:240px;
-	background:#fff;
-	overflow:hidden;
-}
-.top-box .tit>h3{
-	text-align:left;
-	padding-left:30px;
-	padding-right:30px;
-	padding-top:5px;
-}
+
 .post-nopic a,
 .post-nopic a:hover{
 	-webkit-transition: all .3s;
