@@ -2,11 +2,11 @@
 <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {template:header}
-<body id="index-pic">
-<div class="container-fluid">{template:nav}</div>
-<div class="container body long">
+<body id="top" class="index index-pic">
+{template:nav}<!-- 导航结束 -->
+<div class="container article">
 {if $zbp->Config('paipk1')->ifPPT=='1'}
-<div class="col-md-8 col-sm-12 post-list">
+<div class="col-md-8 col-sm-12">
 	<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
 {php}
@@ -51,30 +51,26 @@ preg_match_all($pattern,$content,$matchContent);
 		$bgtURL=$matchContent[1][0];
 	}
 	{/php}
-<div class="col-md-4 col-sm-6 post-list">
-	<div class="post-box" style="background-image:url({$bgtURL})">
-		<div class="tim"><a href="{$article.Url}" title="{$article.Title}">{$article.Time('m')}月<br>{$article.Time('d')}</a></div>
+<section class="col-md-4 col-sm-6 post-box">
+	<a href="{$article.Url}" title="{$article.Title}">
+		<img src="{$bgtURL}" alt="{$article.Title}" class="articleIMG">
+	</a>
+		<div class="tim"><a href="{$article.Url}" title="{$article.Title}">{$article.Time('M')}<br>{$article.Time('d')}</a></div>
 		<div class="cat">
 			<a href="{$article.Category.Url}" target="_blank" title="{$article.Category.Name}">{$article.Category.Name}</a>
 		</div>
-		<div class="tit">
-			<p><a href="{$article.Url}">{SubStrUTF8(TransferHTML($article.Intro,"[nohtml]"),200)}</a></p>
-			<hr>
-			<h3><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h3>
+		<div class="post-text">
+			<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
+			<p>{SubStrUTF8(TransferHTML($article.Intro,"[nohtml]"),80)}</p>
 		</div>
-	</div>
-</div>
+</section>
 {else}
-<div class="col-md-4 col-sm-6 post-list">
-	<div class="post-box post-nopic">
-		<h4><b><a href="{$article.Url}">{$article.Title}</a></b></h4>
-		<h6>
-		<a href="{$article.Category.Url}" target="_blank" title="{$article.Category.Name}"><span class="glyphicon glyphicon-send"></span>&nbsp;{$article.Category.Name}</a>&nbsp;
-		<span class="glyphicon glyphicon-time"></span>&nbsp;{$article.Time('Y-m-d H:i')}
-		</h6>
-		<div>{$article.Intro}</div>
+<section class="col-md-4 col-sm-6 post-box post-nopic">
+	<div class="post-text">
+		<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
+		<p>{SubStrUTF8(TransferHTML($article.Intro,"[nohtml]"),80)}</p>
 	</div>
-</div>
+</section>
 {/if}
 {/foreach}
 <div class="clearfix"></div>

@@ -18,13 +18,10 @@ a:hover,a:focus{color:#555}
 .media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#divPrevious li,
 #divPrevious li:hover,#divPrevious li p,#divPrevious li:hover p,.threepic img,
 .threepic img:hover,.QQstyle:hover,.comment-box a img,.comment-box a:hover img,
-.weiyu a img,.weiyu:hover a img{
+.weiyu a img,.weiyu:hover a img,.index-pic .post-box:hover img.articleIMG,
+.index-pic .post-box img.articleIMG,.index-pic .post-box:hover .post-text,
+.index-pic .post-box .post-text,.index-pic .post-nopic:hover,.index-pic .post-nopic{
 	transition:all 0.2s ease-in-out;
-}
-.post-box,.post-box:hover,.post-box .tim,.post-box:hover .tim,.tit p,.tit p:hover,.tit hr,
-.tit hr:hover,.post-box .tit,.post-box:hover .tit,.post-box .tit h3,.post-box:hover .tit h3,
-.post-box .tit>h3>a,.post-box:hover .tit>h3>a,.top:hover{
-	transition: all .8s;
 }
 .more-text-box p a:hover,.more-text-box p a:focus,
 .istop p a:hover,.istop p a:focus,.post-nopic a:hover,.post-nopic a:focus,.article a{
@@ -433,6 +430,68 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	padding-right:0;
 	min-height:calc(100vh - 70px);
 }
+/* index - pic */
+.index-pic .article{
+	padding:0;
+	margin:0 auto;
+}
+.index-pic .col-md-8,
+.index-pic .col-md-4{
+	padding:0;
+}
+.index-pic .post-box{
+	position:relative;
+	overflow:hidden;
+	height:240px;
+}
+@media(max-width: 748px){
+	.index-pic .post-box{height:auto}
+}
+.index-pic .post-box img.articleIMG{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.index-pic .post-box:hover img.articleIMG{
+	opacity:.1;
+}
+.index-pic .post-box:hover .post-text{
+	opacity:1;
+}
+.index-pic .post-box .post-text{
+	position:absolute;
+	bottom:0;
+	left:2em;
+	right:2em;
+	opacity:0;
+}
+.index-pic .post-box .post-text h4{
+	font-weight:700;
+	line-height:1.42857143;
+}
+.index-pic .post-box .post-text h4::before{
+	content: '';
+	margin-right: 5px;
+	margin-bottom: .4em;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50% 50% 0;
+	border: 2px solid #337ab7;
+}
+.index-pic .post-box .post-text p{
+	text-indent:2em;
+	font-size:14px;
+}
+.index-pic .post-nopic:hover{
+	background:#eee;
+}
+.index-pic .post-nopic .post-text{
+	opacity:1;
+}
+.index-pic .post-nopic .post-text p{
+	min-height:80px;
+}
 /* List */
 /* List - carousel:no picURL; */
 .top-box{
@@ -487,11 +546,11 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 		height:212px;
 	}
 }
-.topbox .carousel-control.right,
-.topbox .carousel-control.left{
+.index .carousel-control.right,
+.index .carousel-control.left{
 	background-image:none !important;
 }
-.topbox .carousel-inner>.item>a>img.topIMG{
+.index .carousel-inner>.item>a>img.topIMG{
 	width:100%;
 	height:100%;
 	object-fit:cover;
@@ -1075,21 +1134,6 @@ background:#428bca;
 	margin-right:auto;
 	margin-left:auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* single - noside */
 /* search page */
 @media(min-width: 992px){
@@ -1133,155 +1177,6 @@ background:#428bca;
 	border:2px solid #428bca;
 	border-radius:50% 50% 0;
 }
-
-
-
-
-
-
-
-
-/*下面代码都是没审核的*/
-
-.post-nopic{
-	padding: 2px 9px 0px;
-}
-.post-nopic>h4{
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-.post-box{
-	background:#fff;
-	overflow:hidden;
-}
-@media (min-width:749px){
-	.post-box{
-		height:212px;
-	}
-}
-.post-box .tim{
-	filter:alpha(Opacity=0);
-	-moz-opacity:0;
-	opacity: 0;
-}
-.post-box:hover .tim{
-	filter:alpha(Opacity=100);
-	-moz-opacity:1;
-	opacity:1;
-}
-.tit{
-	padding:130px 0px 5px;
-	height: 240px;
-}
-.tit hr{
-	margin:5px 10px;
-	padding: 0px;
-}
-.tit>p{
-	margin: 0;
-	padding-left:10px;
-	padding-right:10px;
-	height: 34px;
-	line-height: 18px;
-	overflow: hidden;
-	text-indent: 2em;
-}
-.tit p,
-.tit hr{
-	filter:alpha(Opacity=0);
-	-moz-opacity:0;
-	opacity: 0;
-}
-.post-box:hover .tit p,
-.post-box:hover .tit hr{
-	filter:alpha(Opacity=100);
-	-moz-opacity:1;
-	opacity: 1;
-}
-.tit>h3{
-	font-size:18px;
-	margin-top:5px;
-	padding-left:10px;
-	padding-right:10px;
-	overflow:hidden;
-	height:60px;
-	line-height:24px;
-	text-align:right;
-}
-
-.post-nopic a,
-.post-nopic a:hover{
-	-webkit-transition: all .3s;
-	-moz-transition: all .3s;
-	-ms-transition: all .3s;
-	-o-transition: all .3s;
-	transition: all .3s;
-}
-
-#index-list .post-box,
-#index-three .post-box{
-	margin-bottom:10px;
-}
-#index-list pre,
-#index-three pre{
-	white-space: pre-wrap;
-	word-wrap: break-word;
-}
-
-
-
-.two_logo{
-	border-radius: 0 32px;
-	margin: 10px auto 2px;
-	border: 1px solid rgba(240,240,240,.8);
-	box-shadow: 0px 5px 5px -5px #000;
-	background: #f1f1f1;
-	padding: 2%;
-}
-
-
-
-
-
-
-
-
-.post-list{
-	border-color: #000;
-}
-
-
-.tit{
-	background-color: rgba(222,222,222,0.1);
-}
-.post-box:hover .tit{
-	background-color: rgba(0,0,0,0.6);
-}
-.tit>p>a{
-	color:#ddd;
-}
-.tit>hr{
-	border-color:#ccc;
-}
-.tit>h3{
-	background-color: rgba(0,0,0,0.5);
-}
-.post-box:hover .tit h3{
-	background-color:transparent;
-}
-.tit>h3>a{
-	color:rgb(240, 240, 240);
-}
-.post-box:hover .tit>h3>a{
-	color:rgb(255, 255, 255);
-}
-
-
-
-
-
 /* Other */
 /* 
 	Other - pre
