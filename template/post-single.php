@@ -55,7 +55,7 @@ if($hotlist->Metas->paipk1_teSeTuPian!=""){
     $IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
   }
 {/php}
-<div class="col-md-3 col-sm-6 more-text-box">
+<div class="col-sm-3 col-xs-6 more-text-box">
   <a href="{$hotlist.Url}" title="{$hotlist.Title}"><img src="{$IMGURL}" alt="{$hotlist.Title}"></a>
   <p class="BMT-title">
     <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$hotlist.ViewNums}次

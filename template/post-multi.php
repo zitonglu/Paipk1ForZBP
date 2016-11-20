@@ -40,7 +40,7 @@
 		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
 		{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
 		{/if}
-		<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+		<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="{$article.Url}">{$article.ViewNums}</a>
 		</h6>
 	</div>
 	<a class="media-right" href="{$article.Url}" title="{$article.Title}">
@@ -66,7 +66,7 @@
 	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
 	{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
 	{/if}
-	<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+	<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="{$article.Url}">{$article.ViewNums}</a>
 	</h6>
 </li>
 {elseif $article->sf_img_count>=1 || $article->Metas->paipk1_teSeTuPian!=''}
@@ -89,7 +89,7 @@
 		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
 		{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
 		{/if}
-		<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+		<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="{$article.Url}">{$article.ViewNums}</a>
 		</h6>
 		{$article.Intro}
 		<p class="clearfix"></p>
@@ -100,11 +100,11 @@
   <div>
   	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<h6>
-	<i class="glyphicon glyphicon-time"></i>{TimeAgo($article.Time())}&nbsp;
+	<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
 	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
 	{foreach $article.Tags as $tag}<a href="{$tag.Url}" title="{$tag.Name}">{$tag.Name}</a> {/foreach}&nbsp;
 	{/if}
-	<i class="glyphicon glyphicon-eye-open"></i><a href="{$article.Url}">{$article.ViewNums}</a>
+	<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="{$article.Url}">{$article.ViewNums}</a>
 	</h6>
     {$article.Intro}
     <p class="clearfix"></p>

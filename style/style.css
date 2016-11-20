@@ -967,9 +967,13 @@ background:#428bca;
 .single .article .more-btn{
 	margin-top:2em;
 	margin-bottom:1.5em;
+	padding-top:1.5em;
+	border-top:1px dotted #dedede;
 }
 .single .article .more-list{
-	margin:2.5em auto 1.5em;
+	margin:1.5em auto;
+	padding-bottom:1.5em;
+	border-bottom:1px dotted #dedede;
 }
 @media (max-width: 748px){
 	.single .article .more-list{
@@ -1177,10 +1181,10 @@ background:#428bca;
 */
 pre[class*="language-"]{
 	background:transparent;
-	background-image: linear-gradient(transparent 50%,#dedede 0);
+	background-image: linear-gradient(transparent 50%,#eee 0);
 	background-size: auto 3em;
 	background-origin: content-box;
-	border-color:#dedede;
+	margin: 0 auto 20px;
 	text-shadow:none;
 }
 div.prism-show-language > div.prism-show-language-label[data-language]{
