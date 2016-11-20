@@ -958,8 +958,8 @@ background:#428bca;
 	margin-top:2em;
 	margin-bottom:2.5em;
 	overflow:hidden;
-	width: 300px;
 }
+.single .article .singlebottomAD{width: 300px;}
 .single .article .singlebottomAD>div,
 .single .article .singlefooterAD>div{
 	text-align:center;
