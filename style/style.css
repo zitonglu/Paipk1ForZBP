@@ -20,7 +20,8 @@ a:hover,a:focus{color:#555}
 .threepic img:hover,.QQstyle:hover,.comment-box a img,.comment-box a:hover img,
 .weiyu a img,.weiyu:hover a img,.index-pic .post-box:hover img.articleIMG,
 .index-pic .post-box img.articleIMG,.index-pic .post-box:hover .post-text,
-.index-pic .post-box .post-text,.index-pic .post-nopic:hover,.index-pic .post-nopic{
+.index-pic .post-box .post-text,.index-pic .post-nopic:hover,.index-pic .post-nopic,
+a,a:hover,a:focus{
 	transition:all 0.2s ease-in-out;
 }
 .more-text-box p a:hover,.more-text-box p a:focus,
@@ -271,17 +272,11 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #tbCalendar tbody td:hover a{
 	background:#999;
 }
-#divFavorites div,
 #divFavorites ul,
-#divStatistics div,
 #divStatistics ul,
-#divLinkage div,
 #divLinkage ul,
-#divCatalog div,
 #divCatalog ul,
-#divMisc div,
 #divMisc ul,
-#divTags div,
 #divTags ul{
 	list-style: none;
 	display: inline-block;
@@ -300,7 +295,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #divCatalog li,
 #divTags li{
 	margin: 0 3px 3px 0;
-	padding: 1px 10px 3px;
+	padding: 1px 9px 3px;
 	display: inline-block;
 	border-radius: 1px;
 	color:#666;
@@ -581,12 +576,12 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 /* List - article */
 @media(min-width: 749px){
 	.index .article>ul>li{
-		margin-top:32px;
-		padding-bottom:30px;
+		margin-top:20px;
+		padding-bottom:20px;
 	}
 }
 .index .article>ul>li{
-	border-bottom:.1em solid #dedede;
+	border-bottom:.1em dashed #dedede;
 }
 .index .article>ul>li:first-child{margin-top:0;}
 .index .article>ul>li:last-child{border-bottom:none;}
@@ -963,6 +958,7 @@ background:#428bca;
 	margin-top:2em;
 	margin-bottom:2.5em;
 	overflow:hidden;
+	width: 300px;
 }
 .single .article .singlebottomAD>div,
 .single .article .singlefooterAD>div{
