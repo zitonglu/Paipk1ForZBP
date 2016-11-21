@@ -984,6 +984,7 @@ background:#428bca;
 	font-size:12px;
 	overflow:hidden;
 	border:1px solid #ddd;
+	border-radius: 4px;
 }
 .single .article .author-box img.avatar{
 	width:50px;
@@ -1006,11 +1007,6 @@ background:#428bca;
 .single .article .author-box .col-sm-8 h4 a:focus{
 	color: #333;
 }	
-.single .article .more-list{
-	margin:1.5em auto;
-	padding-bottom:1.5em;
-	border-bottom:1px dotted #dedede;
-}
 @media (max-width: 748px){
 	.single .article .more-list{
 		margin-left:3px;
@@ -1090,6 +1086,43 @@ background:#428bca;
 	width:100%;
 	height:100%;
 	object-fit:cover;
+}
+.single .article .more-list>ul>li>a{
+	padding: 5px 8px;
+}
+.single .article .more-list .active>a,
+.single .article .more-list .tab-content{
+	background: #f0f0f0;
+}
+.single .article .more-list .tab-pane{
+	padding-top:10px;
+	padding-bottom: 20px;
+	border: 1px solid #dedede;
+	border-top: none;
+	border-radius: 0 0 6px 6px;
+}
+.single .article .more-list .nav-tabs i,
+.single .article .more-list #hotList i{
+	font-size: 85%;
+}
+.single .article .more-list #hotList{
+	padding-left:20px;
+	padding-right:20px;
+}
+.single .article .more-list #hotList,
+.single .article .more-list #hotList a{
+	color: #777;
+	font-size: 12px;
+	line-height: 1.6;
+}
+.single .article .more-list #hotList li{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.single .article .more-list #hotList a:hover,
+.single .article .more-list #hotList a:focus{
+	color:#428bca;
 }
 /* single - article - comment */
 .single .article .comment-post{

@@ -15,7 +15,7 @@
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=3.114" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=3.115" type="text/css">
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
 {if $type=='index'&&$page=='1'}

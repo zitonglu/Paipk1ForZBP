@@ -37,7 +37,7 @@
 {if $article.Next} 
   <a class="btn btn-orange" href="{$article.Next.Url}" role="button" title="{$article.Next.Title}">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 {/if}
-</div>
+</div><!-- Prev and Next button end -->
 
 <div class="author-box">
   <div class="col-sm-8">
@@ -45,38 +45,68 @@
     <h4>作者：<a href="{$article.Author.HomePage}" title="文章作者：{$article.Author.StaticName}" target="_blank">{$article.Author.StaticName}</a></h4>
     <p>{$article.Author.Intro}</p>
   </div>
-  <div class="col-sm-4 singlebottomAD">
 {if $zbp->Config('paipk1')->PageAD1!=""}
-  {$zbp->Config('paipk1')->PageAD1}
-{/if}
+  <div class="col-sm-4 singlebottomAD">
+    {$zbp->Config('paipk1')->PageAD1}
   </div>
-</div>
+{/if}
+  <div class="clearfix"></div>
+</div><!-- author and AD button end -->
 
 <div class="more-list">
-{foreach GetList(4,$article->Category->ID) as $hotlist}
+
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#aboutList" role="tab" data-toggle="tab" title="相关文章"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;相关文章</a></li>
+    <li role="presentation"><a href="#hotList" role="tab" data-toggle="tab" title="热门文章"><i class="glyphicon glyphicon-fire"></i>&nbsp;热门文章</a></li>
+</ul>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="aboutList">
+{foreach GetList(4,$article->Category->ID) as $aboutlist}
 {php}
-SF_img1::getPics($hotlist,200,155,4);
+SF_img1::getPics($aboutlist,200,155,4);
 $randABC=rand(1,20);
-if($hotlist->Metas->paipk1_teSeTuPian!=""){
-    $IMGURL=$hotlist->Metas->paipk1_teSeTuPian;
-  }elseif($hotlist->sf_img_count>=1){
-    $IMGURL=$hotlist->sf_img[0];
+if($aboutlist->Metas->paipk1_teSeTuPian!=""){
+    $IMGURL=$aboutlist->Metas->paipk1_teSeTuPian;
+  }elseif($aboutlist->sf_img_count>=1){
+    $IMGURL=$aboutlist->sf_img[0];
   }else{
     $IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
   }
 {/php}
 <div class="col-sm-3 col-xs-6 more-text-box">
-  <a href="{$hotlist.Url}" title="{$hotlist.Title}"><img src="{$IMGURL}" alt="{$hotlist.Title}"></a>
+  <a href="{$aboutlist.Url}" title="{$aboutlist.Title}"><img src="{$IMGURL}" alt="{$aboutlist.Title}"></a>
   <p class="BMT-title">
-    <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$hotlist.ViewNums}次
+    <a href="{$aboutlist.Url}" title="{$aboutlist.Title}">{$aboutlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$aboutlist.ViewNums}次
   </p>
   <p class="more-text-title">
-    <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
+    <a href="{$aboutlist.Url}" title="{$aboutlist.Title}">{$aboutlist.Title}</a>
   </p>
 </div>
 {/foreach}
   <div class="clearfix"></div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="hotList">
+    <ul class="list-inline hotListul">
+{php}
+$stime = time();
+$ytime = 91*24*60*60;
+$ztime = $stime-$ytime;
+$order = array('log_ViewNums'=>'DESC');
+$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
+$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(10),'');
+{/php}
+{foreach $RMarray as $hotlist}
+      <li class="col-sm-6 col-xs-12">
+      <i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;<a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
+      </li>
+{/foreach}
+    </ul>
+    <div class="clearfix"></div>
+  </div>
 </div>
+
+</div><!-- moseList end -->
 
 {if !$article.IsLock}
 {template:comments}		

@@ -19,9 +19,9 @@
   <url>http://www.paipk.com/</url>
 </source>
 <adapted>151626</adapted>
-<version>3</version>
+<version>3.1</version>
 <pubdate>2016-08-24</pubdate>
-<modified>2016-11-19</modified>
+<modified>2016-11-21</modified>
 <price>60</price>
 <advanced>
   <dependency>sf_img1</dependency>
