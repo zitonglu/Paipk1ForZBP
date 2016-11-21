@@ -28,9 +28,6 @@
   {$article.Content}
 
 </section><!-- single content end -->
-{if $zbp->Config('paipk1')->PageAD1!=""}
-  <div class="center-block singlebottomAD">{$zbp->Config('paipk1')->PageAD1}</div>
-{/if}
 
 <div class="text-center more-btn">
 {if $article.Prev}
@@ -40,6 +37,19 @@
 {if $article.Next} 
   <a class="btn btn-orange" href="{$article.Next.Url}" role="button" title="{$article.Next.Title}">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 {/if}
+</div>
+
+<div class="author-box">
+  <div class="col-sm-8">
+    <a href="{$article.Author.HomePage}" title="文章作者：{$article.Author.StaticName}" target="_blank"><img src="{$article.Author.Avatar}" alt="作者头像" class="avatar"></a>
+    <h4>作者：<a href="{$article.Author.HomePage}" title="文章作者：{$article.Author.StaticName}" target="_blank">{$article.Author.StaticName}</a></h4>
+    <p>{$article.Author.Intro}</p>
+  </div>
+  <div class="col-sm-4 singlebottomAD">
+{if $zbp->Config('paipk1')->PageAD1!=""}
+  {$zbp->Config('paipk1')->PageAD1}
+{/if}
+  </div>
 </div>
 
 <div class="more-list">
