@@ -23,10 +23,24 @@
   {$article.Content}
 </section><!-- single content end -->
 
+<div class="author-box">
+  <div class="col-sm-8">
+    <a href="{$article.Author.HomePage}" title="文章作者：{$article.Author.StaticName}" target="_blank"><img src="{$article.Author.Avatar}" alt="作者头像" class="avatar"></a>
+    <h4>作者：<a href="{$article.Author.HomePage}" title="文章作者：{$article.Author.StaticName}" target="_blank">{$article.Author.StaticName}</a></h4>
+    <p>{$article.Author.Intro}</p>
+  </div>
 {if $zbp->Config('paipk1')->PageAD1!=""}
-  <div class="center-block singlebottomAD">{$zbp->Config('paipk1')->PageAD1}</div>
+  <div class="col-sm-4 singlebottomAD">
+    {$zbp->Config('paipk1')->PageAD1}
+  </div>
 {/if}
+  <div class="clearfix"></div>
+</div><!-- author and AD button end -->
 
 {if !$article.IsLock}
 {template:comments}		
+{/if}
+
+{if $zbp->Config('paipk1')->PageAD2!=""}
+  <div class="hidden-xs hidden-sm singlefooterAD">{$zbp->Config('paipk1')->PageAD2}</div>
 {/if}
