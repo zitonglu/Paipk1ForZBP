@@ -34,7 +34,7 @@
 <li class="media videolist" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-body">
-		{$article.Intro}
+		<p class="text-indent">{$article.Intro}</p>
 		<h6>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
 		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
