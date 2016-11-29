@@ -2,7 +2,7 @@
 <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {template:header}
-<body id="top" class="single single-video">
+<body class="single single-video">
 {template:nav}<!-- nav end -->
 <article class="container article">
 	<div class="col-md-7 video-left">{$article->Metas->paipk1_singleVideo}</div>

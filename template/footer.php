@@ -25,11 +25,11 @@
         <br><ul class="list-inline">友情链接：{module:link}</ul>
     {/if}
 </footer>
-<div class="hidden-xs top">
+<div class="hidden-xs top hiddened" id="backTop">
     {if $zbp->Config('paipk1')->QQ != ""}
     <a target="_blank" title="QQ联系我" href="http://wpa.qq.com/msgrd?v=3&uin={$zbp->Config('paipk1')->QQ}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
     {/if}
-    <a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <a href="#" id="returnTop"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 {if $type!='index'}
     <div class="modal fade" id="myshang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -59,11 +59,7 @@
     <script src='{$host}zb_users/theme/{$theme}/js/custom.js'></script>
 <!-- 滚动侧栏 -->
 <script src='{$host}zb_users/theme/{$theme}/js/theia-sticky-sidebar.js'></script>
-<script>
-jQuery(document).ready(function() {
-    jQuery('.sidebar').theiaStickySidebar({ additionalMarginTop:60}); 
-});
-</script>
+<script src='{$host}zb_users/theme/{$theme}/js/paipk1.js'></script>
 {$footer}
 </body>
 </html>

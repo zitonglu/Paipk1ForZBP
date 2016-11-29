@@ -7,7 +7,7 @@
 	{template:single-video}
 {else}
 {template:header}
-<body class="single" id="top">
+<body class="single">
 {template:nav}<!-- nav end -->
 {if $article->Metas->paipk1_singleVideo != ""}
 <div class="jumbotron videobox">
