@@ -62,6 +62,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->QQ = $_POST['QQ'];
   $zbp->Config('paipk1')->indexHome = $_POST['indexHome'];
   $zbp->Config('paipk1')->indexbottom = $_POST['indexbottom'];
+  $zbp->Config('paipk1')->ActivationCode = $_POST['ActivationCode'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -82,6 +83,13 @@ if(isset($_POST['ifOutLink'])){
           自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php
         </td>
         <td>选择文章列表页面的默认模板</td>
+      </tr>
+      <tr>
+        <td scope="row">激活码</td>
+        <td>
+          <input name="ActivationCode" type="text" style="width:40%" value="<?php echo $zbp->Config('paipk1')->ActivationCode; ?>">
+        </td>
+        <td>激活定制主题用的密码</td>
       </tr>
       <tr>
         <td scope="row"><strong>外部JS和CSS</strong></td>
