@@ -62,13 +62,12 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->QQ = $_POST['QQ'];
   $zbp->Config('paipk1')->indexHome = $_POST['indexHome'];
   $zbp->Config('paipk1')->indexbottom = $_POST['indexbottom'];
-  $zbp->Config('paipk1')->ActivationCode = $_POST['ActivationCode'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
 ?>
-    <form id="form-postdata" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php">
-      <table width="100%" border="1" class="tableBorder" id="PPT">
+    <form id="base" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php">
+      <table width="100%" border="1" class="tableBorder">
       <tr>
         <th scope="col" height="32" width="150px">配置项</th>
         <th scope="col">配置内容</th>
@@ -83,13 +82,6 @@ if(isset($_POST['ifOutLink'])){
           自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php
         </td>
         <td>选择文章列表页面的默认模板</td>
-      </tr>
-      <tr>
-        <td scope="row">激活码</td>
-        <td>
-          <input name="ActivationCode" type="text" style="width:40%" value="<?php echo $zbp->Config('paipk1')->ActivationCode; ?>">
-        </td>
-        <td>激活定制主题用的密码</td>
       </tr>
       <tr>
         <td scope="row"><strong>外部JS和CSS</strong></td>
@@ -239,7 +231,7 @@ $zbp->ShowHint('good');
 ?>
 <input type="submit" value="增加一页" id="addTable"/> <input type="submit" value="删除选行" id="deleteTable"/>
   <hr>
-  <form id="form-postdata" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=TopPPT">
+  <form id="PPT" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=TopPPT">
   <table>
     <thead>
       <tr>
@@ -283,6 +275,35 @@ i--;
 </script>
 <?php } ?>
 <?php if ($act == 'byDesign'){?><!--个性定制-->
+<?php
+if(isset($_POST['ActivationCode'])){
+  $zbp->Config('paipk1')->ActivationCode = $_POST['ActivationCode'];
+  $zbp->SaveConfig('paipk1');
+  $zbp->ShowHint('good');
+}?>
+<form id="design" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=byDesign">
+  <table width="100%" border="1" class="tableBorder">
+  <tr>
+    <th scope="col" height="32" width="150px">配置项</th>
+    <th scope="col">配置内容</th>
+    <th scope="col" width="500px">使用说明</th>
+  </tr>
+  <tr>
+    <td scope="row">激活码</td>
+    <td>
+      <input name="ActivationCode" type="text" style="width:40%" value="<?php echo $zbp->Config('paipk1')->ActivationCode; ?>">
+    </td>
+    <td>激活定制主题用的密码</td>
+  </tr>
+<?php 
+if($zbp->Config('paipk1')->ActivationCode!=''){
+  include 'plugin/astro.php';
+}
+?>
+</table>
+  <br/>
+  <input class="button" type="submit" value="保存设置" />
+</form>
     <h3 style="margin-top:30px">定制页面</h3>
     <p>模版可根据客户的要求进行<strong>私人定制</strong>，如果有需要的朋友，请<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=910109610&amp;site=qq&amp;menu=yes" title="联系我们" target="_black">联系作者</a>。
     我们会按低于市场的价格给您优先制作。</p>
