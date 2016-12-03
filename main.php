@@ -241,7 +241,7 @@ $zbp->ShowHint('good');
         <th>图片名称</th>
       </tr>
     </thead>
-    <tbody id="PPT">
+    <tbody>
 <?php
   if(is_file('plugin/alltr.html')) {
     include 'plugin/alltr.html';
@@ -278,6 +278,7 @@ i--;
 <?php
 if(isset($_POST['ActivationCode'])){
   $zbp->Config('paipk1')->ActivationCode = $_POST['ActivationCode'];
+  if(!is_null(GetVars('XXX'))) $zbp->Config('paipk1')->XXX = $_POST['XXX'];
   $zbp->SaveConfig('paipk1');
   $zbp->ShowHint('good');
 }?>
@@ -295,10 +296,11 @@ if(isset($_POST['ActivationCode'])){
     </td>
     <td>激活定制主题用的密码</td>
   </tr>
-<?php 
-if($zbp->Config('paipk1')->ActivationCode!=''){
-  include 'plugin/astro.php';
-}
+<?php
+switch ($zbp->Config('paipk1')->ActivationCode) {
+  case '256':
+    include 'plugin/astro.php';
+} 
 ?>
 </table>
   <br/>
@@ -311,7 +313,7 @@ if($zbp->Config('paipk1')->ActivationCode!=''){
       <ul>
         <li>联系方式：admin@paipk.com（#换成@）。来信请在主题中备注相关需求，您也可以在留言咨询相关信息。</li>
         <li>作者blog：<a href="http://www.paipk.com" target="_black" title="拍拍看科技">http://www.paipk.com</a></li>
-        <li>BUG页面提交：<a href="http://www.paipk.com/?id=67" target="_black" title="BUG提交">http://www.paipk.com/?id=67</a></li>
+        <li>BUG页面提交：<a href="http://www.paipk.com/67.html" target="_black" title="BUG提交">http://www.paipk.com/67.html</a></li>
      </ul>
 <?php } ?>
   </div>
