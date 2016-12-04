@@ -299,7 +299,7 @@ if(isset($_POST['ActivationCode'])){
 <?php
 switch ($zbp->Config('paipk1')->ActivationCode) {
   case '256':
-    include 'plugin/astro.php';
+    include 'plugin/astro-setting.php';
 } 
 ?>
 </table>
