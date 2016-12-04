@@ -96,7 +96,7 @@
 		</div>
 	</div>
 </div><!-- jumbotron end -->
-<div class="container">
+<div class="container" id="first">
 	<div class="col-md-8 first-cate">
 	<ul class="list-inline float-right first-cate-nav">
 		<li><a href="">子目录</a></li>
@@ -104,7 +104,7 @@
 		<li><a href="">子目录</a></li>
 		<li><a href="" title="更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
-	<h4><i class="glyphicon glyphicon-fire"></i>&nbsp;分类名称</h4>
+	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;分类名称</h4>
 	<div class="col-sm-6">
 		<h5><i class=" glyphicon glyphicon-pencil"></i>&nbsp;推荐文章列表</h5>
 		<section class="media">
@@ -149,7 +149,54 @@
 		<a href=""><img src="http://static.aipiaxi.com/Css/Img/wxqr.png" alt="" class="thumbnail img-cover rightimg"></a>
 	</div>
 	<div class="claerfix"></div>
+</div><!-- first-cate -->
+<div class="container" id="second">
+	<div class="col-md-8">
+<div class="col-sm-12">
+	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;分类名称</h4>
+	<div class="col-md-3 second-cate">
+		<a href=""><img src="http://static.aipiaxi.com/Css/Img/wxqr.png" alt=".." class="thumbnail img-cover"></a>
+		<a href="" class="secondtitle">文章标题三度空间手动功</a>
+	</div>
+	<div class="col-md-3 second-cate">
+		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt=".." class="thumbnail img-cover"></a>
+		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三度空间手三度空间手三度空间手</a>
+	</div>
+	<div class="col-md-3 second-cate">
+		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt=".." class="thumbnail img-cover"></a>
+		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三度空间手三度空间手三度空间手</a>
+	</div>
+	<div class="clearflx"></div>
+</div><!-- four pic -->
+<div class="col-sm-12">
+	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+	<h4 class="cateName"><i class="glyphicon glyphicon-user"></i>&nbsp;热门作者</h4>
+	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/1.jpg" alt=""></a>
+	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/2.jpg" alt=""></a>
+	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/3.jpg" alt=""></a>
+	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/4.jpg" alt=""></a>
+	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/5.jpg" alt=""></a>
+	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/6.jpg" alt=""></a>
 </div>
+	</div>
+	<div class="col-md-4">
+		<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;本月热门</h4>
+		<ol class="hot-list">
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手空间手三度空空间手三度空空间手三度空三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+			<li><span class="float-right">三度空</span><a href="">度空间手度空间手度空间间手度间手度手度空间手</a></li>
+			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+		</ol>
+	</div>
+<div class="claerfix"></div>
+</div><!-- second-cate -->
 <footer class="footer">
 	{if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}
     <p>
