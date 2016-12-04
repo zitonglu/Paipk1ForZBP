@@ -154,18 +154,18 @@
 	<div class="col-md-8">
 <div class="col-sm-12">
 	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
-	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;分类名称</h4>
+	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;分类名称</h4>
 	<div class="col-md-3 second-cate">
 		<a href=""><img src="http://static.aipiaxi.com/Css/Img/wxqr.png" alt=".." class="thumbnail img-cover"></a>
 		<a href="" class="secondtitle">文章标题三度空间手动功</a>
 	</div>
 	<div class="col-md-3 second-cate">
 		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt=".." class="thumbnail img-cover"></a>
-		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三度空间手三度空间手三度空间手</a>
+		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三度空间手</a>
 	</div>
 	<div class="col-md-3 second-cate">
 		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt=".." class="thumbnail img-cover"></a>
-		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三度空间手三度空间手三度空间手</a>
+		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三空间手</a>
 	</div>
 	<div class="clearflx"></div>
 </div><!-- four pic -->
@@ -197,26 +197,62 @@
 	</div>
 <div class="claerfix"></div>
 </div><!-- second-cate -->
-<footer class="footer">
-	{if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}
-    <p>
-        Copyright © 2016-2017 <a href="{$host}" title="{$name}">{$name}</a>&nbsp;
-        {if $user.ID>0}
-        <a href="{$host}zb_system/admin/?act=admin" rel="nofollow" title="后台管理"><span class="glyphicon glyphicon-pencil"></span></a>
-        {else}
-        <a href="{$host}zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
-        {/if}
-        {if $zbp->Config('paipk1')->baike!=""}&nbsp;{$zbp->Config('paipk1')->baike}&nbsp;{/if}
-        {$copyright}&nbsp;
-        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
-    </p>
-</footer>
-
-{if $zbp->Config('paipk1')->ifOutLink=="1"}
-    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-{else}
-    <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
-{/if}
-{$footer}
-</body>
-</html>
+<div class="container" id="three">
+	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;分类目录</h4>
+	<div class="col-md-4">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="thumbnail img-cover bottom-left-img">
+	</div>
+	<div class="col-md-8">
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/9.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/10.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/15.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/16.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/19.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/17.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<section class="col-sm-3 bottom-img">
+		<a href="">
+		<img src="{$host}zb_users/theme/{$theme}/images/rand/18.jpg" alt="" class="img-cover">
+		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+		</a>
+		</section>
+		<div class="clearfix"></div>
+	</div>
+</div><!-- three-cate -->
+{template:footer}

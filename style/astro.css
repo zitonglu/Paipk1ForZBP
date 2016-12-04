@@ -2,13 +2,17 @@ body{padding-top:0}
 .newlist li a,
 .toplist li,
 .toptitle,
-.hot-list li a{
+.hot-list li a,
+.bottom-img p{
 	overflow:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap;
 }
 .thumbnail:hover{
-	border-color:#428bca; 
+	border-color:#428bca;
+}
+.thumbnail{
+	box-shadow:0 3px 5px -5px #000;
 }
 /*nav*/
 img.logo {
@@ -157,7 +161,7 @@ img.logo {
 	transition:all 0.2s ease-in-out;
 }
 .hot-list{
-	line-height:2.4;
+	line-height:2.2;
 	font-size:16px;
 }
 .hot-list li a{
@@ -190,4 +194,49 @@ img.logo {
 .hot-list li span{
 	color:#999;
 	font-size:90%;
+}
+/*three-cate*/
+#three{
+	padding-left:45px;
+	padding-right:30px;
+	margin-bottom: 15px;
+}
+.bottom-left-img{
+	height:300px;
+}
+.bottom-img{
+	padding-left:5px;
+	padding-right:5px;
+}
+.bottom-img img{
+	border:1px solid #ddd;
+	border-bottom:none;
+	border-radius:4px 4px 0 0;
+	height:125px;
+}
+.bottom-img p{
+	border:1px solid #ddd;
+	border-top: none;
+	background: #fff;
+	padding:0 .3em;
+	border-radius:0 0 4px 4px;
+	color: #555;
+}
+.bottom-img:hover p{
+	background:#428bca;
+	color:#fff;
+	border-color: #428bca;
+	box-shadow:0 3px 5px -5px #000;
+}
+.bottom-img:hover img{
+	border-color: #428bca;
+}
+.bottom-img:hover a{
+	text-decoration:none;
+}
+.bottom-img:hover img,
+.bottom-img img,
+.bottom-img:hover p,
+.bottom-img p{
+	transition:all 0.2s ease-in-out;
 }
