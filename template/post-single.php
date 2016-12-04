@@ -75,7 +75,7 @@ if($aboutlist->Metas->paipk1_teSeTuPian!=""){
   }
 {/php}
 <div class="col-sm-3 col-xs-6 more-text-box">
-  <a href="{$aboutlist.Url}" title="{$aboutlist.Title}"><img src="{$IMGURL}" alt="{$aboutlist.Title}"></a>
+  <a href="{$aboutlist.Url}" title="{$aboutlist.Title}"><img src="{$IMGURL}" alt="{$aboutlist.Title}" class="img-cover"></a>
   <p class="BMT-title">
     <a href="{$aboutlist.Url}" title="{$aboutlist.Title}">{$aboutlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$aboutlist.ViewNums}次
   </p>

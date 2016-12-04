@@ -18,8 +18,8 @@ a:hover,a:focus{color:#555}
 .media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#divPrevious li,
 #divPrevious li:hover,#divPrevious li p,#divPrevious li:hover p,.threepic img,
 .threepic img:hover,.QQstyle:hover,.comment-box a img,.comment-box a:hover img,
-.weiyu a img,.weiyu:hover a img,.index-pic .post-box:hover img.articleIMG,
-.index-pic .post-box img.articleIMG,.index-pic .post-box:hover .post-text,
+.weiyu a img,.weiyu:hover a img,.index-pic .post-box:hover img.img-cover,
+.index-pic .post-box img.img-cover,.index-pic .post-box:hover .post-text,
 .index-pic .post-box .post-text,.index-pic .post-nopic:hover,.index-pic .post-nopic,
 a,a:hover,a:focus,.single .article .author-box img.avatar:hover,
 .single .article .author-box img.avatar:focus,
@@ -441,12 +441,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 @media(max-width: 748px){
 	.index-pic .post-box{height:auto}
 }
-.index-pic .post-box img.articleIMG{
-	width:100%;
-	height:100%;
-	object-fit:cover;
-}
-.index-pic .post-box:hover img.articleIMG{
+.index-pic .post-box:hover img.img-cover{
 	opacity:.1;
 }
 .index-pic .post-box:hover .post-text{
@@ -544,11 +539,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 .index .carousel-control.left{
 	background-image:none !important;
 }
-.index .carousel-inner>.item>a>img.topIMG{
-	width:100%;
-	height:100%;
-	object-fit:cover;
-}
 /* List - top text */
 .istop{
 	margin:10px 0 24px;
@@ -644,11 +634,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 		width:190px;
 		overflow:hidden;
 }
-.index .article .media-box img{
-	width:100%;
-	height:100%;
-	object-fit:cover;
-}
 @media (min-width: 749px){
 	.index .article .media-box{
 		box-shadow:0px 3px 6px -3px #000;
@@ -682,9 +667,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	padding-right:3px;
 }
 .index .article .threepic img{
-	width:100%;
 	height:80px;
-	object-fit:cover;
 }
 .index .article .threepic .row{
 	margin:auto 0 16px;
@@ -742,11 +725,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 */
 .index .article .videolist{
 	padding-bottom:10px;
-}
-.index .article .videolist .videodiv .videoIMG{
-	width:100%;
-	height:100%;
-	object-fit:cover;
 }
 .index .article .videodiv .mask{
 	position:absolute;
@@ -1082,11 +1060,6 @@ background:#428bca;
 		100%{margin-top:-240px;}
 	}
 }
-.single .article .more-text-box img{
-	width:100%;
-	height:100%;
-	object-fit:cover;
-}
 .single .article .more-list>ul>li>a{
 	padding: 5px 8px;
 }
@@ -1329,3 +1302,8 @@ div.prism-show-language > div.prism-show-language-label[data-language]{
   background-image: none;
 }
 .text-indent{text-indent:2em}
+.img-cover{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}

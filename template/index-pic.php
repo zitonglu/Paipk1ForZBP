@@ -53,7 +53,7 @@ preg_match_all($pattern,$content,$matchContent);
 	{/php}
 <section class="col-md-4 col-sm-6 post-box">
 	<a href="{$article.Url}" title="{$article.Title}">
-		<img src="{$bgtURL}" alt="{$article.Title}" class="articleIMG">
+		<img src="{$bgtURL}" alt="{$article.Title}" class="img-cover">
 	</a>
 		<div class="tim"><a href="{$article.Url}" title="{$article.Title}">{$article.Time('M')}<br>{$article.Time('d')}</a></div>
 		<div class="cat">

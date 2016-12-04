@@ -45,7 +45,7 @@
 	</div>
 	<a class="media-right" href="{$article.Url}" title="{$article.Title}">
 		<div class="videodiv">
-			<img src="{$IMGURL}" alt="视频截图" class="videoIMG">
+			<img src="{$IMGURL}" alt="视频截图" class="videoIMG img-cover">
 			<i class="glyphicon glyphicon-facetime-video mask"></i>
 		</div>
 	</a>
@@ -56,9 +56,9 @@
 <li class="threepic" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 		<div class="row">
-			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[0]}" alt="{$article.Title}"></a>
-			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[1]}" alt="{$article.Title}"></a>
-			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[2]}" alt="{$article.Title}"></a>
+			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[0]}" alt="{$article.Title}" class="img-cover"></a>
+			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[1]}" alt="{$article.Title}" class="img-cover"></a>
+			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[2]}" alt="{$article.Title}" class="img-cover"></a>
 		</div>
 	{$article.Intro}
 	<h6>
@@ -75,7 +75,7 @@
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-left">
 		<div class="media-box">
-			<a href="{$article.Url}" title="{$article.Title}"><img src="{$IMGURL}" alt="{$article.Title}"></a>
+			<a href="{$article.Url}" title="{$article.Title}"><img src="{$IMGURL}" alt="{$article.Title}" class="img-cover"></a>
 			<div class="tim"><a href="{$article.Url}">{$article.Time('M')}<br>{$article.Time('d')}</a>
 			</div>
 			<div class="cat">
