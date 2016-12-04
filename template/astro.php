@@ -96,131 +96,60 @@
 		</div>
 	</div>
 </div><!-- jumbotron end -->
-
-{php}
-if($type == 'index'){
-	$typeURL = $pagebar->nextbutton;
-}else{
-	$typeURL = $host;
-}
-{/php}
-<article class="container contentbox">
-	<section class="col-sm-4">
-	<ul class="nav nav-tabs green" role="tablist">
-	  <li role="presentation" class="active"><a title="博主信息" href="#blog" role="tab" data-toggle="tab">博主信息</a></li>
-	  <li role="presentation"><a href="#tags" role="tab" data-toggle="tab" title="关注范围">关注范围</a></li>
-	  <li class="more">
-	  <a href="{$typeURL}" title="更多内容">
-	  <img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+<div class="container">
+	<div class="col-md-8 first-cate">
+	<ul class="list-inline float-right first-cate-nav">
+		<li><a href="">子目录</a></li>
+		<li><a href="">子目录</a></li>
+		<li><a href="">子目录</a></li>
+		<li><a href="" title="更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
-
-	<div class="tab-content">
-	  <div role="tabpanel" class="tab-pane active" id="blog">
-		<ul class="media-list">
-			<li class="media">
-				<a class="media-left" href="{$zbp.members[1].HomePage}" title="{$zbp.members[1].StaticName}">
-				</a>
-				<div class="media-body">
-					<h4 class="media-heading">{$zbp.members[1].StaticName}</h4>
-					<p>{$zbp.members[1].Intro}</p>
+	<h4><i class="glyphicon glyphicon-fire"></i>&nbsp;分类名称</h4>
+	<div class="col-sm-6">
+		<h5><i class=" glyphicon glyphicon-pencil"></i>&nbsp;推荐文章列表</h5>
+		<section class="media">
+			<div class="media-left">
+				<div class="media-box topIMG-box">
+				<a href="" title=""><img src="http://n.sinaimg.cn/news/transform/20161204/8QWr-fxyipxf7514865.jpg" alt="." class="img-cover"></a>
 				</div>
-			</li>
+			</div>
+			<div class="media-body">
+				<h4 class="toptitle"><a href="">文章的标题之外,总2:投资之之外,总2:投资之</a></h4>
+				<p class="text-indent">唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总</p>
+			</div>
+		</section>
+		<ul class="toplist">
+			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇汇总2:投资之外,总2:投资之外,老</a></li>
+			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇汇总2:投资之外,总2:投资之外,老</a></li>
+			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资之外,汇总2:投资之外,汇总2:投资之外,汇总2:投资之外,汇总2:投资之外,</a></li>
+			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资汇总2:投资之外,汇总2:投资之外,之外,老</a></li>
+			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资汇总2:投资之外,v之外,老</a></li>
+			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资汇总2:投资之外,汇总2:投资之外,之外,老</a></li>
 		</ul>
-{if $host == "http://www.paipk.com/"}
-<div class="hidden-sm">
-<hr>
-<script type="text/javascript">
-/*280*55 创建于 2016/11/12*/
-var cpro_id = "u2814888";
-</script>
-<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>
-</div>
-{/if}
-	  </div>
-	  <div role="tabpanel" class="tab-pane" id="tags"><ul>{module:tags}</ul></div>
 	</div>
-	</section>
-
-	<section class="col-sm-4">
-	<ul class="nav nav-tabs blue" role="tablist">
-	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab" title="最近发文">最近发文</a></li>
-	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab" title="热门文章">热门文章</a></li>
-	  <li class="more"><a href="{$typeURL}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
-	</ul>
-
-	<div class="tab-content">
-	  <div role="tabpanel" class="tab-pane active" id="news">
-	  	<ul class="homelist">
-		{foreach GetList($zbp->option['ZC_DISPLAY_COUNT']) as $related}
-		<li><span>{$related.Time('Y-m-d')}</span><a href="{$related.Url}" title="{$related.Title}">{$related.Title}</a></li>
-		{/foreach}
+	<div class="col-sm-6 newlistbox">
+		<h5><i class="glyphicon glyphicon-star"></i>&nbsp;最新文章</h5>
+		<ul class="newlist">
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:汇总2:投资汇总2:投资汇总2:投资汇总2:投资,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
 		</ul>
-	  </div>
-	  <div role="tabpanel" class="tab-pane" id="hot">
-	  	<ul class="homelist">
-	  		{php}
-	  		$stime = time();
-			$ytime = 91*24*60*60;
-			$ztime = $stime-$ytime;
-			$order = array('log_ViewNums'=>'DESC');
-			$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-			$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array($zbp->option['ZC_DISPLAY_COUNT']),'');
-			foreach ($RMarray as $hotlist){
-				echo "<li><span>".$hotlist->Time('Y-m-d')."</span><a href=\"".$hotlist->Url."\" title=\"".$hotlist->Title."\">".$hotlist->Title."</a></li>";
-			}
-	  		{/php}
-	  	</ul>
-	  </div>
 	</div>
-	</section>
-
-	<section class="col-sm-4">
-	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#work" role="tab" data-toggle="tab">我的作品</a></li>
-
-{if $zbp->Config('paipk1')->ifbaiduShare == '1'}
-<li class="floatright"><!-- 百度分享 -->
-<div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-</li>
-{/if}
-
-	</ul>
-
-	<div class="tab-content">
-	<div role="tabpanel" class="tab-pane active" id="work">
-		
+	<div class="claerfix"></div>
 	</div>
+	<div class="col-md-4">
+		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt="" class="thumbnail img-cover rightimg"></a>
+		<a href=""><img src="http://static.aipiaxi.com/Css/Img/wxqr.png" alt="" class="thumbnail img-cover rightimg"></a>
 	</div>
-	</section>
-</article>
-
-<div class="linkbox">
-	<div class="container">
-		<div class="col-sm-10 list-inline">
-			友情链接：{module:link}
-		</div>
-		<div class="col-sm-2 text-right">
-		{php}
-			$QQzaixian="910109610";
-	        if($zbp->Config('paipk1')->QQ != ""){
-	           $QQzaixian = $zbp->Config('paipk1')->QQ;
-	        }
-		{/php}
-			<span class="dropup">
-			<a href=""  title="点击扫描手机号码" target="_blank" data-toggle="dropdown" data-placement="top" id="callnumber" data-hover="dropdown"><i class="glyphicon glyphicon-phone-alt icon-link"></i></a>&nbsp;
-			<ul class="dropdown-menu" role="menu" aria-labelledby="callnumber">
-				<img class="cellnumber" src="{$host}zb_users/theme/{$theme}/images/cellnumber.png" alt="手机号码"><br>
-				<p class="text-center">手机扫描后直接拨打</p>
-			</ul>
-			</span>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes" title="QQ联系我" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-user icon-link"></i></a>&nbsp;
-			<a href="mailto:{$zbp.members[1].Email}" title="E-mail" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-envelope icon-link"></i></a>
-		</div>
-		<script>$(function () { $("[data-toggle='tooltip']").tooltip(); });</script>
-	</div>
+	<div class="claerfix"></div>
 </div>
-
 <footer class="footer">
 	{if $zbp->Config('paipk1')->CopyrightDescription!=""}<p>{$zbp->Config('paipk1')->CopyrightDescription}</p>{/if}
     <p>
