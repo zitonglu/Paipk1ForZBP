@@ -278,7 +278,7 @@ i--;
 <?php
 if(isset($_POST['ActivationCode'])){
   $zbp->Config('paipk1')->ActivationCode = $_POST['ActivationCode'];
-  if(!is_null(GetVars('XXX'))) $zbp->Config('paipk1')->XXX = $_POST['XXX'];
+  if(!is_null(GetVars('AstrofirstID'))) $zbp->Config('paipk1')->AstrofirstID = intval($_POST['AstrofirstID'],10);
   $zbp->SaveConfig('paipk1');
   $zbp->ShowHint('good');
 }?>

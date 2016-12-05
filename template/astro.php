@@ -102,9 +102,9 @@
 		<li><a href="">子目录</a></li>
 		<li><a href="">子目录</a></li>
 		<li><a href="">子目录</a></li>
-		<li><a href="" title="更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+		<li><a href="{$categorys[$zbp->Config('paipk1')->AstrofirstID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstrofirstID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
-	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;分类名称</h4>
+	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstrofirstID].Name}</h4>
 	<div class="col-sm-6">
 		<h5><i class=" glyphicon glyphicon-pencil"></i>&nbsp;推荐文章列表</h5>
 		<section class="media">
@@ -119,12 +119,10 @@
 			</div>
 		</section>
 		<ul class="toplist">
-			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇汇总2:投资之外,总2:投资之外,老</a></li>
-			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇汇总2:投资之外,总2:投资之外,老</a></li>
-			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资之外,汇总2:投资之外,汇总2:投资之外,汇总2:投资之外,汇总2:投资之外,</a></li>
-			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资汇总2:投资之外,汇总2:投资之外,之外,老</a></li>
-			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资汇总2:投资之外,v之外,老</a></li>
-			<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="">老唐荐书汇总2:投资汇总2:投资之外,汇总2:投资之外,之外,老</a></li>
+{$toplists = GetList(6,$zbp->Config('paipk1')->AstrofirstID)}
+{foreach $toplists as $toplist}
+	<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="{$toplist.Url}" title="{$toplist.Title}">{$toplist.Title}</a></li>
+{/foreach}
 		</ul>
 	</div>
 	<div class="col-sm-6 newlistbox">
@@ -139,8 +137,10 @@
 	<div class="claerfix"></div>
 	</div>
 	<div class="col-md-4">
-		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt="" class="thumbnail img-cover rightimg"></a>
-		<a href=""><img src="http://static.aipiaxi.com/Css/Img/wxqr.png" alt="" class="thumbnail img-cover rightimg"></a>
+{$newLists = GetList(2)}
+{foreach $newLists as $newList}
+	<a href="{$newList.Url}" title="{$newList.Title}"><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt="{$newList.Title}" class="thumbnail img-cover rightimg"></a>
+{/foreach}
 	</div>
 	<div class="claerfix"></div>
 </div><!-- first-cate -->

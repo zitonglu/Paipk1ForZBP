@@ -1,7 +1,7 @@
 <tr>
-	<td scope="row">ces</td>
+	<td scope="row">第一栏分类ID</td>
 	<td>
-		<input name="XXX" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->XXX; ?>">
+		<input name="AstrofirstID" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->AstrofirstID; ?>">
 	</td>
-	<td>用其他SEO插件<?php echo $zbp->Config('paipk1')->ActivationCode; ?></td>
+	<td>请输入对应的分类ID(数字)</td>
 </tr>
