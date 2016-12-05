@@ -130,16 +130,10 @@
 	<div class="col-sm-6 newlistbox">
 		<h5><i class="glyphicon glyphicon-star"></i>&nbsp;最新文章</h5>
 		<ul class="newlist">
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:汇总2:投资汇总2:投资汇总2:投资汇总2:投资,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
-			<li><span class="float-right time">2016-12-05</span><a href="">老唐荐书汇总2:投资之外,老</a></li>
+{$newLists = GetList(10)}
+{foreach $newLists as $newList}
+	<li><span class="float-right time">{$newList.Time('Y-m-d')}</span><a href="{$newList.Url}" title="{$newList.Title}">{$newList.Title}</a></li>
+{/foreach}
 		</ul>
 	</div>
 	<div class="claerfix"></div>
