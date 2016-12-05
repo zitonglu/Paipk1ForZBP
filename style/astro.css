@@ -26,9 +26,11 @@ img.logo {
 .jumbotron{
 	padding-top:51px;
 	padding-bottom:0;
-	height:280px;
 	overflow:hidden;
 	margin-bottom:15px;
+}
+@media (min-width: 749px) {
+	.jumbotron{height:280px;}
 }
 .jumbotron .container,
 .post-box{
@@ -52,8 +54,8 @@ img.logo {
 	line-height:2em;
 	list-style-type:none;
 }
-.first-cate-nav{
-	padding-top:5px;
+@media (min-width:991px) {
+	.first-cate-nav{padding-top:5px;}
 }
 .first-cate .newlistbox{
 	border-left:1px dashed #dedede; 
@@ -239,4 +241,10 @@ img.logo {
 .bottom-img:hover p,
 .bottom-img p{
 	transition:all 0.2s ease-in-out;
+}
+@media (max-width: 748px) {
+	.container{
+		padding-left:0;
+		padding-right:0;
+	}
 }

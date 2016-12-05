@@ -100,9 +100,9 @@
 <div class="container" id="first">
 	<div class="col-md-8 first-cate">
 	<ul class="list-inline float-right first-cate-nav">
-		<li><a href="">子目录</a></li>
-		<li><a href="">子目录</a></li>
-		<li><a href="">子目录</a></li>
+{foreach $categorys[$zbp->Config('paipk1')->AstroFirstID].SubCategorys as $subCategory }
+	<li class="hidden-xs"><a href="{$subCategory.Url}">{if $subCategory.Level ==2} &nbsp;└{/if}{$subCategory.Name}</a></li>
+{/foreach}
 		<li><a href="{$categorys[$zbp->Config('paipk1')->AstroFirstID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}</h4>
@@ -154,7 +154,12 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 <div class="container" id="second">
 	<div class="col-md-8">
 <div class="col-sm-12">
-	<a href="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}的更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+<ul class="list-inline float-right first-cate-nav">
+{foreach $categorys[$zbp->Config('paipk1')->AstroSecondID].SubCategorys as $subCategory }
+	<li class="hidden-xs"><a href="{$subCategory.Url}">{if $subCategory.Level ==2} &nbsp;└{/if}{$subCategory.Name}</a></li>
+{/foreach}
+	<li><a href="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+</ul>
 	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}</h4>
 {$SecondLists = GetList(4,$zbp->Config('paipk1')->AstroSecondID)}
 {foreach $SecondLists as $SecondList}
@@ -195,60 +200,26 @@ $RMarrayList = $zbp->GetArticleList(array('*'),$where,$order,array(10),'');
 <div class="claerfix"></div>
 </div><!-- second-cate -->
 <div class="container" id="three">
-	<a href="{$categorys[$zbp->Config('paipk1')->AstroThreeID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroThreeID].Name}的更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+<ul class="list-inline float-right first-cate-nav">
+{foreach $categorys[$zbp->Config('paipk1')->AstroThreeID].SubCategorys as $subCategory }
+	<li class="hidden-xs"><a href="{$subCategory.Url}">{if $subCategory.Level ==2} &nbsp;└{/if}{$subCategory.Name}</a></li>
+{/foreach}
+	<li><a href="{$categorys[$zbp->Config('paipk1')->AstroThreeID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroThreeID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+</ul>
 	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroThreeID].Name}</h4>
 	<div class="col-md-4">
 		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="thumbnail img-cover bottom-left-img">
 	</div>
 	<div class="col-md-8">
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/9.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
+{$threeLists = GetList(8,$zbp->Config('paipk1')->AstroThreeID)}
+{foreach $threeLists as $threeList}
+	<section class="col-sm-3 bottom-img">
+		<a href="{$threeList.Url}" title="{$threeList.Title}">
+			<img src="{paipk1_mustIMG($threeList)}" alt="{$threeList.Title}" class="img-cover">
+			<p>{$threeList.Title}</p>
 		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/10.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/15.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/16.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/19.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/17.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
-		<section class="col-sm-3 bottom-img">
-		<a href="">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/18.jpg" alt="" class="img-cover">
-		<p>sgsd摄氏度三打哈额斯蒂芬森</p>
-		</a>
-		</section>
+	</section>
+{/foreach}
 		<div class="clearfix"></div>
 	</div>
 </div><!-- three-cate -->
