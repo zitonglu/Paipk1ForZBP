@@ -179,16 +179,17 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 	<div class="col-md-4">
 		<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;本月热门</h4>
 		<ol class="hot-list">
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手空间手三度空空间手三度空空间手三度空三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
-			<li><span class="float-right">三度空</span><a href="">度空间手度空间手度空间间手度间手度手度空间手</a></li>
-			<li><span class="float-right">三度空</span><a href="">三度空间手三度空间</a></li>
+{php}
+$stime = time();
+$ytime = 30*24*60*60;
+$ztime = $stime-$ytime;
+$order = array('log_ViewNums'=>'DESC');
+$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
+$RMarrayList = $zbp->GetArticleList(array('*'),$where,$order,array(10),'');
+{/php}
+{foreach $RMarrayList as $RMarray}
+	<li><span class="float-right">{TimeAgo($RMarray.Time())}</span><a href="{$RMarray.Url}" title="{$RMarray.Title}">{$RMarray.Title}</a></li>
+{/foreach}
 		</ol>
 	</div>
 <div class="claerfix"></div>
