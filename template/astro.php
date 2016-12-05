@@ -1,6 +1,7 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
 		<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
-</div>';die();?>
+</div>';die();
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$language}" lang="{$language}">
 <head>
@@ -102,9 +103,9 @@
 		<li><a href="">子目录</a></li>
 		<li><a href="">子目录</a></li>
 		<li><a href="">子目录</a></li>
-		<li><a href="{$categorys[$zbp->Config('paipk1')->AstrofirstID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstrofirstID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+		<li><a href="{$categorys[$zbp->Config('paipk1')->AstroFirstID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
-	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstrofirstID].Name}</h4>
+	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}</h4>
 	<div class="col-sm-6">
 		<h5><i class=" glyphicon glyphicon-pencil"></i>&nbsp;推荐文章列表</h5>
 		<section class="media">
@@ -119,7 +120,7 @@
 			</div>
 		</section>
 		<ul class="toplist">
-{$toplists = GetList(6,$zbp->Config('paipk1')->AstrofirstID)}
+{$toplists = GetList(6,$zbp->Config('paipk1')->AstroFirstID)}
 {foreach $toplists as $toplist}
 	<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="{$toplist.Url}" title="{$toplist.Title}">{$toplist.Title}</a></li>
 {/foreach}
@@ -147,20 +148,28 @@
 <div class="container" id="second">
 	<div class="col-md-8">
 <div class="col-sm-12">
-	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
-	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;分类名称</h4>
+	<a href="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}的更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}</h4>
+{$SecondLists = GetList(4,$zbp->Config('paipk1')->AstroSecondID)}
+{foreach $SecondLists as $SecondList}
+{php}
+$randABC = rand(1,20);
+$pattern = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
+$content = $SecondList->Content;
+preg_match_all($pattern,$content,$matchContent);
+if($SecondList->Metas->paipk1_teSeTuPian!=""){
+	$thumbnail2 = $SecondList->Metas->paipk1_teSeTuPian;
+}elseif(isset($matchContent[1][0])){
+	$thumbnail2 = $matchContent[1][0];
+}else{
+	$thumbnail2 = $zbp->host."zb_users/theme/$theme/images/rand/$randABC.jpg";
+}
+{/php}
 	<div class="col-md-3 second-cate">
-		<a href=""><img src="http://static.aipiaxi.com/Css/Img/wxqr.png" alt=".." class="thumbnail img-cover"></a>
-		<a href="" class="secondtitle">文章标题三度空间手动功</a>
+		<a href="{$SecondList.Url}" title="{$SecondList.Title}"><img src="{$thumbnail2}" alt=".." class="thumbnail img-cover"></a>
+		<a href="{$SecondList.Url}" title="{$SecondList.Title}" class="secondtitle">{$SecondList.Title}</a>
 	</div>
-	<div class="col-md-3 second-cate">
-		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt=".." class="thumbnail img-cover"></a>
-		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三度空间手</a>
-	</div>
-	<div class="col-md-3 second-cate">
-		<a href=""><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt=".." class="thumbnail img-cover"></a>
-		<a href="" class="secondtitle">三度空间手三度空间手三度空间手三空间手</a>
-	</div>
+{/foreach}
 	<div class="clearflx"></div>
 </div><!-- four pic -->
 <div class="col-sm-12">
@@ -193,7 +202,7 @@
 </div><!-- second-cate -->
 <div class="container" id="three">
 	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
-	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;分类目录</h4>
+	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;{count($categorys)}</h4>
 	<div class="col-md-4">
 		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="thumbnail img-cover bottom-left-img">
 	</div>
