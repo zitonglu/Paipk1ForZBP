@@ -53,7 +53,7 @@
 			<ul class="nav navbar-nav" id="divNavBar">
 				{module:navbar}
 			</ul>
-			<ul class="nav navbar-nav navbar-right hidden-xs">
+			<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击打开二维码"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
 				<ul class="dropdown-menu">
 					{if $host == "http://www.paipk.com/"}
@@ -98,14 +98,14 @@
 	</div>
 </div><!-- jumbotron end -->
 <div class="container" id="first">
-	<div class="col-md-8 first-cate">
+	<div class="col-md-8 col-sm-12 first-cate">
 	<ul class="list-inline float-right first-cate-nav">
 {foreach $categorys[$zbp->Config('paipk1')->AstroFirstID].SubCategorys as $subCategory }
 	<li class="hidden-xs"><a href="{$subCategory.Url}">{if $subCategory.Level ==2} &nbsp;└{/if}{$subCategory.Name}</a></li>
 {/foreach}
 		<li><a href="{$categorys[$zbp->Config('paipk1')->AstroFirstID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
-	<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}</h4>
+	<h4 class="cateName"><i class="glyphicon glyphicon-globe"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroFirstID].Name}</h4>
 	<div class="col-sm-6">
 		<h5><i class=" glyphicon glyphicon-pencil"></i>&nbsp;推荐文章列表</h5>
 		<section class="media">
@@ -141,18 +141,16 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 {/foreach}
 		</ul>
 	</div>
-	<div class="claerfix"></div>
 	</div>
-	<div class="col-md-4">
-{$newLists = GetList(2)}
+	<div class="col-md-4 col-sm-12">
+{$newLists = paipk1_TcgetList(2,null,null,null,null,null,null,'rand')}
 {foreach $newLists as $newList}
-	<a href="{$newList.Url}" title="{$newList.Title}"><img src="{paipk1_mustIMG($newList)}" alt="{$newList.Title}" class="thumbnail img-cover rightimg"></a>
+	<a href="{$newList.Url}" title="{$newList.Title}" class="col-md-12 col-sm-6"><img src="{paipk1_mustIMG($newList)}" alt="{$newList.Title}" class="thumbnail img-cover rightimg"></a>
 {/foreach}
 	</div>
-	<div class="claerfix"></div>
 </div><!-- first-cate -->
 <div class="container" id="second">
-	<div class="col-md-8">
+	<div class="col-md-8 col-sm-12">
 <div class="col-sm-12">
 <ul class="list-inline float-right first-cate-nav">
 {foreach $categorys[$zbp->Config('paipk1')->AstroSecondID].SubCategorys as $subCategory }
@@ -163,41 +161,37 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}</h4>
 {$SecondLists = GetList(4,$zbp->Config('paipk1')->AstroSecondID)}
 {foreach $SecondLists as $SecondList}
-	<div class="col-md-3 second-cate">
+	<div class="col-md-3 col-sm-6 second-cate">
 		<a href="{$SecondList.Url}" title="{$SecondList.Title}"><img src="{paipk1_mustIMG($SecondList)}" alt=".." class="thumbnail img-cover"></a>
 		<a href="{$SecondList.Url}" title="{$SecondList.Title}" class="secondtitle">{$SecondList.Title}</a>
 	</div>
 {/foreach}
-	<div class="clearflx"></div>
 </div><!-- four pic -->
 <div class="col-sm-12">
-	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
-	<h4 class="cateName"><i class="glyphicon glyphicon-user"></i>&nbsp;热门作者</h4>
-	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/1.jpg" alt=""></a>
-	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/2.jpg" alt=""></a>
-	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/3.jpg" alt=""></a>
-	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/4.jpg" alt=""></a>
-	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/5.jpg" alt=""></a>
-	<a href=""><img class="col-sm-6 col-md-2 avatar-img" src="{$host}zb_users/theme/{$theme}/images/avatar/6.jpg" alt=""></a>
+	<h4 class="cateName"><i class="glyphicon glyphicon-comment"></i>&nbsp;热评文章</h4>
+	{php}
+	$paipk1TcgetList = paipk1_TcgetList(6,null,null,null,null,null,null,'comm');
+	$paipk1TcgetListRand = rand (1,15);
+	{/php}
+	{foreach $paipk1TcgetList as $paipk1comm}
+	{php}
+		$comIMG = $host."zb_users/theme/".$theme."/images/avatar/".$paipk1TcgetListRand.".jpg";
+		$paipk1TcgetListRand ++;
+	{/php}
+	<a href="{$paipk1comm.Url}" title="{$paipk1comm.Title}"><img class="col-sm-3 col-md-2 avatar-img" src="{$comIMG}" alt="{$paipk1comm.Title}"></a>
+	{/foreach}
+	<div class="clearfix"></div>
 </div>
 	</div>
-	<div class="col-md-4">
-		<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;本月热门</h4>
+	<div class="col-md-4 col-sm-12">
+		<h4 class="cateName"><i class="glyphicon glyphicon-fire"></i>&nbsp;热门文章</h4>
 		<ol class="hot-list">
-{php}
-$stime = time();
-$ytime = 30*24*60*60;
-$ztime = $stime-$ytime;
-$order = array('log_ViewNums'=>'DESC');
-$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-$RMarrayList = $zbp->GetArticleList(array('*'),$where,$order,array(10),'');
-{/php}
+{$RMarrayList = paipk1_TcgetList(10,null,null,null,null,null,null,'hot')}
 {foreach $RMarrayList as $RMarray}
 	<li><span class="float-right">{TimeAgo($RMarray.Time())}</span><a href="{$RMarray.Url}" title="{$RMarray.Title}">{$RMarray.Title}</a></li>
 {/foreach}
 		</ol>
 	</div>
-<div class="claerfix"></div>
 </div><!-- second-cate -->
 <div class="container" id="three">
 <ul class="list-inline float-right first-cate-nav">
@@ -208,7 +202,7 @@ $RMarrayList = $zbp->GetArticleList(array('*'),$where,$order,array(10),'');
 </ul>
 	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroThreeID].Name}</h4>
 	<div class="col-md-4">
-		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="thumbnail img-cover bottom-left-img">
+		<img src="{$host}zb_users/theme/{$theme}/include/cellnumber.png" alt="图片" class="thumbnail img-cover bottom-left-img">
 	</div>
 	<div class="col-md-8">
 {$threeLists = GetList(8,$zbp->Config('paipk1')->AstroThreeID)}

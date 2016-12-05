@@ -30,7 +30,7 @@ img.logo {
 	margin-bottom:15px;
 }
 @media (min-width: 749px) {
-	.jumbotron{height:280px;}
+	.jumbotron{height:320px;}
 }
 .jumbotron .container,
 .post-box{
@@ -57,8 +57,8 @@ img.logo {
 @media (min-width:991px) {
 	.first-cate-nav{padding-top:5px;}
 }
-.first-cate .newlistbox{
-	border-left:1px dashed #dedede; 
+@media(min-width:749px){
+	.first-cate .newlistbox{border-left:1px dashed #dedede}
 }
 .toplist i{color:#ccc}
 .media-box{
@@ -157,6 +157,10 @@ img.logo {
 .avatar-img{
 	border-radius:20%;
 	transition:all 0.2s ease-in-out;
+	margin-bottom:5px;
+}
+@media (max-width:748px) {
+	.avatar-img{height:110px;}
 }
 .avatar-img:hover{
 	border-radius:50%;
@@ -196,6 +200,7 @@ img.logo {
 .hot-list li span{
 	color:#999;
 	font-size:90%;
+	padding-left:.5em;
 }
 /*three-cate*/
 #three{
@@ -203,8 +208,8 @@ img.logo {
 	padding-right:30px;
 	margin-bottom: 15px;
 }
-.bottom-left-img{
-	height:300px;
+@media(min-width:749px){
+	.bottom-left-img{height:300px;}
 }
 .bottom-img{
 	padding-left:5px;
@@ -246,5 +251,13 @@ img.logo {
 	.container{
 		padding-left:0;
 		padding-right:0;
+	}
+	.col-sm-12 .col-sm-12{
+		padding-left:0;
+		padding-right:0;
+	}
+	#three{
+		padding-right: 15px;
+		padding-left: 15px;
 	}
 }

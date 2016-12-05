@@ -240,6 +240,118 @@ function paipk1_mustIMG($article = '',$rand = 'rand'){
 		return $zbp->host."zb_users/theme/".$zbp->theme."/images/".$rand."/".$randABC.".jpg";
 	};
 }
+/* 随机文章-热门文章-热评文章 */
+function paipk1_TcgetList($count = 10, $cate = null, $auth = null, $date = null, $tags = null, $search = null, $option = null,$order=null) {
+    global $zbp;
+    if (!is_array($option)) {
+        $option = array();
+    }
+    if (!isset($option['only_ontop']))
+        $option['only_ontop'] = false;
+    if (!isset($option['only_not_ontop']))
+        $option['only_not_ontop'] = false;
+    if (!isset($option['has_subcate']))
+        $option['has_subcate'] = false;
+    if (!isset($option['is_related']))
+        $option['is_related'] = false;
+    if ($option['is_related']) {
+        $at = $zbp->GetPostByID($option['is_related']);
+        $tags = $at->Tags;
+        if (!$tags)
+            return array();
+        $count = $count + 1;
+    }
+    if ($option['only_ontop'] == true) {
+        $w[] = array('=', 'log_IsTop', 0);
+    } elseif ($option['only_not_ontop'] == true) {
+        $w[] = array('=', 'log_IsTop', 1);
+    }
+    $w = array();
+    $w[] = array('=', 'log_Status', 0);
+    $articles = array();
+    if (!is_null($cate)) {
+        $category = new Category;
+        $category = $zbp->GetCategoryByID($cate);
+        if ($category->ID > 0) {
+            if (!$option['has_subcate']) {
+                $w[] = array('=', 'log_CateID', $category->ID);
+            } else {
+                $arysubcate = array();
+                $arysubcate[] = array('log_CateID', $category->ID);
+                foreach ($zbp->categorys[$category->ID]->SubCategorys as $subcate) {
+                    $arysubcate[] = array('log_CateID', $subcate->ID);
+                }
+                $w[] = array('array', $arysubcate);
+            }
+        }
+    }
+    if (!is_null($auth)) {
+        $author = new Member;
+        $author = $zbp->GetMemberByID($auth);
+        if ($author->ID > 0) {
+            $w[] = array('=', 'log_AuthorID', $author->ID);
+        }
+    }
+    if (!is_null($date)) {
+        $datetime = strtotime($date);
+        if ($datetime) {
+            $datetitle = str_replace(array('%y%', '%m%'), array(date('Y', $datetime), date('n', $datetime)), $zbp->lang['msg']['year_month']);
+            $w[] = array('BETWEEN', 'log_PostTime', $datetime, strtotime('+1 month', $datetime));
+        }
+    }
+    if (!is_null($tags)) {
+        $tag = new Tag;
+        if (is_array($tags)) {
+            $ta = array();
+            foreach ($tags as $t) {
+                $ta[] = array('log_Tag', '%{' . $t->ID . '}%');
+            }
+            $w[] = array('array_like', $ta);
+            unset($ta);
+        } else {
+            if (is_int($tags)) {
+                $tag = $zbp->GetTagByID($tags);
+            } else {
+                $tag = $zbp->GetTagByAliasOrName($tags);
+            }
+            if ($tag->ID > 0) {
+                $w[] = array('LIKE', 'log_Tag', '%{' . $tag->ID . '}%');
+            }
+        }
+    }
+    if (is_string($search)) {
+        $search=trim($search);
+        if ($search!=='') {
+            $w[] = array('search', 'log_Content', 'log_Intro', 'log_Title', $search);
+        }
+    }    
+    if(!empty($order)){
+    if($order=='new'){
+        $order = array('log_PostTime'=>'DESC');
+    }
+    if($order=='hot'){
+        $order = array('log_ViewNums'=>'DESC');
+    }
+    if($order=='comm'){
+        $order = array('log_CommNums'=>'DESC');
+    }
+    if($order=='rand'){
+        $order = array('rand()'=>' ');
+    }
+    }
+    $articles = $zbp->GetArticleList('*', $w, $order, $count, null, false);
+    if ($option['is_related']) {
+        foreach ($articles as $k => $a) {
+            if ($a->ID == $option['is_related'])
+                unset($articles[$k]);
+        }
+        if (count($articles) == $count){
+            array_pop($articles);
+        }
+    }
+    return $articles;
+}
+
 function UninstallPlugin_paipk1(){
 	global $zbp;
 }
