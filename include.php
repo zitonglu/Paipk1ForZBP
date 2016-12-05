@@ -44,6 +44,7 @@ $zbp->Config('paipk1')->topID = 1;
 $zbp->Config('paipk1')->indexHome = '';
 $zbp->Config('paipk1')->AstroFirstID = '1';
 $zbp->Config('paipk1')->AstroSecondID = '1';
+$zbp->Config('paipk1')->AstroThreeID = '1';
 }
 $zbp->Config('paipk1')->Version = '2.0';
 $zbp->SaveConfig('paipk1');
@@ -218,6 +219,28 @@ function paipk1_categorys_option($selectID=1){
 		echo $tr;
 	}
 }
+/* 插入图片的函数 */
+function paipk1_mustIMG($article = '',$rand = 'rand'){
+	global $zbp;
+	$randABC = rand(1,20);
+	if($article != ''){
+		$pattern = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
+		$content = $article->Content;
+		preg_match_all($pattern,$content,$matchContent);
+		if($article->Metas->paipk1_teSeTuPian!=""){
+			$IMGURL = $article->Metas->paipk1_teSeTuPian;
+		}elseif(isset($matchContent[1][0])){
+			$IMGURL = $matchContent[1][0];
+		}else{
+			$IMGURL = $zbp->host."zb_users/theme/".$zbp->theme."/images/".$rand."/".$randABC.".jpg";
+		};
+
+		return $IMGURL;
+	}else{
+		return $zbp->host."zb_users/theme/".$zbp->theme."/images/".$rand."/".$randABC.".jpg";
+	};
+}
 function UninstallPlugin_paipk1(){
 	global $zbp;
 }
+?>

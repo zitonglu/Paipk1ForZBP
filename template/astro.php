@@ -111,12 +111,18 @@
 		<section class="media">
 			<div class="media-left">
 				<div class="media-box topIMG-box">
-				<a href="" title=""><img src="http://n.sinaimg.cn/news/transform/20161204/8QWr-fxyipxf7514865.jpg" alt="." class="img-cover"></a>
+{if $zbp->Config('paipk1')->topID!=''}
+{php}
+$topText = GetPost((int)$zbp->Config('paipk1')->topID);
+$topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
+{/php}
+				<a href="{$topText.Url}" title="{$topText.Title}"><img src="{paipk1_mustIMG($topText,'avatar')}" alt="{$topText.Title}" class="img-cover"></a>
 				</div>
 			</div>
 			<div class="media-body">
-				<h4 class="toptitle"><a href="">文章的标题之外,总2:投资之之外,总2:投资之</a></h4>
-				<p class="text-indent">唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总唐荐书汇总</p>
+				<h4 class="toptitle"><a href="{$topText.Url}" title="{$topText.Title}">{$topText.Title}</a></h4>
+				<p class="text-indent">{$topTextIntro}</p>
+{/if}
 			</div>
 		</section>
 		<ul class="toplist">
@@ -152,21 +158,8 @@
 	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}</h4>
 {$SecondLists = GetList(4,$zbp->Config('paipk1')->AstroSecondID)}
 {foreach $SecondLists as $SecondList}
-{php}
-$randABC = rand(1,20);
-$pattern = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
-$content = $SecondList->Content;
-preg_match_all($pattern,$content,$matchContent);
-if($SecondList->Metas->paipk1_teSeTuPian!=""){
-	$thumbnail2 = $SecondList->Metas->paipk1_teSeTuPian;
-}elseif(isset($matchContent[1][0])){
-	$thumbnail2 = $matchContent[1][0];
-}else{
-	$thumbnail2 = $zbp->host."zb_users/theme/$theme/images/rand/$randABC.jpg";
-}
-{/php}
 	<div class="col-md-3 second-cate">
-		<a href="{$SecondList.Url}" title="{$SecondList.Title}"><img src="{$thumbnail2}" alt=".." class="thumbnail img-cover"></a>
+		<a href="{$SecondList.Url}" title="{$SecondList.Title}"><img src="{paipk1_mustIMG($SecondList)}" alt=".." class="thumbnail img-cover"></a>
 		<a href="{$SecondList.Url}" title="{$SecondList.Title}" class="secondtitle">{$SecondList.Title}</a>
 	</div>
 {/foreach}
@@ -201,8 +194,8 @@ if($SecondList->Metas->paipk1_teSeTuPian!=""){
 <div class="claerfix"></div>
 </div><!-- second-cate -->
 <div class="container" id="three">
-	<a href="" title="更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
-	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;{count($categorys)}</h4>
+	<a href="{$categorys[$zbp->Config('paipk1')->AstroThreeID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroThreeID].Name}的更多内容" class="float-right"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a>
+	<h4 class="cateName"><i class="glyphicon glyphicon-picture"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroThreeID].Name}</h4>
 	<div class="col-md-4">
 		<img src="{$host}zb_users/theme/{$theme}/images/rand/8.jpg" alt="" class="thumbnail img-cover bottom-left-img">
 	</div>
