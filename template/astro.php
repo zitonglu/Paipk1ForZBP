@@ -146,7 +146,7 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 	<div class="col-md-4">
 {$newLists = GetList(2)}
 {foreach $newLists as $newList}
-	<a href="{$newList.Url}" title="{$newList.Title}"><img src="http://www.paipk.com/zb_users/theme/paipk1/screenshot.png" alt="{$newList.Title}" class="thumbnail img-cover rightimg"></a>
+	<a href="{$newList.Url}" title="{$newList.Title}"><img src="{paipk1_mustIMG($newList)}" alt="{$newList.Title}" class="thumbnail img-cover rightimg"></a>
 {/foreach}
 	</div>
 	<div class="claerfix"></div>
