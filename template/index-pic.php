@@ -9,22 +9,7 @@
 <div class="col-md-8 col-sm-12">
 	<div id="carousel-example-generic" class="post-box carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
-{php}
-if(is_file($zbp->path.'zb_users/theme/paipk1/plugin/out.html')){
-	include $zbp->path.'zb_users/theme/paipk1/plugin/out.html';
-}else{
-$stime = time();
-$ytime = 91*24*60*60;
-$ztime = $stime-$ytime;
-$order = array('log_ViewNums'=>'DESC');
-$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(4),'');
-$PPTNumber = 1;
-foreach ($RMarray as $hotlist){
-	include $this->GetTemplate('post-istop');
-	}
-}
-{/php}
+	{php}include $zbp->path.'zb_users/theme/paipk1/plugin/out.html';{/php}
 		</div>
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -43,17 +28,10 @@ $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/
 $content = $article->Content;
 preg_match_all($pattern,$content,$matchContent);
 {/php}
-{if isset($matchContent[1][0]) or $article->Metas->paipk1_teSeTuPian!=''}
-	{php}
-	if($article->Metas->paipk1_teSeTuPian!=""){
-		$bgtURL=$article->Metas->paipk1_teSeTuPian;
-	}else{
-		$bgtURL=$matchContent[1][0];
-	}
-	{/php}
+{if isset($matchContent[1][0]) || $article->Metas->paipk1_teSeTuPian!=''}
 <section class="col-md-4 col-sm-6 post-box">
 	<a href="{$article.Url}" title="{$article.Title}">
-		<img src="{$bgtURL}" alt="{$article.Title}" class="img-cover">
+		<img src="{paipk1_mustIMG($article)}" alt="{$article.Title}" class="img-cover">
 	</a>
 		<div class="tim"><a href="{$article.Url}" title="{$article.Title}">{$article.Time('M')}<br>{$article.Time('d')}</a></div>
 		<div class="cat">

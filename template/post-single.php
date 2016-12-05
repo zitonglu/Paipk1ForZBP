@@ -58,24 +58,14 @@
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#aboutList" role="tab" data-toggle="tab" title="相关文章"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;相关文章</a></li>
     <li role="presentation"><a href="#hotList" role="tab" data-toggle="tab" title="热门文章"><i class="glyphicon glyphicon-fire"></i>&nbsp;热门文章</a></li>
+    <li role="presentation"><a href="#randList" role="tab" data-toggle="tab" title="随机文章"><i class="glyphicon glyphicon-globe"></i>&nbsp;随机文章</a></li>
 </ul>
 
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="aboutList">
 {foreach GetList(4,$article->Category->ID) as $aboutlist}
-{php}
-SF_img1::getPics($aboutlist,200,155,4);
-$randABC=rand(1,20);
-if($aboutlist->Metas->paipk1_teSeTuPian!=""){
-    $IMGURL=$aboutlist->Metas->paipk1_teSeTuPian;
-  }elseif($aboutlist->sf_img_count>=1){
-    $IMGURL=$aboutlist->sf_img[0];
-  }else{
-    $IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
-  }
-{/php}
 <div class="col-sm-3 col-xs-6 more-text-box">
-  <a href="{$aboutlist.Url}" title="{$aboutlist.Title}"><img src="{$IMGURL}" alt="{$aboutlist.Title}" class="img-cover"></a>
+  <a href="{$aboutlist.Url}" title="{$aboutlist.Title}"><img src="{paipk1_mustIMG($aboutlist)}" alt="{$aboutlist.Title}" class="img-cover"></a>
   <p class="BMT-title">
     <a href="{$aboutlist.Url}" title="{$aboutlist.Title}">{$aboutlist.Time('Y-m-d')}</a><br><br>该文章被浏览 {$aboutlist.ViewNums}次
   </p>
@@ -88,17 +78,21 @@ if($aboutlist->Metas->paipk1_teSeTuPian!=""){
   </div>
   <div role="tabpanel" class="tab-pane" id="hotList">
     <ul class="list-inline hotListul">
-{php}
-$stime = time();
-$ytime = 91*24*60*60;
-$ztime = $stime-$ytime;
-$order = array('log_ViewNums'=>'DESC');
-$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(10),'');
-{/php}
+{$RMarray = paipk1_TcgetList(10,null,null,null,null,null,null,'hot')}
 {foreach $RMarray as $hotlist}
       <li class="col-sm-6 col-xs-12">
       <i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;<a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
+      </li>
+{/foreach}
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="randList">
+    <ul class="list-inline hotListul">
+{$RMarray = paipk1_TcgetList(10,null,null,null,null,null,null,'rand')}
+{foreach $RMarray as $randlist}
+      <li class="col-sm-6 col-xs-12">
+      <i class="glyphicon glyphicon-star-empty"></i>&nbsp;&nbsp;<a href="{$randlist.Url}" title="{$randlist.Title}">{$randlist.Title}</a>
       </li>
 {/foreach}
     </ul>

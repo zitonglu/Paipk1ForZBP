@@ -1075,25 +1075,32 @@ background:#428bca;
 	border-radius: 0 0 6px 6px;
 }
 .single .article .more-list .nav-tabs i,
-.single .article .more-list #hotList i{
+.single .article .more-list #hotList i，
+.single .article .more-list #randList i{
 	font-size: 85%;
 }
-.single .article .more-list #hotList{
+.single .article .more-list #hotList,
+.single .article .more-list #randList{
 	padding-left:20px;
 	padding-right:20px;
 }
 .single .article .more-list #hotList,
-.single .article .more-list #hotList a{
+.single .article .more-list #hotList a,
+.single .article .more-list #randList,
+.single .article .more-list #randList a{
 	color: #777;
 	line-height: 1.6;
 }
-.single .article .more-list #hotList li{
+.single .article .more-list #hotList li,
+.single .article .more-list #randList li{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 .single .article .more-list #hotList a:hover,
-.single .article .more-list #hotList a:focus{
+.single .article .more-list #hotList a:focus,
+.single .article .more-list #randList a:hover,
+.single .article .more-list #randList a:focus{
 	color:#428bca;
 }
 /* single - article - comment */

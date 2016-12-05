@@ -36,6 +36,7 @@
 {$header}
 </head>
 <body id="astro" class="index">
+{if $zbp->Config('paipk1')->ActivationCode == 'sdd194c8234nb'}
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -217,4 +218,5 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 		<div class="clearfix"></div>
 	</div>
 </div><!-- three-cate -->
+{/if}
 {template:footer}

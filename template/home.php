@@ -144,6 +144,7 @@ var cpro_id = "u2814888";
 	<ul class="nav nav-tabs blue" role="tablist">
 	  <li role="presentation" class="active"><a href="#news" role="tab" data-toggle="tab" title="最近发文">最近发文</a></li>
 	  <li role="presentation"><a href="#hot" role="tab" data-toggle="tab" title="热门文章">热门文章</a></li>
+	  <li role="presentation"><a href="#rand" role="tab" data-toggle="tab" title="随机文章">随机文章</a></li>
 	  <li class="more"><a href="{$typeURL}" title="更多内容"><img src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 	</ul>
 
@@ -157,17 +158,18 @@ var cpro_id = "u2814888";
 	  </div>
 	  <div role="tabpanel" class="tab-pane" id="hot">
 	  	<ul class="homelist">
-	  		{php}
-	  		$stime = time();
-			$ytime = 91*24*60*60;
-			$ztime = $stime-$ytime;
-			$order = array('log_ViewNums'=>'DESC');
-			$where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-			$RMarray = $zbp->GetArticleList(array('*'),$where,$order,array($zbp->option['ZC_DISPLAY_COUNT']),'');
-			foreach ($RMarray as $hotlist){
-				echo "<li><span>".$hotlist->Time('Y-m-d')."</span><a href=\"".$hotlist->Url."\" title=\"".$hotlist->Title."\">".$hotlist->Title."</a></li>";
-			}
-	  		{/php}
+	  		{$RMarray = paipk1_TcgetList($zbp->option['ZC_DISPLAY_COUNT'],null,null,null,null,null,null,'hot')}
+	  		{foreach $RMarray as $hotlist}
+	  			<li><span>{$hotlist.Time('Y-m-d')}</span><a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
+	  		{/foreach}
+	  	</ul>
+	  </div>
+	  <div role="tabpanel" class="tab-pane" id="rand">
+	  	<ul class="homelist">
+	  		{$RMarray = paipk1_TcgetList($zbp->option['ZC_DISPLAY_COUNT'],null,null,null,null,null,null,'rand')}
+	  		{foreach $RMarray as $randlist}
+	  			<li><span>{$randlist.Time('Y-m-d')}</span><a href="{$randlist.Url}" title="{$randlist.Title}">{$randlist.Title}</a>
+	  		{/foreach}
 	  	</ul>
 	  </div>
 	</div>
