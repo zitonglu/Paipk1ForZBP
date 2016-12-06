@@ -289,6 +289,7 @@ if(isset($_POST['ActivationCode'])){
   if(!is_null(GetVars('AstroFirstID'))) $zbp->Config('paipk1')->AstroFirstID = intval($_POST['AstroFirstID'],10);
   if(!is_null(GetVars('AstroSecondID'))) $zbp->Config('paipk1')->AstroSecondID = intval($_POST['AstroSecondID'],10);
   if(!is_null(GetVars('AstroThreeID'))) $zbp->Config('paipk1')->AstroThreeID = intval($_POST['AstroThreeID'],10);
+  if(!is_null(GetVars('AstroFourID'))) $zbp->Config('paipk1')->AstroFourID = intval($_POST['AstroFourID'],10);
   $zbp->SaveConfig('paipk1');
   $zbp->ShowHint('good');
 }?>

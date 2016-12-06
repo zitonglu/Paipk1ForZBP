@@ -19,9 +19,18 @@
 <tr>
 	<td scope="row">第三栏分类</td>
 	<td>
+		<select name="AstroFourID" style="width:150px">
+			<?php paipk1_categorys_option($zbp->Config('paipk1')->AstroFourID) ?>
+		</select>
+	</td>
+	<td>首页底部的分类</td>
+</tr>
+<tr>
+	<td scope="row">第四栏分类</td>
+	<td>
 		<select name="AstroThreeID" style="width:150px">
 			<?php paipk1_categorys_option($zbp->Config('paipk1')->AstroThreeID) ?>
 		</select>
 	</td>
-	<td>首页底部的分类</td>
+	<td>最底部的分类</td>
 </tr>

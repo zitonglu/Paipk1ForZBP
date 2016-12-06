@@ -42,9 +42,10 @@ $zbp->Config('paipk1')->ifbaiduShare = '1';
 $zbp->Config('paipk1')->CopyrightDescription = '本站主题模版版权归拍拍看科技所有，任何商业用途均须联系作者。如未经授权用作他处，作者将保留追究侵权者法律责任的权利。';
 $zbp->Config('paipk1')->topID = 1;
 $zbp->Config('paipk1')->indexHome = '';
-$zbp->Config('paipk1')->AstroFirstID = '1';
-$zbp->Config('paipk1')->AstroSecondID = '1';
-$zbp->Config('paipk1')->AstroThreeID = '1';
+$zbp->Config('paipk1')->AstroFirstID = 1;
+$zbp->Config('paipk1')->AstroSecondID = 1;
+$zbp->Config('paipk1')->AstroThreeID = 1;
+$zbp->Config('paipk1')->AstroFourID = 1;
 }
 $zbp->Config('paipk1')->Version = '2.0';
 $zbp->SaveConfig('paipk1');

@@ -127,7 +127,7 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 			</div>
 		</section>
 		<ul class="toplist">
-{$toplists = GetList(6,$zbp->Config('paipk1')->AstroFirstID)}
+{$toplists = GetList(6,$zbp->Config('paipk1')->AstroFirstID,null,null,null,null,array("has_subcate"=>true))}
 {foreach $toplists as $toplist}
 	<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="{$toplist.Url}" title="{$toplist.Title}">{$toplist.Title}</a></li>
 {/foreach}
@@ -160,7 +160,7 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 	<li><a href="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
 </ul>
 	<h4 class="cateName"><i class="glyphicon glyphicon-heart"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroSecondID].Name}</h4>
-{$SecondLists = GetList(4,$zbp->Config('paipk1')->AstroSecondID)}
+{$SecondLists = GetList(4,$zbp->Config('paipk1')->AstroSecondID,null,null,null,null,array("has_subcate"=>true))}
 {foreach $SecondLists as $SecondList}
 	<div class="col-md-3 col-sm-6 second-cate">
 		<a href="{$SecondList.Url}" title="{$SecondList.Title}"><img src="{paipk1_mustIMG($SecondList)}" alt=".." class="thumbnail img-cover"></a>
@@ -194,6 +194,24 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 		</ol>
 	</div>
 </div><!-- second-cate -->
+<div class="container" id="four">
+	<ul class="list-inline float-right first-cate-nav">
+{foreach $categorys[$zbp->Config('paipk1')->AstroFourID].SubCategorys as $subCategory }
+		<li class="hidden-xs"><a href="{$subCategory.Url}">{if $subCategory.Level ==2} &nbsp;└{/if}{$subCategory.Name}</a></li>
+{/foreach}
+		<li><a href="{$categorys[$zbp->Config('paipk1')->AstroFourID].Url}" title="{$categorys[$zbp->Config('paipk1')->AstroFourID].Name}分类的更多内容"><img class="more" src="{$host}zb_users/theme/{$theme}/images/more.jpg" alt="more"></a></li>
+	</ul>
+	<h4 class="cateName"><i class="glyphicon glyphicon-headphones"></i>&nbsp;{$categorys[$zbp->Config('paipk1')->AstroFourID].Name}</h4>
+{$fourLists = GetList(4,$zbp->Config('paipk1')->AstroFourID,null,null,null,null,array("has_subcate"=>true))}
+{foreach $fourLists as $fourList}
+	<section class="col-md-3 col-sm-6">
+		<a href="{$fourList.Url}" title="{$fourList.Title}">
+			<img src="{paipk1_mustIMG($fourList)}" alt="" class="thumbnail img-cover">
+			<p class="fourListP"><span class="float-right"><i class="glyphicon glyphicon-expand"></i>&nbsp;{$fourList.ViewNums}次</span><i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($fourList.Time())}<br><b>{$fourList.Title}</b></p>
+		</a>
+	</section>
+{/foreach}
+</div><!-- four-cate -->
 <div class="container" id="three">
 <ul class="list-inline float-right first-cate-nav">
 {foreach $categorys[$zbp->Config('paipk1')->AstroThreeID].SubCategorys as $subCategory }
@@ -206,7 +224,7 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 		<img src="{$host}zb_users/theme/{$theme}/include/cellnumber.png" alt="图片" class="thumbnail img-cover bottom-left-img">
 	</div>
 	<div class="col-md-8">
-{$threeLists = GetList(8,$zbp->Config('paipk1')->AstroThreeID)}
+{$threeLists = GetList(8,$zbp->Config('paipk1')->AstroThreeID,null,null,null,null,array("has_subcate"=>true))}
 {foreach $threeLists as $threeList}
 	<section class="col-sm-3 bottom-img">
 		<a href="{$threeList.Url}" title="{$threeList.Title}">
