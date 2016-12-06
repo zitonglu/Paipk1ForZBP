@@ -127,7 +127,7 @@ $topTextIntro = SubStrUTF8(TransferHTML($topText->Intro,"[nohtml]"),40);
 			</div>
 		</section>
 		<ul class="toplist">
-{$toplists = GetList(6,$zbp->Config('paipk1')->AstroFirstID,null,null,null,null,array("has_subcate"=>true))}
+{$toplists = GetList(6,null,null,null,null,null,array("only_ontop" => true))}
 {foreach $toplists as $toplist}
 	<li><i class="glyphicon glyphicon-star-empty"></i>&nbsp;<a href="{$toplist.Url}" title="{$toplist.Title}">{$toplist.Title}</a></li>
 {/foreach}
