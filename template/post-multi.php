@@ -3,14 +3,6 @@
 </div>';die();?>
 {php}
 	SF_img1::getPics($article,190,120,4);
-	$randABC=rand(1,20);
-	if($article->Metas->paipk1_teSeTuPian!=""){
-		$IMGURL=$article->Metas->paipk1_teSeTuPian;
-	}elseif($article->sf_img_count>=1){
-		$IMGURL=$article->sf_img[0];
-	}else{
-		$IMGURL=$host.'zb_users/theme/'.$theme.'/images/rand/'.$randABC.'.jpg';
-	}
 {/php}
 {if $article->Metas->paipk1_single_theme_select == "weiyu"}
 <!-- 微语模式 -->
@@ -45,7 +37,7 @@
 	</div>
 	<a class="media-right" href="{$article.Url}" title="{$article.Title}">
 		<div class="videodiv">
-			<img src="{$IMGURL}" alt="视频截图" class="videoIMG img-cover">
+			<img src="{paipk1_mustIMG($article)}" alt="视频截图" class="videoIMG img-cover">
 			<i class="glyphicon glyphicon-facetime-video mask"></i>
 		</div>
 	</a>
@@ -75,7 +67,7 @@
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-left">
 		<div class="media-box">
-			<a href="{$article.Url}" title="{$article.Title}"><img src="{$IMGURL}" alt="{$article.Title}" class="img-cover"></a>
+			<a href="{$article.Url}" title="{$article.Title}"><img src="{paipk1_mustIMG($article)}" alt="{$article.Title}" class="img-cover"></a>
 			<div class="tim"><a href="{$article.Url}">{$article.Time('M')}<br>{$article.Time('d')}</a>
 			</div>
 			<div class="cat">
