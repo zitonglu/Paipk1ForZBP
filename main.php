@@ -239,7 +239,7 @@ $zbp->ShowHint('good');
 ?>
 <input type="submit" value="增加一页" id="addTable"/> <input type="submit" value="删除选行" id="deleteTable"/>
   <hr>
-  <form id="PPT" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=TopPPT">
+  <form name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=TopPPT">
   <table>
     <thead>
       <tr>
@@ -249,7 +249,7 @@ $zbp->ShowHint('good');
         <th>图片名称</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="PPT">
 <?php
   if(is_file('plugin/alltr.html')) {
     include 'plugin/alltr.html';
