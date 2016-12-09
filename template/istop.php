@@ -32,7 +32,6 @@
 {if $zbp->Config('paipk1')->topID!=''}
 	{$topText=GetPost((int)$zbp->Config('paipk1')->topID);}
 	<div class="istop">
-		<p>
 <div class="float-right">
 	{if $zbp->Config('paipk1')->ifbaiduShare == '1'}
 <div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
