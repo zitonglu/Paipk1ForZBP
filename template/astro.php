@@ -75,7 +75,19 @@
 					    </div>
 				    </form>
 				</ul>
-				</li>	
+				</li>
+			{if $user.ID>0}
+				<li class="dropdown">
+					<a href="#" title="后台管理"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-pencil"></i> {$zbp.members[$user.ID].StaticName}</a>
+					<ul class="dropdown-menu">
+						<li><a href="{$host}zb_system/admin/?act=admin" rel="nofollow" title="后台管理">后台管理</a></li>
+						<li><a href="{$host}zb_system/cmd.php?act=logout" rel="nofollow" title="登出注销">登出注销</a></li>
+					</ul>
+			{else}
+				<li>
+				<a href="{$host}zb_system/cmd.php?act=login" rel="nofollow" title="登录"><i class="glyphicon glyphicon-user"></i> 登录</a>
+			{/if}
+				</li>
 			</ul>
 		</div>
 	</div>
