@@ -6,6 +6,11 @@
 <form class="form-horizontal" id="frmSumbit" target="_self" method="post" action="{$article.CommentPostUrl}">
 <input type="hidden" name="inpId" id="inpId" value="{$article.ID}" />
 <input type="hidden" name="inpRevID" id="inpRevID" value="0" />
+{if $user.ID>0}
+	<input type="hidden" name="inpName" id="inpName" value="{$user.Name}" />
+	<input type="hidden" name="inpEmail" id="inpEmail" value="{$user.Email}" />
+	<input type="hidden" name="inpHomePage" id="inpHomePage" value="{$user.HomePage}" />
+{else}
 	<div class="form-group">
 		<label for="inpName" class="col-sm-2 control-label">评论者(*)</label>
 		<div class="col-sm-10">
@@ -24,8 +29,9 @@
 			<input type="text" name="inpHomePage" id="inpHomePage" placeholder="http://" value="{$user.HomePage}" tabindex="3" class="form-control">
 		</div>
 	</div>
+{/if}
 	<div class="form-group">
-		<label for="txaArticle" class="col-sm-2 control-label">文章评论(*)</label>
+		<label for="txaArticle" class="col-sm-2 control-label">{if $user.ID>0}{$zbp.members[$user.ID].StaticName}{else}文章评论{/if}(*)</label>
 		<div class="col-sm-10">
 			<textarea name="txaArticle" id="txaArticle" rows="3" tabindex="5" class="form-control"></textarea>
 		</div>
