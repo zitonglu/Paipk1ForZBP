@@ -31,8 +31,6 @@ a,a:hover,a:focus,.single .article .author-box img.avatar:hover,
 	text-decoration: none;
 }
 /* Top Navigation Bar */
-.navbar-mycolor .navbar-brand:hover,
-.navbar-mycolor .navbar-brand:focus,
 .navbar-mycolor .navbar-nav > li > a:hover,
 .navbar-mycolor .navbar-nav > li > a:focus,
 .navbar-mycolor .navbar-nav > .active > a,
@@ -64,8 +62,6 @@ a,a:hover,a:focus,.single .article .author-box img.avatar:hover,
   border-color:#428bca;
 }
 @media (max-width: 767px) {
-.navbar-mycolor .navbar-brand:hover,
-.navbar-mycolor .navbar-brand:focus,
 .navbar-mycolor .navbar-nav > li > a:hover,
 .navbar-mycolor .navbar-nav > li > a:focus,
 .navbar-mycolor .navbar-nav > .active > a,
@@ -113,6 +109,12 @@ fieldset[disabled] .navbar-mycolor .btn-link:hover,
 .navbar-mycolor .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-mycolor .btn-link:focus {
   color: #23527c;
+}
+img.logo {
+    max-height: 50px;
+}
+.navbar-brand{
+	padding:0 15px;
 }
 /* Top Navigation Bar - search:change bootstrap */
 .search-box{

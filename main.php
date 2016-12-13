@@ -70,6 +70,10 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->QQ = $_POST['QQ'];
   $zbp->Config('paipk1')->indexHome = $_POST['indexHome'];
   $zbp->Config('paipk1')->indexbottom = $_POST['indexbottom'];
+  $zbp->Config('paipk1')->ifNavImage = $_POST['ifNavImage'];
+  $zbp->Config('paipk1')->ifNavQRCode = $_POST['ifNavQRCode'];
+  $zbp->Config('paipk1')->ifNavSearch = $_POST['ifNavSearch'];
+  $zbp->Config('paipk1')->ifNavLogin = $_POST['ifNavLogin'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -92,7 +96,18 @@ if(isset($_POST['ifOutLink'])){
         <td>选择文章列表页面的默认模板</td>
       </tr>
       <tr>
-        <td scope="row"><strong>外部JS和CSS</strong></td>
+        <td scope="row">导航栏设置</td>
+        <td>
+          <input name="ifNavImage" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifNavImage; ?>"> 开启LOGO；
+          <input name="ifNavQRCode" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifNavQRCode; ?>"> 开启二维码；
+          <input name="ifNavSearch" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifNavSearch; ?>"> 开启搜索；
+          <input name="ifNavLogin" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifNavLogin; ?>"> 开启登录；
+        </td>
+      <td>导航栏开启相应设置</td>
+      </tr>
+      <tr>
+      <tr>
+        <td scope="row">外部JS和CSS</td>
         <td><input name="ifOutLink" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifOutLink; ?>">
       </td>
       <td>开启后默认调用百度库</td>
