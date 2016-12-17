@@ -1,17 +1,17 @@
 ::-moz-selection{
-	background:#00a635;
+	background:#7B1FA2;
 	color:#fff
 }
 ::selection{
-	background:#00a635;
+	background:#7B1FA2;
 	color:#fff
 }
-a{color:#00a635}
-.widget h5::before{color:#B2DFDB}
+a{color:#7B1FA2}
+.widget h5::before{color:#E1BEE7}
 .form-control:focus{
-	border-color:#B2DFDB;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #B2DFDB;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #B2DFDB;
+	border-color:#E1BEE7;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #E1BEE7;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #E1BEE7;
 }
 /* Top Navigation Bar */
 .navbar-mycolor .navbar-nav > li > a:hover,
@@ -35,7 +35,7 @@ div.prism-show-language > div.prism-show-language-label[data-language],
 .single .article .section h1::before,
 .single .article .section h4::before,
 .single .article .section h6::before{
-  background-color:#00a635
+  background-color:#7B1FA2
 }
 .navbar-mycolor .navbar-toggle,
 .navbar-mycolor .navbar-collapse,
@@ -47,7 +47,7 @@ div.prism-show-language > div.prism-show-language-label[data-language],
 .single .article .section h3::before,
 .single .article .section h5::before,
 .single-search .section > p > a:first-child::before{
-  border-color:#00a635
+  border-color:#7B1FA2
 }
 @media (max-width: 767px) {
 .navbar-mycolor .navbar-nav > li > a:hover,
@@ -55,12 +55,12 @@ div.prism-show-language > div.prism-show-language-label[data-language],
 .navbar-mycolor .navbar-nav > .active > a,
 .navbar-mycolor .navbar-nav > .active > a:hover,
 .navbar-mycolor .navbar-nav > .active > a:focus{
-  background:#00a635
+  background:#7B1FA2
 }
 .navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a:hover,
 .navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-  color: #00a635
+  color: #7B1FA2
 }
 }
 .navbar-mycolor .btn-link[disabled]:hover,
@@ -82,7 +82,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus,
 .pagination > li > span:hover,
 .pagination > li > a,
 .pagination > li > span{
-	color:#00a635
+	color:#7B1FA2
 }
 .pagination > .active > a,
 .pagination > .active > a:focus,
@@ -90,6 +90,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus,
 .pagination > .active > span,
 .pagination > .active > span:focus,
 .pagination > .active > span:hover{
-	border-color:#00a635;
-	background-color:#00a635
+	border-color:#7B1FA2;
+	background-color:#7B1FA2
 }

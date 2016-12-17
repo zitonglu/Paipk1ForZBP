@@ -74,6 +74,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifNavQRCode = $_POST['ifNavQRCode'];
   $zbp->Config('paipk1')->ifNavSearch = $_POST['ifNavSearch'];
   $zbp->Config('paipk1')->ifNavLogin = $_POST['ifNavLogin'];
+  $zbp->Config('paipk1')->themeColor = $_POST['themeColor'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -88,7 +89,7 @@ if(isset($_POST['ifOutLink'])){
       <tr>
         <td scope="row">首页模板</td>
         <td>
-          <select name="indexTheme" style="width:150px">
+          <select name="indexTheme" style="width:120px;text-align:center">
             <?php paipk1_index_theme_option() ?> 
           </select>
           自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php
@@ -106,6 +107,14 @@ if(isset($_POST['ifOutLink'])){
       <td>导航栏开启相应设置</td>
       </tr>
       <tr>
+        <td scope="row">主题颜色</td>
+        <td>
+          <select name="themeColor" style="width:100px;text-align:center">
+            <?php paipk1_themeColor_option() ?>
+          </select>
+        </td>
+      <td>开启主题颜色</td>
+      </tr>
       <tr>
         <td scope="row">外部JS和CSS</td>
         <td><input name="ifOutLink" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifOutLink; ?>">

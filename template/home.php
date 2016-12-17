@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/home.css?v=2.46" type="text/css">
+{if $zbp->Config('paipk1')->themeColor != 'blue' && $zbp->Config('paipk1')->themeColor != ''}
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color-{$zbp->Config('paipk1')->themeColor}.css?v=3.3" type="text/css">
+{/if}
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
 {if $type=='index'&&$page=='1'}

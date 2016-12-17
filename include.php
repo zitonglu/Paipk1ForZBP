@@ -178,6 +178,30 @@ function paipk1_index_theme_option(){
 		echo $tr;
 	}
 }
+/* 主题indexColor模版选择的<option> */
+function paipk1_themeColor_option(){
+	global $zbp;
+	$themeColor = $zbp->Config('paipk1')->themeColor;
+	$themesColor = array(
+			'red' => '- 红色 -',
+			'orange' => '- 橙色 -',
+			'yellow' => '- 黄色 -',
+			'green' => '- 绿色 -',
+			'cyan' => '- 青色 -',
+			'blue' => '- 蓝色 -',
+			'purple' => '- 紫色 -',
+			'black' => '- 黑色 -',
+			'navy' => '- 藏青色 -',
+			'tan' => '- 褐色 -'
+		);
+	if($themeColor == '') $theme = 'blue';
+	foreach ($themesColor as $key => $value){
+		$tr = '<option value="'.$key.'"';
+		if($key == $themeColor) $tr .= ' selected="selected"';
+		$tr .='>'.$value.'</option>';
+		echo $tr;
+	}
+}
 /* 文章页面插入视频 */
 function paipk1_single_footer(){
 	global $zbp,$article; ?>
