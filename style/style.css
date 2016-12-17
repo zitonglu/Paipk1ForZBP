@@ -864,12 +864,12 @@ img.logo {
 	font-size: 18px;
 	color:#428bca;
 }
-.single .article .section h1:before,
-.single .article .section h2:before,
-.single .article .section h3:before,
-.single .article .section h4:before,
-.single .article .section h5:before,
-.single .article .section h6:before{
+.single .article .section h1::before,
+.single .article .section h2::before,
+.single .article .section h3::before,
+.single .article .section h4::before,
+.single .article .section h5::before,
+.single .article .section h6::before{
 	position: relative;
 	content: '';
 	width:14px;
@@ -877,27 +877,27 @@ img.logo {
 	display: inline-block;
 	margin-right:6px;
 }
-.single .article .section h1:before{
+.single .article .section h1::before{
 border-radius:6px 6px 0;
 background:#428bca;
 }
-.single .article .section h2:before{
+.single .article .section h2::before{
 border-radius:50%;
 border:3px solid #428bca;
 }
-.single .article .section h3:before{
+.single .article .section h3::before{
 border-radius:6px 6px 0;
 border: 2px solid #428bca;
 }
-.single .article .section h4:before{
+.single .article .section h4::before{
 border-radius:0 6px;
 background:#428bca;
 }
-.single .article .section h5:before{
+.single .article .section h5::before{
 border-radius:6px 0;
 border: 2px solid #428bca;
 }
-.single .article .section h6:before{
+.single .article .section h6::before{
 border-radius:50%;
 background:#428bca;
 }

@@ -1,12 +1,18 @@
 ::-moz-selection{
 	background:#009688;
-	color:#fff;
+	color:#fff
 }
 ::selection{
 	background:#009688;
-	color:#fff;
+	color:#fff
 }
-a{color:#009688;}
+a{color:#009688}
+.widget h5::before{color:#B2DFDB}
+.form-control:focus{
+	border-color:#B2DFDB;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #B2DFDB;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #B2DFDB;
+}
 /* Top Navigation Bar */
 .navbar-mycolor .navbar-nav > li > a:hover,
 .navbar-mycolor .navbar-nav > li > a:focus,
@@ -18,25 +24,66 @@ a{color:#009688;}
 .navbar-mycolor .navbar-nav > .open > a:focus,
 .navbar-mycolor .navbar-toggle,
 .navbar-mycolor .navbar-toggle:hover,
-.navbar-mycolor .navbar-toggle:focus {
-  background-color:#009688;
+.navbar-mycolor .navbar-toggle:focus,
+.cat,
+div.prism-show-language > div.prism-show-language-label[data-language],
+#divFavorites li:hover,
+#divLinkage li:hover,
+#divCatalog li:hover,
+#divTags li:hover,
+#tbCalendar tbody a,
+.single .article .section h1::before,
+.single .article .section h4::before,
+.single .article .section h6::before{
+  background-color:#009688
 }
 .navbar-mycolor .navbar-toggle,
 .navbar-mycolor .navbar-collapse,
-.navbar-mycolor .navbar-form {
-  border-color:#009688;
+.navbar-mycolor .navbar-form,
+.index-pic .post-box .post-text h4::before,
+.index .article .media-list h4 a::before,
+.single .article .section>h2.title::before,
+.single .article .section h2::before,
+.single .article .section h3::before,
+.single .article .section h5::before,
+.single-search .section > p > a:first-child::before{
+  border-color:#009688
 }
 @media (max-width: 767px) {
 .navbar-mycolor .navbar-nav > li > a:hover,
 .navbar-mycolor .navbar-nav > li > a:focus,
 .navbar-mycolor .navbar-nav > .active > a,
 .navbar-mycolor .navbar-nav > .active > a:hover,
-.navbar-mycolor .navbar-nav > .active > a:focus {
-  background:#009688;
+.navbar-mycolor .navbar-nav > .active > a:focus{
+  background:#009688
 }
 .navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a:hover,
 .navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-  color: #009688;
+  color: #009688
 }
+}
+.navbar-mycolor .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-mycolor .btn-link:hover,
+.navbar-mycolor .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-mycolor .btn-link:focus,
+.top a:hover,
+.top a:focus,
+.index .article .media-list h6 a:hover,
+.single .article .section h1,
+.single .article .section h2,
+.single .article .section h3,
+.single .article .section h4,
+.single .article .section h5,
+.single .article .section h6{
+	color:#009688
+}
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover{
+	border-color:#009688;
+	background-color:#009688
 }
