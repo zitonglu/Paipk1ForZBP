@@ -111,10 +111,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
   color: #23527c;
 }
 img.logo {
-    max-height: 50px;
-}
-.navbar-brand{
-	padding:0 15px;
+    max-height:50px;
+    margin:0 15px;
 }
 /* Top Navigation Bar - search:change bootstrap */
 .search-box{

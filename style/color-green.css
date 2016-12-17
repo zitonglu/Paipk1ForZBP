@@ -1,0 +1,42 @@
+::-moz-selection{
+	background:#009688;
+	color:#fff;
+}
+::selection{
+	background:#009688;
+	color:#fff;
+}
+a{color:#009688;}
+/* Top Navigation Bar */
+.navbar-mycolor .navbar-nav > li > a:hover,
+.navbar-mycolor .navbar-nav > li > a:focus,
+.navbar-mycolor .navbar-nav > .active > a,
+.navbar-mycolor .navbar-nav > .active > a:hover,
+.navbar-mycolor .navbar-nav > .active > a:focus,
+.navbar-mycolor .navbar-nav > .open > a,
+.navbar-mycolor .navbar-nav > .open > a:hover,
+.navbar-mycolor .navbar-nav > .open > a:focus,
+.navbar-mycolor .navbar-toggle,
+.navbar-mycolor .navbar-toggle:hover,
+.navbar-mycolor .navbar-toggle:focus {
+  background-color:#009688;
+}
+.navbar-mycolor .navbar-toggle,
+.navbar-mycolor .navbar-collapse,
+.navbar-mycolor .navbar-form {
+  border-color:#009688;
+}
+@media (max-width: 767px) {
+.navbar-mycolor .navbar-nav > li > a:hover,
+.navbar-mycolor .navbar-nav > li > a:focus,
+.navbar-mycolor .navbar-nav > .active > a,
+.navbar-mycolor .navbar-nav > .active > a:hover,
+.navbar-mycolor .navbar-nav > .active > a:focus {
+  background:#009688;
+}
+.navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar-mycolor .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #009688;
+}
+}

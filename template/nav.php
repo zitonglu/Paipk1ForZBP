@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="navbar-header">
 		{if $zbp->Config('paipk1')->ifNavImage == '1'}
-			<a class="navbar-brand" href="{$host}" title="{$name}">
+			<a href="{$host}" title="{$name}">
 				<img class="logo" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO">
 			</a>
 		{/if}
@@ -15,7 +15,9 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
+		{if $zbp->Config('paipk1')->ifNavImage == '0'}
 			<a class="navbar-brand visible-xs" href="{$host}">{$name}</a>
+		{/if}
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav" id="divNavBar">

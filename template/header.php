@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
  	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=3.22" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color-green.css?v=3.3" type="text/css">
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
 {if $type=='index'&&$page=='1'}
