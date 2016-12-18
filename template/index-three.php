@@ -7,7 +7,7 @@
 <div class="container">
 	<aside class="col-md-2 col-sm-3 hidden-xs sidebar">
 		<div class="theiaStickySidebar">
-		<a href="{$host}" title="{$name}"><img class="img-responsive" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
+		<a href="{$host}" title="{$name}"><img class="img-responsive siderLogo" src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="{$name}的网站LOGO"></a>
 		{template:sidebar2}
 		</div>
 	</aside>

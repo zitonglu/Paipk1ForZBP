@@ -34,7 +34,9 @@ div.prism-show-language > div.prism-show-language-label[data-language],
 #tbCalendar tbody a,
 .single .article .section h1::before,
 .single .article .section h4::before,
-.single .article .section h6::before{
+.single .article .section h6::before,
+.index .siderLogo,
+img.logo{
   background-color:#FBC02D
 }
 .navbar-mycolor .navbar-toggle,

@@ -112,7 +112,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 img.logo {
     max-height:50px;
-    margin:0 15px;
+    margin-left:15px;
+    background-color:#428bca
 }
 /* Top Navigation Bar - search:change bootstrap */
 .search-box{
@@ -672,6 +673,7 @@ img.logo {
 .index .article .threepic .row{
 	margin:auto 0 16px;
 }
+.index .siderLogo{margin-bottom: 4px;background-color:#428bca}
 @media (min-width: 749px){
 	.index .article .threepic img{
 		height:120px;
