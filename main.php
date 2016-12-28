@@ -75,6 +75,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifNavSearch = $_POST['ifNavSearch'];
   $zbp->Config('paipk1')->ifNavLogin = $_POST['ifNavLogin'];
   $zbp->Config('paipk1')->themeColor = $_POST['themeColor'];
+  $zbp->Config('paipk1')->ifThreeLogo = $_POST['ifThreeLogo'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -105,6 +106,12 @@ if(isset($_POST['ifOutLink'])){
           <input name="ifNavLogin" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifNavLogin; ?>"> 开启登录；
         </td>
       <td>导航栏开启相应设置</td>
+      </tr>
+      <tr>
+        <td scope="row">三栏LOGO设置</td>
+        <td>
+        <input name="ifThreeLogo" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifThreeLogo; ?>"></td>
+        <td>开启关闭三滥的文章LOGO</td>
       </tr>
       <tr>
         <td scope="row">主题颜色</td>
