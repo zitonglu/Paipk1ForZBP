@@ -74,12 +74,17 @@
 <script src="{$host}zb_users/theme/{$theme}/js/jquery.infinitescroll.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function (){
-      $("#infinitescroll").infinitescroll({  
-            navSelector: "#navigation",
-            nextSelector: "#navigation a",  
-            itemSelector: ".media" ,             
-            animate:true,                                               
-        }); 
+  $("#infinitescroll").infinitescroll({
+    loading: {
+      finishedMsg: "<p>您好，已经到了最后页面。</p>",
+      msgText: "<p>文章加载中...</p>",
+      },
+    navSelector: "#navigation",
+    nextSelector: "#navigation a",
+    itemSelector: ".media",
+    extraScrollPx:5,
+    animate:true
+  });
  }); 
 </script>
 {/if}
