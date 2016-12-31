@@ -45,7 +45,7 @@
 </li>
 {elseif $article->sf_img_count>=3 && $article->Metas->paipk1_single_theme_select == "threepic"}
 <!-- 图片模式 -->
-<li class="threepic" id="post-{$article.ID}">
+<li class="media threepic" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 		<div class="row">
 			<a href="{$article.Url}" title="{$article.Title}" class="col-xs-4"><img src="{$article->sf_img[0]}" alt="{$article.Title}" class="img-cover"></a>

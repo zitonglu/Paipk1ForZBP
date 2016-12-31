@@ -4,6 +4,7 @@
 {template:header}
 <body class="index">
 {template:nav}<!-- 导航结束 -->
+
 <div class="container">
 	<aside class="col-md-2 col-sm-3 hidden-xs sidebar">
 		<div class="theiaStickySidebar">
@@ -18,7 +19,7 @@
 		{template:istop}<!-- 置顶内容结束 -->
 		{/if}
 		<div class="article">
-			<ul class="media-list">
+			<ul class="media-list" id="infinitescroll">
 				{foreach $articles as $article}
 				{template:post-multi}
 				{/foreach}

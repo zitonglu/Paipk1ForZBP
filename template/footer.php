@@ -59,6 +59,7 @@
 <!-- 滚动侧栏 -->
 <script src='{$host}zb_users/theme/{$theme}/js/theia-sticky-sidebar.js'></script>
 <script src='{$host}zb_users/theme/{$theme}/js/paipk1.js'></script>
+
 {$footer}
 </body>
 </html>

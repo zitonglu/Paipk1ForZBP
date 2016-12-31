@@ -15,7 +15,7 @@
 			{template:istop}<!-- 置顶内容结束 -->
 		{/if}
 		<div class="article">
-			<ul class="media-list">
+			<ul class="media-list" id="infinitescroll">
 				{foreach $articles as $article}
 				{template:post-multi}
 				{/foreach}

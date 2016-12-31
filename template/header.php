@@ -68,5 +68,21 @@
   <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
   <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+{if $zbp->Config('paipk1')->ifScroll == '1'}
+<!-- 无限翻页流 -->
+<script src="{$host}zb_users/theme/{$theme}/js/jquery.infinitescroll.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+      $("#infinitescroll").infinitescroll({  
+            navSelector: "#navigation",
+            nextSelector: "#navigation a",  
+            itemSelector: ".media" ,             
+            animate:true,                                               
+        }); 
+ }); 
+</script>
+{/if}
+
 {$header}
 </head>

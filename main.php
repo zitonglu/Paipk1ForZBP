@@ -76,6 +76,7 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->ifNavLogin = $_POST['ifNavLogin'];
   $zbp->Config('paipk1')->themeColor = $_POST['themeColor'];
   $zbp->Config('paipk1')->ifThreeLogo = $_POST['ifThreeLogo'];
+  $zbp->Config('paipk1')->ifScroll = $_POST['ifScroll'];
   $zbp->SaveConfig('paipk1');
     $zbp->ShowHint('good');
 }
@@ -112,6 +113,12 @@ if(isset($_POST['ifOutLink'])){
         <td>
         <input name="ifThreeLogo" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifThreeLogo; ?>"></td>
         <td>开启关闭三滥的文章LOGO</td>
+      </tr>
+      <tr>
+        <td scope="row">无限翻页</td>
+        <td>
+        <input name="ifScroll" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifScroll; ?>"></td>
+        <td>开启后无限向后翻页</td>
       </tr>
       <tr>
         <td scope="row">主题颜色</td>
