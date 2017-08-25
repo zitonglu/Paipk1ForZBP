@@ -17,7 +17,7 @@
         {else}
         <a href="{$host}zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
         {/if}
-        {if $zbp->Config('paipk1')->baike!=""}&nbsp;{$zbp->Config('paipk1')->baike}&nbsp;{/if}
+        {if $zbp->Config('paipk1')->baike!=""}&nbsp;<a href="http://www.miibeian.gov.cn" title="备案" target="_blank" rel="nofollow">{$zbp->Config('paipk1')->baike}</a>&nbsp;{/if}
         {$copyright}&nbsp;
         Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
     </p>
