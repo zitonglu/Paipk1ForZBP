@@ -37,9 +37,9 @@ if(!$zbp->Config('paipk1')->HasKey('Version')){
 $zbp->Config('paipk1')->ifseo = '1';
 $zbp->Config('paipk1')->ifGlaze = '1';
 $zbp->Config('paipk1')->ifbg = '0';
-$zbp->Config('paipk1')->HomeKeywords = '拍拍看科技';
+$zbp->Config('paipk1')->HomeKeywords = '厘米屋';
 $zbp->Config('paipk1')->ifbaiduShare = '1';
-$zbp->Config('paipk1')->CopyrightDescription = '本站主题模版版权归拍拍看科技所有，任何商业用途均须联系作者。如未经授权用作他处，作者将保留追究侵权者法律责任的权利。';
+$zbp->Config('paipk1')->CopyrightDescription = '本站主题模版版权归limiwu.com所有，任何商业用途均须联系作者。如未经授权用作他处，作者将保留追究侵权者法律责任的权利。';
 $zbp->Config('paipk1')->topID = 1;
 $zbp->Config('paipk1')->indexHome = '';
 $zbp->Config('paipk1')->AstroFirstID = 1;

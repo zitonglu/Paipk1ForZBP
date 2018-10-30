@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="php">
 <id>paipk1</id>
-<name>拍拍看主题</name>
-<url>http://www.paipk.com/</url>
+<name>limiwu</name>
+<url>http://limiwu.com/</url>
 <note>清新三栏响应式主题，强大模块管理，兼容多屏浏览</note>
-<description>z-blogPHP主题模版由紫铜炉设计和制作.详见拍拍看科技</description>
+<description>z-blogPHP主题模版由紫铜炉设计和制作.详见limiwu.com</description>
 <path>main.php</path>
 <include>include.php</include>
 <level>1</level>
 <author>
   <name>紫铜炉</name>
-  <email>paipk@paipk.com</email>
-  <url>http://www.paipk.com/</url>
+  <email>910109610@qq.com</email>
+  <url>http://limiwu.com/</url>
 </author>
 <source>
   <name>紫铜炉</name>
-  <email>paipk@paipk.com</email>
-  <url>http://www.paipk.com/</url>
+  <email>910109610@qq.com</email>
+  <url>http://limiwu.com/</url>
 </source>
 <adapted>151626</adapted>
 <version>3.4</version>
 <pubdate>2016-08-24</pubdate>
-<modified>2016-12-31</modified>
+<modified>2018-10-31</modified>
 <price>60</price>
 <advanced>
-  <dependency>sf_img1</dependency>
+  <dependency></dependency>
   <rewritefunctions></rewritefunctions>
   <conflict></conflict>
 </advanced>
