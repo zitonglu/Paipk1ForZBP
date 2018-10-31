@@ -24,7 +24,7 @@
 <modified>2018-10-31</modified>
 <price>60</price>
 <advanced>
-  <dependency></dependency>
+  <dependency>sf_img1</dependency>
   <rewritefunctions></rewritefunctions>
   <conflict></conflict>
 </advanced>

@@ -1,5 +1,5 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
-<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
+<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://limiwu.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {php}
 	SF_img1::getPics($article,190,120,4);
@@ -91,6 +91,7 @@
 <li class="media">
   <div>
   	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
+	{$article.Intro}
 	<h6>
 	<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
 	{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
@@ -98,7 +99,6 @@
 	{/if}
 	<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="{$article.Url}">{$article.ViewNums}</a>
 	</h6>
-    {$article.Intro}
     <p class="clearfix"></p>
   </div>
 </li>
