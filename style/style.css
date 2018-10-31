@@ -567,12 +567,6 @@ img.logo {
 	color:#555;
 }
 /* List - article */
-/*@media(min-width: 749px){
-	.index .article>ul>li{
-		margin-top:20px;
-		padding-bottom:20px;
-	}
-}*/
 .index .article>ul>li{
 	border-bottom:.1em dashed #dedede;
 }
@@ -712,10 +706,11 @@ img.logo {
 .index .article .weiyu .media-body h5{
 	line-height:1.5;
 }
+.index .article .weiyu{
+	padding-bottom:1em; 
+	border-bottom: none;
+}
 @media (max-width:748px){
-	.index .article .weiyu{
-		padding-bottom:20px;
-	}
 	.index .article .weiyu .media-body h5{
 		margin-bottom:.8em;
 	}
