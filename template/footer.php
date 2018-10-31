@@ -1,5 +1,5 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
-        <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://www.paipk.com">紫铜炉</a>设计制作</h2>
+        <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://limiwu.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {if $type=='index' && $zbp->Config('paipk1')->indexbottom != ""}
 <div class="jumbotron bottom hidden-xs">
@@ -19,7 +19,7 @@
         {/if}
         {if $zbp->Config('paipk1')->baike!=""}&nbsp;<a href="http://www.miibeian.gov.cn" title="备案" target="_blank" rel="nofollow">{$zbp->Config('paipk1')->baike}</a>&nbsp;{/if}
         {$copyright}&nbsp;
-        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
+        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://limiwu.com" title="limiwu.com-专业z-blogPHP主题模版制作" target="_blank" >limiwu.com.</a>
     </p>
     {if $type=='index'&&$page=='1'}
         <br><ul class="list-inline">友情链接：{module:link}</ul>
