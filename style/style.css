@@ -653,6 +653,15 @@ img.logo {
 	}
 }
 /* 
+	List - article - one pic article
+*/
+.index .article .onepic{
+	min-height: 185px;
+}
+.index .article .onepic>h4{
+	margin-bottom: 1em;
+}
+/* 
 	List - article - three pic article
 	select PIC and have three pic
 */

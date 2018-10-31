@@ -63,7 +63,7 @@
 </li>
 {elseif $article->sf_img_count>=1 || $article->Metas->paipk1_teSeTuPian!=''}
 <!-- 单图普通模式 -->
-<li class="media" id="post-{$article.ID}">
+<li class="media onepic" id="post-{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<div class="media-left">
 		<div class="media-box">
@@ -76,6 +76,7 @@
 		</div>
 	</div>
 	<div class="media-body">
+		{$article.Intro}
 		<h6>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;{TimeAgo($article.Time())}&nbsp;
 		{if $article.Tags}<i class="glyphicon glyphicon-tags"></i>
@@ -83,7 +84,6 @@
 		{/if}
 		<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="{$article.Url}">{$article.ViewNums}</a>
 		</h6>
-		{$article.Intro}
 		<p class="clearfix"></p>
 	</div>
 </li>
