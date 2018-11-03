@@ -17,7 +17,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
   <div class="divHeader2"><?php echo $blogtitle;?></div>
   <div class="SubMenu">
     <?php paipk1_SubMenu($act);?>
-    <a href="http://www.paipk.com/wiki/geziwiki.html" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
+    <a href="http://limiwu.com/wiki/paipk1.html" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
   </div>
   <div id="divMain2">
 <?php if ($act == 'base' || $act == 'shangjpg' || $act == 'cellnumber'){?><!--图片设置-->
@@ -94,7 +94,7 @@ if(isset($_POST['ifOutLink'])){
           <select name="indexTheme" style="width:120px;text-align:center">
             <?php paipk1_index_theme_option() ?> 
           </select>
-          自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php
+          <!-- 自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php -->
         </td>
         <td>选择文章列表页面的默认模板</td>
       </tr>
@@ -112,7 +112,7 @@ if(isset($_POST['ifOutLink'])){
         <td scope="row">三栏LOGO设置</td>
         <td>
         <input name="ifThreeLogo" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('paipk1')->ifThreeLogo; ?>"></td>
-        <td>开启关闭三滥的文章LOGO</td>
+        <td>开启关闭三栏的文章LOGO</td>
       </tr>
       <tr>
         <td scope="row">无限翻页</td>
@@ -321,48 +321,14 @@ i--;
 </script>
 <?php } ?>
 <?php if ($act == 'byDesign'){?><!--个性定制-->
-<?php
-if(isset($_POST['ActivationCode'])){
-  $zbp->Config('paipk1')->ActivationCode = $_POST['ActivationCode'];
-  if(!is_null(GetVars('AstroFirstID'))) $zbp->Config('paipk1')->AstroFirstID = intval($_POST['AstroFirstID'],10);
-  if(!is_null(GetVars('AstroSecondID'))) $zbp->Config('paipk1')->AstroSecondID = intval($_POST['AstroSecondID'],10);
-  if(!is_null(GetVars('AstroThreeID'))) $zbp->Config('paipk1')->AstroThreeID = intval($_POST['AstroThreeID'],10);
-  if(!is_null(GetVars('AstroFourID'))) $zbp->Config('paipk1')->AstroFourID = intval($_POST['AstroFourID'],10);
-  $zbp->SaveConfig('paipk1');
-  $zbp->ShowHint('good');
-}?>
-<form id="design" name="form-postdata" method="post" enctype="multipart/form-data" action="main.php?act=byDesign">
-  <table width="100%" border="1" class="tableBorder">
-  <tr>
-    <th scope="col" height="32" width="150px">配置项</th>
-    <th scope="col">配置内容</th>
-    <th scope="col" width="500px">使用说明</th>
-  </tr>
-  <tr>
-    <td scope="row">激活码</td>
-    <td>
-      <input name="ActivationCode" type="text" style="width:40%" value="<?php echo $zbp->Config('paipk1')->ActivationCode; ?>">
-    </td>
-    <td>激活定制主题用的密码</td>
-  </tr>
-<?php
-switch ($zbp->Config('paipk1')->ActivationCode) {
-  case 'sdd194c8234nb':
-    include 'plugin/astro-setting.php';
-} 
-?>
-</table>
-  <br/>
-  <input class="button" type="submit" value="保存设置" />
-</form>
-    <h3 style="margin-top:30px">定制页面</h3>
+<h3 style="margin-top:30px">定制页面</h3>
     <p>模版可根据客户的要求进行<strong>私人定制</strong>，如果有需要的朋友，请<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=910109610&amp;site=qq&amp;menu=yes" title="联系我们" target="_black">联系作者</a>。
     我们会按低于市场的价格给您优先制作。</p>
     <h3 style="margin-top:30px">联系方式</h3>
       <ul>
-        <li>联系方式：admin@paipk.com（#换成@）。来信请在主题中备注相关需求，您也可以在留言咨询相关信息。</li>
-        <li>作者blog：<a href="http://www.paipk.com" target="_black" title="拍拍看科技">http://www.paipk.com</a></li>
-        <li>BUG页面提交：<a href="http://www.paipk.com/67.html" target="_black" title="BUG提交">http://www.paipk.com/67.html</a></li>
+        <li>联系方式：910109610#qq.com（#换成@）。来信请在主题中备注相关需求，您也可以在留言咨询相关信息。</li>
+        <li>作者blog：<a href="http://limiwu.com" target="_black" title="拍拍看科技">http://limiwu.com</a></li>
+        <li>BUG页面提交：<a href="http://limiwu.com/67.html" target="_black" title="BUG提交">http://limiwu.com/67.html</a></li>
      </ul>
 <?php } ?>
   </div>

@@ -62,11 +62,7 @@
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击打开二维码"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
 				<ul class="dropdown-menu">
-					{if $host == "http://www.paipk.com/"}
-					<img src="http://images.paipk.com/erweima.png" alt="网页二维码">
-					{else}
 					<img src="http://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data={$host}" alt="网页二维码">
-					{/if}
 				</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击搜索"><i class="glyphicon glyphicon-search"></i> 搜索</a>
@@ -87,11 +83,7 @@
 </nav>
 <div class="shade"></div>
 <!-- 导航end -->
-{if $host == "http://www.paipk.com/"}
-<div class="jumbotron" style="background-image:url(http://images.paipk.com/1.jpg)">
-{else}
 <div class="jumbotron" style="background-image:url({$host}zb_users/theme/{$theme}/images/1.jpg)">
-{/if}
 </div>
 <!-- 内容页面 -->
 {php}
@@ -116,7 +108,7 @@ if($type == 'index'){
 		<ul class="media-list">
 			<li class="media">
 				<a class="media-left" href="{$zbp.members[1].HomePage}" title="{$zbp.members[1].StaticName}">
-					{if $host == "http://www.paipk.com/"}
+					{if $host == "http://limiwu.com/"}
 					<img src="http://images.paipk.com/avatar.jpg" alt="{$zbp.members[1].StaticName}" class="Avatar">
 					{else}
 					<img src="{$zbp.members[1].Avatar}" alt="{$zbp.members[1].StaticName}" class="Avatar">
@@ -128,7 +120,7 @@ if($type == 'index'){
 				</div>
 			</li>
 		</ul>
-{if $host == "http://www.paipk.com/"}
+{if $host == "http://limiwu.com/"}
 <div class="hidden-sm">
 <hr>
 <script type="text/javascript">
@@ -248,7 +240,7 @@ var cpro_id = "u2814888";
         {/if}
         {if $zbp->Config('paipk1')->baike!=""}&nbsp;{$zbp->Config('paipk1')->baike}&nbsp;{/if}
         {$copyright}&nbsp;
-        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://www.paipk.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
+        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://limiwu.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
     </p>
 </footer>
 
