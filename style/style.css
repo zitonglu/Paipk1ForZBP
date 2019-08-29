@@ -342,8 +342,8 @@ img.logo {
 	list-style-type: none;
 }
 #divComments .img-comment {
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	float: left;
 	margin-right:10px;
 	border-radius:50%;
@@ -813,6 +813,12 @@ img.logo {
 	line-height: 1.6;
 	margin-bottom: 1.5em;
 }
+@media (min-width: 549px){
+	.single .article .section>p{
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}
 .single .article .section>h2.title{
 	color:#212121;
 	font-size:28px;
@@ -859,7 +865,7 @@ img.logo {
 }
 /* single - article - content */
 .single .article .section{
-	font-size:16px;
+	font-size:18px;
 }
 .single .article .section h1,
 .single .article .section h2,
