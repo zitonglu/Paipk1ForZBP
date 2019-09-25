@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="php">
 <id>paipk1</id>
-<name>limiwu</name>
-<url>http://limiwu.com/</url>
+<name>拍拍看科技</name>
+<url>http://annanzi.com/</url>
 <note>清新三栏响应式主题，强大模块管理，兼容多屏浏览</note>
-<description>z-blogPHP主题模版由紫铜炉设计和制作.详见limiwu.com</description>
+<description>z-blogPHP主题模版由紫铜炉设计和制作.详见annanzi.com</description>
 <path>main.php</path>
 <include>include.php</include>
 <level>1</level>
 <author>
   <name>紫铜炉</name>
   <email>910109610@qq.com</email>
-  <url>http://limiwu.com/</url>
+  <url>https://annanzi.com/</url>
 </author>
 <source>
   <name>紫铜炉</name>
   <email>910109610@qq.com</email>
-  <url>http://limiwu.com/</url>
+  <url>https://annanzi.com/</url>
 </source>
 <adapted>151626</adapted>
-<version>3.4</version>
+<version>3.5</version>
 <pubdate>2016-08-24</pubdate>
-<modified>2018-10-31</modified>
+<modified>2019-09-25</modified>
 <price>60</price>
 <phpver>5.2</phpver>
 <advanced>
