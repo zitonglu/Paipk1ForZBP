@@ -62,7 +62,7 @@
 </ul>
 
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="aboutList">
+  <div role="tabpanel" class="tab-pane" id="aboutList">
 {foreach GetList(4,$article->Category->ID) as $aboutlist}
 <div class="col-sm-3 col-xs-6 more-text-box">
   <a href="{$aboutlist.Url}" title="{$aboutlist.Title}"><img src="{paipk1_mustIMG($aboutlist)}" alt="{$aboutlist.Title}" class="img-cover"></a>
@@ -87,7 +87,7 @@
     </ul>
     <div class="clearfix"></div>
   </div>
-  <div role="tabpanel" class="tab-pane" id="randList">
+  <div role="tabpanel" class="tab-pane active" id="randList">
     <ul class="list-inline hotListul">
 {$RMarray = paipk1_TcgetList(10,null,null,null,null,null,null,'rand')}
 {foreach $RMarray as $randlist}
