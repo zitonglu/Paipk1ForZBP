@@ -1,5 +1,5 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
-        <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://limiwu.com">紫铜炉</a>设计制作</h2>
+        <h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="//annanzi.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 {if $type=='index' && $zbp->Config('paipk1')->indexbottom != ""}
 <div class="jumbotron bottom hidden-xs">
@@ -17,9 +17,9 @@
         {else}
         <a href="{$host}zb_system/cmd.php?act=login" rel="nofollow" title="后台登录"><span class="glyphicon glyphicon-user"></span></a>
         {/if}
-        {if $zbp->Config('paipk1')->baike!=""}&nbsp;<a href="http://www.miibeian.gov.cn" title="备案" target="_blank" rel="nofollow">{$zbp->Config('paipk1')->baike}</a>&nbsp;{/if}
+        {if $zbp->Config('paipk1')->baike!=""}&nbsp;<a href="//www.miibeian.gov.cn" title="备案" target="_blank" rel="nofollow">{$zbp->Config('paipk1')->baike}</a>&nbsp;{/if}
         {$copyright}&nbsp;
-        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://limiwu.com" title="limiwu.com-专业z-blogPHP主题模版制作" target="_blank" >limiwu.com.</a>
+        Powered By {$zblogphpabbrhtml}. Theme by <a href="//annanzi.com" title="limiwu.com-专业z-blogPHP主题模版制作" target="_blank" >annanzi.com.</a>
     </p>
     {if $type=='index'&&$page=='1'}
         <br><ul class="list-inline">友情链接：{module:link}</ul>
@@ -27,7 +27,7 @@
 </footer>
 <div class="hidden-xs top hiddened" id="backTop">
     {if $zbp->Config('paipk1')->QQ != ""}
-    <a target="_blank" title="QQ联系我" href="http://wpa.qq.com/msgrd?v=3&uin={$zbp->Config('paipk1')->QQ}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
+    <a target="_blank" title="QQ联系我" href="//wpa.qq.com/msgrd?v=3&uin={$zbp->Config('paipk1')->QQ}&site={$host}&menu=yes"><img src="{$host}zb_users/theme/{$theme}/images/qq.png" alt="QQ在线" class="QQstyle"></a><br>
     {/if}
     <a href="#" id="returnTop"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
@@ -52,7 +52,7 @@
 {/if}
 
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
-    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 {else}
     <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}

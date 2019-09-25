@@ -1,8 +1,8 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
-		<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://limiwu.com">紫铜炉</a>设计制作</h2>
+		<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="//annanzi.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$language}" lang="{$language}">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="{$language}" lang="{$language}">
 <head>
 	<meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
@@ -11,7 +11,7 @@
   <script src="{$host}zb_system/script/zblogphp.js" type="text/javascript"></script>
   <script src="{$host}zb_system/script/c_html_js_add.php" type="text/javascript"></script>
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
-  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css"/>
 {else}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
@@ -65,8 +65,8 @@
 <!--百度统计-->
 {if $zbp->Config('paipk1')->baiduTJ!=""}{$zbp->Config('paipk1')->baiduTJ}{/if}
 <!--[if lt IE 9]>
-  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="//apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="//apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 {if $zbp->Config('paipk1')->ifScroll == '1'}
