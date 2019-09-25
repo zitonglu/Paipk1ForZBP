@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
 {/if}
  	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=3.237" type="text/css">
+  <link rel="shortcut icon" href="{$host}zb_users/theme/{$theme}/images/favicon.ico" type="image/x-icon" />
 {if $zbp->Config('paipk1')->themeColor != 'blue' && $zbp->Config('paipk1')->themeColor != ''}
   <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color-{$zbp->Config('paipk1')->themeColor}.css?v=3.3" type="text/css">
 {/if}
