@@ -56,9 +56,9 @@
 <div class="more-list">
 
 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#aboutList" role="tab" data-toggle="tab" title="相关文章"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;相关文章</a></li>
+    <li role="presentation"><a href="#aboutList" role="tab" data-toggle="tab" title="相关文章"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;相关文章</a></li>
     <li role="presentation"><a href="#hotList" role="tab" data-toggle="tab" title="热门文章"><i class="glyphicon glyphicon-fire"></i>&nbsp;热门文章</a></li>
-    <li role="presentation"><a href="#randList" role="tab" data-toggle="tab" title="随机文章"><i class="glyphicon glyphicon-globe"></i>&nbsp;随机文章</a></li>
+    <li role="presentation" class="active"><a href="#randList" role="tab" data-toggle="tab" title="随机文章"><i class="glyphicon glyphicon-globe"></i>&nbsp;随机文章</a></li>
 </ul>
 
 <div class="tab-content">
