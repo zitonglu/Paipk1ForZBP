@@ -17,7 +17,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
   <div class="divHeader2"><?php echo $blogtitle;?></div>
   <div class="SubMenu">
     <?php paipk1_SubMenu($act);?>
-    <a href="http://limiwu.com/wiki/paipk1.html" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
+    <a href="//annanzi.com/wiki/paipk1.html" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
   </div>
   <div id="divMain2">
 <?php if ($act == 'base' || $act == 'shangjpg' || $act == 'cellnumber'){?><!--图片设置-->
@@ -68,7 +68,6 @@ if(isset($_POST['ifOutLink'])){
   $zbp->Config('paipk1')->topID = $_POST['topID'];
   $zbp->Config('paipk1')->indexTheme = $_POST['indexTheme'];
   $zbp->Config('paipk1')->QQ = $_POST['QQ'];
-  $zbp->Config('paipk1')->indexHome = $_POST['indexHome'];
   $zbp->Config('paipk1')->indexbottom = $_POST['indexbottom'];
   $zbp->Config('paipk1')->ifNavImage = $_POST['ifNavImage'];
   $zbp->Config('paipk1')->ifNavQRCode = $_POST['ifNavQRCode'];
@@ -94,7 +93,6 @@ if(isset($_POST['ifOutLink'])){
           <select name="indexTheme" style="width:120px;text-align:center">
             <?php paipk1_index_theme_option() ?> 
           </select>
-          <!-- 自定义首页模版：<input name="indexHome" type="text" style="width:10%" value="<?php echo $zbp->Config('paipk1')->indexHome; ?>">.php -->
         </td>
         <td>选择文章列表页面的默认模板</td>
       </tr>
@@ -327,8 +325,8 @@ i--;
     <h3 style="margin-top:30px">联系方式</h3>
       <ul>
         <li>联系方式：910109610#qq.com（#换成@）。来信请在主题中备注相关需求，您也可以在留言咨询相关信息。</li>
-        <li>作者blog：<a href="http://limiwu.com" target="_black" title="拍拍看科技">http://limiwu.com</a></li>
-        <li>BUG页面提交：<a href="http://limiwu.com/67.html" target="_black" title="BUG提交">http://limiwu.com/67.html</a></li>
+        <li>作者blog：<a href="//annanzi.com" target="_black" title="拍拍看科技">annanzi.com</a></li>
+        <li>BUG页面提交：<a href="//annanzi.com/67.html" target="_black" title="BUG提交">annanzi.com/67.html</a></li>
      </ul>
 <?php } ?>
   </div>

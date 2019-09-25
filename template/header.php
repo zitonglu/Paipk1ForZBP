@@ -13,12 +13,12 @@
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
   <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css"/>
 {else}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/css/bootstrap.min.css" type="text/css"/>
 {/if}
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/style.css?v=3.237" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/{$style}.css?v=3.237" type="text/css">
   <link rel="shortcut icon" href="{$host}zb_users/theme/{$theme}/images/favicon.ico" type="image/x-icon" />
 {if $zbp->Config('paipk1')->themeColor != 'blue' && $zbp->Config('paipk1')->themeColor != ''}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color-{$zbp->Config('paipk1')->themeColor}.css?v=3.3" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/css/color-{$zbp->Config('paipk1')->themeColor}.css?v=3.5" type="text/css">
 {/if}
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->

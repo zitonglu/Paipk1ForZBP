@@ -1,8 +1,8 @@
 <?php echo'<meta charset="UTF-8"><div style="text-align:center;padding:60px 0;font-size:16px;">
-		<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="http://limiwu.com">紫铜炉</a>设计制作</h2>
+		<h2 style="font-size:60px;margin-bottom:32px;color:f00;">主题由<a href="annanzi.com">紫铜炉</a>设计制作</h2>
 </div>';die();?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$language}" lang="{$language}">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="{$language}" lang="{$language}">
 <head>
 	<meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
@@ -11,13 +11,13 @@
   <script src="{$host}zb_system/script/zblogphp.js" type="text/javascript"></script>
   <script src="{$host}zb_system/script/c_html_js_add.php" type="text/javascript"></script>
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
-  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css"/>
 {else}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/css/bootstrap.min.css" type="text/css"/>
 {/if}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/home.css?v=2.46" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/css/home.css?v=2.46" type="text/css">
 {if $zbp->Config('paipk1')->themeColor != 'blue' && $zbp->Config('paipk1')->themeColor != ''}
-  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/color-{$zbp->Config('paipk1')->themeColor}.css?v=3.3" type="text/css">
+  <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/css/color-{$zbp->Config('paipk1')->themeColor}.css?v=3.3" type="text/css">
 {/if}
 	<meta name="generator" content="{$zblogphp}" />
   <!--首页相关信息-->
@@ -32,8 +32,8 @@
 <!--百度统计-->
 {if $zbp->Config('paipk1')->baiduTJ!=""}{$zbp->Config('paipk1')->baiduTJ}{/if}
 <!--[if lt IE 9]>
-  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="//apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="//apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 {$header}
 <style type="text/css">
@@ -62,7 +62,7 @@
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击打开二维码"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
 				<ul class="dropdown-menu">
-					<img src="http://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data={$host}" alt="网页二维码">
+					<img src="//api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data={$host}" alt="网页二维码">
 				</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="点击搜索"><i class="glyphicon glyphicon-search"></i> 搜索</a>
@@ -108,8 +108,8 @@ if($type == 'index'){
 		<ul class="media-list">
 			<li class="media">
 				<a class="media-left" href="{$zbp.members[1].HomePage}" title="{$zbp.members[1].StaticName}">
-					{if $host == "http://limiwu.com/"}
-					<img src="http://images.paipk.com/avatar.jpg" alt="{$zbp.members[1].StaticName}" class="Avatar">
+					{if $host == "//annanzi.com/"}
+					<img src="//images.paipk.com/avatar.jpg" alt="{$zbp.members[1].StaticName}" class="Avatar">
 					{else}
 					<img src="{$zbp.members[1].Avatar}" alt="{$zbp.members[1].StaticName}" class="Avatar">
 					{/if}
@@ -120,14 +120,14 @@ if($type == 'index'){
 				</div>
 			</li>
 		</ul>
-{if $host == "http://limiwu.com/"}
+{if $host == "//limiwu.com/"}
 <div class="hidden-sm">
 <hr>
 <script type="text/javascript">
 /*280*55 创建于 2016/11/12*/
 var cpro_id = "u2814888";
 </script>
-<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>
 </div>
 {/if}
 	  </div>
@@ -177,7 +177,7 @@ var cpro_id = "u2814888";
 {if $zbp->Config('paipk1')->ifbaiduShare == '1'}
 <li class="floatright"><!-- 百度分享 -->
 <div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 </li>
 {/if}
 
@@ -222,7 +222,7 @@ var cpro_id = "u2814888";
 				<p class="text-center">手机扫描后直接拨打</p>
 			</ul>
 			</span>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes" title="QQ联系我" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-user icon-link"></i></a>&nbsp;
+			<a href="//wpa.qq.com/msgrd?v=3&uin={$QQzaixian}&site={$host}&menu=yes" title="QQ联系我" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-user icon-link"></i></a>&nbsp;
 			<a href="mailto:{$zbp.members[1].Email}" title="E-mail" target="_blank" data-toggle="tooltip" data-placement="top"><i class="glyphicon glyphicon-envelope icon-link"></i></a>
 		</div>
 		<script>$(function () { $("[data-toggle='tooltip']").tooltip(); });</script>
@@ -240,12 +240,12 @@ var cpro_id = "u2814888";
         {/if}
         {if $zbp->Config('paipk1')->baike!=""}&nbsp;{$zbp->Config('paipk1')->baike}&nbsp;{/if}
         {$copyright}&nbsp;
-        Powered By {$zblogphpabbrhtml}. Theme by <a href="http://limiwu.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
+        Powered By {$zblogphpabbrhtml}. Theme by <a href="//limiwu.com" title="拍拍看科技-专业z-blogPHP主题模版制作" target="_blank" >Paipk.com.</a>
     </p>
 </footer>
 
 {if $zbp->Config('paipk1')->ifOutLink=="1"}
-    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 {else}
     <script src='{$host}zb_users/theme/{$theme}/js/bootstrap.min.js'></script>
 {/if}
